@@ -1,0 +1,25 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="HomeController"{{/contentFor}}
+
+<section class="what-we-are back1">
+    <div class="wrap">
+        <div class="box colour1">
+            <h2>We love software</h2>
+            <p>We create custom, web software.  We can help you navigate technical complexity to solve your problems and see your ideas evolve into working solutions.  We designing and rolling out custom enterprise and web-based solutions across the world.</p>
+            <p>We understand the challenges and opportunities your business faces. And it’s our business to help you succeed, while saving you time and money. We keep technology simple, but offer expert help and resources should you need them.</p>
+            <p><a href="about">Learn more about us ›</a></p>
+        </div>
+    </div>
+</section>
+<section class="what-we-work">
+        <carousel interval="myInterval">
+            <slide ng-repeat="work in works" active="work.active" class="wrap">
+                <h2><a href="{{angular 'work.home'}}" ng-bind="work.title" target="_blank"></a></h2>
+                <div class="carousel-caption">
+                    <p ng-bind="work.description"></p>
+                </div>
+                <img ng-src="{{angular 'work.image'}}" style="height: 500px">
+            </slide>
+        </carousel>
+</section>
+

@@ -1,0 +1,21 @@
+/* TEAM */
+	Chef:Howard
+	Contact: howard [at] erealm.com.my
+	From:Xi'an, Shaanxi, China
+
+	Architect: Ling
+	Contact: ling [at] erealm.com.my
+	From:Xi'an, Shaanxi, China
+
+	UI Designer: Ken
+	Contact: ken [at] erealm.com.my
+	From:Xi'an, Shaanxi, China
+
+	Web Developer: Json
+	Contact: jason [at] erealm.com.my
+	From:Xi'an, Shaanxi, China
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: AngularJs, jQuery, Node.js
+  Software: Photoshop CS6

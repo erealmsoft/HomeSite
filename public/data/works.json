@@ -1,0 +1,20 @@
+[
+    {
+        "title": "MyStudyBible",
+        "home":"http://www.mystudybible.com",
+        "image": "images/contents/MyStudyBible.png",
+        "description": "Study the Holman Christian Standard Bible through fully integrated commentaries, study notes, and original language definitions."
+    },
+    {
+        "title": "LifeWay Reader",
+        "home":"http://reader.lifeway.com",
+        "image": "images/contents/lifewayReader.png",
+        "description": "Access a growing library of your favorite Christian books, Bibles and studies."
+    },
+    {
+        "title": "SBG Bio-Registration System",
+        "home":"http://www.sbg-fwcms.com",
+        "image": "images/contents/SBG-Bio.png",
+        "description": "Access a growing library of your favorite Christian books, Bibles and studies."
+    }
+]
