@@ -8,6 +8,9 @@ angular.module('erealm').controller('HomeController', ['$scope','client', functi
 
     'use strict';
 
+    $scope.subTitle = "Hello, We are",
+    $scope.mainTitle = "Erealm Info & Tech",
+    $scope.currentPage = "home-page",
     $scope.myInterval = 5000;
 
     client.getWorks().then(function(response) {

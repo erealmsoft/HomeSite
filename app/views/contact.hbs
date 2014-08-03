@@ -1,0 +1,66 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="ContactController"{{/contentFor}}
+<div class="contact-content">
+    <div id="contact_details">
+        <div class="wrap">
+            <div class="contact_details">
+                <div>
+                    <div class="circle_icon"><span class="fa fa-envelope"></span></div>
+                    <a class="contact-info" href="mailto:hello@erealm.com.my?subject=Enquiry%20from%20Erealm%20website">hello@erealm.com.my</a>
+
+                    <hr>
+                    <p></p>
+                    <ul class="cotact-address">
+                        <li ng-class="{active: activeMap == 'malaysia'}">
+                            <!--http://goo.gl/6QoZt8-->
+                            <i class="location-marker fa fa-map-marker"></i>
+                            <a href="javascript:void(0);" ng-click="changeMap('malaysia')">Malaysia Office</a>
+                            <div class="address">
+                                <span class="street-address">3F-19 IOI Business Park</span>
+                                <span class="region">Bandar Puchong Jaya</span>
+                                <span class="county">Selangor</span>
+                                <span class="postal-code">47100</span>
+                                <span class="country-name">Malaysia</span>
+                                <span class="tel"><b>+60 011-2623-4513</b></span>
+                            </div>
+                        </li>
+                        <li  ng-class="{active: activeMap == 'china'}">
+                            <!--http://goo.gl/iKsQxE-->
+                            <i class="location-marker fa fa-map-marker"></i>
+                            <a href="javascript:void(0);" ng-click="changeMap('china')">China Office</a>
+                            <div class="address">
+                                <span class="street-address">Zhangba 1st Rd</span>
+                                <span class="region">Yanta, Xi'an</span>
+                                <span class="county">Shaanxi</span>
+                                <span class="postal-code">710065</span>
+                                <span class="country-name">China</span>
+                                <span class="tel"><b>+86 7719 720088</b></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="google_map" class="google-map" ng-init="changeMap();"></div>
+</div>
+<div class="send-message">
+    <div class="wrap">
+        <h2>Send Us a message</h2>
+        <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
+            <p class="info" ng-bind="errorMessage|| 'Please make sure all fields are fill out correctly.'"></p>
+            <fieldset>
+                <div class="form-group left">
+                    <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
+                              ng-model="message" title="Enter your message" ng-maxlength="300" required="required" placeholder="Pop your message in here…"></textarea>
+                </div>
+                <div class="form-group right">
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" placeholder="Your name"><br>
+                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" placeholder="Your email address">
+                    <button class="btn btn-info contact-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">Send Message</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+

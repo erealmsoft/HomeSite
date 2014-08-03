@@ -6,11 +6,13 @@
 
 'use strict';
 
-var cluster = require('cluster');
-var express = require('express');
-var hbs = require('express-hbs');
-var config = require('./config');
-var app = express();
+var cluster = require('cluster'),
+ express = require('express'),
+ hbs = require('express-hbs'),
+ config = require('./config'),
+ app = express(),
+ expressValidator = require('express-validator');
+
 
 //config express in all environments
 app.disable('x-powered-by');
@@ -30,6 +32,9 @@ app.set('views', config.serverRoot + '/views');
 app.use(express.compress());
 app.use(express.favicon(config.clientRoot + '/images/favicon.ico'));
 app.use(express.static(config.clientRoot));
+
+app.use(express.bodyParser());
+app.use(expressValidator([]));
 
 require('./app/routes')(app, express);
 

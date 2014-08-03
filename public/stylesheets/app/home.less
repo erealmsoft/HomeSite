@@ -2,6 +2,35 @@
   min-height: 400px;
   margin-bottom: 1.18em;
 
+  .carousel-control {
+    height: 80px;
+    width: 80px;
+    top: 40%;
+    border-radius: 50%;
+
+    &.left, &.right {
+      background-image: none;
+      background-color: #ea9b81;
+    }
+    &.left {
+      left: -30px;
+    }
+    &.right {
+      right: -30px;
+    }
+
+    .glyphicon-chevron-right, .glyphicon-chevron-left {
+      top: 25px;
+      margin: 0;
+    }
+    .glyphicon-chevron-right {
+      left: 15px;
+    }
+    .glyphicon-chevron-left {
+      left: 35px;
+    }
+  }
+
   .carousel-caption {
     color:  #333;
     position: static;
@@ -54,4 +83,45 @@
   &.back1 {
     background-image: url("/images/background-1.png");
   }
+}
+
+.what-we-love {
+
+  margin: 0;
+  padding: 2% 15%;
+  background: #39a9a4;
+  color: #fff;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    width: 20%;
+    margin-right: 4%;
+    margin-bottom: 2em!important;
+    vertical-align: top;
+  }
+  .illustration {
+    width: 135px;
+    height: 135px;
+    background: #ffffff;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 60px;
+    line-height: 130px;
+  }
+
+}
+
+.cta {
+  font-size: 2em;
+  font-weight: 700;
+  color: #333333;
+  padding: 2.5em 1em;
 }

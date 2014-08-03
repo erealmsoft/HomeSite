@@ -76,6 +76,49 @@ h4 {
   padding: 0;
   margin: 0 0 1em 0;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.form-control {
+  border: none;
+  padding: 1em;
+  font-size: 1.2em;
+  background: #eeeeee;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+textarea.error, input.error {
+  background-color: #e1704b;
+  color: #FFF;
+
+  &::-webkit-input-placeholder { color:#FFF; }
+  &::-moz-placeholder { color:#FFF; } /* firefox 19+ */
+  &:-ms-input-placeholder { color:#FFF; } /* ie */
+  &:-moz-placeholder { color:#FFF; }
+}
+
+.circle_icon {
+  background: #75c3bf;
+  color: #FFF;
+  width: 82px;
+  height: 82px;
+  line-height: 82px;
+  font-size: 3em;
+  border-radius: 41px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .5em;
+  transition: background .15s linear;
+  -webkit-transition: background .15s linear;
+  -moz-transition: background .15s linear;
+  text-align: center;
+}
 
 
 /* Header __________________________________________________________ */
@@ -114,22 +157,21 @@ header {
   .intro {
     margin-left: 15%;
 
+    span {
+      font-family: 'Droid Sans Mono', ;
+      color: #999999;
+      display: block;
+      font-size: 1.2em;
+      letter-spacing: .05em;
+      line-height: 1em;
+      margin-bottom: .7em;
+    }
 
     h1 {
       font-family: 'Cantarell', sans-serif;
       font-size: 4em;
       margin-bottom: 0;
       width: 100%;
-
-      span {
-        font-family: 'Droid Sans Mono', ;
-        color: #999999;
-        display: block;
-        font-size: .3em;
-        letter-spacing: .05em;
-        line-height: 1em;
-        margin-bottom: .7em;
-      }
     }
 
     h2 {
@@ -157,74 +199,76 @@ header {
 /* Navigation __________________________________________________________ */
 .nav_container {
   height: 4em;
-}
 
-nav {
-  background: #eeeeee;
-  padding: 0;
-  height: 4em;
-  z-index: 999;
-  width: 100%;
+  nav {
+    background: #eeeeee;
+    padding: 0;
+    height: 4em;
+    z-index: 999;
+    width: 100%;
 
-  .logo_mark {
+    .logo_mark {
+      display: none;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+
+      .logo_mark {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      line-height: 4.7em;
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      font-size: .9em;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-align: left;
+      text-transform: uppercase;
+      vertical-align: top;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 1em;
+        padding-bottom: 5px;
+      }
+      a:visited {
+        color: #333;
+      }
+
+      li {
+        line-height: 1em;
+        display: inline-block;
+      }
+    }
+
+    li.active a {
+      color: #e1704b;
+    }
+    li.active a {
+      color: #e1704b;
+    }
+    li:hover a {
+      color: #e1704b;
+    }
+  }
+
+  .nav_link {
     display: none;
   }
 
-  &.fixed {
-    position: fixed;
-    top: 0;
-
-    .logo_mark {
-      display: inline-block;
-    }
-  }
-
-  ul {
-    line-height: 4.7em;
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    font-size: .9em;
-    letter-spacing: .1em;
-    font-weight: 700;
+  nav .wrap {
     text-align: left;
-    text-transform: uppercase;
-    vertical-align: top;
-
-    a {
-      color: #333;
-      text-decoration: none;
-      margin: 0 1em;
-      padding-bottom: 5px;
-    }
-    a:visited {
-      color: #333;
-    }
-
-    li {
-      line-height: 1em;
-      display: inline-block;
-    }
-  }
-
-  li.active a {
-    color: #e1704b;
-  }
-  li.active a {
-    color: #e1704b;
-  }
-  li:hover a {
-    color: #e1704b;
   }
 }
 
-.nav_link {
-  display: none;
-}
 
-nav .wrap {
-  text-align: left;
-}
 
 .content {
   min-height: 400px;
@@ -258,22 +302,13 @@ footer {
     a,
     a:link,
     a:visited {
-      display: block;
       background: #ea9b81;
-      color: #ffffff;
-      width: 82px;
-      height: 82px;
-      border-radius: 82px;
+      color: #FFF;
       position: relative;
-      font-size: 2.75em;
-      line-height: 2.2em;
-      transition: background .15s linear;
-      -webkit-transition: background  .15s linear;
-      -moz-transition: background  .15s linear; }
+    }
 
     a:hover {
       background: #d56540;
-      color: #ffffff;
     }
   }
 
@@ -282,11 +317,25 @@ footer {
     text-align: center;
     padding: 2em;
     p {
-      font-size: .8em;
+      font-size: .9em;
       width: 100%;
+    }
+    a {
+      color: #EA9B81;
+
+      &:hover {
+        color: #a34424;
+      }
     }
   }
 
+}
+
+.error-info {
+  padding: 40px 0;
+  h1 {
+    color: #e1704b;
+  }
 }
 
 
