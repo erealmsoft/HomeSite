@@ -3,3 +3,7 @@
  *
  * Created by dang on 2/08/2014
  */
+
+module.exports = {
+    port: 80
+}
