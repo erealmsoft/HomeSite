@@ -17,5 +17,5 @@ exports.sendMessage = function(req, res) {
         return;
     }
 
-    res.json({success: true});
+    res.json({code: 200, success: true});
 };
