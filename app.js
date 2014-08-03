@@ -30,7 +30,7 @@ app.engine('hbs', hbs.express3({
 app.set('view engine', 'hbs');
 app.set('views', config.serverRoot + '/views');
 app.use(express.compress());
-app.use(express.favicon(config.clientRoot + '/images/favicon.ico'));
+app.use(express.favicon(config.clientRoot + '/favicon.ico'));
 app.use(express.static(config.clientRoot));
 
 app.use(express.bodyParser());
