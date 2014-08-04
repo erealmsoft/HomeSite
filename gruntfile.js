@@ -106,6 +106,14 @@ module.exports = function(grunt){
                 ]
             }
         },
+        lesslint: {
+            strict: {
+                options: {
+                    import: 2
+                },
+                src: ['public/stylesheets/app/*.less']
+            }
+        },
         imagemin: {
             dynamic: {
                 files: [{
@@ -123,8 +131,7 @@ module.exports = function(grunt){
                 files: {
                     'public/stylesheets/libs.min.css':
                         [
-                            "public/stylesheets/libs/bootstrap.min.css",
-                            "public/stylesheets/libs/reset.css"
+                            "public/stylesheets/libs/*"
                         ]
                 }
             }
@@ -146,20 +153,19 @@ module.exports = function(grunt){
                     '* <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") + "\\n" %>' +
                     '* <%= pkg.homepage + "\\n" %>' +
                     '* Copyright (c) <%= grunt.template.today("yyyy") %> - <%= pkg.author %> */ <%= "\\n" %>'
-            }
-        },
-        useminPrepare: {
-            html: 'app/layouts/*.hbs',
-            options: {
-                root: 'public',
-                dest: '<%= asset %>'
+            },
+            build: {
+                files: {
+                    'public/javascripts/libs.min.js': ['public/javascripts/libs/*.js', 'public/javascripts/libs/plugins/*.js'] ,
+                    'public/javascripts/app.min.js': ['public/javascripts/erealm.js', 'public/javascripts/client.js', 'public/javascripts/app/*.js']
+                }
             }
         },
         usemin: {
-            html: 'app/layouts/*.hbs',
+            html: 'app/views/layouts/*.hbs',
             options: {
-//                dirs: ['public/js', 'public/js/libs'],
-                dest: '<%= asset %>'
+                root: 'public',
+                dest: 'public'
             }
         },
         watch: {
@@ -226,20 +232,25 @@ module.exports = function(grunt){
 
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
+
+    grunt.loadNpmTasks('grunt-lesslint')
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-open');
+
+
     grunt.loadNpmTasks('grunt-contrib-clean');
+
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-usemin');
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.loadNpmTasks('grunt-nodemon');
-    grunt.loadNpmTasks('grunt-open');
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
