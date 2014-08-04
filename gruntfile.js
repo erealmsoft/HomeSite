@@ -71,14 +71,8 @@ module.exports = function(grunt){
             build: {
                 src: [
                     'build',
-                    'public/images-build', 'public/stylesheets/**/*', "!public/stylesheets/*.min.css",
+                    'public/stylesheets/**/*', "!public/stylesheets/*.min.css",
                     'public/javascripts/app','public/javascripts/*.js', 'public/javascripts/debug', 'public/javascripts/libs', "!public/javascripts/*.min.js"]
-            },
-            web: {
-                src: ['app/controllers/management.java', 'app/controllers/report.java']
-            },
-            api: {
-                src: ['app/controllers/Application.java', 'app/controllers/Secured.java']
             }
         },
         jshint: {
@@ -157,7 +151,7 @@ module.exports = function(grunt){
             build: {
                 files: {
                     'public/javascripts/libs.min.js': ['public/javascripts/libs/*.js', 'public/javascripts/libs/plugins/*.js'] ,
-                    'public/javascripts/app.min.js': ['public/javascripts/erealm.js', 'public/javascripts/client.js', 'public/javascripts/app/*.js']
+                    'public/javascripts/app.min.js': ['public/javascripts/erealm.js', 'public/javascripts/clients.js', 'public/javascripts/app/*.js']
                 }
             }
         },
@@ -256,6 +250,6 @@ module.exports = function(grunt){
     grunt.option('force', true);
 
     grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images']);
-    grunt.registerTask('default', ['lesslint', 'jshint','nodemon:dev','watch','open:dev']);
+    grunt.registerTask('default', ['jshint','nodemon:dev','watch','open:dev']);
     grunt.registerTask('build', ['cssmin', 'less', 'uglify','usemin', 'copy:build', 'clean:build']);
 };
