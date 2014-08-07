@@ -10,5 +10,6 @@ Home Page for  Erealm Info & Tech Sdn Bhd.
 ## TODO List
 * Responsive Design.
 * Integrate with **MongoDB**.
+* Add blog module using [**poet**](https://github.com/jsantell/poet)
 * Logger.
 * Unit test.
