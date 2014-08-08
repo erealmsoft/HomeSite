@@ -13,6 +13,12 @@ module.exports = function(app, express) {
     app.get('/contact', function(req, res){
         res.render('contact');
     });
+    app.get('/about', function(req, res){
+        res.render('about');
+    });
+    app.get('/work', function(req, res){
+        res.render('work');
+    });
 
     app.post('/app/message', require('./api/support').sendMessage);
 
