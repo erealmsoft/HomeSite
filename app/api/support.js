@@ -3,6 +3,7 @@
  *
  * Created by dang on 3/08/2014
  */
+'use strict';
 
 exports.sendMessage = function(req, res) {
     var name     = req.body.name,

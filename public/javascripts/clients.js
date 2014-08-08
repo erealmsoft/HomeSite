@@ -9,6 +9,9 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getWorks: function() {
             return $http.get('/data/works.json');
         },
+        getContacts: function() {
+          return $http.get('/data/contact.json');
+        },
         submitMessage: function(name, email, message) {
             return $http.post('/app/message', {name: name, email:email, message: message});
         }

@@ -12,21 +12,17 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
     $scope.mainTitle = "Say Hello",
     $scope.currentPage = "contact-page";
 
-    var locations = {
-        "malaysia": {
-            latLng: [3.04228,101.64] ,
-            point: [3.04228,101.61906]
-        },
-        "china": {
-            latLng: [34.194825,108.91] ,
-            point: [34.194825,108.88425]
-        }
-    }
 
+    client.getContacts().then(function(response) {
+        $scope.contacts = response.data;
+        $scope.changeMap(response.data[0]);
+    });
 
-    var setMap = function(mapLocation) {
-        var latLng = mapLocation.latLng;
-        var point = mapLocation.point;
+    $scope.changeMap = function(contactInfo) {
+        $scope.activeMap = contactInfo.name;
+
+        var latLng = contactInfo.map.latLng;
+        var point = contactInfo.map.point;
         var latlng = new google.maps.LatLng(latLng[0],latLng[1]);
         var settings = {
             zoom: 15,
@@ -43,7 +39,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
         };
 
         var map = new google.maps.Map(document.getElementById("google_map"), settings);
-        var point = new google.maps.LatLng(point[0],point[1]);
+        var pointInfo = new google.maps.LatLng(point[0],point[1]);
 
         var image = new google.maps.MarkerImage(
             '/images/icon_marker.png',
@@ -73,7 +69,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
             shadow: shadow,
             shape: shape,
             map: map,
-            position: point,
+            position: pointInfo,
             title: "Erealm Info & Tech Sdn Bhd"
         });
 
@@ -95,18 +91,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
         ];
 
         map.setOptions({styles: red_road_styles});
-    }
-
-    $scope.changeMap = function(place) {
-        if (locations[place]) {
-            setMap(locations[place]);
-            $scope.activeMap = place;
-        } else {
-            setMap(locations["malaysia"])
-            $scope.activeMap = "malaysia";
-        }
     };
-
 
     $scope.sendMessage = function() {
         if(!$scope.form.$invalid){
@@ -119,5 +104,4 @@ angular.module('erealm').controller('ContactController', ['$scope','client', fun
             });
         }
     }
-
 }]);

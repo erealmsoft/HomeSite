@@ -7,7 +7,7 @@
 var erealm = angular.module('erealm', ['ui.bootstrap']);
 // window scroll event.
 erealm.directive("scroll", function ($window) {
-    return function(scope, element, attrs) {
+    return function(scope) {
         angular.element($window).bind("scroll", function() {
             scope.showFixedHeader = ($window.document.body.scrollTop > 280);
             scope.$apply();

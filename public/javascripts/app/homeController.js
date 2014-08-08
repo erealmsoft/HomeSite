@@ -15,6 +15,6 @@ angular.module('erealm').controller('HomeController', ['$scope','client', functi
 
     client.getWorks().then(function(response) {
         $scope.works = response.data;
-    })
+    });
 
 }]);

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "malaysia",
+        "location" : "Malaysia Office",
+        "map": {
+            "shortUrl": "http://goo.gl/6QoZt8",
+            "latLng": [3.04228,101.64] ,
+            "point" : [3.04228,101.61906]
+        },
+        "info" : {
+            "address" : "3F-19 IOI Business Park",
+            "region": "Bandar Puchong Jaya",
+            "county": "Selangor",
+            "postcode": "47100",
+            "country": "Malaysia",
+            "contact": "+60 011-2623-4513"
+
+        }
+    },
+    {
+        "name": "china",
+        "location" : "China Office",
+        "map": {
+            "shortUrl": "http://goo.gl/6QoZt8",
+            "latLng": [34.194825,108.90] ,
+            "point" : [34.194825,108.88425]
+        },
+        "info" : {
+            "address" : "Zhangba 1st Rd",
+            "region": "Yanta, Xi'an",
+            "county": "Shaanxi",
+            "postcode": "710065",
+            "country": "china",
+            "contact": "+86 029"
+
+        }
+    }
+]

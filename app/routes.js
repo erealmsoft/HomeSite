@@ -4,6 +4,8 @@
  * Created by dang on 2/08/2014
  */
 
+'use strict';
+
 module.exports = function(app, express) {
     app.get('/', function(req, res){
         res.render('index');
