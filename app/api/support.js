@@ -5,6 +5,9 @@
  */
 'use strict';
 
+var config      = require('../../config'),
+    mailer      = require('../helper/mailer');
+
 exports.sendMessage = function(req, res) {
     var name     = req.body.name,
         email    = req.body.email,
@@ -17,6 +20,9 @@ exports.sendMessage = function(req, res) {
         res.send('There have been validation errors', 400);
         return;
     }
+
+    mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
+    mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
 
     res.json({code: 200, success: true});
 };

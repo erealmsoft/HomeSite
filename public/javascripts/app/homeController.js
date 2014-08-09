@@ -13,6 +13,8 @@ angular.module('erealm').controller('HomeController', ['$scope','client', functi
     $scope.currentPage = "home-page",
     $scope.myInterval = 5000;
 
+    $scope.homeBack = 'back' + Math.floor(Math.random() * 6);
+
     client.getWorks().then(function(response) {
         $scope.works = response.data;
     });

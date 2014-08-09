@@ -22,7 +22,11 @@
         "lru-cache": "~2.5.0",
         "mkdirp": "~0.3.5",
         "express-validator": "~1.0.1",
-        "express-hbs": "~0.7.8"
+        "express-hbs": "~0.7.8",
+        "nodemailer": "^0.6.5",
+        "winston": "^0.7.3",
+        "winston-sendmail": "^1.0.4",
+        "handlebars": "^2.0.0-alpha.4"
     },
     "devDependencies": {
         "grunt": "~0.4.2",

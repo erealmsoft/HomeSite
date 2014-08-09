@@ -21,6 +21,19 @@ module.exports = {
         version: pkg.version,
         description: pkg.description
     },
+    mail: {
+        enable: true,
+        transport: 'SMTP',
+        fromaddress: ' Erealm Info & Tech Sdn Bhd <hello@erealm.com.my>',
+        options: {
+            service: 'Gmail',
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_PASS
+            }
+        }
+    },
+    support: 'ken@erealm.com.my',
     projectName: 'eRealm-Home',
     copyrightName: 'eRealm'
 };

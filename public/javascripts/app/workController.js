@@ -8,7 +8,7 @@ angular.module('erealm').controller('WorkController', ['$scope','client', functi
 
     'use strict';
 
-    $scope.subTitle = "work",
+    $scope.subTitle = "WORK",
         $scope.mainTitle = "what we did",
         $scope.currentPage = "work-page";
 

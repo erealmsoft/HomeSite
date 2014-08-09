@@ -8,7 +8,15 @@ angular.module('erealm').controller('AboutController', ['$scope','client', funct
 
     'use strict';
 
-    $scope.subTitle = "about",
+    $scope.subTitle = "ABOUT",
         $scope.mainTitle = "working with you",
         $scope.currentPage = "about-page";
+
+    client.getFlickrPhotos().then(function(response){
+        var photos = response.data.items
+        angular.forEach(photos, function(item) {
+            item.media.m = item.media.m.replace('_m', '_q');
+        });
+        $scope.photos = photos;
+    });
 }]);

@@ -39,7 +39,7 @@ module.exports = function(grunt){
                     },
                     {
                         expand: true, cwd: 'public/vendor/angular-bootstrap',
-                        src: ['ui-bootstrap.min.js'], dest: "public/javascripts/libs/plugins"
+                        src: ['ui-bootstrap-tpls.min.js'], dest: "public/javascripts/libs/plugins"
                     },
                     {
                         expand: true, cwd: 'public/vendor/font-awesome/fonts',

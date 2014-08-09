@@ -1,0 +1,31 @@
+.flickr-feed{
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+
+  ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    margin-left: -75px;
+    width: 120%;
+    height: 150px;
+    overflow: hidden;
+
+    li {
+      display: inline-block;
+      width: 150px;
+      background: #E1704B;
+
+      img {
+        max-width: 100%;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

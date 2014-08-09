@@ -5,3 +5,13 @@
     <p>We are working on this page, please try again in a couple days.</p>
 </section>
 
+<section id="flickrfeed" class="flickr-feed">
+    <ul>
+        <li ng-repeat="item in photos">
+            <a ng-href="{{angular 'item.link'}}" target="_blank">
+                <img ng-src="{{angular 'item.media.m'}}" ng-alt="{{angular 'item.title'}}" ng-title="{{angular 'item.title'}}">
+            </a>
+        </li>
+    </ul>
+</section>
+

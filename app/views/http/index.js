@@ -7,8 +7,12 @@
 
 'use strict';
 
+var logger = require('../../helper/logger');
+
 exports.http403 = function(req, res){
     res.status(403);
+    logger.warn('Access denial : ', req.originalUrl);
+
     if (req.xhr) {
         res.send({ error: 'Access denial.' });
     }
@@ -20,6 +24,7 @@ exports.http403 = function(req, res){
 
 exports.http404 = function(req, res){
     res.status(404);
+    logger.warn('Resource not found : ', req.originalUrl);
     if (req.xhr) {
         res.send({ error: 'Resource not found.' });
     }
@@ -35,6 +40,7 @@ exports.http500 = function(err, req, res, next){
 //    if (config.errors) {
 //        config.errors.captureError(err);
 //    }
+    logger.error('Something went wrong : ', err);
     if (req.xhr) {
         res.send({ error: 'Something went wrong.' });
     }

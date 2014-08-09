@@ -7,6 +7,13 @@
 'use strict';
 
 module.exports = function(app, express) {
+
+    app.use(function(req, res, next) {
+        var logger = require('./helper/logger');
+        logger.info('Request: ', req.originalUrl);
+        next();
+    });
+
     app.get('/', function(req, res){
         res.render('index');
     });
@@ -18,6 +25,9 @@ module.exports = function(app, express) {
     });
     app.get('/work', function(req, res){
         res.render('work');
+    });
+    app.get('/project', function(req, res){
+        res.render('project');
     });
 
     app.post('/app/message', require('./api/support').sendMessage);
