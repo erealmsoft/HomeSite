@@ -11,21 +11,24 @@
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
 
 ### Setting up the application
-Install all modules
+1. Install all modules
 ```bash
 npm install
 ```
-Before Checkin code: manage front-end library and compress images.
+2. Before Checkin code: manage front-end library and compress images.
 ```bash
 grunt prepare
 ```
-Debug and run application: check code quality.
+3. Debug and run application: check code quality.
 ```bash
 grunt
 ```
-Publish the application: merge and compress **JavaScript** and **CSS**, Clean unused code.
+4. Publish the application: merge and compress **JavaScript** and **CSS**, Clean unused code.
 ```bash
 grunt build
+``` 
+```bash
+sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' forever app.js
 ``` 
 
 ## TODO List
