@@ -11,19 +11,19 @@
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
 
 ### Setting up the application
- 1. Install all modules
+ * Install all modules
 ```bash
 npm install
 ```
- 2. Before Checkin code: manage front-end library and compress images.
+* Before Checkin code: manage front-end library and compress images.
 ```bash
 grunt prepare
 ```
- 3. Debug and run application: check code quality.
+* Debug and run application: check code quality.
 ```bash
 grunt
 ```
- 4. Publish the application: merge and compress **JavaScript** and **CSS**, Clean unused code.
+* Publish the application: merge and compress **JavaScript** and **CSS**, Clean unused code.
 ```bash
 grunt build
 ``` 
