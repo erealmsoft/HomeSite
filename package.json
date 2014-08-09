@@ -26,7 +26,7 @@
         "nodemailer": "~0.7.1",
         "winston": "~0.7.3",
         "winston-sendmail": "~1.0.4",
-        "handlebars": "^2.0.0-alpha.4"
+        "handlebars": "~2.0.0-alpha.4"
     },
     "devDependencies": {
         "grunt": "~0.4.2",
