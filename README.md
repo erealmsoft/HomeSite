@@ -9,6 +9,7 @@ Home Page for  Erealm Info & Tech Sdn Bhd.
 * Using **Bootstrap** to setup UI.
 * Using [**winston**](https://github.com/flatiron/winston) as Logger
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
+
 ### Setting up the application
 * Install all modules
 ```bash
