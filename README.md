@@ -23,7 +23,7 @@ grunt prepare
 ```bash
 grunt
 ```
-* Publish the application: merge and compress **JavaScript** and **CSS**
+* Publish the application: merge and compress **JavaScript** and **CSS**, Clean unused code.
 ```bash
 grunt build
 ``` 
