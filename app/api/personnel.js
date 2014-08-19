@@ -1,33 +1,26 @@
 /**
  * Copyright 2014 eRealm Sdn.Bhd.
  *
- * Created by dang on 3/08/2014
- */
-'use strict';/**
  * Created by root on 8/18/2014.
  */
+'use strict';
 
-var MongoClient = require('mongodb').MongoClient
-, format = require('util').format;
+var mhelper=require('../helper/dbhelper');
 
 exports.readStaff = function(req, res) {
 
-    MongoClient.connect('mongodb://127.0.0.1:27017/erealm', function(err, db) {
-        if(err) throw err;
-        db.createCollection('team', function(err, collection) {
-            console.log("open the table named team!");
+     mhelper.conn_db().open(function(err, db){
+            db.createCollection('team', function(err, collection) {
+                if (err) {
+                    console.log("error during create or open the team table!");
+                    db.close();
+                    throw err;
+                }
 
-           collection.find().toArray(function(err, items) {
-                res.json(items);
-              //  res.json({code: 200, success: true});
+                collection.find().toArray(function (err, items) {
+                    mhelper.queryArray(err, items, db, res);
+                });
             });
-
- //           collection.findOne({'name':'gavin'}, function(err, item) {
- //               console.log("findOne {name:"+item.name+",email:"+item.email+",phone:"+item.phone);
- //               res.json({code: 200, success: true});
- //           });
-        });
-//
     });
 };
 
