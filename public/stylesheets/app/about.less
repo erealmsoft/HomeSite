@@ -1,7 +1,8 @@
 .flickr-feed{
-  position: absolute;
+ // position: absolute;
   bottom: 0;
   overflow: hidden;
+  float:left;
 
   ul{
     list-style: none;
@@ -28,4 +29,55 @@
       }
     }
   }
+}
+.gird .row figure img:hover {
+
+  -webkit-transform:matrix(1.1,0,0,1.1,0,0);
+  transform:matrix(1.1,0,0,1.1,0,0);
+}
+.gird .row figure img{
+
+  transition:transform .5s ease;
+  -webkit-transition:-webkit-transform .5s ease;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+}
+
+.sectio .container h2 {
+    color: @white;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 800px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+.section{
+  background: @green;
+  border: solid 2px @green;
+  width:100%;
+  left:0;
+  float:left;
+  text-align:center;
+  color:@white;
+}
+.gird{
+  margin-top:75px;
+}
+.col-lg-3{
+  width:25%;
+text-align: center;
+  padding-left:65px;
+  margin:0 auto;
+
+}
+.motto{
+  font-family:'Josefin Sans', sans-serif, 'Kalam', cursive;
+  color:@orange;
+  font-style: italic;
+
+
 }

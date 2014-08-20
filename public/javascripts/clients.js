@@ -17,6 +17,10 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         submitMessage: function(name, email, message) {
             return $http.post('/app/message', {name: name, email:email, message: message});
+        },
+        getEmployeeInfo:function(){
+            return $http.get('/data/employee.json');
+
         }
     }
 }]);

@@ -1,17 +1,57 @@
 {{!< master}}
 {{#contentFor "bodyAttr"}}ng-controller="AboutController"{{/contentFor}}
-<section class="wrap error-info">
-    <h1>Coming Soon</h1>
-    <p>We are working on this page, please try again in a couple days.</p>
-</section>
+
+<div class="wrap">
+    <div>
+        <p>
+            We love software,We create custom, web software. We can help you navigate technical complexity to solve
+            your problems and see your ideas evolve into working solutions. We designing and rolling out custom
+            enterprise and web-based solutions across the world.
+        </p>
+        <p>
+            We understand the challenges and opportunities your business faces. And it’s our business to help you
+            succeed, while saving you time and money. We keep technology simple, but offer expert help and resources
+            should you need them.
+        </p>
+    </div>
+
+    <div class="gird">
+        <div class="row">
+            <div class="col-lg-3" ng-repeat="item in person">
+                <figure>
+                    <img class="img-circle img-responsive" ng-click="$parent.isCollapsed = !$parent.isCollapsed"
+                         ng-src="{{angular 'item.photo'}}"/>
+                </figure>
+                <h3 ng-bind="item.first_name"></h3>
+
+                <q ng-bind="item.motto" class="motto"></q>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div collapse="isCollapsed" >
+        <div class="section">
+            <h2>Emma's Overall</h2>
+
+            <q>to be happy every day</q>
+
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><br>
+
+            <p>fhsdfhdfgjdddddddddddddddddddddddddddddddddddddddddddddddhfgxhxsfgggggggbh</p><br>
+
+            <p>rdzgfgflkhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhj</p><br>
+
+        </div>
+    </div>
 
 <section id="flickrfeed" class="flickr-feed">
     <ul>
         <li ng-repeat="item in photos">
             <a ng-href="{{angular 'item.link'}}" target="_blank">
-                <img ng-src="{{angular 'item.media.m'}}" ng-alt="{{angular 'item.title'}}" ng-title="{{angular 'item.title'}}">
+                <img ng-src="{{angular 'item.media.m'}}" ng-alt="{{angular 'item.title'}}"
+                     ng-title="{{angular 'item.title'}}">
             </a>
         </li>
     </ul>
 </section>
-
