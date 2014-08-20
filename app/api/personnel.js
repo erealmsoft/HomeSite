@@ -12,13 +12,20 @@ exports.readStaff = function(req, res) {
      mhelper.conn_db().open(function(err, db){
             db.createCollection('team', function(err, collection) {
                 if (err) {
-                    console.log("error during create or open the team table!");
+                    console.log("error during creating or openniing the team table!");
                     db.close();
                     throw err;
                 }
 
                 collection.find().toArray(function (err, items) {
-                    mhelper.queryArray(err, items, db, res);
+         //         mhelper.queryArray(err, items, db, res);
+                    if(err) {
+                        console.log("error during finding the team table!");
+                        db.close();
+                        throw err;
+                    }
+                    res.json(items);
+                    db.close();
                 });
             });
     });

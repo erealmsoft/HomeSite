@@ -33,11 +33,6 @@ module.exports = {
             }
         }
     },
-    mongodb: {
-        hostaddress:'127.0.0.1',
-        port:27017,
-        dbname:'erealm'
-    },
 
     support: 'ken@erealm.com.my',
     projectName: 'eRealm-Home',
