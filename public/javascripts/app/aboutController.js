@@ -25,5 +25,11 @@ angular.module('erealm').controller('AboutController', ['$scope','client', funct
 
         $scope.person = person;
     });
+     $scope.collapsed=function(ite)
+     {
+         $scope.isCollapsed=!( $scope.isCollapsed);
+         $scope.item=ite;
+     }
+
 
 }]);

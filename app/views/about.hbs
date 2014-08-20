@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-lg-3" ng-repeat="item in person">
                 <figure>
-                    <img class="img-circle img-responsive" ng-click="$parent.isCollapsed = !$parent.isCollapsed"
+                    <img class="img-circle img-responsive" ng-click="collapsed(item)"
                          ng-src="{{angular 'item.photo'}}"/>
                 </figure>
                 <h3 ng-bind="item.first_name"></h3>
@@ -30,20 +30,20 @@
         </div>
     </div>
 </div>
-    <div collapse="isCollapsed" >
-        <div class="section">
-            <h2>Emma's Overall</h2>
+<div collapse="isCollapsed" >
+    <div class="section">
+        <div class="container">
+            <h2 ng-bind="item.first_name"></h2>
 
-            <q>to be happy every day</q>
+            <p ng-bind="item.position"></p>
 
-            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><br>
+            <p ng-bind="item.hobby"></p>
 
-            <p>fhsdfhdfgjdddddddddddddddddddddddddddddddddddddddddddddddhfgxhxsfgggggggbh</p><br>
-
-            <p>rdzgfgflkhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhjhj</p><br>
+            <p ng-bind="item.description"></p>
 
         </div>
     </div>
+</div>
 
 <section id="flickrfeed" class="flickr-feed">
     <ul>
