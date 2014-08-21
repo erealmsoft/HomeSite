@@ -31,7 +31,11 @@
             "county": "Shaanxi",
             "postcode": "710065",
             "country": "china",
+<<<<<<< HEAD
             "contact": "+86 029-68596119"
+=======
+            "contact": "+86 02962596119"
+>>>>>>> b1cf5011edfcb860913fcb0064d9f84e79584faa
         }
     }
 ]

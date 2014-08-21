@@ -6,3 +6,11 @@
 
 
 'use strict';
+
+module.exports = {
+    mongodb: {
+        hostaddress:"192.168.199.254",
+        port: 27017,
+        dbname: 'e-homesite'
+    }
+};
