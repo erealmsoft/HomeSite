@@ -2,7 +2,7 @@
 {{#contentFor "bodyAttr"}}ng-controller="AboutController"{{/contentFor}}
 
 <div class="wrap">
-    <div>
+    <div class="about-center">
         <p>
             We love software,We create custom, web software. We can help you navigate technical complexity to solve
             your problems and see your ideas evolve into working solutions. We designing and rolling out custom
@@ -22,7 +22,7 @@
                     <img class="img-circle img-responsive" ng-click="collapsed(item)"
                          ng-src="{{angular 'item.photo'}}"/>
                 </figure>
-                <h3 ng-bind="item.first_name"></h3>
+                <h3 ng-bind="aitem.first_name"></h3>
 
                 <q ng-bind="item.motto" class="motto"></q>
 
