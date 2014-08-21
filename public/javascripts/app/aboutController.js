@@ -4,7 +4,7 @@
  * Created by dang on 8/08/2014
  */
 
-angular.module('erealm').controller('AboutController', ['$scope','client', function($scope, client) {
+angular.module('erealm').controller('AboutController', ['$scope','client','$translate',function($scope, client,$translate) {
 
     'use strict';
 
@@ -30,6 +30,10 @@ angular.module('erealm').controller('AboutController', ['$scope','client', funct
          $scope.isCollapsed=!( $scope.isCollapsed);
          $scope.item=ite;
      }
+     
+         $scope.changeLanguage = function (key) {
+        $translate.uses(key);
+    };
 
 
 }]);
