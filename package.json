@@ -16,9 +16,6 @@
         "email":"ken@ereaml.com.my"
     },
     "license": "",
-    "scripts": {
-        "postinstall": "node node_modules/grunt-cli/bin/grunt build"
-    },
     "dependencies": {
         "lodash": "~2.4.1",
         "express": "~3.4.8",
