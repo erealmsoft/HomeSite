@@ -1,16 +1,21 @@
+
+@white: #ffffff;
+@orange:#e1704b;
+@green:#39A9A4;
+
 html {
   height: 100%;
   background: #ca5c38;
 }
-
 body {
-  background: #ffffff;
+  background:@white;
   color: #808080;
+  font-family:'Inconsolata', 'Raleway', sans-serif;
+  font-size:2em;
 }
 .wrap {
   margin: 0 auto;
-  text-align: center;
-  width: 90%;
+  width: 70%;
   max-width: 1140px;
   position: relative;
 }
@@ -25,7 +30,7 @@ a {
 }
 
 a.link:before {
-  background: url('../img/icon_link.png') no-repeat;
+  background: url('../images/') no-repeat;
   display: inline-block;
   content: "";
   width: 18px;
@@ -38,6 +43,8 @@ a:visited { color: #e1704b; }
 a:hover {
   color: #333;
   text-decoration: none;
+
+
 }
 
 a:focus { outline: thin dotted; }
@@ -51,22 +58,23 @@ h1 {
   margin: 0 0 .5em 0;
   color: #333333;
   font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 300;
   letter-spacing: .05em;
   width: 100%;
   display: inline-block;
 }
 h2 {
-  font-size: 2.4em;
-  text-transform: uppercase;
+  font-size: 2em;
   letter-spacing: .05em;
 }
 
 
 h3 {
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 10 0 1em 0;
+  font-family:'Josefin Sans', sans-serif, 'Kalam', cursive;
+  color:@orange;
+  font-weight:bolder;
 }
 
 h4 {
@@ -101,6 +109,20 @@ textarea.error, input.error {
   &::-moz-placeholder { color:#FFF; } /* firefox 19+ */
   &:-ms-input-placeholder { color:#FFF; } /* ie */
   &:-moz-placeholder { color:#FFF; }
+}
+
+.btn-submit {
+  color: #fff;
+  border:solid 1px #fff;
+  background: transparent;
+  border-radius: 0;
+  margin:10px;
+  padding:10px 40px;
+  -webkit-transition:background 500ms linear;
+  &:hover {
+    color: #FFF;
+    background:#3B4250;
+  }
 }
 
 .circle_icon {
@@ -159,7 +181,7 @@ header {
     margin-left: 15%;
 
     span {
-      font-family: 'Droid Sans Mono', ;
+      font-family: 'Droid Sans Mono';
       color: #999999;
       display: block;
       font-size: 1.2em;
@@ -169,8 +191,8 @@ header {
     }
 
     h1 {
-      font-family: 'Cantarell', sans-serif;
-      font-size: 4em;
+      font-family:'Raleway', sans-serif;
+      font-size: 3em;
       margin-bottom: 0;
       width: 100%;
     }
@@ -192,7 +214,8 @@ header {
       position: absolute;
       top: 0;
       right: 0;
-      border: 0;
+      border:0;
+
     }
   }
 }
@@ -298,11 +321,12 @@ header {
 .content {
   min-height: 400px;
   position: relative;
+  background-color:#F1F0E8 ;
 }
 
 footer {
-  background: #e1704b;
-  color: #ffffff;
+  background:@orange;
+  color: @white;
   padding-top: 2.5em;
   clear: both;
   margin-top: 0;

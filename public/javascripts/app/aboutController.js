@@ -8,15 +8,28 @@ angular.module('erealm').controller('AboutController', ['$scope','client', funct
 
     'use strict';
 
-    $scope.subTitle = "ABOUT",
-        $scope.mainTitle = "working with you",
+    $scope.subTitle = "ABOUT";
+        $scope.mainTitle = "working with you";
         $scope.currentPage = "about-page";
+        $scope.isCollapsed = true;
 
     client.getFlickrPhotos().then(function(response){
-        var photos = response.data.items
+        var photos = response.data.items;
         angular.forEach(photos, function(item) {
             item.media.m = item.media.m.replace('_m', '_q');
         });
         $scope.photos = photos;
     });
+    client.getEmployeeInfo().then(function(response){
+        var person = response.data;
+
+        $scope.person = person;
+    });
+     $scope.collapsed=function(ite)
+     {
+         $scope.isCollapsed=!( $scope.isCollapsed);
+         $scope.item=ite;
+     }
+
+
 }]);
