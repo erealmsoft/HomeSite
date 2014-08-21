@@ -4,8 +4,8 @@
 
 'use strict';
 
-var config = require("../../config"),  //配置文件
-    mongodb = require('mongodb');
+var config = require("../../config"),   //request the config files.
+    mongodb = require('mongodb');       //connect to the mongodb driver.
 
 exports.conn_db = function(){
 
