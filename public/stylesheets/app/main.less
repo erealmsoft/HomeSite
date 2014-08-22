@@ -18,8 +18,46 @@ body {
   width: 70%;
   max-width: 1140px;
   position: relative;
-  text-align:center;
+  text-align: center;
+
+  .home-box {
+    color: @white;
+    width: 50%;
+    padding: 2.2em 2.2em 2.2em 2.5em;
+    text-align: left;
+
+  }
+
+  .about-box {
+
+    text-align: left;
+    width: 65%;
+    background: @green;
+    color: @white;
+    padding: 20px;
+    margin: 0 auto;
+    .about-center {
+
+      -webkit-column-count: 2;
+      -webkit-column-gap: 1.5em;
+
+    }
+  }
+  .btn-submit {
+    color: #fff;
+    border: solid 1px #fff;
+    background: transparent;
+    border-radius: 0;
+    margin: 10px;
+    padding: 10px 40px;
+    -webkit-transition: background 500ms linear;
+    &:hover {
+      color: #FFF;
+      background: #3B4250;
+    }
+  }
 }
+
 ::-moz-selection { background: #3DA9A4; color: #fff; text-shadow: none; }
 ::selection { background: #3DA9A4; color: #fff; text-shadow: none; }
 a {
@@ -64,6 +102,10 @@ h1 {
   width: 100%;
   display: inline-block;
 }
+.about-h1{
+  color:@white;
+}
+
 h2 {
   font-size: 2em;
   letter-spacing: .05em;
@@ -112,19 +154,7 @@ textarea.error, input.error {
   &:-moz-placeholder { color:#FFF; }
 }
 
-.btn-submit {
-  color: #fff;
-  border:solid 1px #fff;
-  background: transparent;
-  border-radius: 0;
-  margin:10px;
-  padding:10px 40px;
-  -webkit-transition:background 500ms linear;
-  &:hover {
-    color: #FFF;
-    background:#3B4250;
-  }
-}
+
 
 .circle_icon {
   background: #75c3bf;
