@@ -32,7 +32,7 @@ module.exports = function(app, express) {
 
     app.post('/app/message', require('./api/support').sendMessage);
 
-    app.get('/language/:language', require('./api/language').readMsg);
+    app.get('/app/language', require('./api/language').readMsg);
 
     app.get('/app/personnel',require('./api/personnel').readStaff);
     //error handler

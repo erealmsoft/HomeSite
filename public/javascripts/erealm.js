@@ -7,13 +7,11 @@
 var erealm = angular.module('erealm', ['ui.bootstrap','pascalprecht.translate','ngCookies']);
 erealm.config(['$translateProvider', function($translateProvider){
 
-    $translateProvider.useUrlLoader('test/en');
+    $translateProvider.useUrlLoader('/app/language');
     // Tell the module what language to use by default
     $translateProvider.preferredLanguage('en');
     // Tell the module to store the language in the cookie
     $translateProvider.useCookieStorage();
-
-
 }]);
 
 

@@ -9,9 +9,9 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
     'use strict';
 
     $scope.subTitle = "ABOUT";
-        $scope.mainTitle = "working with you";
-        $scope.currentPage = "about-page";
-        $scope.isCollapsed = true;
+    $scope.mainTitle = "working with you";
+    $scope.currentPage = "about-page";
+    $scope.isCollapsed = true;
 
     client.getFlickrPhotos().then(function(response){
         var photos = response.data.items;
@@ -25,13 +25,13 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
 
         $scope.person = person;
     });
-     $scope.collapsed=function(ite)
-     {
-         $scope.isCollapsed=!( $scope.isCollapsed);
-         $scope.item=ite;
-     }
-     
-         $scope.changeLanguage = function (key) {
+    $scope.collapsed=function(ite)
+    {
+        $scope.isCollapsed=!( $scope.isCollapsed);
+        $scope.item=ite;
+    }
+
+    $scope.changeLanguage = function (key) {
         $translate.uses(key);
     };
 

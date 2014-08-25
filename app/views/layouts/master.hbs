@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/stylesheets/libs/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="/stylesheets/libs/font-awesome.min.css" type="text/css"/>
     <link rel="stylesheet" href="/stylesheets/libs/reset.css" type="text/css"/>
-    <link rel="stylesheet" href="/stylesheets/libs/right.css" type="text/css"/>
     <!-- endbuild -->
     <!-- build:css /stylesheets/app.min.css -->
     <link rel="stylesheet" href="/stylesheets/app.less" type="text/less"/>
@@ -22,17 +21,20 @@
 <header role="banner">
     <div class="wrap">
         <div class="logo-mark"><a href="/"></a></div>
-        <section class="intro">
+        <section class="intro ">
             <span translate="subtittle"></span>
             <h1 translate="maintittle"></h1>
-            <a class="pos_right" href="#" ng-click="changeLanguage('cn')">简体中文</a>&nbsp
-            <a class="pos_right" href="#" ng-click="changeLanguage('en')">English</a>
+
         </section>
     </div>
     <a href="https://github.com/Erealm-Tech" class="git-fock" target="_blank">
         <img src="/images/forkme_right_orange.png" alt="fork me on github">
     </a>
 </header>
+ <span class="pos_right">
+            <a  href="#" ng-click="changeLanguage('cn')">简体中文</a>|
+            <a  href="#" ng-click="changeLanguage('en')">English</a>
+ </span>
 <div class="nav_container" >
     <nav ng-class="{fixed: showFixedHeader}">
         <div class="wrap">
@@ -70,7 +72,6 @@
 <script src="/javascripts/libs/plugins/angular-cookies.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-translate.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-translate-loader-url.min.js"></script>
-
 <script src="/javascripts/libs/plugins/angular-translate-storage-cookie.min.js"></script>
 <script src="/javascripts/libs/plugins/storage-local.js"></script>
 <script src="/javascripts/libs/jquery.min.js"></script>

@@ -7,7 +7,7 @@ exports.readMsg = function(req,res){
 
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
-    var language = req.params.language;
+    var language =req.query.lang;
 
     <!--query the content of collection -->
     db.open(function(err,db){
