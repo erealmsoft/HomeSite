@@ -31,6 +31,9 @@ module.exports = function(app, express) {
     });
 
     app.post('/app/message', require('./api/support').sendMessage);
+
+    app.get('/app/language', require('./api/language').readMsg);
+
     app.get('/app/personnel',require('./api/personnel').readStaff);
     //error handler
     app.use(require('./views/http/index').http500);
