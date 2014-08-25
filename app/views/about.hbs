@@ -21,10 +21,12 @@
     <div class="gird">
         <ul class="row">
             <li class="col-lg-3 col" ng-repeat="item in person">
-                <figure>
-                    <img class="img-circle img-responsive" ng-click="collapsed(item)"
-                         ng-src="{{angular 'item.photo'}}"/>
-                </figure>
+                <a ng-href="#{{angular 'item.first_name'}}">
+                    <figure>
+                        <img class="img-circle img-responsive" ng-click="collapsed(item)"
+                             ng-src="{{angular 'item.photo'}}"/>
+                    </figure>
+                </a>
                 <h3 ng-bind="item.first_name"></h3>
 
                 <q ng-bind="item.motto" class="motto"></q>
@@ -33,7 +35,7 @@
         </ul>
     </div>
 </div>
-<div collapse="isCollapsed" >
+<div id="{{angular 'item.first_name'}}" collapse="isCollapsed" >
     <div class="section">
         <div class="container">
             <h2 ng-bind="item.first_name"></h2>

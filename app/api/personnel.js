@@ -24,6 +24,7 @@ exports.readStaff = function(req, res) {
                         db.close();
                         throw err;
                     }
+                    items.sort(function(va,vb){return va.number - vb.number});
                     res.json(items);
                     db.close();
                 });

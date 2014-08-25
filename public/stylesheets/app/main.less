@@ -2,6 +2,7 @@
 @white: #ffffff;
 @orange:#e1704b;
 @green:#39A9A4;
+@grey:#808080;
 
 html {
   height: 100%;
@@ -44,18 +45,25 @@ body {
     }
   }
   .btn-submit {
-    color: #fff;
-    border: solid 1px #fff;
-    background: transparent;
     border-radius: 0;
     margin: 10px;
     padding: 10px 40px;
     -webkit-transition: background 500ms linear;
+    background: transparent;
     &:hover {
       color: #FFF;
       background: #3B4250;
     }
   }
+    .btn-submit.home-submit{
+
+      border: solid 1px @white;
+    }
+
+    .btn-submit.contact-submit{
+      border:solid 1px @grey;
+    }
+
 }
 
 ::-moz-selection { background: #3DA9A4; color: #fff; text-shadow: none; }
@@ -80,7 +88,7 @@ a.link:before {
 a:visited { color: #e1704b; }
 
 a:hover {
-  color: #333;
+  color: @white;
   text-decoration: none;
 
 

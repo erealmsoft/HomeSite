@@ -33,9 +33,9 @@
 </div>
 <div class="send-message">
     <div class="wrap">
-        <h2>Send Us a message</h2>
+        <h2 class="contact-center">Send Us a message</h2>
         <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
-            <p class="info" ng-bind="errorMessage|| 'Please make sure all fields are fill out correctly.'"></p>
+            <p class="info contact-center" ng-bind="errorMessage|| 'Please make sure all fields are fill out correctly.'"></p>
             <fieldset>
                 <div class="form-group left">
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
@@ -44,7 +44,7 @@
                 <div class="form-group right">
                     <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" placeholder="Your name"><br>
                     <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" placeholder="Your email address">
-                    <button class="btn btn-submit contact-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">Send Message</button>
+                    <button class="btn btn-submit contact-submit contact-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">Send Message</button>
                 </div>
             </fieldset>
         </form>
