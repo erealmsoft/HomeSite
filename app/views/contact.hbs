@@ -35,7 +35,7 @@
     <div class="wrap">
         <h2 class="contact-center" translate="send.us"></h2>
         <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
-            <p class="info contact-center" translate="make.sure"></p>
+            <p class="info contact-center" ng-bind="errorMessage" translate="make.sure"></p>
             <fieldset>
                 <div class="form-group left">
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
