@@ -3,6 +3,7 @@
 @orange:#e1704b;
 @green:#39A9A4;
 @grey:#808080;
+@black:#333;
 
 html {
   height: 100%;
@@ -45,11 +46,14 @@ body {
     }
   }
   .btn-submit {
-    border-radius: 0;
-    margin: 10px;
-    padding: 10px 40px;
-    -webkit-transition: background 500ms linear;
+    color: #fff;
+    border:solid 1px #fff;
     background: transparent;
+    border-radius: 0;
+    margin:10px;
+    padding:10px 40px;
+    width:170px;
+    -webkit-transition:background 500ms linear;
     &:hover {
       color: #FFF;
       background: #3B4250;
@@ -85,7 +89,7 @@ a.link:before {
   margin-right: .5em;
 }
 
-a:visited { color: #e1704b; }
+a:visited { color:@orange; }
 
 a:hover {
   color: @white;
@@ -372,13 +376,14 @@ footer {
 
   .contact {
     ul {
-      margin-bottom: 3em;
+      margin: 0 0 3em 0!important;
+      padding: 0!important;
     }
 
     p {
       width: 50%;
       margin: 0 auto;
-      margin-bottom: 3em;
+      margin-bottom: 3em!important;
     }
   }
 
@@ -387,6 +392,7 @@ footer {
     display: inline-block;
     margin-left: 1.5em;
     margin-right: 1.5em;
+    width:82px;
 
     a,
     a:link,

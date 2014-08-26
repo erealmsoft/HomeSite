@@ -117,8 +117,8 @@
     vertical-align: top;
   }
   .illustration {
-    width: 135px;
-    height: 135px;
+    width: 115px;
+    height: 115px;
     background: #ffffff;
     display: inline-block;
     border-radius: 50%;
@@ -145,4 +145,176 @@
   font-weight: 700;
   color: #333333;
   padding: 2.5em 1em;
+}
+
+
+/* Smartphones ----------- */
+@media only screen
+and (max-width: 586px)
+and (min-width: 0) {
+
+  header {
+    margin-bottom: 0;
+  }
+
+  .nav_container nav .sub-logo-mark {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .logo-mark {
+    display: none;
+  }
+  header img{
+    display:none;
+  }
+  .wrap {
+    width: 100%;
+  }
+
+  header #intro {
+    width: 90%;
+    margin: 2em 0 2em 0;
+    padding: 0 1em;
+    text-align: center;
+  }
+
+  .nav_container {
+    height: 0em;
+  }
+
+  nav {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    background-repeat: no-repeat;
+    background-size: 29px 59px;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    margin: 1.3em 1em 0 0;
+    width: 29px;
+    height: 21px;
+  }
+
+  nav ul {
+    position: relative;
+    float: right;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    display: none;
+  }
+
+  nav li {
+    display: block;
+    line-height: 1.6em;
+    text-align: right;
+  }
+  nav li {
+    display: block;
+    line-height: 1.6em;
+    text-align: right;
+  }
+
+  nav li.active a {
+    border-bottom: 0;
+  }
+
+  nav li:hover a {
+    border-bottom: 0;
+  }
+
+  nav ul#navslide{
+    text-transform:uppercase;
+    font-weight:bold;
+    display:none;
+  }
+
+  #pageslide{
+    diaplay:block;
+    position:fixed;
+    top:0;
+    height:100%;
+    z-index: 999999;
+    background-color:@black;
+    color:@white;
+  }
+  header
+  {
+    padding:1em 0;
+    .intro {
+      width: 90%;
+      margin: 4em 0 0 0;
+      padding: 0 1em;
+      text-align: center;
+      h1 {
+        line-height:1em;
+        width:100%;
+        font-size:30px;
+      }
+    }
+  }
+  .what-we-are{
+    padding:0;
+    background-image:none!important;
+    background-color: @green;
+  }
+  .wrap .home-box {
+    width: 100%;
+    display: block;
+    padding:0;
+    text-align:center;
+    h2{
+      font-size:1.5em;
+    }
+
+  }
+
+  .what-we-love .wrap ul li
+  {
+
+    width:80%;
+    margin-right:15%;
+    p{
+      width:100%;
+
+    }
+
+
+  }
+
+  footer{
+    padding-top: 1em;
+
+    h2{
+      font-size:1.3em;
+    }
+   .contact p{
+      width:90%;
+    }
+    ul li{
+      margin-left:.2em;
+      margin-right:.2em;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width:480px) and (max-width:767px)
+{
+  .logo-mark
+  {
+    float: none;
+    width: 90px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
 }
