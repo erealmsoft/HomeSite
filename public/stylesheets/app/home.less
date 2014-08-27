@@ -148,131 +148,8 @@
   padding: 2.5em 1em;
 }
 
-
-/* Smartphones ----------- */
-@media only screen
-and (max-width: 600px)
-and (min-width: 0)
+@media only screen and (max-width: 580px) and (min-width: 0)
 {
-  .nav_container nav .sub-logo-mark
-  {
-    display: inline-block;
-    margin-left: 1em;
-  }
-  .nav_container
-  {
-    height: 0em;
-  }
-
-  nav
-  {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    width: 100%;
-  }
-
-  .nav-link
-  {
-    background-repeat: no-repeat;
-    background-size: 29px 59px;
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    margin: 1.3em 1em 0 0;
-    width: 29px;
-    height: 21px;
-  }
-
-  nav ul
-  {
-    position: relative;
-    float: right;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    display: none;
-  }
-
-  nav li
-  {
-    display: block;
-    line-height: 1.6em;
-    text-align: right;
-  }
-  nav li
-  {
-    display: block;
-    line-height: 1.6em;
-    text-align: right;
-  }
-
-  nav li.active a
-  {
-    border-bottom: 0;
-  }
-
-  nav li:hover a
-  {
-    border-bottom: 0;
-  }
-
-  nav ul#navslide
-  {
-    text-transform:uppercase;
-    font-weight:bold;
-    display:none;
-  }
-
-  #pageslide
-  {
-    diaplay:block;
-    position:fixed;
-    top:0;
-    height:100%;
-    z-index: 999999;
-    background-color:@black;
-    color:@white;
-  }
-
-  header
-  {
-    padding: 1em 0;
-    margin-bottom: 0;
-    img
-    {
-      display: none;
-    }
-    .wrap
-    {
-      width:100%;
-      .logo-mark
-      {
-        display: none;
-      }
-      .intro
-      {
-        padding: 0 1em;
-        text-align: center;
-        margin-left:1%;
-        span
-        {
-          margin-top: 3em;
-          font-size:20px;
-        }
-        h1
-        {
-          line-height: 1em;
-          width: 100%;
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  .pos_right
-  {
-    display: none;
-  }
-
   .what-we-are
   {
     padding: 0;
@@ -294,7 +171,6 @@ and (min-width: 0)
       }
     }
   }
-
   .what-we-love .wrap
   {
     width: 100%;
@@ -308,160 +184,9 @@ and (min-width: 0)
       }
     }
   }
-
-  footer
-  {
-    padding-top: 1em;
-    h2
-    {
-      font-size:1.3em;
-    }
-    .contact p
-    {
-      width:90%;
-    }
-    ul li
-    {
-      margin-left:.2em;
-      margin-right:.2em;
-    }
-  }
 }
-
-@media only screen and (min-width:520px) and (max-width:767px)
+@media only screen and (max-width: 1402px)and (min-width: 1272px)
 {
-  .pos_right
-  {
-    display: none;
-  }
-  header .logo-mark
-  {
-    float: none;
-    width: 80px;
-    height:80px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
-  }
-  .wrap
-  {
-    width:100%;
-    .intro
-    {
-      margin: 0;
-      text-align: center;
-      h1
-      {
-        font-size: 2em;
-      }
-    }
-    .home-box
-    {
-      width: 90%;
-      display: block;
-      padding:0;
-      text-align:center;
-      h2
-      {
-        font-size:1.5em;
-      }
-    }
-  }
-  .nav_container nav
-  {
-    text-align: center;
-  }
-
-  .what-we-love .wrap
-  {
-    width: 100%;
-    ul li
-    {
-      width: 43%;
-      margin-right: 5%;
-      p
-      {
-        width: 100%;
-      }
-    }
-  }
-  footer .contact p
-  {
-    width:80%;
-  }
-}
-
-@media only screen and (max-width:1271px) and (min-width: 768px)
-{
-  header
-  {
-    padding-bottom: 1em;
-  }
-  .pos_right
-  {
-    display: none;
-  }
-
-  .wrap
-  {
-    width:100%;
-    .intro h1
-    {
-      font-size: 2em;
-    }
-    .home-box
-    {
-      width: 60%;
-      display: block;
-      padding:0;
-      text-align:center;
-      margin:0 auto;
-      h2
-      {
-        font-size:1.5em;
-      }
-    }
-  }
-  .what-we-love .wrap
-  {
-    width: 100%;
-    ul li
-    {
-      width: 43%;
-      margin-right: 5%;
-      p
-      {
-        width: 100%;
-      }
-    }
-  }
-  footer .contact
-  {
-    p
-    {
-      width: 90%;
-    }
-    h2
-    {
-      font-size:1.5em;
-    }
-  }
-}
-@media only screen and (max-width: 1402px)and (min-width: 769px)
-{
-  .wrap .home-box
-  {
-    width: 70%;
-    display: block;
-    padding:0;
-    text-align:center;
-    h2
-    {
-      font-size:1.5em;
-    }
-
-  }
   .what-we-love .wrap
   {
     width: 100%;
@@ -476,4 +201,36 @@ and (min-width: 0)
     }
   }
 
+}
+@media only screen and (max-width:1271px) and (min-width: 768px)
+{
+  .what-we-love .wrap
+  {
+    width: 100%;
+    ul li
+    {
+      width: 43%;
+      margin-right: 5%;
+      p
+      {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (min-width:581px) and (max-width:767px)
+{
+  .what-we-love .wrap
+  {
+    width: 100%;
+    ul li
+    {
+      width: 43%;
+      margin-right: 5%;
+      p
+      {
+        width: 100%;
+      }
+    }
+  }
 }
