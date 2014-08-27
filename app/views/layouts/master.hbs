@@ -21,7 +21,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway|Inconsolata|Josefin+Sans|Kalam' rel='stylesheet' type='text/css'>
 </head>
 <body {{{block "bodyAttr"}}} scroll>
-<header role="banner">
+<header role="banner" ng-click="$spMenu.hide()">
     <div class="wrap">
         <div class="logo-mark"><a href="/"></a></div>
         <section class="intro">
@@ -33,7 +33,7 @@
         <img src="/images/forkme_right_orange.png" alt="fork me on github">
     </a>
 </header>
- <span class="pos_right">
+<span class="pos_right">
     <div class="btn-group">
         <button type="button" class="btn btn-default " translate="language"></button>
         <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown">
@@ -51,7 +51,7 @@
     <nav ng-class="{fixed: showFixedHeader}">
         <div class="wrap">
             <div class="sub-logo-mark"><a href="/"></a></div>
-            <div class="nav-ink"><a href="#navslide">Menu</a></div>
+            <div class="nav-link fa fa-bars" ng-click="$spMenu.toggle()"></div>
             <ul id="navslide">
                 <li ng-class="{active: currentPage == 'home-page'}"><a href="/" translate="home"></a></li>
                 <li ng-class="{active: currentPage == 'work-page'}"><a href="/work" translate="work"></a></li>
@@ -61,7 +61,15 @@
         </div>
     </nav>
 </div>
-<div class="content">
+<div id="sp-nav" class="page-menu-slide">
+    <ul class="nav-slide">
+        <li><a href="/" translate="home"></a></li>
+        <li><a href="/work" translate="work"></a></li>
+        <li><a href="/about" translate="about"></a></li>
+        <li><a href="/contact" translate="contact"></a></li>
+    </ul>
+</div>
+<div class="content" ng-click="$spMenu.hide()">
     {{{body}}}
 </div>
 <footer role="contentinfo">
@@ -81,13 +89,14 @@
 </footer>
 <!-- build:js /javascripts/libs.min.js -->
 <script src="/javascripts/libs/angular.min.js"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-cookies.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-translate.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-translate-loader-url.min.js"></script>
 <script src="/javascripts/libs/plugins/angular-translate-storage-cookie.min.js"></script>
 <script src="/javascripts/libs/plugins/storage-local.js"></script>
-<script src="/javascripts/libs/jquery.min.js"></script>
 <script src="/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
+<script src="/javascripts/libs/plugins/ng-mobile-menu.min.js"></script>
 <script src="/javascripts/libs/plugins/bootstrap.min.js"></script>
 <script src="http://127.0.0.1:35729/livereload.js" cache="false"></script>
 <!-- endbuild -->

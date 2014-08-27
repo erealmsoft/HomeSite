@@ -4,7 +4,7 @@
  * Created by dang on 2/08/2014
  */
 
-var erealm = angular.module('erealm', ['ui.bootstrap','pascalprecht.translate','ngCookies']);
+var erealm = angular.module('erealm', ['ui.bootstrap','pascalprecht.translate','ngCookies','shoppinpal.mobile-menu']);
 erealm.config(['$translateProvider', function($translateProvider){
 
     $translateProvider.useUrlLoader('/app/language');
