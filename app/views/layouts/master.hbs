@@ -34,8 +34,18 @@
     </a>
 </header>
  <span class="pos_right">
-            <a  href="#" ng-click="changeLanguage('cn')">简体中文</a>|
-            <a  href="#" ng-click="changeLanguage('en')">English</a>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default " translate="language"></button>
+        <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a  href="#" ng-click="changeLanguage('cn')">简体中文</a></li>
+            <li class="divider"></li>
+            <li><a  href="#" ng-click="changeLanguage('en')">English</a></li>
+        </ul>
+    </div>
  </span>
 <div class="nav_container" >
     <nav ng-class="{fixed: showFixedHeader}">
@@ -47,7 +57,7 @@
                 <li ng-class="{active: currentPage == 'work-page'}"><a href="/work" translate="work"></a></li>
                 <li ng-class="{active: currentPage == 'about-page'}"><a href="/about" translate="about"></a></li>
                 <li ng-class="{active: currentPage == 'contact-page'}"><a href="/contact" translate="contact"></a></li>
-           </div>
+           </ul>
         </div>
     </nav>
 </div>
@@ -78,6 +88,7 @@
 <script src="/javascripts/libs/plugins/storage-local.js"></script>
 <script src="/javascripts/libs/jquery.min.js"></script>
 <script src="/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
+<script src="/javascripts/libs/plugins/bootstrap.min.js"></script>
 <script src="http://127.0.0.1:35729/livereload.js" cache="false"></script>
 <!-- endbuild -->
 <!-- build:js /javascripts/app.min.js -->
