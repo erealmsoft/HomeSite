@@ -39,7 +39,7 @@
     margin-bottom: 0;
   }
   .row figure img{
-
+    text-align: center;
     transition:transform .5s ease;
     -webkit-transition:-webkit-transform .5s ease;
     width: 200px;
@@ -60,11 +60,10 @@
     }
   }
 
-  .col {
-    width:25%;
+  li.col {
     height: 500px;
+    padding-left: 65px;
     text-align: center;
-    padding-left:65px;
     margin:0 auto;
     cursor:pointer;
 
@@ -115,8 +114,17 @@ h1{
 and (max-width: 586px)
 and (min-width: 0)
 {
+  header
+  {
+    .intro
+    {
+      width: 100%;
+      text-align:center;
+    }
+  }
   .wrap
   {
+    width:100%;
     .about-box
     {
       width:100%;
@@ -134,11 +142,12 @@ and (min-width: 0)
     .gird
     {
       width: 100%;
-      .col
+      li.col
       {
         width: 80%;
         height: 350px;
         margin:0 auto;
+        padding-left:0;
       }
 
     }
