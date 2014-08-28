@@ -1,12 +1,12 @@
 /**
  * Created by root on 8/27/2014.
  */
+'use strict';
 
 exports.readCollections = function(req,res){
 
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
-    <!--query the content of collection -->
     db.open(function(err,db){
 
         if(err){
@@ -45,7 +45,6 @@ exports.readCollections = function(req,res){
 //            console.log("the db-connection is closed.");
 //        });
     });
-
 };
 
 
