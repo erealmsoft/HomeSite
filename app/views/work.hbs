@@ -1,12 +1,12 @@
 {{!< master}}
 {{#contentFor "bodyAttr"}}ng-controller="WorkController"{{/contentFor}}
-<div class="wrap">
+<div class="work-wrap">
   <div class="work">
     <ul class="work_row">
-        <li class="col-lg-4 col" ng-repeat="pro in project">
+        <li class="col-lg-4" ng-repeat="pro in project">
             <a ng-href="#{{angular 'pro.proj_name'}}">
                 <figure>
-                    <img class="img-rounded img-responsive" ng-src="{{angular 'pro.cover'}}"/>
+                    <img ng-src="{{angular 'pro.cover'}}"/>
                 </figure>
             </a>
             <h3 ng-bind="pro.proj_name"></h3>
