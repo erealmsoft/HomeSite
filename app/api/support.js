@@ -7,6 +7,17 @@
 
 var config      = require('../../config'),
     mailer      = require('../helper/mailer');
+function parseCookies (request) {
+    var list = {},
+        rc = request.headers.cookie;
+
+    rc && rc.split(';').forEach(function( cookie ) {
+        var parts = cookie.split('=');
+        list[parts.shift().trim()] = unescape(parts.join('='));
+    });
+
+    return list;
+}
 
 exports.sendMessage = function(req, res) {
     var name     = req.body.name,
@@ -21,9 +32,16 @@ exports.sendMessage = function(req, res) {
         return;
     }
 
-    mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
-    mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
-
+    var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
+    console.log(storagekey);
+    if(storagekey == '"cn"') {
+        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced_cn', {fullName: name});
+        mailer.sendTemplate(config.support, 'newContactMessage_cn', {name: name, email: email, message: message});
+    }
+    else{
+        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
+        mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
+    }
     //save the email message into mongodb
     require('./saveEmail').saveMessage({name: name, email: email, message: message});
 

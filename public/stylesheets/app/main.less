@@ -4,6 +4,7 @@
 @green:#39A9A4;
 @grey:#808080;
 @black:#333;
+@content:#F1F0E8;
 
 html {
   height: 100%;
@@ -21,6 +22,7 @@ body {
   max-width: 1140px;
   position: relative;
   text-align: center;
+  overflow: hidden;
 
   .home-box {
     color: @white;
@@ -171,11 +173,11 @@ textarea.error, input.error {
 .circle_icon {
   background: #75c3bf;
   color: #FFF;
-  width: 82px;
-  height: 82px;
-  line-height: 82px;
-  font-size: 3em;
-  border-radius: 41px;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  font-size: 2em;
+  border-radius: 50%;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -313,8 +315,7 @@ header {
 
     ul {
       line-height: 4.7em;
-      position: absolute;
-      right: 0;
+      float:right;
       display: inline-block;
       font-size: .9em;
       letter-spacing: .1em;
@@ -364,7 +365,7 @@ header {
 .content {
   min-height: 400px;
   position: relative;
-  background-color:#F1F0E8 ;
+  background-color: @content;
 }
 
 footer {

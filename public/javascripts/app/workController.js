@@ -12,6 +12,11 @@ angular.module('erealm').controller('WorkController', ['$scope','client','$trans
         $scope.mainTitle = "what we did",
         $scope.currentPage = "work-page";
 
+    client.getProjectsInfo().then(function(response){
+        var project = response.data;
+        $scope.project = project;
+    });
+
     $scope.changeLanguage = function (key) {
         $translate.uses(key);
     };
