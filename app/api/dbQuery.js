@@ -6,7 +6,11 @@ exports.queryCollection = function(req,res){
 
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
-//    var collectionName = req.params.collectionName;
+    var collectionName = req.params.collectionName;
+
+    var param = "hello";
+    console.log(param);
+    console.log(collectionName);
 
     <!--query the content of collection -->
     db.open(function(err,db){
@@ -16,7 +20,7 @@ exports.queryCollection = function(req,res){
             return false;
         }
 
-        db.collection('language_cn',{safe:true},function(err,collection){
+        db.collection(collectionName,{safe:true},function(err,collection){
             collection.find().toArray(function(err,items){
                 if(err){
                     console.log(err);

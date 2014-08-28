@@ -26,8 +26,8 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getDbCollections: function(){
             return $http.get('/app/dbCollections');
         },
-        queryCollection: function(){
-            return $http.get('/app/dbQuery');
+        queryCollection: function(collectionName){
+            return $http.get('/app/dbQuery' + '/' + collectionName);
         }
     }
 }]);

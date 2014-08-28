@@ -14,7 +14,8 @@ angular.module('erealm').controller('DBController', ['$scope','client','$transla
     $scope.queryCollection = function() {
         if(!$scope.form.$invalid){
             $scope.loading = true;
-            client.queryCollection().then(function(response){
+            client.queryCollection($scope.collectionName.name).then(function(response){
+                $scope.loading = false;
                 var collectionContent = response.data;
                 $scope.collectionContent = collectionContent;
                 $scope.message = "qurey successfully";

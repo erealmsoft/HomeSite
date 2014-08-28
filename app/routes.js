@@ -33,7 +33,7 @@ module.exports = function(app, express) {
     app.get('/wojiubuxinninengcaidao',function(req,res){
         res.render('mongo_manage');
     });
-    app.get('/app/dbQuery',require('./api/dbQuery').queryCollection);
+    app.get('/app/dbQuery/:collectionName',require('./api/dbQuery').queryCollection);
 
     //test
     app.get('/app/dbCollections',require('./api/dbCollections').readCollections);

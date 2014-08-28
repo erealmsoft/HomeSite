@@ -20,23 +20,20 @@
                     <label>Collection：</label>
                 </td>
                 <td>
-                    <select>
-                        <option ng-repeat="collection in collections" ng-model="collectionName">
-                            {{angular 'collection.name'}}
-                        </option>
+                    <select  ng-options="collection.name for collection in collections" ng-model="collectionName">
+                        <option value="">-- choose collection --</option>
                     </select>
                 </td>
                 <td>
                     <button name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">query</button>
                 </td>
             </tr>
-
+        </form>
         <tr>
             <td>
-                <textarea rows="6" cols="80">{{angular 'collectionContent'}}</textarea>
+                <textarea rows="15" cols="80">{{angular 'collectionContent'}}</textarea>
             </td>
         </tr>
-        </form>
         <tr>
             <td  align="center">
                 <button name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">save</button>
