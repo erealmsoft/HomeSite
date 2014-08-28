@@ -20,6 +20,14 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         getEmployeeInfo:function(){
             return $http.get('/app/personnel');
+        },
+
+
+        getDbCollections: function(){
+            return $http.get('/app/dbCollections');
+        },
+        queryCollection: function(){
+            return $http.get('/app/dbQuery');
         }
     }
 }]);

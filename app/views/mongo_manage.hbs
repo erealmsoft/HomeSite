@@ -1,0 +1,46 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="DBController"{{/contentFor}}
+<!--<table align="center" border="0" width="400px" height="500px">-->
+
+<!-- <form  ng-submit="saveCollection();" method="" action="" novalidate="novalidate" role="form" name="form1"> -->
+    <table align="center" border="0" cellspacing="15px">
+        <tr>
+            <td align="center">
+                <label style="color: blue">Database management.</label>
+            </td>
+        </tr>
+        <form  ng-submit="queryCollection();" method="" action="" novalidate="novalidate" role="form" name="form">
+            <tr>
+                <td>
+                    <label ng-bind="message"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Collection：</label>
+                </td>
+                <td>
+                    <select>
+                        <option ng-repeat="collection in collections" ng-model="collectionName">
+                            {{angular 'collection.name'}}
+                        </option>
+                    </select>
+                </td>
+                <td>
+                    <button name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">query</button>
+                </td>
+            </tr>
+
+        <tr>
+            <td>
+                <textarea rows="6" cols="80">{{angular 'collectionContent'}}</textarea>
+            </td>
+        </tr>
+        </form>
+        <tr>
+            <td  align="center">
+                <button name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">save</button>
+            </td>
+        </tr>
+    </table>
+<!--</form> -->

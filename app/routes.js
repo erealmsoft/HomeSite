@@ -29,12 +29,22 @@ module.exports = function(app, express) {
     app.get('/project', function(req, res){
         res.render('project');
     });
+    //the database manage page.
+    app.get('/wojiubuxinninengcaidao',function(req,res){
+        res.render('mongo_manage');
+    });
+    app.get('/app/dbQuery',require('./api/dbQuery').queryCollection);
+
+    //test
+    app.get('/app/dbCollections',require('./api/dbCollections').readCollections);
 
     app.post('/app/message', require('./api/support').sendMessage);
 
     app.get('/app/language', require('./api/language').readMsg);
 
     app.get('/app/personnel',require('./api/personnel').readStaff);
+
+    app.get('/app/projects',require('./api/projects').readProjects);
     //error handler
     app.use(require('./views/http/index').http500);
     app.use(require('./views/http/index').http404);
