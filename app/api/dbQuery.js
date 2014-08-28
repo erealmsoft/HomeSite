@@ -1,6 +1,7 @@
 /**
  * Created by root on 8/28/2014.
  */
+'use strict';
 
 exports.queryCollection = function(req,res){
 
@@ -8,11 +9,6 @@ exports.queryCollection = function(req,res){
 
     var collectionName = req.params.collectionName;
 
-    var param = "hello";
-    console.log(param);
-    console.log(collectionName);
-
-    <!--query the content of collection -->
     db.open(function(err,db){
 
         if(err){

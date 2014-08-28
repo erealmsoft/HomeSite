@@ -29,14 +29,6 @@ module.exports = function(app, express) {
     app.get('/project', function(req, res){
         res.render('project');
     });
-    //the database manage page.
-    app.get('/wojiubuxinninengcaidao',function(req,res){
-        res.render('mongo_manage');
-    });
-    app.get('/app/dbQuery/:collectionName',require('./api/dbQuery').queryCollection);
-
-    //test
-    app.get('/app/dbCollections',require('./api/dbCollections').readCollections);
 
     app.post('/app/message', require('./api/support').sendMessage);
 
@@ -45,6 +37,16 @@ module.exports = function(app, express) {
     app.get('/app/personnel',require('./api/personnel').readStaff);
 
     app.get('/app/projects',require('./api/projects').readProjects);
+
+    //the database manage page.
+    app.get('/wojiubuxinninengcaidao',function(req,res){
+        res.render('mongo_manage');
+    });
+    app.get('/app/dbCollections',require('./api/dbCollections').readCollections);
+    app.get('/app/dbQuery/:collectionName',require('./api/dbQuery').queryCollection);
+    app.post('/app/dbSave',require('./api/dbSave').saveCollection);
+
+
     //error handler
     app.use(require('./views/http/index').http500);
     app.use(require('./views/http/index').http404);

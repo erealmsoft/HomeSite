@@ -28,6 +28,9 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         queryCollection: function(collectionName){
             return $http.get('/app/dbQuery' + '/' + collectionName);
+        },
+        saveCollection: function(name,collectionContent) {
+            return $http.post('/app/dbSave', {collectionName: name,collectionContent:collectionContent});
         }
     }
 }]);

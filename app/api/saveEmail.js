@@ -1,12 +1,12 @@
 /**
  * Created by root on 8/22/2014.
  */
+'use strict';
 
 exports.saveMessage = function(message){
 
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
-    <!-- save the message to db -->
     db.open(function(err,db){
 
         if(err){

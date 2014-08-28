@@ -1,7 +1,7 @@
 /**
  * Created by root on 8/19/2014.
  */
-
+'use strict';
 
 exports.readMsg = function(req,res){
 
@@ -9,7 +9,6 @@ exports.readMsg = function(req,res){
 
     var language =req.query.lang;
 
-    <!--query the content of collection -->
     db.open(function(err,db){
 
         if(err){

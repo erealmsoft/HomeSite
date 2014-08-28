@@ -1,12 +1,12 @@
 /**
  * Created by root on 8/27/2014.
  */
+'use strict';
 
 exports.readProjects = function(req,res){
 
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
-    <!--query the content of collection -->
     db.open(function(err,db){
 
         if(err){

@@ -25,7 +25,7 @@ exports.sendMessage = function(req, res) {
     mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
 
     //save the email message into mongodb
-    require('./save_email').saveMessage({name: name, email: email, message: message});
+    require('./saveEmail').saveMessage({name: name, email: email, message: message});
 
     res.json({code: 200, success: true});
 };
