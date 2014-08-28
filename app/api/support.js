@@ -21,9 +21,16 @@ exports.sendMessage = function(req, res) {
         return;
     }
 
-    mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
-    mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
-
+    var storage = window.localStorage;
+    var storagekey = storage.getItem("NG_TRANSLATE_LANG_KEY");
+    if(storagekey =='en') {
+        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
+        mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
+    }
+    else if(storagekey == 'cn'){
+        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced_cn', {fullName: name});
+        mailer.sendTemplate(config.support, 'newContactMessage_cn', {name: name, email: email, message: message});
+    }
     //save the email message into mongodb
     require('./save_email').saveMessage({name: name, email: email, message: message});
 
