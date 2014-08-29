@@ -29,6 +29,9 @@ module.exports = function(app, express) {
     app.get('/project', function(req, res){
         res.render('project');
     });
+    app.get('/projectdetails', function(req, res){
+        res.render('projectdetails');
+    });
 
     app.post('/app/message', require('./api/support').sendMessage);
 
