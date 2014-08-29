@@ -247,13 +247,30 @@ header {
   }
 
   .git-fock {
-    float: right;
-    img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      border:0;
+    background-color: #a00;
+    overflow: hidden;
+    /* top left corner */
+    position: absolute;
+    right: -3em;
+    top: 2.5em;
+    /* 45 deg ccw rotation */
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    /* shadow */
+    -moz-box-shadow: 0 0 1em #888;
+    -webkit-box-shadow: 0 0 1em #888;
 
+    a {
+      border: 1px solid #faa;
+      color: #fff;
+      display: block;
+      font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+      margin: 0.05em 0 0.075em 0;
+      padding: 0.5em 3.5em;
+      text-align: center;
+      text-decoration: none;
+      /* shadow */
+      text-shadow: 0 0 0.5em #444;
     }
   }
 }
@@ -427,10 +444,17 @@ footer {
   }
 }
 
-.pos_right{
+.muti-language {
   position:absolute;
   top:10px;
-  right:150px;
+  left:20px;
+  color:#A00;
+
+
+  .btn {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   a:visited {
     color: #e1704b;
   }
@@ -460,7 +484,7 @@ footer {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
 
     li.divider {
       height: 100px;
@@ -599,7 +623,7 @@ footer {
   }
   header
   {
-    .git-fock img
+    .git-fock
     {
       display: none;
     }
@@ -634,7 +658,7 @@ footer {
       text-align:center;
       h2
       {
-        font-size:1.5em;
+        font-size:2em;
       }
     }
   }
@@ -682,7 +706,7 @@ footer {
       margin:0 auto;
       h2
       {
-        font-size:1.5em;
+        font-size:2em;
       }
     }
   }
@@ -721,7 +745,7 @@ footer {
     text-align:center;
     h2
     {
-      font-size:1.5em;
+      font-size:2em;
     }
 
   }

@@ -51,7 +51,7 @@
   overflow: hidden;
   margin-bottom: 1.18em;
   position: relative;
-  height: 400px;
+  height: 500px;
   color: @white;
 
 
@@ -59,6 +59,8 @@
     width: 600px;
     padding: 2.2em 2.2em 2.2em 2.5em;
     text-align: left;
+    margin-bottom:50px;
+    margin-top:30px;
   }
   .back2+.wrap {
     color: @orange;
@@ -74,7 +76,8 @@
     background-repeat: no-repeat;
     -webkit-filter: blur(1.5px);
 
-    background-color: @orange;
+
+    background-color:@green;
     &.back1 {
       background-image: url("/images/background-1.png");
     }
@@ -146,44 +149,8 @@
   padding: 2.5em 1em;
 }
 
-@media only screen and (max-width: 580px) and (min-width: 0)
-{
-  .what-we-are
-  {
-    padding: 0;
-    background-image: none !important;
-    background-color: @green;
-    .wrap
-    {
-      width: 100%;
-      .home-box
-      {
-        width: 100%;
-        display: block;
-        padding: 0 10px;
-        text-align: center;
-        h2
-        {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
-  .what-we-love .wrap
-  {
-    width: 100%;
-    ul li
-    {
-      width: 80%;
-      margin-right: 5%;
-      p
-      {
-        width: 100%;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 1402px)and (min-width: 1272px)
+
+@media only screen and (max-width: 1402px)
 {
   .what-we-love .wrap
   {
@@ -200,30 +167,40 @@
   }
 
 }
-@media only screen and (max-width:1271px) and (min-width: 768px)
+
+@media only screen and (max-width: 580px) and (min-width: 0)
 {
-  .what-we-love .wrap
+  .what-we-are
   {
-    width: 100%;
-    ul li
+    height: auto;
+
+    .back {
+      &.back1,&.back2,&.back3,&.back4 {
+        background-image: none;
+      }
+    }
+    .wrap
     {
-      width: 43%;
-      margin-right: 5%;
-      p
+      width: 100%;
+      .home-box
       {
         width: 100%;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        h2
+        {
+          font-size: 1.5em;
+        }
       }
     }
   }
-}
-@media only screen and (min-width:581px) and (max-width:767px)
-{
   .what-we-love .wrap
   {
     width: 100%;
     ul li
     {
-      width: 43%;
+      width: 80%;
       margin-right: 5%;
       p
       {
