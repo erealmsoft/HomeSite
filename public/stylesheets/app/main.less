@@ -592,17 +592,27 @@ footer {
 {
   .pos_right
   {
-    display: none;
-  }
-  header .logo-mark
-  {
-    float: none;
-    width: 80px;
-    height:80px;
-    text-align: center;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
+    position: absolute;
+    top:20px;
+    right:20px;
+  }
+  header
+  {
+    .git-fock img
+    {
+      display: none;
+    }
+    .logo-mark
+    {
+      float: none;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 1em;
+    }
   }
   .wrap
   {
@@ -643,10 +653,17 @@ footer {
   header
   {
     padding-bottom: 1em;
+    img
+    {
+      display: none;
+    }
   }
   .pos_right
   {
-    display: none;
+    display: block;
+    position: absolute;
+    top:20px;
+    right:20px;
   }
 
   .wrap
