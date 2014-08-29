@@ -37,11 +37,11 @@
             <fieldset>
                 <div class="form-group left">
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
-                              ng-model="message" title="Enter your message" ng-maxlength="300" required="required" placeholder="Pop your message in here…"></textarea>
+                              ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop.message\'| translate'}}"></textarea>
                 </div>
                 <div class="form-group right">
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" placeholder="Your name"><br>
-                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" placeholder="Your email address">
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your.name\'| translate'}}"><br>
+                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your.email\'| translate'}}">
                     <button class="btn btn-submit contact-submit contact-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send.message"></button>
                 </div>
             </fieldset>
