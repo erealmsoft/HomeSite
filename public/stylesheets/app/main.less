@@ -18,7 +18,7 @@ body {
 }
 .wrap {
   margin: 0 auto;
-  width: 70%;
+  width: 85%;
   max-width: 1140px;
   position: relative;
   text-align: center;
@@ -187,6 +187,7 @@ header {
   background: #fff;
   overflow: hidden;
   padding: 3em 0;
+  position: relative;
 
   .wrap {
     text-align: left;
@@ -194,7 +195,7 @@ header {
 
   .logo-mark {
     float: left;
-    width:10%;
+    width:100px;
     height:137px;
     zoom: 1;
     filter: alpha(opacity=90);
@@ -362,6 +363,15 @@ header {
   }
 
   .nav-link {
+    background-repeat: no-repeat;
+    background-size: 29px 59px;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    margin: .7em 0;
+    font-size: 1.5em;
+    width: 29px;
+    height: 21px;
     display: none;
   }
 
@@ -393,6 +403,7 @@ footer {
 
     p {
       width: 50%;
+      min-width: 400px;
       margin: 0 auto;
       margin-bottom: 3em!important;
     }
@@ -479,6 +490,9 @@ footer {
   -webkit-transition:width 100ms linear;
   transition:width 100ms linear;
 
+  &.show {
+    width: 200px;
+  }
 
   .nav-slide {
     margin: 0;
@@ -503,124 +517,21 @@ footer {
   }
 }
 
-/* Smartphones ----------- */
-@media only screen and (max-width: 580px) and (min-width: 0)
+@media only screen and (max-width:1024px)
 {
-  .page-menu-slide.show {
-    width: 200px;
-  }
 
-  .nav_container {
-    .nav-link {
-      position: absolute;
-      right: 0;
-      display: inline-block;
-      font-size: 1.5em;
-      margin: .7em;
-      cursor: pointer;
-    }
-  }
-
-  .nav_container nav .sub-logo-mark
+  .wrap
   {
-    display: inline-block;
-    margin-left: 1em;
-  }
-  .nav_container
-  {
-    height: 0em;
-  }
-
-  nav
-  {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    width: 100%;
-  }
-  #navslide
-  {
-    display: none;
-  }
-
-  .nav-link
-  {
-    background-repeat: no-repeat;
-    background-size: 29px 59px;
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    margin: 1.3em 1em 0 0;
-    width: 29px;
-    height: 21px;
-  }
-  header
-  {
-    padding: 1em 0;
-    margin-bottom: 0;
-    img
+    width:99%;
+    .intro h1
     {
-      display: none;
-    }
-    .wrap
-    {
-      width:100%;
-      .logo-mark
-      {
-        display: none;
-      }
-      .intro
-      {
-        padding: 0 1em;
-        text-align: center;
-        margin-left:auto;
-        span
-        {
-          margin-top: 3em;
-          font-size:20px;
-          padding-top:10px;
-        }
-        h1
-        {
-          line-height: 1em;
-          width: 100%;
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  .pos_right
-  {
-    display: none;
-  }
-
-  footer
-  {
-    padding-top: 1em;
-    h2
-    {
-      font-size:1.3em;
-    }
-    .contact p
-    {
-      width:90%;
-    }
-    ul li
-    {
-      margin-left:.2em;
-      margin-right:.2em;
+      font-size: 2em;
     }
   }
 }
-@media only screen and (min-width:581px) and (max-width:767px)
+
+@media only screen and (max-width:768px)
 {
-  .pos_right
-  {
-    display: block;
-    position: absolute;
-    top:20px;
-    right:20px;
-  }
   header
   {
     .git-fock
@@ -638,116 +549,69 @@ footer {
       margin-bottom: 1em;
     }
   }
-  .wrap
-  {
-    width:100%;
-    .intro
-    {
-      margin: 0;
-      text-align: center;
-      h1
-      {
-        font-size: 2em;
-      }
-    }
-    .home-box
-    {
-      width: 90%;
-      display: block;
-      padding:0;
-      text-align:center;
-      h2
-      {
-        font-size:2em;
-      }
-    }
-  }
-  .nav_container nav
-  {
-    text-align: center;
-  }
-  footer .contact p
-  {
-    width:80%;
-  }
 }
 
-@media only screen and (max-width:1271px) and (min-width: 768px)
+/* Smartphones ----------- */
+@media only screen and (max-width: 580px)
 {
+  img
+  {
+    max-width:100%;
+    height:auto;
+  }
   header
   {
-    padding-bottom: 1em;
-    img
-    {
-      display: none;
-    }
-  }
-  .pos_right
-  {
-    display: block;
-    position: absolute;
-    top:20px;
-    right:20px;
-  }
+    padding: 1em 0;
 
-  .wrap
-  {
-    width:100%;
-    .intro h1
+    .wrap
     {
-      font-size: 2em;
-    }
-    .home-box
-    {
-      width: 60%;
-      display: block;
-      padding:0;
-      text-align:center;
-      margin:0 auto;
-      h2
+      .logo-mark
       {
-        font-size:2em;
+        display: none;
+      }
+      .intro
+      {
+        text-align: center;
+        margin-left:auto;
+        margin-top: 4em;
+
+        h1
+        {
+          font-size: 1.5em;
+        }
       }
     }
   }
-  .what-we-love .wrap
+
+  .nav_container {
+    height: auto;
+    nav {
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      width: 100%;
+
+      ul {
+        display: none;
+      }
+
+      .sub-logo-mark
+      {
+        display: inline-block;
+      }
+    }
+
+    .nav-link {
+      display: inline-block;
+    }
+  }
+
+  footer
   {
-    width: 100%;
     ul li
     {
-      width: 43%;
-      margin-right: 5%;
-      p
-      {
-        width: 100%;
-      }
+      margin-left:.2em;
+      margin-right:.2em;
     }
   }
-  footer .contact
-  {
-    p
-    {
-      width: 90%;
-    }
-    h2
-    {
-      font-size:1.5em;
-    }
-  }
-}
-@media only screen and (max-width: 1402px)and (min-width: 1272px)
-{
-  .wrap .home-box
-  {
-    width: 70%;
-    display: block;
-    padding:0;
-    text-align:center;
-    h2
-    {
-      font-size:2em;
-    }
-
-  }
-
 }
