@@ -4,7 +4,7 @@
  * Created by dang on 8/08/2014
  */
 
-angular.module('erealm').controller('WorkController', ['$scope','client','$translate', function($scope, client,$translate) {
+angular.module('erealm').controller('WorkController', ['$scope','client','$translate', function($scope, client, $translate) {
 
     'use strict';
 
@@ -16,8 +16,4 @@ angular.module('erealm').controller('WorkController', ['$scope','client','$trans
         var project = response.data;
         $scope.project = project;
     });
-
-    $scope.changeLanguage = function (key) {
-        $translate.uses(key);
-    };
 }]);
