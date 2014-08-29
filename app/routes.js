@@ -26,9 +26,15 @@ module.exports = function(app, express) {
     app.get('/work', function(req, res){
         res.render('work');
     });
-    app.get('/project', function(req, res){
-        res.render('project');
+    app.get('/work', function(req, res){
+        res.render('work');
     });
+    app.get('/projectdetails', function(req, res){
+        res.render('projectdetails');
+    });
+//    app.get('/project', function(req, res){  //暂时没用
+//        res.render('project');
+//    });
 
     app.post('/app/message', require('./api/support').sendMessage);
 

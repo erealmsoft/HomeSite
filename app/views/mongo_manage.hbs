@@ -2,7 +2,6 @@
 {{#contentFor "bodyAttr"}}ng-controller="DBController"{{/contentFor}}
 <!--<table align="center" border="0" width="400px" height="500px">-->
 
- <!--<form  ng-submit="saveCollection();" method="" action="" novalidate="novalidate" role="form" name="form1">-->
     <table align="center" border="0" cellspacing="15px">
         <tr>
             <td align="center">
@@ -13,7 +12,7 @@
         <form  ng-submit="queryCollection();" method="" action="" novalidate="novalidate" role="form" name="queryForm">
             <tr>
                 <td>
-                    <label ng-bind="message"></label>
+                    <label ng-bind="message" style="color:red"></label>
                 </td>
             </tr>
             <tr>
@@ -39,7 +38,7 @@
             </tr>
             <tr>
                 <td>
-                    <label ng-bind="saveMessage"></label>
+                    <label ng-bind="saveMessage" style="color:red"></label>
                 </td>
                 <td  align="center">
                     <button name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading">save</button>
@@ -48,4 +47,3 @@
         </form>
 
     </table>
-<!--</form>-->
