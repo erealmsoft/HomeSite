@@ -47,54 +47,51 @@
   }
 }
 .what-we-are {
-  padding: 3.75em 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   overflow: hidden;
   margin-bottom: 1.18em;
+  position: relative;
+  height: 400px;
+  color: @white;
 
-  .box {
 
-    width: 50%;
-    color: #ffffff;
-    text-align: left;
+  .home-box {
+    width: 600px;
     padding: 2.2em 2.2em 2.2em 2.5em;
-    clear: both;
-    opacity: 1;
+    text-align: left;
+  }
+  .back2+.wrap {
+    color: @orange;
+  }
 
-    h1 {
-      color: #ffffff;
+
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 3.75em 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(1.5px);
+
+    background-color: @orange;
+    &.back1 {
+      background-image: url("/images/background-1.png");
     }
-
-    p {
-      font-size: 1.2em;
+    &.back2 {
+      background-image: url("/images/background-2.png");
     }
-
-    a {
-      color: @white;
+    &.back3 {
+      background-image: url("/images/background-3.png");
     }
-
-    a:hover {
-      color:  #b23f1a;
+    &.back4 {
+      background-image: url("/images/background-4.png");
+    }
+    &.back5 {
+      background-image: url("/images/background-5.png");
     }
   }
 
-  background-image: url("/images/background-1.png");
-  &.back1 {
-    background-image: url("/images/background-1.png");
-  }
-  &.back2 {
-    background-image: url("/images/background-2.png");
-  }
-  &.back3 {
-    background-image: url("/images/background-3.png");
-  }
-  &.back4 {
-    background-image: url("/images/background-4.png");
-  }
-  &.back5 {
-    background-image: url("/images/background-5.png");
-  }
 }
 
 .what-we-love {
