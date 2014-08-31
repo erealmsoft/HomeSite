@@ -108,6 +108,18 @@ module.exports = function(grunt){
                 src: ['public/stylesheets/app/*.less']
             }
         },
+        autoprefixer: {
+
+            options: {
+                browsers: ['last 2 versions', 'ie 9']
+            },
+            debug: {
+                src: 'public/stylesheets/app.css'
+            },
+            compile: {
+                src: 'public/stylesheets/app.min.css'
+            }
+        },
         imagemin: {
             dynamic: {
                 files: [{
@@ -131,6 +143,14 @@ module.exports = function(grunt){
             }
         },
         less: {
+            debug: {
+                options: {
+                    cleancss: false
+                },
+                files: {
+                    'public/stylesheets/app.css': 'public/stylesheets/app.less'
+                }
+            },
             compile: {
                 options: {
                     cleancss: true
@@ -202,7 +222,7 @@ module.exports = function(grunt){
                 tasks: ['newer:jshint:server']
             },
             serverTemplates: {
-                files: ['app/views/**/*.hbs'],
+                files: ['app/views/**/*.hbs','app/templates/*.html'],
                 options: {
                     livereload: true
                 }
@@ -225,14 +245,36 @@ module.exports = function(grunt){
                     env: {
                         PORT: 3000,
                         NODE_ENV: 'development'
+                    },
+                    callback: function (nodemon) {
+                        nodemon.on('log', function (event) {
+                            console.log(event.colour);
+                        });
+
+                        // opens browser on initial server start
+                        nodemon.on('config:update', function () {
+                            // Delay before server listens on port
+                            setTimeout(function() {
+                                console.log('start browser');
+                                require('open')('http://localhost:3000');
+                            }, 1000);
+                        });
+
+                        // refreshes browser when server reboots
+                        nodemon.on('restart', function () {
+                            // Delay before server listens on port
+                            setTimeout(function() {
+                                require('fs').writeFileSync('.rebooted', 'rebooted');
+                            }, 1000);
+                        });
                     }
                 }
             }
         },
-        open : {
-            dev : {
-                path: 'http://127.0.0.1:3000/',
-                app: 'Google Chrome'
+        concurrent: {
+            tasks: ['nodemon:dev', 'watch'],
+            options: {
+                logConcurrentOutput: true
             }
         }
     });
@@ -243,9 +285,10 @@ module.exports = function(grunt){
 
     grunt.loadNpmTasks('grunt-lesslint')
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-open');
+    grunt.loadNpmTasks('grunt-concurrent');
 
 
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -262,6 +305,6 @@ module.exports = function(grunt){
     grunt.option('force', true);
 
     grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images']);
-    grunt.registerTask('default', ['jshint','nodemon:dev','watch','open:dev']);
-    grunt.registerTask('build', ['cssmin', 'less', 'uglify','usemin', 'copy:build', 'clean:build']);
+    grunt.registerTask('default', ['jshint','less:debug','autoprefixer:debug', "concurrent"]);
+    grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','usemin', 'copy:build', 'clean:build']);
 };
