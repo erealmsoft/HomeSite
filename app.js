@@ -13,6 +13,9 @@ var cluster = require('cluster'),
  app = express(),
  expressValidator = require('express-validator');
 
+if (process.env.SITE_USER) {
+    app.use(express.basicAuth(process.env.SITE_USER, process.env.SITE_PASS));
+}
 
 //config express in all environments
 app.disable('x-powered-by');
