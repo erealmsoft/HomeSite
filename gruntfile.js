@@ -150,8 +150,21 @@ module.exports = function(grunt){
             },
             build: {
                 files: {
-                    'public/javascripts/libs.min.js': ['public/javascripts/libs/*.js', 'public/javascripts/libs/plugins/*.js'] ,
-                    'public/javascripts/app.min.js': ['public/javascripts/erealm.js', 'public/javascripts/clients.js', 'public/javascripts/app/*.js']
+                    'public/javascripts/libs.min.js': [
+                        'public/javascripts/libs/*.js',
+                        'public/javascripts/libs/plugins/angular-cookies.min.js',
+                        'public/javascripts/libs/plugins/angular-translate.min.js',
+                        'public/javascripts/libs/plugins/angular-translate-loader-url.min.js',
+                        'public/javascripts/libs/plugins/angular-translate-storage-cookie.min.js',
+                        'public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js',
+                        'public/javascripts/libs/plugins/ng-mobile-menu.min.js',
+                        'public/javascripts/libs/plugins/bootstrap.min.js'
+                    ] ,
+                    'public/javascripts/app.min.js': [
+                        'public/javascripts/erealm.js',
+                        'public/javascripts/clients.js',
+                        'public/javascripts/app/*.js'
+                    ]
                 }
             }
         },
@@ -224,7 +237,6 @@ module.exports = function(grunt){
         }
     });
 
-    grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
