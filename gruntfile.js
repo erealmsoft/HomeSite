@@ -71,8 +71,8 @@ module.exports = function(grunt){
             build: {
                 src: [
                     'build',
-                    'public/stylesheets/**/*', "!public/stylesheets/*.min.css",
-                    'public/javascripts/app','public/javascripts/*.js', 'public/javascripts/debug', 'public/javascripts/libs', "!public/javascripts/*.min.js"]
+                    'public/stylesheets/**/*', "!public/stylesheets/*.min.*.css",
+                    'public/javascripts/app','public/javascripts/*.js', 'public/javascripts/debug', 'public/javascripts/libs', "!public/javascripts/*.min.*.js"]
             }
         },
         jshint: {
