@@ -34,7 +34,7 @@ exports.sendMessage = function(req, res) {
 
     var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
     console.log(storagekey);
-    if(storagekey == '"cn"') {
+    if(storagekey === '"cn"') {
         mailer.sendTemplate(name + '<' + email + '>', 'messageReciced_cn', {fullName: name});
         mailer.sendTemplate(config.support, 'newContactMessage_cn', {name: name, email: email, message: message});
     }
