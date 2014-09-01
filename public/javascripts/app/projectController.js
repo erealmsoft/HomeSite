@@ -11,9 +11,4 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     $scope.subTitle = "PROJECT",
         $scope.mainTitle = "submit your project",
         $scope.currentPage = "project-page";
-
-    $scope.changeLanguage = function (key) {
-        $translate.uses(key);
-    };
-
 }]);

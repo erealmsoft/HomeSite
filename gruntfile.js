@@ -71,8 +71,8 @@ module.exports = function(grunt){
             build: {
                 src: [
                     'build',
-                    'public/stylesheets/**/*', "!public/stylesheets/*.min.css",
-                    'public/javascripts/app','public/javascripts/*.js', 'public/javascripts/debug', 'public/javascripts/libs', "!public/javascripts/*.min.js"]
+                    'public/stylesheets/**/*', "!public/stylesheets/*.min.*.css",
+                    'public/javascripts/app','public/javascripts/*.js', 'public/javascripts/debug', 'public/javascripts/libs', "!public/javascripts/*.min.*.js"]
             }
         },
         jshint: {
@@ -108,6 +108,18 @@ module.exports = function(grunt){
                 src: ['public/stylesheets/app/*.less']
             }
         },
+        autoprefixer: {
+
+            options: {
+                browsers: ['last 2 versions', 'ie 9']
+            },
+            debug: {
+                src: 'public/stylesheets/app.css'
+            },
+            compile: {
+                src: 'public/stylesheets/app.min.css'
+            }
+        },
         imagemin: {
             dynamic: {
                 files: [{
@@ -131,6 +143,14 @@ module.exports = function(grunt){
             }
         },
         less: {
+            debug: {
+                options: {
+                    cleancss: false
+                },
+                files: {
+                    'public/stylesheets/app.css': 'public/stylesheets/app.less'
+                }
+            },
             compile: {
                 options: {
                     cleancss: true
@@ -150,16 +170,36 @@ module.exports = function(grunt){
             },
             build: {
                 files: {
-                    'public/javascripts/libs.min.js': ['public/javascripts/libs/*.js', 'public/javascripts/libs/plugins/*.js'] ,
-                    'public/javascripts/app.min.js': ['public/javascripts/erealm.js', 'public/javascripts/clients.js', 'public/javascripts/app/*.js']
+                    'public/javascripts/libs.min.js': [
+                        'public/javascripts/libs/*.js',
+                        'public/javascripts/libs/plugins/angular-cookies.min.js',
+                        'public/javascripts/libs/plugins/angular-translate.min.js',
+                        'public/javascripts/libs/plugins/angular-translate-loader-url.min.js',
+                        'public/javascripts/libs/plugins/angular-translate-storage-cookie.min.js',
+                        'public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js',
+                        'public/javascripts/libs/plugins/ng-mobile-menu.min.js',
+                        'public/javascripts/libs/plugins/bootstrap.min.js'
+                    ] ,
+                    'public/javascripts/app.min.js': [
+                        'public/javascripts/erealm.js',
+                        'public/javascripts/clients.js',
+                        'public/javascripts/app/*.js'
+                    ]
                 }
+            }
+        },
+        useminPrepare: {
+            html: 'app/views/layouts/*.hbs',
+            options: {
+                dest: 'public'
             }
         },
         usemin: {
             html: 'app/views/layouts/*.hbs',
             options: {
                 root: 'public',
-                dest: 'public'
+                dest: 'public',
+                assetsDirs: ['public']
             }
         },
         watch: {
@@ -189,7 +229,7 @@ module.exports = function(grunt){
                 tasks: ['newer:jshint:server']
             },
             serverTemplates: {
-                files: ['app/views/**/*.hbs'],
+                files: ['app/views/**/*.hbs','app/templates/*.html'],
                 options: {
                     livereload: true
                 }
@@ -197,6 +237,22 @@ module.exports = function(grunt){
             tests: {
                 files: ['tests/**/*.js'],
                 tasks: ['mochacov:test']
+            },
+            server: {
+                files: ['.rebooted'],
+                options: {
+                    livereload: true
+                }
+            }
+        },
+        filerev: {
+            options: {
+                encoding: 'utf8',
+                algorithm: 'md5',
+                length: 8
+            },
+            build: {
+                src: ['public/javascripts/*.min.js', 'public/stylesheets/*.min.css']
             }
         },
         nodemon: {
@@ -212,28 +268,51 @@ module.exports = function(grunt){
                     env: {
                         PORT: 3000,
                         NODE_ENV: 'development'
+                    },
+                    callback: function (nodemon) {
+                        nodemon.on('log', function (event) {
+                            console.log(event.colour);
+                        });
+
+                        // opens browser on initial server start
+                        nodemon.on('config:update', function () {
+                            // Delay before server listens on port
+                            setTimeout(function() {
+                                console.log('start browser');
+                                require('open')('http://localhost:3000');
+                            }, 1000);
+                        });
+
+                        // refreshes browser when server reboots
+                        nodemon.on('restart', function () {
+                            // Delay before server listens on port
+                            setTimeout(function() {
+                                require('fs').writeFileSync('.rebooted', 'rebooted');
+                            }, 1000);
+                        });
                     }
                 }
             }
         },
-        open : {
-            dev : {
-                path: 'http://127.0.0.1:3000/',
-                app: 'Google Chrome'
+        concurrent: {
+            tasks: ['nodemon:dev', 'watch'],
+            options: {
+                logConcurrentOutput: true
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
-    grunt.loadNpmTasks('grunt-lesslint')
+    grunt.loadNpmTasks('grunt-lesslint');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-filerev');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-open');
+    grunt.loadNpmTasks('grunt-concurrent');
 
 
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -242,6 +321,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+//    grunt.loadNpmTasks('grunt-useminPrepare');
     grunt.loadNpmTasks('grunt-usemin');
 
 
@@ -250,6 +330,6 @@ module.exports = function(grunt){
     grunt.option('force', true);
 
     grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images']);
-    grunt.registerTask('default', ['jshint','nodemon:dev','watch','open:dev']);
-    grunt.registerTask('build', ['cssmin', 'less', 'uglify','usemin', 'copy:build', 'clean:build']);
+    grunt.registerTask('default', ['jshint','less:debug','autoprefixer:debug', "concurrent"]);
+    grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'copy:build', 'clean:build']);
 };

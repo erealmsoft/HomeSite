@@ -104,8 +104,4 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
             });
         }
     };
-
-    $scope.changeLanguage = function (key) {
-        $translate.uses(key);
-    };
 }]);

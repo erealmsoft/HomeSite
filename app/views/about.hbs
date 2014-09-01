@@ -5,16 +5,16 @@
     <div class="about-box">
         <h1 class="about-h1" translate="aboutlove"></h1>
         <div class="about-center">
-            <p translate="aboutlove.one">
+            <p translate="aboutlove_one">
             </p>
-            <p translate="aboutlove.two">
+            <p translate="aboutlove_two">
             </p>
         </div>
     </div>
 
-    <div class="gird">
-        <ul class="row">
-            <li class="col-lg-3 col" ng-repeat="item in person">
+    <div class="team-profile">
+        <ul>
+            <li class="profile" ng-repeat="item in person">
                 <a ng-href="#{{angular 'item.first_name'}}">
                     <figure>
                         <img class="img-circle img-responsive"
@@ -29,7 +29,7 @@
         </ul>
     </div>
 </div>
-<div id="{{angular 'item.first_name'}}" collapse="isCollapsed" >
+<div id="{{angular 'item.first_name'}}" collapsed="isCollapsed" >
     <div class="section">
         <div class="container">
             <h2 ng-bind="item.first_name"></h2>

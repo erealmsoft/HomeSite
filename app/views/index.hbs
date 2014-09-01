@@ -1,14 +1,14 @@
 {{!< master}}
 {{#contentFor "bodyAttr"}}ng-controller="HomeController"{{/contentFor}}
 
-<section class="what-we-are" ng-class="homeBack">
+<section class="what-we-are">
+    <div class="back" ng-class="homeBack"></div>
     <div class="wrap">
         <div class="home-box">
             <h2 translate="slogan"></h2>
-            <button type="button" class="btn btn-lg btn-submit home-submit"><a href="about" translate="about.us"></a></button>
-            <button type="button" class="btn btn-lg btn-submit home-submit"><a href="contact" translate="hire.us"></a></button>
+            <button type="button" class="btn btn-lg btn-submit home-submit"><a href="about" translate="about_us"></a></button>
+            <button type="button" class="btn btn-lg btn-submit home-submit"><a href="contact" translate="hire_us"></a></button>
        </div>
-
     </div>
 </section>
 <section class="what-we-work">
@@ -23,27 +23,25 @@
         </carousel>
 </section>
 <section class="what-we-love">
-    <div class="wrap">
-        <h2 translate="what.welove"></h2>
-        <ul>
-            <li class="end">
-                <div class="illustration fa fa-codepen"></div>
-                <p translate="love.one"></p>
-            </li>
-            <li>
-                <div class="illustration fa fa-code"></div>
-                <p translate="love.two"></p>
-            </li>
-            <li>
-                <div class="illustration fa fa-apple"></div>
-                <p translate="love.three"></p>
-            </li>
-            <li class="last">
-                <div class="illustration fa fa-group"></div>
-                <p translate="love.four"></p>
-            </li>
-        </ul>
-        <a href="project" title="submit your project plan to us" target="_self" translate="submit"><i class="fa fa-hand-o-right"></i></a>
-    </div>
+    <h2 translate="what_welove"></h2>
+    <ul>
+        <li class="end">
+            <div class="illustration fa fa-codepen"></div>
+            <p translate="love_one"></p>
+        </li>
+        <li>
+            <div class="illustration fa fa-code"></div>
+            <p translate="love_two"></p>
+        </li>
+        <li>
+            <div class="illustration fa fa-apple"></div>
+            <p translate="love_three"></p>
+        </li>
+        <li class="last">
+            <div class="illustration fa fa-group"></div>
+            <p translate="love_four"></p>
+        </li>
+    </ul>
+    <a href="project" title="submit your project plan to us" target="_self" translate="submit"><i class="fa fa-hand-o-right"></i></a>
 </section>
 

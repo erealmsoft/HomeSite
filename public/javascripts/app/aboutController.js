@@ -30,10 +30,4 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
         $scope.isCollapsed=!( $scope.isCollapsed);
         $scope.item=ite;
     };
-
-    $scope.changeLanguage = function (key) {
-        $translate.uses(key);
-    };
-
-
 }]);
