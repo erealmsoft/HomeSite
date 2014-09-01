@@ -23,17 +23,6 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         getProjectsInfo:function(){
             return $http.get('/app/projects');
-        },
-
-
-        getDbCollections: function(){
-            return $http.get('/app/dbCollections');
-        },
-        queryCollection: function(collectionName){
-            return $http.get('/app/dbQuery' + '/' + collectionName);
-        },
-        saveCollection: function(name,collectionContent) {
-            return $http.post('/app/dbSave', {collectionName: name,collectionContent:collectionContent});
         }
     }
 }]);

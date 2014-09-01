@@ -33,7 +33,8 @@ module.exports = {
             }
         }
     },
-
+//    dbManage:process.env.DB_MANAGE,
+    dbManage:'wojiubuxinninengcaidao',
     support: 'ken@erealm.com.my',
     projectName: 'eRealm-Home',
     copyrightName: 'eRealm'

@@ -6,6 +6,8 @@
 
 'use strict';
 
+var config = require("../config");
+
 module.exports = function(app, express) {
 
     app.use(function(req, res, next) {
@@ -29,6 +31,12 @@ module.exports = function(app, express) {
     app.get('/project', function(req, res){
         res.render('project');
     });
+    app.get('/projectdetails', function(req, res){
+        res.render('projectdetails');
+    });
+//    app.get('/project', function(req, res){  //暂时没用
+//        res.render('project');
+//    });
 
     app.post('/app/message', require('./api/support').sendMessage);
 
@@ -37,6 +45,19 @@ module.exports = function(app, express) {
     app.get('/app/personnel',require('./api/personnel').readStaff);
 
     app.get('/app/projects',require('./api/projects').readProjects);
+
+    //the database manage page.
+    app.get('/' + config.dbManage,function(req,res){
+        res.render('mongo_manage');
+    });
+//    app.get('/wojiubuxinninengcaidao',function(req,res){
+//        res.render('mongo_manage');
+//    });
+    app.get('/app/dbCollections',require('./api/dbCollections').readCollections);
+    app.get('/app/dbQuery/:collectionName',require('./api/dbQuery').queryCollection);
+    app.post('/app/dbSave',require('./api/dbSave').saveCollection);
+
+
     //error handler
     app.use(require('./views/http/index').http500);
     app.use(require('./views/http/index').http404);

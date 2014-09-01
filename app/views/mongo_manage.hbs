@@ -1,5 +1,13 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="DBController"{{/contentFor}}
+<!DOCTYPE html>
+<html data-app="erealm">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Erealm Info & Tech Sdn Bhd</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="author" href="humans.txt">
+</head>
+<body ng-controller="DBController">
 <!--<table align="center" border="0" width="400px" height="500px">-->
 
     <table align="center" border="0" cellspacing="15px">
@@ -47,3 +55,26 @@
         </form>
 
     </table>
+    <!-- build:js /javascripts/libs.min.js -->
+    <script src="/javascripts/libs/angular.min.js"></script>
+    <script src="/javascripts/libs/jquery.min.js"></script>
+    <script src="/javascripts/libs/plugins/angular-cookies.min.js"></script>
+    <script src="/javascripts/libs/plugins/angular-translate.min.js"></script>
+    <script src="/javascripts/libs/plugins/angular-translate-loader-url.min.js"></script>
+    <script src="/javascripts/libs/plugins/angular-translate-storage-cookie.min.js"></script>
+    <script src="/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
+    <script src="/javascripts/libs/plugins/ng-mobile-menu.min.js"></script>
+    <script src="/javascripts/libs/plugins/bootstrap.min.js"></script>
+    <!-- endbuild -->
+    <script src="/javascripts/erealm.js"></script>
+    <script src="/javascripts/app/dbController.js"></script>
+<script>
+    angular.element(document).ready(function() {
+        // Launch jdk module. Here we go!
+        var id = angular.element(document.querySelector('html')).attr('data-app');
+        console.log('booting angular app: ' + id);
+        angular.bootstrap(document, [id]);
+    });
+</script>
+</body>
+</html>
