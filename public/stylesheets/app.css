@@ -958,10 +958,23 @@ h1 {
     height: 350px;
   }
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 768px) {
+  .wrap .about-box {
+    width: 100%;
+  }
   .team-profile .profile {
     width: 90%;
     height: auto;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .wrap h1 {
+    font-size: 1em;
+  }
+  .wrap .about-box .about-center {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 }
 /* Smartphones ------------------------------------------------------------ */

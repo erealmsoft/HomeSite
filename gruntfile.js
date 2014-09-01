@@ -220,6 +220,13 @@ module.exports = function(grunt){
             },
             clientLess: {
                 files: ['public/stylesheets/**/*.less'],
+                tasks:['less:debug','autoprefixer:debug'],
+                options: {
+                    livereload: true
+                }
+            },
+            clientCss: {
+                files: ['public/stylesheets/*.css'],
                 options: {
                     livereload: true
                 }
