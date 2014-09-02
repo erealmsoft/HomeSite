@@ -4,7 +4,7 @@
  * Created by dang on 8/08/2014
  */
 
-angular.module('erealm').controller('ProjectController', ['$scope','client','$tranlate',function($scope, client,$translate) {
+angular.module('erealm').controller('ProjectController', ['$scope','client','$translate',function($scope, client, $translate) {
 
     'use strict';
 
