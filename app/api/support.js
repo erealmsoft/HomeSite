@@ -19,6 +19,10 @@ function parseCookies (request) {
     return list;
 }
 
+var cn = require('../../public/data/content_cn.json');
+var en = require('../../public/data/content_en.json');
+
+
 exports.sendMessage = function(req, res) {
     var name     = req.body.name,
         email    = req.body.email,
@@ -34,14 +38,15 @@ exports.sendMessage = function(req, res) {
 
     var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
     console.log(storagekey);
-    if(storagekey == '"cn"') {
-        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced_cn', {fullName: name});
-        mailer.sendTemplate(config.support, 'newContactMessage_cn', {name: name, email: email, message: message});
+    var language = '';
+    if(storagekey == '"cn"'){
+        language = cn;
+    }else{
+        language = en;
     }
-    else{
-        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced', {fullName: name});
-        mailer.sendTemplate(config.support, 'newContactMessage', {name: name, email: email, message: message});
-    }
+        mailer.sendTemplate(name + '<' + email + '>', 'messageReciced',{language:language,fullName: name});
+        mailer.sendTemplate(config.support, 'newContactMessage',{language:language, name: name, email: email, message: message});
+
     //save the email message into mongodb
     require('./saveEmail').saveMessage({name: name, email: email, message: message});
 

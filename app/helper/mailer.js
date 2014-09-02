@@ -22,14 +22,6 @@ function Mailer() {
         "newContactMessage": {
             "file": "new-contact-message.html",
             "subject": "[ Erealm Info & Tech Sdn Bhd] New Message from Customer"
-        },
-        "messageReciced_cn": {
-            "file": "message-received_cn.html",
-            "subject": "[西安瑞木信息技术有限公司] 邮件已收到"
-        },
-        "newContactMessage_cn": {
-            "file": "new-contact-message_cn.html",
-            "subject": "[ 西安瑞木信息技术有限公司] 来自客户的新邮件"
         }
     };
 

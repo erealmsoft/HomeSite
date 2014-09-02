@@ -102,7 +102,7 @@ angular.module('erealm').controller('DBController', ['$scope','$http',function($
                 $scope.loading = false;
                 var collectionContent = response.data;
 //                $scope.collectionContent = JSON.stringify(collectionContent);
-                $scope.collectionContent = JsonUti.convertToString(collectionContent);
+                $scope.collectionContent = JsonUti.convertToString(collectionContent);    //format the collectionContent
                 $scope.message = "qurey successfully";
             }, function(){
                 $scope.loading = false;

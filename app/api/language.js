@@ -16,7 +16,7 @@ exports.readMsg = function(req,res){
             return false;
         }
 
-        if(language == 'en'){
+        if(language === 'en'){
             db.collection('language_en',{safe:true},function(err,collection){
                 collection.find().toArray(function(err,items){
                     if(err){
@@ -28,7 +28,7 @@ exports.readMsg = function(req,res){
                     console.log("the db-connection is closed.");
                 });
             });
-        }else if(language == 'cn'){
+        }else if(language === 'cn'){
             db.collection('language_cn',{safe:true},function(err,collection){
                 collection.find().toArray(function(err,items){
                     if(err){
