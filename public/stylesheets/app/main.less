@@ -439,6 +439,27 @@ footer {
     }
   }
 
+  .back-top {
+    position: fixed;
+    font-size: .8em;
+    color: @white;
+    bottom: 20px;
+    right: 20px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:1px solid @white;
+    text-align: center;
+    z-index: 1000;
+    transition:background 500ms linear;
+    &:hover {
+      background: #3B4250;
+    }
+    i {
+      line-height: 20px;
+    }
+  }
 }
 
 .error-info {
@@ -506,6 +527,8 @@ footer {
     }
   }
 }
+
+
 
 @media only screen and (max-width:1024px)
 {

@@ -404,6 +404,28 @@ footer .copyright a {
 footer .copyright a:hover {
   color: #a34424;
 }
+footer .back-top {
+  position: fixed;
+  font-size: .8em;
+  color: #ffffff;
+  bottom: 20px;
+  right: 20px;
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  text-align: center;
+  z-index: 1000;
+  -webkit-transition: background 500ms linear;
+          transition: background 500ms linear;
+}
+footer .back-top:hover {
+  background: #3B4250;
+}
+footer .back-top i {
+  line-height: 20px;
+}
 .error-info {
   padding: 40px 0;
 }
