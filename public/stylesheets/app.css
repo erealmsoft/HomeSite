@@ -108,6 +108,7 @@ h1 {
 h2 {
   font-size: 2em;
   letter-spacing: .05em;
+  text-transform: uppercase;
 }
 h3 {
   padding: 0;
@@ -460,7 +461,7 @@ footer .copyright a:hover {
   border-bottom: 1px solid #5c5c5c;
 }
 .page-menu-slide .nav-slide li a:hover {
-  background-color: #6a6a6a;
+  w-color: #6a6a6a;
 }
 @media only screen and (max-width: 1024px) {
   .wrap {
@@ -977,4 +978,3 @@ h1 {
             column-count: 1;
   }
 }
-/* Smartphones ------------------------------------------------------------ */
