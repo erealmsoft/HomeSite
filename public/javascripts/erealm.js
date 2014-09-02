@@ -33,5 +33,16 @@ erealm.config(['$translateProvider', function($translateProvider){
             scope.$apply();
         });
     };
+}])
+.directive("backtop",  ['$window',function () {
+    return function(scope, element, attrs) {
+        angular.element(element).bind("click", function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+            scope.$apply();
+        });
+    };
 }]);
 

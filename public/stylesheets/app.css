@@ -416,15 +416,8 @@ footer .back-top {
   border-radius: 50%;
   border: 1px solid #ffffff;
   text-align: center;
-  z-index: 1000;
-  -webkit-transition: background 500ms linear;
-          transition: background 500ms linear;
-}
-footer .back-top:hover {
   background: #3B4250;
-}
-footer .back-top i {
-  line-height: 20px;
+  z-index: 1000;
 }
 .error-info {
   padding: 40px 0;
