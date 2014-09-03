@@ -9,8 +9,8 @@ erealm.config(['$translateProvider', function($translateProvider){
 
     $translateProvider.useUrlLoader('/app/language');
     // Tell the module what language to use by default
-    $translateProvider.preferredLanguage('en');
-    $translateProvider.fallbackLanguage('en');
+    $translateProvider.preferredLanguage('cn');
+    $translateProvider.fallbackLanguage('cn');
     // Tell the module to store the language in the cookie
     $translateProvider.useCookieStorage();
 }])

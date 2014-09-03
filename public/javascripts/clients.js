@@ -23,6 +23,9 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         getProjectsInfo:function(){
             return $http.get('/app/projects');
+        },
+        getProjectsDetailsInfo:function(hash){
+            return $http.get('/app/projectDetails' + '/' + hash);
         }
     };
 }]);
