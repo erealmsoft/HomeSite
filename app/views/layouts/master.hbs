@@ -2,6 +2,10 @@
 <html data-app="erealm">
 <head>
     <meta charset="utf-8">
+    <!--[if lte IE 8 ]>
+    <meta http-equiv=refresh content="0; URL=/assets/pages/oops.html" />
+    <script>window.location.href="/assets/pages/oops.html";</script>
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Erealm Info & Tech Sdn Bhd</title>
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -18,7 +22,6 @@
     <link rel="stylesheet" href="/stylesheets/app.css" type="text/less"/>
     <script src="/javascripts/debug/less.min.js" type="text/javascript"></script>
     <!-- endbuild -->
-
 </head>
 <body {{{block "bodyAttr"}}} scroll>
 <header role="banner" ng-click="$spMenu.hide()">
@@ -91,6 +94,7 @@
     </div>
     <a class="back-top fa fa-level-up" href="javascript: void(0)" ng-show="showFixedHeader" backtop></a>
 </footer>
+<div class="overlay-message"></div>
 <!-- build:js /javascripts/libs.min.js -->
 <script src="/javascripts/libs/angular.min.js"></script>
 <script src="/javascripts/libs/jquery.min.js"></script>
@@ -106,6 +110,7 @@
 <!-- build:js /javascripts/app.min.js -->
 <script src="/javascripts/erealm.js"></script>
 <script src="/javascripts/clients.js"></script>
+<script src="/javascripts/modernizr.js"></script>
 <script src="/javascripts/app/homeController.js"></script>
 <script src="/javascripts/app/contactController.js"></script>
 <script src="/javascripts/app/aboutController.js"></script>
