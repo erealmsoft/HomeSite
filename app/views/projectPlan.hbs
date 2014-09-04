@@ -1,0 +1,18 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="ProjectController"{{/contentFor}}
+<section class="wrap">
+    <h2>Tell us a little more about your project </h2>
+    <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
+        <p class="info contact-center" ng-bind="errorMessage" translate="make_sure"></p>
+        <fieldset>
+            <h2>Your Details</h2>
+            <div class="form-group">
+                <input type="text" class="form-control col-xs-3" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
+                <input type="text" class="form-control col-xs-3" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
+                <input type="email" class="form-control col-xs-3" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
+                <input type="number" class="form-control col-xs-3" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
+            </div>
+        </fieldset>
+    </form>
+</section>
+

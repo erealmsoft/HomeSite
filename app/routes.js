@@ -28,8 +28,8 @@ module.exports = function(app, express) {
     app.get('/work', function(req, res){
         res.render('work');
     });
-    app.get('/project', function(req, res){
-        res.render('project');
+    app.get('/projectplan', function(req, res){
+        res.render('projectPlan');
     });
     app.get('/projectdetails', function(req, res){
         res.render('projectdetails');

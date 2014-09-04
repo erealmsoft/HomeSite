@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="/stylesheets/libs/erealmFont.css" type="text/css" />
     <!-- endbuild -->
     <!-- build:css /stylesheets/app.min.css -->
-    <link rel="stylesheet" href="/stylesheets/app.css" type="text/less"/>
-    <script src="/javascripts/debug/less.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/stylesheets/app.css" type="text/css"/>
     <!-- endbuild -->
 </head>
 <body {{{block "bodyAttr"}}} scroll>
@@ -81,14 +80,15 @@
         <h2 translate="say_hello"></h2>
         <p translate="say_content"></p>
         <ul>
-            <li><a href="https://twitter.com/erealmtech" class="circle_icon" ng-attr-title="{{angular '\'follow_us\'| translate'}}" target="_blank"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="mailto:hello@erealm.com.my" class="circle_icon" ng-attr-title="{{angular '\'sendus_email\'| translate'}}"><span class="fa fa-envelope"></span></a></li>
+            <li><a href="https://github.com/Erealm-Tech" class="circle_icon" ng-attr-title="{{angular '\'follow_us\'| translate'}}" target="_blank"><span class="fa fa-github"></span></a></li>
+            <li><a href="mailto:hello@erealm.com.my" ng-attr-href="{{angular '\'emaillink\'| translate'}}" class="circle_icon" ng-attr-title="{{angular '\'sendus_email\'| translate'}}"><span class="fa fa-envelope"></span></a></li>
             <li class="last end"><a href="project" class="circle_icon" ng-attr-title="{{angular '\'submit_project\'| translate'}}"><span class="fa fa-send"></span></a></li>
         </ul>
     </div>
     <div class="copyright">
         <p translate="copyright"></p>
         <p><span translate="powerby"></span><a href="http://www.erealm.com.my" target="_blank">Erealm</a> @ 2014.</p>
+        <p>Mentioned product names and logos are property of their respective owners.</p>
     </div>
     <a class="back-top fa fa-level-up" href="javascript: void(0)" ng-show="showFixedHeader" backtop></a>
 </footer>

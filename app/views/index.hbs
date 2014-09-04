@@ -2,31 +2,29 @@
 {{#contentFor "bodyAttr"}}ng-controller="HomeController"{{/contentFor}}
 
 <section class="what-we-are">
-    <div class="back" ng-class="homeBack"></div>
     <div class="wrap">
-        <div class="back2">
         <div class="home-box">
             <h2 translate="slogan"></h2>
             <a href="about" class="btn btn-lg btn-submit home-submit" translate="about_us"></a>
             <a href="contact" class="btn btn-lg btn-submit home-submit" translate="hire_us"></a>
        </div>
-       </div>
     </div>
 </section>
 <section class="what-we-work">
-        <carousel interval="myInterval">
-            <slide ng-repeat="work in works" active="work.active" class="wrap">
-                <h2><a href="{{angular 'work.home'}}" ng-bind="work.title" target="_blank"></a></h2>
-                <div class="carousel-caption">
-                    <p ng-bind="work.description"></p>
-                </div>
-                <img ng-src="{{angular 'work.image'}}">
-            </slide>
-        </carousel>
+    <h2 translate="what_we_done">What we have done</h2>
+    <carousel interval="myInterval">
+        <slide ng-repeat="work in works" active="work.active" class="wrap">
+            <h3><a href="{{angular 'work.home'}}" ng-bind="work.title" target="_blank"></a></h3>
+            <div class="carousel-caption">
+                <p ng-bind="work.description"></p>
+            </div>
+            <img ng-src="{{angular 'work.image'}}">
+        </slide>
+    </carousel>
 </section>
 <section class="what-we-love">
     <h2 translate="what_welove"></h2>
-    <ul>
+    <ul class="programming-manners">
         <li class="end">
             <div class="illustration fa fa-bell-o"></div>
             <p translate="love_one"></p>
@@ -44,6 +42,19 @@
             <p translate="love_four"></p>
         </li>
     </ul>
-    <a href="project" title="submit your project plan to us" target="_self" translate="submit"><i class="fa fa-hand-o-right"></i></a>
+
+    <a href="/projectplan" title="submit your project plan to us" target="_self" translate="submit"><i class="fa fa-hand-o-right"></i></a>
+</section>
+<section class="what-we-can">
+    <h2 translate="what_we_can">what we can do</h2>
+    <h3 translate="what_we_can_language">Programming Language We Used</h3>
+    <ul class="programming-language">
+        <li ng-repeat="language in languages" ng-class="language.class" ng-bind="language.name"></li>
+    </ul>
+    <h3 translate="what_we_can_technology">Technology We Used</h3>
+    <ul class="programming-technology">
+        <li ng-repeat="technology in technologies" ng-bind="technology.name"></li>
+    </ul>
+
 </section>
 

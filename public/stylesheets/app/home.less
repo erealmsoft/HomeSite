@@ -2,6 +2,7 @@
   min-height: 400px;
   margin-bottom: 1.18em;
   overflow-x: hidden;
+  text-align: center;
 
   .carousel-control {
     height: 80px;
@@ -51,51 +52,20 @@
   overflow: hidden;
   margin-bottom: 1.18em;
   position: relative;
-  height: 500px;
-  color: @white;
-
+  height: 600px;
+  color: @orange;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/background-0.png");
 
   .home-box {
-    width: 600px;
-    padding: 2.2em 2.2em 2.2em 2.5em;
-    text-align: left;
-    margin-bottom:50px;
-    margin-top:30px;
+    width: 650px;
+    text-align: center;
+    margin-top:150px;
   }
   .back2+.wrap {
     color: @orange;
   }
-
-
-  .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 3.75em 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(1.5px);
-
-
-
-    background-color:@green;
-    &.back1 {
-      background-image: url("/images/background-1.png");
-    }
-    &.back2 {
-      background-image: url("/images/background-2.png");
-    }
-    &.back3 {
-      background-image: url("/images/background-3.png");
-    }
-    &.back4 {
-      background-image: url("/images/background-4.png");
-    }
-    &.back5 {
-      background-image: url("/images/background-5.png");
-    }
-  }
-
 }
 
 .what-we-love {
@@ -110,26 +80,27 @@
     margin-bottom: 30px;
   }
 
-  ul li {
-    list-style-type: none;
+  .programming-manners li {
     display: inline-block;
     width: 20%;
-    margin-right: 4%;
+    margin: 0 2%;
     margin-bottom: 2em;
     vertical-align: top;
-  }
-  .illustration {
-    width: 115px;
-    height: 115px;
-    background: #ffffff;
-    display: inline-block;
-    border-radius: 50%;
-    margin-bottom: 30px;
-    color: #666;
-    font-size: 60px;
-    line-height: 115px;
-  }
 
+    .illustration {
+      width: 115px;
+      height: 115px;
+      background: #ffffff;
+      display: inline-block;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      color: #666;
+      font-size: 60px;
+      line-height: 115px;
+    }
+
+
+  }
   a {
     color: #fff;
     font-size: 1.5em;
@@ -139,7 +110,74 @@
       color: #333;
     }
   }
+}
 
+.what-we-can {
+  padding: 2% 0%;
+  overflow: hidden;
+  min-height: 400px;
+  color: @white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/background-6.png");
+  text-align: center;
+
+  .programming-language li {
+    display: inline-block;
+    width: 100px;
+    margin: 1%;
+    margin-bottom: 2em;
+    vertical-align: top;
+    text-align: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+      background-image: url("/images/languages.png");
+    }
+
+    &.language-java::before {
+      background-position: 10px 0;
+    }
+    &.language-scala::before {
+      background-position: -96px 0;
+    }
+    &.language-net::before {
+      background-position: -200px 0;
+    }
+    &.language-nodejs::before {
+      background-position: -300px 0;
+    }
+    &.language-php::before {
+      background-position: -400px 0;
+    }
+    &.language-go::before {
+      background-position: 0 -100px;
+    }
+    &.language-swift::before {
+      background-position: -100px -100px;
+    }
+    &.language-html5::before {
+      background-position: -200px -100px;
+    }
+    &.language-python::before {
+      background-position: -300px -100px;
+    }
+    &.language-ruby::before {
+      background-position: -400px -100px;
+    }
+  }
+  .programming-technology {
+    width: 90%;
+    margin: 0 auto;
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
 }
 
 .cta
@@ -155,10 +193,10 @@
 {
   .what-we-love
   {
-    ul li
+    .programming-manners li
     {
       width: 40%;
-      margin-right: 5%;
+      margin: 0 2.5%;
     }
   }
 
@@ -193,7 +231,7 @@
 
   .what-we-love
   {
-    ul li
+    .programming-manners li
     {
       width: 90%;
       margin: 1em auto;
@@ -201,6 +239,10 @@
       {
         width: 100%;
       }
+    }
+
+    a {
+      font-size: 1.2em;
     }
   }
 }

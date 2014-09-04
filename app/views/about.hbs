@@ -1,53 +1,43 @@
 {{!< master}}
 {{#contentFor "bodyAttr"}}ng-controller="AboutController"{{/contentFor}}
-
-<div class="wrap">
-    <div class="about-box">
-        <h1 class="about-h1" translate="aboutlove"></h1>
-        <div class="about-center">
-            <p translate="aboutlove_one">
-            </p>
-            <p translate="aboutlove_two">
-            </p>
-            <p translate="aboutlove_three">
-            </p>
-            <p translate="aboutlove_four">
-            </p>
+<section class="detail-we-are">
+    <div class="back" ng-class="homeBack"></div>
+    <div class="wrap">
+        <div class="about-box">
+            <h2 class="about-h1" translate="aboutlove"></h2>
+            <div class="about-center">
+                <p translate="aboutlove_one">
+                </p>
+                <p translate="aboutlove_two">
+                </p>
+                <p translate="aboutlove_three">
+                </p>
+                <p translate="aboutlove_four">
+                </p>
+            </div>
         </div>
     </div>
-
-    <div class="team-profile">
-        <ul>
-            <li class="profile" ng-repeat="item in person">
-                <a ng-href="#{{angular 'item.first_name'}}">
-                    <figure>
-                        <img class="img-circle img-responsive"
-                             ng-src="{{angular 'item.photo'}}"/>
-                    </figure>
-                </a>
-                <h3 ng-bind="item.first_name"></h3>
-
-                <q ng-bind="item.description" class="description"></q>
-
-            </li>
-        </ul>
+</section>
+<section>
+    <div class="wrap">
+        <div class="team-profile">
+            <h2>Meet our team of erealm</h2>
+            <h3>We love what we do every day.</h3>
+            <ul class="clearfix">
+                <li class="profile" ng-repeat="item in person">
+                    <a ng-href="#{{angular 'item.first_name'}}" class="clearfix">
+                        <figure>
+                            <img class="img-circle img-responsive"
+                                 ng-src="{{angular 'item.photo'}}"/>
+                        </figure>
+                    </a>
+                    <h3 ng-bind="item.first_name"></h3>
+                    <q ng-bind="item.description" class="description"></q>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-<!--<div id="{{angular 'item.first_name'}}" collapsed="isCollapsed" >-->
-    <!--<div class="section">-->
-        <!--<div class="container">-->
-            <!--<h2 ng-bind="item.first_name"></h2>-->
-
-            <!--<p ng-bind="item.position"></p>-->
-
-            <!--<p ng-bind="item.hobby"></p>-->
-
-            <!--<p ng-bind="item.description"></p>-->
-
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-
+</section>
 <section id="flickrfeed" class="flickr-feed">
     <ul>
         <li ng-repeat="item in photos">

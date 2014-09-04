@@ -12,6 +12,7 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
     $scope.mainTitle = "working with you";
     $scope.currentPage = "about-page";
     $scope.isCollapsed = true;
+    $scope.homeBack = 'back' + (Math.floor(Math.random() * 4) + 1);
 
     client.getFlickrPhotos().then(function(response){
         var photos = response.data.items;

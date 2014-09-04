@@ -4,6 +4,7 @@
   overflow: hidden;
   float:left;
   width: 100%;
+  background-color: @content;
 
   ul{
     list-style: none;
@@ -13,6 +14,7 @@
     width: 120%;
     height: 150px;
     overflow: hidden;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -33,7 +35,7 @@
 }
 
 .team-profile {
-  margin-top:75px;
+
 
   .profile {
     width: 25%;
@@ -55,6 +57,54 @@
         transform:matrix(1.1,0,0,1.1,0,0);
         filter: none;
       }
+    }
+  }
+}
+
+.detail-we-are {
+  overflow: hidden;
+  margin-bottom: 1.18em;
+  position: relative;
+  min-height: 600px;
+  color: @white;
+
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 3.75em 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(1.5px);
+    background-color:@green;
+    &.back1 {
+      background-image: url("/images/background-1.png");
+    }
+    &.back2 {
+      background-image: url("/images/background-2.png");
+    }
+    &.back3 {
+      background-image: url("/images/background-3.png");
+    }
+    &.back4 {
+      background-image: url("/images/background-4.png");
+    }
+    &.back5 {
+      background-image: url("/images/background-5.png");
+    }
+  }
+
+  .about-box {
+
+    text-align: left;
+    width: 85%;
+    background: rgba(57, 169, 164, 0.9);;
+    color: @white;
+    padding: 20px;
+    margin: 30px auto;
+    .about-center {
+      column-count: 2;
+      column-gap: 1.5em;
     }
   }
 }
@@ -91,11 +141,6 @@
   color:@orange;
   font-style: italic;
 
-}
-
-
-h1{
-  font-size:2em;
 }
 
 @media only screen and (max-width:1024px)

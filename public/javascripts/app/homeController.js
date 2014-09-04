@@ -13,9 +13,14 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
     $scope.currentPage = "home-page",
     $scope.myInterval = 5000;
 
-    $scope.homeBack = 'back' + (Math.floor(Math.random() * 4) + 1);
-
     client.getWorks().then(function(response) {
         $scope.works = response.data;
     });
+    client.getTechnologies().then(function(response) {
+        $scope.technologies = response.data.technologies;
+        $scope.languages = response.data.languages;
+
+    });
+
+
 }]);
