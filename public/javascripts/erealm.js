@@ -47,10 +47,11 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
     }
 ])
 // window scroll event.
-.directive("language", ['$translate', function ($translate) {
+.directive("language", ['$translate', '$spMenu', function ($translate, $spMenu) {
     return function(scope, element, attrs) {
         angular.element(element).bind("click", function() {
             $translate.uses(attrs['key']);
+            $spMenu.hide();
             scope.$apply();
         });
     };
@@ -76,7 +77,7 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
         });
     };
 }])
-.config(['$translateProvider', function($translateProvider){
+.config(['$translateProvider','$httpProvider', function($translateProvider,$httpProvider){
 
     $translateProvider.useUrlLoader('/app/language');
     // Tell the module what language to use by default
