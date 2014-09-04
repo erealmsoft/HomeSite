@@ -404,6 +404,21 @@ footer .copyright a {
 footer .copyright a:hover {
   color: #a34424;
 }
+footer .back-top {
+  position: fixed;
+  font-size: .8em;
+  color: #ffffff;
+  bottom: 20px;
+  right: 20px;
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  text-align: center;
+  background: #3B4250;
+  z-index: 1000;
+}
 .error-info {
   padding: 40px 0;
 }
@@ -462,6 +477,58 @@ footer .copyright a:hover {
 }
 .page-menu-slide .nav-slide li a:hover {
   w-color: #6a6a6a;
+}
+@-webkit-keyframes 'loadbars' {
+  0% {
+    height: 10px;
+    margin-top: 25px;
+  }
+  50% {
+    height: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    height: 10px;
+    margin-top: 25px;
+  }
+}
+.overlay-message {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay-message .loader {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -30px;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  list-style: none;
+}
+.overlay-message li {
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-right: 5px;
+  box-shadow: 0px 100px 20px rgba(0, 0, 0, 0.2);
+}
+.overlay-message li:first-child {
+  -webkit-animation: loadbars 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s;
+}
+.overlay-message li:nth-child(2) {
+  -webkit-animation: loadbars 0.6s ease-in-out infinite -0.2s;
+}
+.overlay-message li:nth-child(3) {
+  -webkit-animation: loadbars 0.6s ease-in-out infinite -0.4s;
 }
 @media only screen and (max-width: 1024px) {
   .wrap {

@@ -5,16 +5,47 @@
  */
 
 var erealm = angular.module('erealm', ['ui.bootstrap','pascalprecht.translate','ngCookies','shoppinpal.mobile-menu']);
-erealm.config(['$translateProvider', function($translateProvider){
+erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
+    function ($q, $rootScope, $injector) {
+        $rootScope.mainLoading = false;
+        $rootScope.http = null;
+        return {
+            'request': function (config) {
+                $rootScope.mainLoading = true;
+                return config || $q.when(config);
+            },
+            'requestError': function (rejection) {
+                $rootScope.http = $rootScope.http || $injector.get('$http');
+                if ($rootScope.http.pendingRequests.length < 1) {
+                    $rootScope.mainLoading = false;
+                }
 
-    $translateProvider.useUrlLoader('/app/language');
-    // Tell the module what language to use by default
-    $translateProvider.preferredLanguage('cn');
-    $translateProvider.fallbackLanguage('cn');
-    // Tell the module to store the language in the cookie
-    $translateProvider.useCookieStorage();
-}])
+                return $q.reject(rejection);
+            },
+            'response': function (response) {
+                $rootScope.http = $rootScope.http || $injector.get('$http');
+                $rootScope.mainLoading = false;
 
+                return response || $q.when(response);
+            },
+            'responseError': function (rejection) {
+                $rootScope.http = $rootScope.http || $injector.get('$http');
+                if ($rootScope.http.pendingRequests.length < 1) {
+                    $rootScope.mainLoading = false;
+                }
+
+                var message = 'Please try again later';
+
+                if (rejection.status == '400') {
+                    message = "Invalid request parameters";
+                }
+
+                $rootScope.errorMessage = {text: message};
+                return $q.reject(rejection);
+            }
+        }
+    }
+])
 // window scroll event.
 .directive("language", ['$translate', function ($translate) {
     return function(scope, element, attrs) {
@@ -44,5 +75,14 @@ erealm.config(['$translateProvider', function($translateProvider){
             scope.$apply();
         });
     };
-}]);
+}])
+.config(['$translateProvider', function($translateProvider){
 
+    $translateProvider.useUrlLoader('/app/language');
+    // Tell the module what language to use by default
+    $translateProvider.preferredLanguage('cn');
+    $translateProvider.fallbackLanguage('cn');
+    // Tell the module to store the language in the cookie
+    $translateProvider.useCookieStorage();
+    $httpProvider.interceptors.push('errorHttpInterceptor');
+}]);
