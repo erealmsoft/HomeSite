@@ -449,20 +449,6 @@ footer .back-top {
 .page-menu-slide .nav-slide li a:hover {
   w-color: #6a6a6a;
 }
-@-webkit-keyframes 'loadbars' {
-  0% {
-    height: 10px;
-    margin-top: 25px;
-  }
-  50% {
-    height: 50px;
-    margin-top: 0px;
-  }
-  100% {
-    height: 10px;
-    margin-top: 25px;
-  }
-}
 .overlay-message {
   position: fixed;
   z-index: 1001;
@@ -480,13 +466,12 @@ footer .back-top {
   top: 50%;
   margin-top: -30px;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  width: 100px;
   list-style: none;
 }
 .overlay-message li {
   background-color: #FFFFFF;
-  width: 10px;
+  width: 20px;
   height: 10px;
   float: right;
   margin-right: 5px;
@@ -494,12 +479,43 @@ footer .back-top {
 }
 .overlay-message li:first-child {
   -webkit-animation: loadbars 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s;
+          animation: loadbars 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s;
 }
 .overlay-message li:nth-child(2) {
   -webkit-animation: loadbars 0.6s ease-in-out infinite -0.2s;
+          animation: loadbars 0.6s ease-in-out infinite -0.2s;
 }
 .overlay-message li:nth-child(3) {
   -webkit-animation: loadbars 0.6s ease-in-out infinite -0.4s;
+          animation: loadbars 0.6s ease-in-out infinite -0.4s;
+}
+@-webkit-keyframes loadbars {
+  0% {
+    height: 10px;
+    margin-top: 25px;
+  }
+  50% {
+    height: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    height: 10px;
+    margin-top: 25px;
+  }
+}
+@keyframes loadbars {
+  0% {
+    height: 10px;
+    margin-top: 25px;
+  }
+  50% {
+    height: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    height: 10px;
+    margin-top: 25px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .wrap {
