@@ -157,7 +157,6 @@ textarea.error, input.error {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-right: .5em;
   transition: background .15s linear;
   text-align: center;
 }
@@ -260,6 +259,7 @@ header {
       background-size: 100%;
       background-repeat: no-repeat;
       margin-top: 1em;
+      margin-left: .4em;
 
       &:hover {
         filter: alpha(opacity=100);
@@ -330,7 +330,7 @@ header {
     position: absolute;
     right: 0;
     display: inline-block;
-    margin: .7em 0;
+    margin: .7em .4em;
     font-size: 1.5em;
     width: 29px;
     height: 21px;
@@ -515,7 +515,7 @@ footer {
     width: 15px;
     height: 10px;
     float: right;
-    margin-right: 15px;
+    margin: 0 8px;
     box-shadow: 0px 100px 20px rgba(0, 0, 0, 0.2);
    &:first-child {
       animation: loadbars 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s;
@@ -587,6 +587,7 @@ footer {
     .contact {
       p {
         width: 70%;
+        min-width: 0;
       }
     }
   }

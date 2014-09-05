@@ -159,7 +159,6 @@ input.error:-moz-placeholder {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-right: .5em;
   -webkit-transition: background .15s linear;
           transition: background .15s linear;
   text-align: center;
@@ -254,6 +253,7 @@ header .git-fock a {
   background-size: 100%;
   background-repeat: no-repeat;
   margin-top: 1em;
+  margin-left: .4em;
 }
 .nav_container nav .sub-logo-mark:hover {
   filter: alpha(opacity=100);
@@ -313,7 +313,7 @@ header .git-fock a {
   position: absolute;
   right: 0;
   display: inline-block;
-  margin: .7em 0;
+  margin: .7em .4em;
   font-size: 1.5em;
   width: 29px;
   height: 21px;
@@ -474,7 +474,7 @@ footer .back-top {
   width: 15px;
   height: 10px;
   float: right;
-  margin-right: 15px;
+  margin: 0 8px;
   box-shadow: 0px 100px 20px rgba(0, 0, 0, 0.2);
 }
 .overlay-message li:first-child {
@@ -545,6 +545,7 @@ footer .back-top {
   }
   footer .contact p {
     width: 70%;
+    min-width: 0;
   }
 }
 /* Smartphones ----------- */
@@ -627,7 +628,7 @@ footer .back-top {
 .what-we-work .carousel-caption {
   color: #333333;
   position: static;
-  height: 5em;
+  height: 4em;
 }
 .what-we-work .carousel-indicators li {
   border: 1px solid #333333;
@@ -753,7 +754,7 @@ footer .back-top {
   background-position: -400px -100px;
 }
 .what-we-can .programming-technology {
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
 }
 .what-we-can .programming-technology li {
@@ -783,7 +784,7 @@ footer .back-top {
     text-align: center;
   }
   .what-we-work .carousel-cover {
-    height: 400px;
+    height: 300px;
   }
 }
 @media only screen and (max-width: 580px) and (min-width: 0) {
@@ -798,6 +799,10 @@ footer .back-top {
   }
   .what-we-are .wrap .home-box h2 {
     font-size: 1.5em;
+  }
+  .what-we-work .carousel-caption {
+    height: 6em;
+    padding: 0;
   }
   .what-we-love .programming-manners li {
     width: 90%;
