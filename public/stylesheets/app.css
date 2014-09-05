@@ -5,7 +5,7 @@ html {
 body {
   background: #ffffff;
   color: #808080;
-  font-family: 'Inconsolata', 'Raleway', sans-serif;
+  font-family: 'Inconsolata', 'Raleway', SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-size: 20px;
 }
 .wrap {
