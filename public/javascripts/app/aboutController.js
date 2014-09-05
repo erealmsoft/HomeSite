@@ -14,6 +14,14 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
     $scope.isCollapsed = true;
     $scope.homeBack = 'back' + (Math.floor(Math.random() * 4) + 1);
 
+    $scope.loadData = function(language) {
+        if (!language) language = $translate.proposedLanguage();
+        client.getEmployeeInfo(language).then(function(response){
+            var person = response.data;
+            $scope.person = person;
+        });
+    };
+    $scope.loadData();
     client.getFlickrPhotos().then(function(response){
         var photos = response.data.items;
         angular.forEach(photos, function(item) {
@@ -21,11 +29,7 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
         });
         $scope.photos = photos;
     });
-    client.getEmployeeInfo().then(function(response){
-        var person = response.data;
 
-        $scope.person = person;
-    });
     $scope.collapsed=function(ite)
     {
         $scope.isCollapsed=!( $scope.isCollapsed);

@@ -52,6 +52,9 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
         angular.element(element).bind("click", function() {
             $translate.uses(attrs['key']);
             $spMenu.hide();
+            if (scope.loadData){
+                scope.loadData(attrs['key']);
+            }
             scope.$apply();
         });
     };

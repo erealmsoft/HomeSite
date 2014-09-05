@@ -9,8 +9,9 @@ var mhelper=require('../helper/dbhelper');
 
 exports.readStaff = function(req, res) {
 
-     mhelper.conn_db().open(function(err, db){
-            db.createCollection('personnel', function(err, collection) {
+    var language =req.params.language;
+    mhelper.conn_db().open(function(err, db){
+            db.createCollection('personnel_' + language, function(err, collection) {
                 if (err) {
                     console.log("error during creating or openniing the team table!");
                     db.close();
