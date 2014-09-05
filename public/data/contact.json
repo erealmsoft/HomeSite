@@ -4,7 +4,7 @@
         "location" : "Malaysia Office",
         "map": {
             "shortUrl": "http://goo.gl/6QoZt8",
-            "latLng": [3.04228,101.64] ,
+            "latLng": [3.04,101.62] ,
             "point" : [3.04228,101.61906]
         },
         "info" : {
@@ -22,7 +22,7 @@
         "location" : "China Office",
         "map": {
             "shortUrl": "http://goo.gl/6QoZt8",
-            "latLng": [34.194825,108.90] ,
+            "latLng": [34.194825,108.89] ,
             "point" : [34.194825,108.88425]
         },
         "info" : {
