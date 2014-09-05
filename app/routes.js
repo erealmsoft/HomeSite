@@ -48,6 +48,9 @@ module.exports = function(app, express) {
 
     app.get('/app/projectDetails/:id',require('./api/projectDetails').findProDetails);
 
+    app.get('/app/contact/:language',require('./api/contacts').readcontacts);
+
+
     //the database manage page.
     app.get('/' + config.dbManage,function(req,res){
         res.render('mongo_manage');

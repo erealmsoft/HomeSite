@@ -12,11 +12,15 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
     $scope.mainTitle = "Say Hello",
     $scope.currentPage = "contact-page";
 
-
-    client.getContacts().then(function(response) {
-        $scope.contacts = response.data;
-        $scope.changeMap(response.data[0]);
-    });
+    $scope.loadData = function(language) {
+        if (!language) language = $translate.proposedLanguage();
+        client.getContactsInfo(language).then(function(response){
+            var contact = response.data;
+            $scope.contacts = contact;
+            $scope.changeMap(response.data[0]);
+        });
+    };
+    $scope.loadData();
 
     $scope.changeMap = function(contactInfo) {
         $scope.activeMap = contactInfo.name;

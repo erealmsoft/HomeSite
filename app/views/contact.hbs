@@ -12,14 +12,14 @@
                 <li ng-repeat="item in contacts" ng-class="{active: activeMap == item.name}">
                     <!--http://goo.gl/6QoZt8-->
                     <i class="location-marker fa fa-map-marker"></i>
-                    <a href="javascript:void(0);" ng-click="changeMap(item)" ng-bind="item.location">Malaysia Office</a>
+                    <a href="javascript:void(0);" ng-click="changeMap(item.map)" ng-bind="item.location"></a>
                     <div class="address">
-                        <span class="street-address" ng-bind="item.info.address">3F-19 IOI Business Park</span>
-                        <span class="region" ng-bind="item.info.region">Bandar Puchong Jaya</span>
-                        <span class="county" ng-bind="item.info.county">Selangor</span>
-                        <span class="postal-code" ng-bind="item.info.postcode">47100</span>
-                        <span class="country-name" ng-bind="item.info.country">Malaysia</span>
-                        <span class="tel"><b ng-bind="item.info.contact">+60 011-2623-4513</b></span>
+                        <span class="street-address" ng-bind="item.info.address"></span>
+                        <span class="region" ng-bind="item.info.region"></span>
+                        <span class="county" ng-bind="item.info.county"></span>
+                        <span class="postal-code" ng-bind="item.info.postcode"></span>
+                        <span class="country-name" ng-bind="item.info.country"></span>
+                        <span class="tel"><b ng-bind="item.info.contact"></b></span>
                     </div>
                 </li>
             </ul>
