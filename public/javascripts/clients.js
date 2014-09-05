@@ -21,8 +21,8 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getEmployeeInfo:function(language){
             return $http.get('/app/personnel/'+language);
         },
-        getProjectsInfo:function(){
-            return $http.get('/app/projects');
+        getProjectsInfo:function(language){
+            return $http.get('/app/projects/'+language);
         },
         getProjectsDetailsInfo:function(hash){
             return $http.get('/app/projectDetails' + '/' + hash);

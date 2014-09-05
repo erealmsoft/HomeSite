@@ -1,29 +1,35 @@
 /**
- * Created by root on 8/27/2014.
+ * Copyright 2014 eRealm Sdn.Bhd.
+ *
+ * Created by root on 8/18/2014.
  */
 'use strict';
 
-exports.readProjects = function(req,res){
+var mhelper=require('../helper/dbhelper');
 
-    var db = require("../helper/dbhelper").conn_db();   //connect to the databases
+exports.readProjects = function(req, res) {
 
-    db.open(function(err,db){
+    var language =req.params.language;
+    mhelper.conn_db().open(function(err, db){
+        db.createCollection('projects_' + language, function(err, collection) {
+            if (err) {
+                console.log("error during creating or openniing the team table!");
+                db.close();
+                throw err;
+            }
 
-        if(err){
-            console.log(err);
-            return false;
-        }
-        db.collection('projects',{safe:true},function(err,collection){
-            collection.find().toArray(function(err,items){
-                if(err){
-                    console.log(err);
-                    return false;
+            collection.find().toArray(function (err, items) {
+                //         mhelper.queryArray(err, items, db, res);
+                if(err) {
+                    console.log("error during finding the team table!");
+                    db.close();
+                    throw err;
                 }
+                items.sort(function(va,vb){return va.number - vb.number});
                 res.json(items);
                 db.close();
-                console.log("the db-connection is closed.");
             });
         });
     });
-
 };
+

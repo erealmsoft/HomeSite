@@ -12,7 +12,7 @@
                 <li ng-repeat="item in contacts" ng-class="{active: activeMap == item.name}">
                     <!--http://goo.gl/6QoZt8-->
                     <i class="location-marker fa fa-map-marker"></i>
-                    <a href="javascript:void(0);" ng-click="changeMap(item.map)" ng-bind="item.location"></a>
+                    <a href="javascript:void(0);" ng-click="changeMap(item)" ng-bind="item.location"></a>
                     <div class="address">
                         <span class="street-address" ng-bind="item.info.address"></span>
                         <span class="region" ng-bind="item.info.region"></span>

@@ -9,7 +9,6 @@ var mhelper=require('../helper/dbhelper');
 exports.readcontacts = function(req, res) {
 
     var language =req.params.language;
-    console.log(language);
 
     var collectionName = 'contact_' + language;
     console.log(collectionName);
