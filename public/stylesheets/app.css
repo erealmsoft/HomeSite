@@ -387,7 +387,7 @@ footer .back-top {
   border-radius: 50%;
   border: 1px solid #ffffff;
   text-align: center;
-  background: #3B4250;
+  background: #39a9a4;
   z-index: 1000;
 }
 .error-info {
@@ -410,7 +410,7 @@ footer .back-top {
   color: #e1704b;
 }
 .muti-language a:hover {
-  color: #333;
+  color: #333333;
 }
 .page-menu-slide {
   width: 0;
@@ -419,7 +419,7 @@ footer .back-top {
   top: 0;
   height: 100%;
   z-index: 999999;
-  background-color: #333;
+  background-color: #333333;
   color: #FFF;
   box-shadow: inset 0 0 5px 5px #222;
   opacity: 0.9;
@@ -470,11 +470,11 @@ footer .back-top {
   list-style: none;
 }
 .overlay-message li {
-  background-color: #FFFFFF;
-  width: 20px;
+  background-color: #ffffff;
+  width: 15px;
   height: 10px;
   float: right;
-  margin-right: 5px;
+  margin-right: 15px;
   box-shadow: 0px 100px 20px rgba(0, 0, 0, 0.2);
 }
 .overlay-message li:first-child {
@@ -495,7 +495,7 @@ footer .back-top {
     margin-top: 25px;
   }
   50% {
-    height: 50px;
+    height: 70px;
     margin-top: 0px;
   }
   100% {
@@ -509,7 +509,7 @@ footer .back-top {
     margin-top: 25px;
   }
   50% {
-    height: 50px;
+    height: 70px;
     margin-top: 0px;
   }
   100% {
@@ -519,7 +519,8 @@ footer .back-top {
 }
 @media only screen and (max-width: 1024px) {
   .wrap {
-    width: 99%;
+    width: 100%;
+    padding: 0 1%;
   }
   .wrap .intro h1 {
     font-size: 2em;
@@ -537,6 +538,13 @@ footer .back-top {
     display: block;
     margin: 0 auto;
     margin-bottom: 1em;
+  }
+  header .intro {
+    margin: 0;
+    text-align: center;
+  }
+  footer .contact p {
+    width: 70%;
   }
 }
 /* Smartphones ----------- */
@@ -617,15 +625,22 @@ footer .back-top {
   left: 35px;
 }
 .what-we-work .carousel-caption {
-  color: #333;
+  color: #333333;
   position: static;
+  height: 5em;
+}
+.what-we-work .carousel-indicators li {
+  border: 1px solid #333333;
 }
 .what-we-work .carousel-indicators .active {
   background-color: #e1704b;
 }
+.what-we-work .carousel-cover {
+  height: 500px;
+}
 .what-we-work img {
   margin: 0 auto;
-  height: 500px;
+  max-height: 100%;
 }
 .what-we-are {
   overflow: hidden;
@@ -647,7 +662,7 @@ footer .back-top {
 }
 .what-we-love {
   margin: 0;
-  padding: 2% 0%;
+  padding: 2% 0;
   background: #39a9a4;
   color: #fff;
   text-align: center;
@@ -757,10 +772,21 @@ footer .back-top {
     margin: 0 2.5%;
   }
 }
-@media only screen and (max-width: 580px) and (min-width: 0) {
+@media only screen and (max-width: 768px) and (min-width: 0) {
   .what-we-are {
     height: auto;
   }
+  .what-we-are .wrap .home-box {
+    width: 100%;
+    padding: 10px;
+    margin: 100px 0;
+    text-align: center;
+  }
+  .what-we-work .carousel-cover {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 580px) and (min-width: 0) {
   .what-we-are .back.back1,
   .what-we-are .back.back2,
   .what-we-are .back.back3,
@@ -768,9 +794,7 @@ footer .back-top {
     background-image: none;
   }
   .what-we-are .wrap .home-box {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
+    margin: 50px 0;
   }
   .what-we-are .wrap .home-box h2 {
     font-size: 1.5em;
@@ -837,7 +861,6 @@ footer .back-top {
   left: 50%;
   margin: 3em 0;
   z-index: 99;
-  width: 650px;
   background: #39a9a4;
   background: rgba(57, 169, 164, 0.95);
   color: #fff;
@@ -865,13 +888,13 @@ footer .back-top {
 .contact_details .cotact-address li {
   display: inline-block;
   list-style-type: none;
-  padding: 0 3%;
+  padding-left: 25px;
   vertical-align: top;
   font-size: .9em;
+  margin: 0 20px;
 }
 .contact_details .cotact-address li .location-marker {
-  margin-left: -15%;
-  margin-right: 5%;
+  margin-left: -25px;
   font-size: 1.5em;
   line-height: 1.6em;
 }
@@ -884,6 +907,9 @@ footer .back-top {
 .google-map {
   width: 100%;
   height: 600px;
+}
+.send-message {
+  padding: 2% 0;
 }
 .send-message .form-group {
   width: 50%;
@@ -1103,10 +1129,22 @@ footer .back-top {
 @media only screen and (max-width: 768px) {
   .wrap .about-box {
     width: 100%;
+    margin: 0;
   }
   .team-profile .profile {
     width: 90%;
     height: auto;
+    float: none;
+  }
+  .detail-we-are {
+    background: #39a9a4;
+    min-height: 0;
+  }
+  .detail-we-are .back {
+    display: none;
+  }
+  .detail-we-are .about-box {
+    background: none;
   }
 }
 @media only screen and (max-width: 580px) {

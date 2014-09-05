@@ -34,17 +34,25 @@
   }
 
   .carousel-caption {
-    color:  #333;
+    color:  @black;
     position: static;
+    height: 5em;
   }
 
+  .carousel-indicators li {
+    border: 1px solid @black;
+  }
   .carousel-indicators .active {
     background-color: #e1704b;
   }
 
+  .carousel-cover {
+    height: 500px;
+  }
+
   img {
     margin: 0 auto;
-    height: 500px;
+    max-height: 100%
   }
 }
 .what-we-are {
@@ -71,7 +79,7 @@
 .what-we-love {
 
   margin: 0;
-  padding: 2% 0%;
+  padding: 2% 0;
   background: #39a9a4;
   color: #fff;
   text-align: center;
@@ -201,14 +209,32 @@
   }
 
 }
+@media only screen and (max-width: 768px) and (min-width: 0){
+  .what-we-are
+  {
+    height: auto;
+    .wrap
+    {
+      .home-box
+      {
+        width: 100%;
+        padding: 10px;
+        margin: 100px 0;
+        text-align: center;
+      }
+    }
+  }
+  .what-we-work .carousel-cover {
+    height: 400px;
+  }
+}
+
 
 
 @media only screen and (max-width: 580px) and (min-width: 0)
 {
   .what-we-are
   {
-    height: auto;
-
     .back {
       &.back1,&.back2,&.back3,&.back4 {
         background-image: none;
@@ -218,9 +244,7 @@
     {
       .home-box
       {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
+        margin: 50px 0;
         h2
         {
           font-size: 1.5em;

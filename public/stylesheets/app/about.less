@@ -158,12 +158,25 @@
   .wrap .about-box
   {
     width:100%;
+    margin: 0;
   }
 
   .team-profile {
     .profile {
       width: 90%;
       height: auto;
+      float: none;
+    }
+  }
+
+  .detail-we-are {
+    background: @green;
+    min-height: 0;
+    .back {
+      display: none;
+    }
+    .about-box {
+      background: none;
     }
   }
 }

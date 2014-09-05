@@ -420,7 +420,7 @@ footer {
     border-radius: 50%;
     border:1px solid @white;
     text-align: center;
-    background: #3B4250;
+    background: @green;
     z-index: 1000;
   }
 }
@@ -428,7 +428,7 @@ footer {
 .error-info {
   padding: 40px 0;
   h1 {
-    color: #e1704b;
+    color: @orange;
   }
 }
 
@@ -444,10 +444,10 @@ footer {
     padding-bottom: 0;
   }
   a:visited {
-    color: #e1704b;
+    color: @orange;
   }
   a:hover{
-    color: #333;
+    color: @black;
   }
 }
 
@@ -458,7 +458,7 @@ footer {
   top: 0;
   height: 100%;
   z-index: 999999;
-  background-color: #333;
+  background-color: @black;
   color: #FFF;
   box-shadow: inset 0 0 5px 5px #222;
   opacity: 0.9;
@@ -482,7 +482,7 @@ footer {
 
     li a {
       display: block;
-      color: #ffffff;
+      color: @white;
       padding: 1em 2em ;
       border-bottom: 1px solid #5c5c5c;
       &:hover {
@@ -511,11 +511,11 @@ footer {
     list-style: none;
   }
   li {
-    background-color: #FFFFFF;
-    width: 20px;
+    background-color: @white;
+    width: 15px;
     height: 10px;
     float: right;
-    margin-right: 5px;
+    margin-right: 15px;
     box-shadow: 0px 100px 20px rgba(0, 0, 0, 0.2);
    &:first-child {
       animation: loadbars 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s;
@@ -535,7 +535,7 @@ footer {
     margin-top: 25px;
   }
   50%{
-    height:50px;
+    height:70px;
     margin-top: 0px;
   }
   100%{
@@ -549,7 +549,8 @@ footer {
 
   .wrap
   {
-    width:99%;
+    width:100%;
+    padding: 0 1%;
     .intro h1
     {
       font-size: 2em;
@@ -574,6 +575,19 @@ footer {
       display: block;
       margin: 0 auto;
       margin-bottom: 1em;
+    }
+
+    .intro {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  footer {
+    .contact {
+      p {
+        width: 70%;
+      }
     }
   }
 }

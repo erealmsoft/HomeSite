@@ -3,28 +3,26 @@
 <div class="contact-content">
     <div id="contact_details">
         <div class="contact_details">
-            <div>
-                <div class="circle_icon"><span class="fa fa-envelope"></span></div>
-                <a class="contact-info" ng-attr-href="{{angular '\'emaillink\'| translate'}}" translate="email"></a>
+            <div class="circle_icon"><span class="fa fa-envelope"></span></div>
+            <a class="contact-info" ng-attr-href="{{angular '\'emaillink\'| translate'}}" translate="email"></a>
 
-                <hr>
-                <p></p>
-                <ul class="cotact-address">
-                    <li ng-repeat="item in contacts" ng-class="{active: activeMap == item.name}">
-                        <!--http://goo.gl/6QoZt8-->
-                        <i class="location-marker fa fa-map-marker"></i>
-                        <a href="javascript:void(0);" ng-click="changeMap(item)" ng-bind="item.location">Malaysia Office</a>
-                        <div class="address">
-                            <span class="street-address" ng-bind="item.info.address">3F-19 IOI Business Park</span>
-                            <span class="region" ng-bind="item.info.region">Bandar Puchong Jaya</span>
-                            <span class="county" ng-bind="item.info.county">Selangor</span>
-                            <span class="postal-code" ng-bind="item.info.postcode">47100</span>
-                            <span class="country-name" ng-bind="item.info.country">Malaysia</span>
-                            <span class="tel"><b ng-bind="item.info.contact">+60 011-2623-4513</b></span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <hr>
+            <p></p>
+            <ul class="cotact-address">
+                <li ng-repeat="item in contacts" ng-class="{active: activeMap == item.name}">
+                    <!--http://goo.gl/6QoZt8-->
+                    <i class="location-marker fa fa-map-marker"></i>
+                    <a href="javascript:void(0);" ng-click="changeMap(item)" ng-bind="item.location">Malaysia Office</a>
+                    <div class="address">
+                        <span class="street-address" ng-bind="item.info.address">3F-19 IOI Business Park</span>
+                        <span class="region" ng-bind="item.info.region">Bandar Puchong Jaya</span>
+                        <span class="county" ng-bind="item.info.county">Selangor</span>
+                        <span class="postal-code" ng-bind="item.info.postcode">47100</span>
+                        <span class="country-name" ng-bind="item.info.country">Malaysia</span>
+                        <span class="tel"><b ng-bind="item.info.contact">+60 011-2623-4513</b></span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="google_map" class="google-map"></div>
