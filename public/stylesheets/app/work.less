@@ -28,21 +28,36 @@
         margin-bottom: 30px;
       }
     }
-    figure img
-    {
-      margin: 0 auto;
-      transition: transform .5s ease;
+    figure{
       width: 350px;
       height: 270px;
+      margin: 0 auto;
+      position: relative;
 
-
-      filter: grayscale(0%);
-
-      &:hover
-      {
-        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        filter: none;
+      &:hover::after {
+        content: '+';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: rgba(225, 112, 75, 0.8);
+        border-radius: 50%;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 80px;
+        color: @white;
+        text-align: center;
       }
+    }
+    img
+    {
+      transition: transform .5s ease;
+      width: 100%;
+      height: auto;
+      max-height: 100%;
     }
   }
 }

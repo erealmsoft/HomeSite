@@ -75,8 +75,8 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
             $('body,html').animate({
                 scrollTop: 0
             }, 800);
-            return false;
             scope.$apply();
+            return false;
         });
     };
 }])

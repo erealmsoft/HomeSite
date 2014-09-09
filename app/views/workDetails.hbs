@@ -1,0 +1,14 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="WorkDetailsController"{{/contentFor}}
+
+<section class="project-details-container">
+    <div class="wrap">
+    <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
+        <li ng-repeat="detail in projectDetails.details">
+            <img ng-src="{{angular 'detail.image'}}">
+            <p ng-bind="detail.description"></p>
+        </li>
+    </ul>
+    </div>
+</section>
+

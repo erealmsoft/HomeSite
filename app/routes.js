@@ -31,8 +31,8 @@ module.exports = function(app, express) {
     app.get('/projectplan', function(req, res){
         res.render('projectPlan');
     });
-    app.get('/projectdetails', function(req, res){
-        res.render('projectdetails');
+    app.get('/workdetails', function(req, res){
+        res.render('workDetails');
     });
 //    app.get('/project', function(req, res){  //Temporarily useless
 //        res.render('project');
