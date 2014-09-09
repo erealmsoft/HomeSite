@@ -6,6 +6,7 @@ exports.findProDetails = function(req,res){
     var db = require("../helper/dbhelper").conn_db();   //connect to the databases
 
     var id =req.params.id;
+    var language = req.params.language;
 
     db.open(function(err,db){
 
@@ -13,7 +14,8 @@ exports.findProDetails = function(req,res){
             console.log(err);
             return false;
         }
-        db.collection('projects',{safe:true},function(err,collection){
+        var collectionName ='projects_' + language;
+        db.collection(collectionName,{safe:true},function(err,collection){
             collection.findOne({ID:id},function(err,items){
                 if(err){
                     console.log(err);
