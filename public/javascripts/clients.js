@@ -6,9 +6,9 @@
 
 angular.module('erealm').factory('client', ['$http', function ($http) {
     return {
-        getWorks: function() {
-            return $http.get('/data/works.json');
-        },
+//        getWorks: function() {    instead by the 'getProjectsInfo'
+//            return $http.get('/data/works.json');
+//        },
         getTechnologies: function() {
             return $http.get('/data/technology.json');
         },
@@ -21,8 +21,8 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getEmployeeInfo:function(language){
             return $http.get('/app/personnel/'+language);
         },
-        getProjectsInfo:function(language){
-            return $http.get('/app/projects/'+language);
+        getProjectsInfo:function(language,flag){
+            return $http.get('/app/projects/' + language + '/' + flag);
         },
         getProjectsDetailsInfo:function(hash,language){
             return $http.get('/app/projectDetails' + '/' + hash + '/' + language);

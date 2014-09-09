@@ -14,7 +14,7 @@ angular.module('erealm').controller('WorkController', ['$scope','client','$trans
 
     $scope.loadData = function(language) {
         if (!language) language = $translate.proposedLanguage();
-        client.getProjectsInfo(language).then(function(response){
+        client.getProjectsInfo(language,'1').then(function(response){  //1 presents the whole projects
             var project = response.data;
             $scope.project = project;
         });

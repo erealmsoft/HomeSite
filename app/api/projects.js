@@ -10,6 +10,8 @@ var mhelper=require('../helper/dbhelper');
 exports.readProjects = function(req, res) {
 
     var language =req.params.language;
+    var flag = req.params.flag;   //flag represents the projects . 1:whole projects  2:the top 5 projects
+
     mhelper.conn_db().open(function(err, db){
         db.createCollection('projects_' + language, function(err, collection) {
             if (err) {
@@ -26,8 +28,24 @@ exports.readProjects = function(req, res) {
                     throw err;
                 }
                 items.sort(function(va,vb){return va.number - vb.number});
-                res.json(items);
-                db.close();
+                var projectsNumber = items.length;
+                var topProjects = [];
+                var iii = 0;
+                if(flag == '1'){
+                    res.json(items);
+                    db.close();
+                }else if(flag == '2'){
+                    if(projectsNumber <= 5){
+                        res.json(items);
+                        db.close();
+                    }else{
+                        for(iii=0; iii<5; iii++){
+                            topProjects[iii] = items[iii];
+                        }
+                        res.json(topProjects);
+                        db.close();
+                    }
+                }
             });
         });
     });
