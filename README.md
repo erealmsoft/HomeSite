@@ -11,6 +11,7 @@
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
 * Using [**handlebars**](https://www.npmjs.org/package/handlebars) as the server template engine.
 * Integrate with **MongoDB**.
+* Responsive Design.
 
 ### Setting up the application
  * Install all modules
@@ -34,7 +35,5 @@ sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' forever st
 ``` 
 
 ## TODO List
-* Responsive Design.
 * Add blog module using [**poet**](https://github.com/jsantell/poet)
-* Logger.
 * Unit test.

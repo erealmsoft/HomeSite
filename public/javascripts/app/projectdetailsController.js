@@ -3,8 +3,7 @@ angular.module('erealm').controller('ProjectdetailsController', ['$scope','clien
     'use strict';
     var hash = location.hash.substring(1);  //remove the '#' from the ID
 
-
-    $scope.loadData = function(language) {
+    $scope.loadData = function(language){
         if (!language) language = $translate.proposedLanguage();
 
         client.getProjectsDetailsInfo(hash,language).then(function(response){
@@ -13,9 +12,4 @@ angular.module('erealm').controller('ProjectdetailsController', ['$scope','clien
         });
     };
     $scope.loadData();
-
-
-
-
-
 }]);
