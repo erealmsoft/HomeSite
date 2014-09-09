@@ -1,50 +1,26 @@
 {{!< master}}
 {{#contentFor "bodyAttr"}}ng-controller="ProjectdetailsController"{{/contentFor}}
 
-<div class="wrap">
-    <!--<header>-->
-    <!--<ul id="project_navigation">-->
-    <!--<li><a id="up" href="work" class="grid"><span></span></a></li>-->
-    <!--<li class="last"><a id="next" href="logo_wecommend" class="arrow right"><span></span></a></li>-->
-    <!--</ul>-->
-    <!--</header>-->
-    <h2>{{angular 'projectDetails.proj_name'}}</h2>
-    <hr class="short">
-    <p class="project_intro">{{angular 'projectDetails.details[0].description'}}</p>
-    <hr class="short">
-    <img class="restrict-size" ng-attr-src="{{angular 'projectDetails.details[0].image'}}" >
 
-    <hr class="short">
-    <div class="colleft">
-        <img ng-attr-src="{{angular 'projectDetails.details[1].image'}}" >&nbsp;&nbsp;&nbsp;
-        <img ng-attr-src="{{angular 'projectDetails.details[2].image'}}"  class="restrict-size">
-        <br>
-        <br>
-        <img ng-attr-src="{{angular 'projectDetails.details[3].image'}}"  class="restrict-size">&nbsp;&nbsp;&nbsp;
-        <img ng-attr-src="{{angular 'projectDetails.details[4].image'}}"  class="restrict-size">
+<div id="container">
+    <header>
+        <h1>jQuery Wookmark Plug-in Example</h1>
+        <p>Scroll down to see the infinite scroll effect.</p>
+    </header>
+    <div id="main" role="main">
+
+        <ul id="tiles">
+            <!-- These are our grid blocks -->
+            <li><img src="http://i.imgur.com/O7Oybsd.jpg" width="200" height="283"><p>1</p></li>
+            <li><img src="http://i.imgur.com/aPrBC6B.jpg" width="200" height="300"><p>2</p></li>
+            <li><img src="http://i.imgur.com/T70eNfm.jpg" width="200" height="252"><p>3</p></li>
+            <li><img src="http://i.imgur.com/IqXfUrJ.jpg" width="200" height="158"><p>4</p></li>
+            <li><img src="http://i.imgur.com/cFIg4CB.jpg" width="200" height="300"><p>5</p></li>
+        </ul>
 
     </div>
-    </br>
-    <div class="colright">
-        <img ng-attr-src="{{angular 'projectDetails.details[5].image'}}"  class="restrict-size">
-        <br>
-        <br>
-        <img ng-attr-src="{{angular 'projectDetails.details[6].image'}}"  class="restrict-size">&nbsp;&nbsp;&nbsp;
-        <img ng-attr-src="{{angular 'projectDetails.details[7].image'}}"  class="restrict-size">
-    </div>
+    <footer>
 
-
-    <hr class="short">
-    <p>{{angular 'projectDetails.details[1].description'}}</p>
-
-    <p>{{angular 'projectDetails.details[2].description'}}</p>
-
-    <p><a class="link" href="http://www.erealm.cn" target="_blank">erealm.cn</a></p>
-
+    </footer>
 </div>
 
-<section id="cta">
-    <div class="wrap">
-        <p>Let us help your App look awesome. <a href="contact">Let's&nbsp;get&nbsp;started</a>.</p>
-    </div>
-</section>

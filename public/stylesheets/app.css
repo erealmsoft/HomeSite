@@ -1015,8 +1015,8 @@ footer .back-top {
   margin: 0 auto;
   -webkit-transition: -webkit-transform .5s ease;
           transition: transform .5s ease;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
