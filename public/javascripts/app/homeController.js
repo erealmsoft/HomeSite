@@ -13,14 +13,18 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
     $scope.currentPage = "home-page",
     $scope.myInterval = 5000;
 
-    client.getWorks().then(function(response) {
-        $scope.works = response.data;
-    });
+    $scope.loadData = function(language) {
+        if (!language) language = $translate.proposedLanguage();
+        client.getProjectsInfo(language).then(function(response){
+            var projects = response.data;
+            $scope.projects = projects;
+        });
+    };
+    $scope.loadData();
+
     client.getTechnologies().then(function(response) {
         $scope.technologies = response.data.technologies;
         $scope.languages = response.data.languages;
 
     });
-
-
 }]);

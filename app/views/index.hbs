@@ -13,13 +13,13 @@
 <section class="what-we-work">
     <h2 translate="what_we_done">What we have done</h2>
     <carousel interval="myInterval">
-        <slide ng-repeat="work in works" active="work.active" class="wrap">
+        <slide ng-repeat="work in projects" active="work.active" class="wrap">
             <h3><a href="{{angular 'work.home'}}" ng-bind="work.title" target="_blank"></a></h3>
             <div class="carousel-caption">
                 <p ng-bind="work.description"></p>
             </div>
             <div class="carousel-cover">
-                <img ng-src="{{angular 'work.image'}}">
+                <img ng-src="{{angular 'work.cover'}}">
             </div>
         </slide>
     </carousel>
