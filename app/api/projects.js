@@ -21,7 +21,6 @@ exports.readProjects = function(req, res) {
             }
 
             collection.find().toArray(function (err, items) {
-                //         mhelper.queryArray(err, items, db, res);
                 if(err) {
                     console.log("error during finding the team table!");
                     db.close();
@@ -30,16 +29,16 @@ exports.readProjects = function(req, res) {
                 items.sort(function(va,vb){return va.number - vb.number});
                 var projectsNumber = items.length;
                 var topProjects = [];
-                var iii = 0;
-                if(flag == '1'){
+
+                if (flag == '1'){
                     res.json(items);
                     db.close();
-                }else if(flag == '2'){
-                    if(projectsNumber <= 5){
+                }else if (flag == '2'){
+                    if (projectsNumber <= 5){
                         res.json(items);
                         db.close();
-                    }else{
-                        for(iii=0; iii<5; iii++){
+                    } else {
+                        for (var iii=0; iii<5; iii++){
                             topProjects[iii] = items[iii];
                         }
                         res.json(topProjects);

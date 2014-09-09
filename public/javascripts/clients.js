@@ -6,7 +6,7 @@
 
 angular.module('erealm').factory('client', ['$http', function ($http) {
     return {
-//        getWorks: function() {    instead by the 'getProjectsInfo'
+//        getWorks: function() {                         instead by the 'getProjectsInfo' below
 //            return $http.get('/data/works.json');
 //        },
         getTechnologies: function() {

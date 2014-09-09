@@ -34,7 +34,7 @@ module.exports = function(app, express) {
     app.get('/projectdetails', function(req, res){
         res.render('projectdetails');
     });
-//    app.get('/project', function(req, res){  //暂时没用
+//    app.get('/project', function(req, res){  //Temporarily useless
 //        res.render('project');
 //    });
 
@@ -55,9 +55,7 @@ module.exports = function(app, express) {
     app.get('/' + config.dbManage,function(req,res){
         res.render('mongo_manage');
     });
-//    app.get('/wojiubuxinninengcaidao',function(req,res){
-//        res.render('mongo_manage');
-//    });
+
     app.get('/app/dbCollections',require('./api/dbCollections').readCollections);
     app.get('/app/dbQuery/:collectionName',require('./api/dbQuery').queryCollection);
     app.post('/app/dbSave',require('./api/dbSave').saveCollection);

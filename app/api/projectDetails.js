@@ -22,7 +22,6 @@ exports.findProDetails = function(req,res){
                     return false;
                 }
                 res.json(items);
-                db.close();   //close the connection.
                 console.log("the db-connection is closed.");
             });
         });
