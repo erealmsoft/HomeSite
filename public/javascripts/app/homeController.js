@@ -17,7 +17,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
         if (!language) language = $translate.proposedLanguage();
         client.getProjectsInfo(language,'2').then(function(response){  //2 presents the top 5 projects
             var projects = response.data;
-            $scope.projects = works;
+            $scope.projects = projects;
         });
     };
     $scope.loadData();
