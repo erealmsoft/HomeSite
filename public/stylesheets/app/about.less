@@ -34,9 +34,15 @@
   }
 }
 
-.team-profile {
+.our-team {
+  padding: 1.18em 0;
 
-
+  &.our-partners {
+    background-color: #EEE;
+  }
+  h3 {
+    padding: 0 10em 2em 10em;
+  }
   .profile {
     width: 25%;
     padding: 0 2%;
@@ -58,6 +64,15 @@
         filter: none;
       }
     }
+  }
+
+  h4 {
+    color:@orange;
+    margin: 1em 0 1.5em;
+  }
+  .description{
+//    color:@orange;
+    font-style: italic;
   }
 }
 
@@ -109,44 +124,10 @@
   }
 }
 
-.section {
-  background: @green;
-  border: solid 2px @green;
-  width: 100%;
-  left: 0;
-  float: left;
-  text-align: center;
-  color: @white;
-
-  .container {
-    width: 50%;
-    text-align: center;
-    font-size: 1.5em;
-
-    h2 {
-      color: @white;
-      font-size: 42px;
-      text-transform: capitalize;
-      font-family: 'proxima-nova', sans-serif;
-      font-weight: 800px;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
-    }
-  }
-}
-
-
-.description{
-  font-family:'Josefin Sans', sans-serif, 'Kalam', cursive;
-  color:@orange;
-  font-style: italic;
-
-}
-
 @media only screen and (max-width:1024px)
 {
 
-  .team-profile {
+  .our-team {
     .profile {
       width: 50%;
       height: 350px;
@@ -161,7 +142,7 @@
     margin: 0;
   }
 
-  .team-profile {
+  .our-team {
     .profile {
       width: 90%;
       height: auto;

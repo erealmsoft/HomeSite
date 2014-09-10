@@ -5,7 +5,7 @@ html {
 body {
   background: #ffffff;
   color: #808080;
-  font-family: 'Inconsolata', 'Raleway', SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-family: 'Roboto', "Helvetica", SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-size: 20px;
 }
 .wrap {
@@ -77,16 +77,18 @@ a:active {
 }
 h2,
 h3 {
-  font-family: 'Josefin Sans', cursive, sans-serif;
+  font-family: 'Arimo', cursive, sans-serif;
+  font-weight: 700;
 }
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 3em;
   line-height: 1em;
   margin: 0 0 .5em 0;
   color: #333333;
   letter-spacing: .05em;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .about-h1 {
   color: #ffffff;
@@ -95,13 +97,11 @@ h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
-  font-weight: 700;
 }
 h3 {
   padding: 0;
   margin: 10px 0 1em 0;
   color: #e1704b;
-  font-weight: 700;
 }
 h4 {
   color: #333333;
@@ -197,7 +197,6 @@ header .intro {
   margin-left: 15%;
 }
 header .intro span {
-  font-family: 'Droid Sans Mono';
   color: #999999;
   display: block;
   font-size: 1.2em;
@@ -364,7 +363,7 @@ footer .copyright {
   padding: 2em;
 }
 footer .copyright p {
-  font-size: .9em;
+  font-size: .7em;
   width: 100%;
 }
 footer .copyright a {
@@ -873,6 +872,40 @@ footer .back-top {
 }
 .project-details-container {
   background-color: #ffffff;
+  padding: 3em;
+}
+.project-details-container header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.project-details-container header .back-work {
+  float: right;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.project-details-container h2 {
+  display: inline-block;
+  margin: 0;
+  color: #333333;
+  line-height: 1em;
+  width: 70%;
+}
+.project-details-container hr {
+  border-top: 1px solid #61bab6;
+}
+.project-details-container hr.short {
+  border-top: 1px solid #eeeeee;
+  clear: both;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 20%;
+}
+.project-details-container p.introduce {
+  padding: 0em 5em 2em 5em;
 }
 .project-details {
   position: relative;
@@ -889,8 +922,8 @@ footer .back-top {
   height: auto;
 }
 .project-details li p {
-  color: #666;
-  font-size: 13px;
+  color: #333333;
+  font-size: 18px;
   line-height: 20px;
   text-align: center;
   font-weight: 200;
@@ -1041,7 +1074,16 @@ footer .back-top {
 .flickr-feed ul li:hover img {
   opacity: 0.5;
 }
-.team-profile .profile {
+.our-team {
+  padding: 1.18em 0;
+}
+.our-team.our-partners {
+  background-color: #EEE;
+}
+.our-team h3 {
+  padding: 0 10em 2em 10em;
+}
+.our-team .profile {
   width: 25%;
   padding: 0 2%;
   height: 500px;
@@ -1050,7 +1092,7 @@ footer .back-top {
   margin: .5em auto 4em;
   float: left;
 }
-.team-profile .profile img {
+.our-team .profile img {
   margin: 0 auto;
   -webkit-transition: -webkit-transform .5s ease;
           transition: transform .5s ease;
@@ -1059,12 +1101,19 @@ footer .back-top {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
-.team-profile .profile img:hover {
+.our-team .profile img:hover {
   -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
       -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
           transform: matrix(1.1, 0, 0, 1.1, 0, 0);
   -webkit-filter: none;
           filter: none;
+}
+.our-team h4 {
+  color: #e1704b;
+  margin: 1em 0 1.5em;
+}
+.our-team .description {
+  font-style: italic;
 }
 .detail-we-are {
   overflow: hidden;
@@ -1115,36 +1164,8 @@ footer .back-top {
      -moz-column-gap: 1.5em;
           column-gap: 1.5em;
 }
-.section {
-  background: #39a9a4;
-  border: solid 2px #39a9a4;
-  width: 100%;
-  left: 0;
-  float: left;
-  text-align: center;
-  color: #ffffff;
-}
-.section .container {
-  width: 50%;
-  text-align: center;
-  font-size: 1.5em;
-}
-.section .container h2 {
-  color: #ffffff;
-  font-size: 42px;
-  text-transform: capitalize;
-  font-family: 'proxima-nova', sans-serif;
-  font-weight: 800px;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-}
-.description {
-  font-family: 'Josefin Sans', sans-serif, 'Kalam', cursive;
-  color: #e1704b;
-  font-style: italic;
-}
 @media only screen and (max-width: 1024px) {
-  .team-profile .profile {
+  .our-team .profile {
     width: 50%;
     height: 350px;
   }
@@ -1154,7 +1175,7 @@ footer .back-top {
     width: 100%;
     margin: 0;
   }
-  .team-profile .profile {
+  .our-team .profile {
     width: 90%;
     height: auto;
     float: none;

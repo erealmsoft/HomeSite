@@ -18,24 +18,40 @@
         </div>
     </div>
 </section>
-<section>
+<section class="our-team">
     <div class="wrap">
-        <div class="team-profile">
-            <h2 translate="our_team"></h2>
-            <h3 translate="welove"></h3>
-            <ul class="clearfix">
-                <li class="profile" ng-repeat="item in person">
-                    <a ng-href="#{{angular 'item.first_name'}}" class="clearfix">
-                        <figure>
-                            <img class="img-circle img-responsive"
-                                 ng-src="{{angular 'item.photo'}}"/>
-                        </figure>
-                    </a>
-                    <h3 ng-bind="item.first_name"></h3>
-                    <q ng-bind="item.description" class="description"></q>
-                </li>
-            </ul>
-        </div>
+        <h2 translate="our_team"></h2>
+        <h3 translate="welove"></h3>
+        <ul class="clearfix">
+            <li class="profile" ng-repeat="item in person">
+                <a ng-href="#{{angular 'item.first_name'}}" class="clearfix">
+                    <figure>
+                        <img class="img-circle img-responsive"
+                             ng-src="{{angular 'item.photo'}}"/>
+                    </figure>
+                </a>
+                <h4 ng-bind="item.first_name"></h4>
+                <q ng-bind="item.description" class="description"></q>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="our-team our-partners">
+    <div class="wrap">
+        <h2>Our Partners</h2>
+        <h3>We work closely with a number of trusted partners who specialise in branding and front and back end development.</h3>
+        <ul class="clearfix">
+            <li class="profile" ng-repeat="item in person">
+                <a ng-href="#{{angular 'item.first_name'}}" class="clearfix">
+                    <figure>
+                        <img class="img-circle img-responsive"
+                             ng-src="{{angular 'item.photo'}}"/>
+                    </figure>
+                </a>
+                <h4 ng-bind="item.first_name"></h4>
+                <q ng-bind="item.description" class="description"></q>
+            </li>
+        </ul>
     </div>
 </section>
 <section id="flickrfeed" class="flickr-feed">

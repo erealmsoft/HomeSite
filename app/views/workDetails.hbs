@@ -4,9 +4,10 @@
 <section class="project-details-container">
     <div class="wrap">
     <header>
-        <h2>{{angular 'projectDetails.proj_name'}}</h2>
+        <h2 ng-bind="projectDetails.proj_name"></h2>
+        <a href="/work" title="back to project list" class="back-work fa fa-th"></a>
     </header>
-        <p class="introduce">{{angular 'projectDetails.description_title'}}</p>
+        <p class="introduce" ng-bind="projectDetails.description_title"></p>
         <hr class="short">
     <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
         <li ng-repeat="detail in projectDetails.details">
