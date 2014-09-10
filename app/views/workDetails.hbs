@@ -3,9 +3,15 @@
 
 <section class="project-details-container">
     <div class="wrap">
+    <header>
+        <h2>{{angular 'projectDetails.proj_name'}}</h2>
+    </header>
+        <p class="introduce">{{angular 'projectDetails.description'}}</p>
+        <hr class="short">
     <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
         <li ng-repeat="detail in projectDetails.details">
             <img ng-src="{{angular 'detail.image'}}">
+            <p ng-bind="detail.title"></p>
             <p ng-bind="detail.description"></p>
         </li>
     </ul>
