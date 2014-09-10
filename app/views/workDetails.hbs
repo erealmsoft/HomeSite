@@ -6,15 +6,18 @@
     <header>
         <h2>{{angular 'projectDetails.proj_name'}}</h2>
     </header>
-        <p class="introduce">{{angular 'projectDetails.description'}}</p>
+        <p class="introduce">{{angular 'projectDetails.description_title'}}</p>
         <hr class="short">
     <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
         <li ng-repeat="detail in projectDetails.details">
             <img ng-src="{{angular 'detail.image'}}">
-            <p ng-bind="detail.title"></p>
+            <b ng-bind="detail.title"></b>
             <p ng-bind="detail.description"></p>
         </li>
     </ul>
+        <hr class="short">
+        <p>{{angular 'projectDetails.description_conclude_one'}}<a class="link" ng-attr-href="{{angular 'projectDetails.home'}}" target="_blank">{{angular 'projectDetails.link_name'}}</a>{{angular 'projectDetails.description_conclude_two'}}</p>
+        <b>Let us help your App look awesome. <a href="contact">Let's&nbsp;get&nbsp;started</a>.</b>
     </div>
 </section>
 
