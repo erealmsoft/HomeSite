@@ -2,43 +2,41 @@
 {{#contentFor "bodyAttr"}}ng-controller="ProjectController"{{/contentFor}}
 <div class="send-project">
     <div class="project-wrap">
-        <h2>Tell us a little more about your project </h2>
+        <h2 translate="tell_us"></h2>
         <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
             <p class="info contact-center" ng-bind="errorMessage" translate="make_sure"></p>
             <fieldset>
                 <div class="form-group left">
-                    <h1>YOUR DETAILS</h1>
+                    <h1 translate="your_details"></h1>
                     <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
                     <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
                 </div>
                 <div class="form-group right">
                     <h1>&nbsp;</h1>
                     <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_company\'| translate'}}"><br>
-                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
-                    </div>
-            </fieldset>
-            <fieldset>
-                <div class="form-group left">
-                    <h1>PROJECT TYPE</h1>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_company\'| translate'}}"><br>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}"><br>
-                    </div>
-                <div class="form-group right">
-                    <h1>TIMELINE</h1>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
+                    <input type="text" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
                 </div>
             </fieldset>
             <fieldset>
                 <div class="form-group left">
-                    <h1>BUDGET</h1>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
+                    <h1 translate="pro_type"></h1>
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'project_type\'| translate'}}"><br>
                 </div>
                 <div class="form-group right">
-                    <h1>BRIEF DESCRIPTION</h1>
+                    <h1 translate="timeline"></h1>
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'Start_date\'| translate'}}"><br>
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'deadline\'| translate'}}"><br>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group left">
+                    <h1 translate="brief_description"></h1>
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
                               ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
+                </div>
+                <div class="form-group right">
+                    <h1 translate="budget"></h1>
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'budget\'| translate'}}"><br>
                 </div>
             </fieldset>
         </form>
