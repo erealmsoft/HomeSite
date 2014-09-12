@@ -7,39 +7,59 @@
             <p class="info contact-center" ng-bind="errorMessage" translate="make_sure"></p>
             <fieldset>
                 <div class="form-group left">
-                    <h1 translate="your_details"></h1>
+                    <h1 class="required" translate="your_details"></h1>
                     <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
-                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
+                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
                 </div>
                 <div class="form-group right">
                     <h1>&nbsp;</h1>
-                    <input type="text" class="form-control" name="company" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="company" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_company\'| translate'}}"><br>
-                    <input type="text" class="form-control" name="telephone" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="telephone" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
+                    <input type="text" class="form-control" name="company" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="company" title="Enter your company" required="required" ng-attr-placeholder="{{angular '\'your_company\'| translate'}}"><br>
+                    <input type="tel" class="form-control" name="telephone" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" ng-model="telephone" title="Enter your telephone" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
                 </div>
             </fieldset>
             <fieldset>
                 <div class="form-group left">
-                    <h1 translate="pro_type"></h1>
-                    <input type="text" class="form-control" name="type" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="type" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'project_type\'| translate'}}"><br>
+                    <h1 class="required" translate="pro_type"></h1>
+                    <input type="text" class="form-control" name="type" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="type" title="Enter your projectname" required="required" ng-attr-placeholder="{{angular '\'project_type\'| translate'}}"><br>
                 </div>
                 <div class="form-group right">
-                    <h1 translate="timeline"></h1>
-                    <input type="text" class="form-control" name="start" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="start" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'start_date\'| translate'}}"><br>
-                    <input type="text" class="form-control" name="deadline" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="deadline" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'deadline\'| translate'}}"><br>
+                    <h1 class="required" translate="timeline"></h1>
+                    <input type="date" class="form-control" name="start" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="start" title="Enter your project start data" required="required" ng-attr-placeholder="{{angular '\'start_date\'| translate'}}"><br>
+                    <input type="date" class="form-control" name="deadline" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="deadline" title="Enter your project deadline" required="required" ng-attr-placeholder="{{angular '\'deadline\'| translate'}}"><br>
                 </div>
             </fieldset>
             <fieldset>
-                <div class="form-group left">
-                    <h1 translate="brief_description"></h1>
+                <div class="pro_col1 form-group">
+                    <h1 class="required" translate="budget"></h1>
+                    <div class="bigradioholder activeradioholder"><span class="tick"></span>
+                        <input type="radio" name="budget" id="b_1" value="Under £5,000" checked="" style="display: none;">
+                        <label for="b_1" style="display: none;">Under £5,000</label>
+                        <span class="desc">Under £5,000</span></div>
+                    <div class="bigradioholder"><span class="tick"></span>
+                        <input type="radio" name="budget" id="b_2" value="£5,000 - £10,000" style="display: none;">
+                        <label for="b_2" style="display: none;">£5,000 - £10,000</label>
+                        <span class="desc">£5,000 - £10,000</span></div>
+                    <div class="bigradioholder"><span class="tick"></span>
+                        <input type="radio" name="budget" id="b_3" value="£10,000 - £15,000" style="display: none;">
+                        <label for="b_3" style="display: none;">£10,000 - £15,000</label>
+                        <span class="desc">£10,000 - £15,000</span></div>
+                    <div class="bigradioholder"><span class="tick"></span>
+                        <input type="radio" name="budget" id="b_4" value="£15,000 - £20,000" style="display: none;">
+                        <label for="b_4" style="display: none;">£15,000 - £20,000</label>
+                        <span class="desc">£15,000 - £20,000</span></div>
+                    <div class="bigradioholder"><span class="tick"></span>
+                        <input type="radio" name="budget" id="b_5" value="Over £20,000" style="display: none;">
+                        <label for="b_5" style="display: none;">Over £20,000</label>
+                        <span class="desc">Over £20,000</span></div>
+                    <button id="planner-submit" class="planner-submit" name="reset" type="reset" >Reset</button>
+                </div>
+                <div class="form-group right">
+                    <h1 class="required" translate="brief_description"></h1>
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
                               ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
-                </div>
-                <div class="form-group right">
-                    <h1 translate="budget"></h1>
-                    <input type="text" class="form-control" name="budget" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="budget" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'budget\'| translate'}}"><br>
+                    <button id="planner-submit" class="planner-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send_message"></button>
                 </div>
             </fieldset>
-        <button id="planner-submit" class="planner-submit" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send_message"></button>
         </form>
     </div>
 </div>
