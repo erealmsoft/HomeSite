@@ -1,58 +1,63 @@
 {
-    "name": "eRealm",
-    "description": "Home page for eReaml.",
-    "version": "1.0.0",
-    "keywords": ["open source","node.js", "home page"],
-    "homepage": "http://www.erealm.com.my",
-    "author": "dangjian",
-    "repository" : { "type" : "git"
-        , "url" : "https://github.com/Erealm-Tech/HomeSite.git"
-    },
-    "config": {
-        "unsafe-perm":true
-    },
-    "bugs": {
-        "url": "https://github.com/Erealm-Tech/HomeSite/issues",
-        "email":"ken@ereaml.com.my"
-    },
-    "license": "",
-    "dependencies": {
-        "lodash": "~2.4.1",
-        "express": "~3.4.8",
-        "lru-cache": "~2.5.0",
-        "mkdirp": "~0.3.5",
-        "express-validator": "~1.0.1",
-        "express-hbs": "~0.7.11",
-        "nodemailer": "~0.7.1",
-        "winston": "~0.7.3",
-        "winston-sendmail": "~1.0.4",
-        "handlebars": "~2.0.0-alpha.4",
-        "mongodb": "~1.4.8",
-        "grunt-contrib-clean": "~0.5.0",
-        "grunt-contrib-copy": "~0.5.0",
-        "grunt-contrib-less": "~0.9.0",
-        "grunt-autoprefixer":  "~1.0.1",
-        "grunt-filerev": "~0.2.1",
-        "grunt-usemin": "~2.0.2",
-        "grunt-contrib-cssmin": "~0.9.0",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-uglify": "~0.3.3"
-    },
-    "devDependencies": {
-        "grunt": "~0.4.2",
-        "grunt-cli": "~0.1.13",
-        "grunt-env": "~0.4.1",
-        "open": "~0.0.5",
-        "grunt-concurrent": "~0.5.0",
-        "grunt-contrib-imagemin": "~0.8.0",
-        "grunt-contrib-htmlmin": "~0.2.0",
-        "grunt-lesslint": "~1.1.7",
-        "grunt-contrib-jshint": "~0.9.2",
-        "jshint-stylish": "~0.1.5",
-        "grunt-contrib-watch": "~0.5.3",
-        "grunt-nodemon": "~0.2.0",
-        "grunt-mocha-cov": "~0.2.1",
-        "should": "~3.1.3",
-        "debug": "~0.7.4"
-    }
+  "name": "eRealm",
+  "description": "Home page for eReaml.",
+  "version": "1.0.0",
+  "keywords": [
+    "open source",
+    "node.js",
+    "home page"
+  ],
+  "homepage": "http://www.erealm.com.my",
+  "author": "dangjian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Erealm-Tech/HomeSite.git"
+  },
+  "config": {
+    "unsafe-perm": true
+  },
+  "bugs": {
+    "url": "https://github.com/Erealm-Tech/HomeSite/issues",
+    "email": "ken@ereaml.com.my"
+  },
+  "license": "",
+  "dependencies": {
+    "express": "^3.4.8",
+    "express-hbs": "~0.7.11",
+    "express-validator": "^1.0.1",
+    "grunt-autoprefixer": "~1.0.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-less": "^0.9.0",
+    "grunt-contrib-uglify": "^0.3.3",
+    "grunt-filerev": "~0.2.1",
+    "grunt-usemin": "^2.0.2",
+    "handlebars": "~2.0.0-alpha.4",
+    "lodash": "~2.4.1",
+    "lru-cache": "~2.5.0",
+    "mkdirp": "^0.3.5",
+    "mongodb": "~1.4.8",
+    "nodemailer": "^0.7.1",
+    "winston": "~0.7.3",
+    "winston-sendmail": "~1.0.4"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-env": "~0.4.1",
+    "open": "~0.0.5",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-imagemin": "~0.8.0",
+    "grunt-contrib-htmlmin": "~0.2.0",
+    "grunt-lesslint": "~1.1.7",
+    "grunt-contrib-jshint": "~0.9.2",
+    "jshint-stylish": "~0.1.5",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-nodemon": "~0.2.0",
+    "grunt-mocha-cov": "~0.2.1",
+    "should": "~3.1.3",
+    "debug": "~0.7.4"
+  }
 }
