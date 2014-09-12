@@ -1201,3 +1201,64 @@ footer .back-top {
             column-count: 1;
   }
 }
+.send-project {
+  padding: 2% 0;
+}
+.send-project h1 {
+  float: left;
+  font-size: 1.5em;
+  letter-spacing: .05em;
+}
+.send-project h2 {
+  font-size: 2em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.send-project .info {
+  color: #e1704b;
+}
+.send-project .form-group {
+  width: 50%;
+  padding: 3%;
+  height: 180px;
+}
+.send-project .form-group textarea {
+  height: 100%;
+}
+.send-project .form-group input {
+  height: 2em;
+  margin-bottom: -0.2em;
+}
+.send-project .form-group h1 {
+  float: left;
+  font-size: 1.5em;
+  letter-spacing: .05em;
+}
+.send-project .form-group h2 {
+  font-size: 2em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.send-project .info {
+  color: #e1704b;
+}
+.project-wrap {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 1140px;
+  position: relative;
+}
+.planner-submit {
+  border: none;
+  background: #39A9A4;
+  border-radius: 10px;
+  color: #ffffff;
+  height: 10%;
+  padding: 1em 3em;
+  margin-top: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1em;
+  font-weight: 700;
+}

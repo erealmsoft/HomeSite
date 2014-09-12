@@ -22,6 +22,14 @@ function Mailer() {
         "newContactMessage": {
             "file": "new-contact-message.html",
             "subject": "[ Erealm Info & Tech Sdn Bhd] New Message from Customer"
+        },
+        "messagePlanReciced":{
+            "file":"message-projectplan-received.html",
+            "subject": "[ Erealm Info & Tech Sdn Bhd] ProjectPlan Received"
+        },
+        "newProjectplanMessage":{
+            "file":"new-projectplan-message.html",
+            "subject": "[ Erealm Info & Tech Sdn Bhd] New ProjectPlan from Customer"
         }
     };
 

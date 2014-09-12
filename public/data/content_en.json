@@ -4,6 +4,7 @@
     "dear":"Dear",
     "promption":"This is an auto generated mail to notify you that your message has been received.",
     "reachus":"For any further assistance, please reach us at the contact details provided at the bottom of this email!",
+    "show":"The following is the email from the customer：",
     "thanks":"Thanks",
     "link":"Erealm Info & Tech Sdn Bhd",
     "note":"Note",
@@ -20,5 +21,14 @@
     "dearall":"Dear All",
     "name":"Name",
     "emailid":"Email ID",
-    "message":"Message"
+    "message":"Message",
+    "your_company" : "Company",
+    "pro_content":"ProjectPlan Received",
+    "pro_newmessage":"New Project Plan From Customer ",
+    "pro_show":"The following is the Project Plan from the customer：",
+    "your_telephone" : "Telephone",
+    "pro_type" : "PROJECT TYPE",
+    "start_date" : "Start",
+    "deadline" : "Deadline",
+    "budget" : "Budget"
 }

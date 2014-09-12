@@ -15,7 +15,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     $scope.sendMessage = function() {
         if(!$scope.form.$invalid){
             $scope.loading = true;
-            client.submitMessage($scope.name, $scope.email, $scope.message).then(function(){
+            client.submitProjectplan($scope.name, $scope.email, $scope.company,$scope.message,$scope.start,$scope.type,$scope.deadline,$scope.telephone,$scope.budget).then(function(){
                 $scope.errorMessage = "Your message has be sent successfully";
             }, function(){
                 $scope.loading = false;
