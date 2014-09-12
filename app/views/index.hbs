@@ -15,8 +15,9 @@
     <carousel interval="myInterval">
         <slide ng-repeat="work in projects" active="work.active" class="wrap">
             <h3><a ng-href="/workdetails#{{angular 'pro.ID'}}" ng-bind="work.title" target="_blank"></a></h3>
+            <h3 ng-bind="work.proj_name"></h3>
             <div class="carousel-caption">
-                <p ng-bind="work.description"></p>
+                <p ng-bind="work.description_title"></p>
             </div>
             <div class="carousel-cover">
                 <img ng-src="{{angular 'work.cover'}}">
