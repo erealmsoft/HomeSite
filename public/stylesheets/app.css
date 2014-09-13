@@ -757,6 +757,25 @@ footer .back-top {
   display: inline-block;
   margin: 0 1em;
 }
+.what-we-can .programming-technology .tech-1 {
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.what-we-can .programming-technology .tech-2 {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.what-we-can .programming-technology .tech-3 {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.what-we-can .programming-technology .tech-4 {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9);
+}
+.what-we-can .programming-technology .tech-5 {
+  font-size: 1.1em;
+}
 .cta {
   font-size: 2em;
   font-weight: 700;
@@ -1204,8 +1223,8 @@ footer .back-top {
 .send-project {
   padding: 2% 0;
 }
-.send-project h1 {
-  float: left;
+.send-project .form-group h1 {
+  text-align: left;
   font-size: 1.5em;
   letter-spacing: .05em;
 }
@@ -1219,20 +1238,14 @@ footer .back-top {
 }
 .send-project .form-group {
   width: 50%;
-  padding: 3%;
-  height: 180px;
+  padding: 1.5%;
 }
-.send-project .form-group textarea {
+.send-message textarea {
   height: 100%;
 }
 .send-project .form-group input {
   height: 2em;
   margin-bottom: -0.2em;
-}
-.send-project .form-group h1 {
-  float: left;
-  font-size: 1.5em;
-  letter-spacing: .05em;
 }
 .send-project .form-group h2 {
   font-size: 2em;
@@ -1261,4 +1274,74 @@ footer .back-top {
   letter-spacing: .1em;
   font-size: 1em;
   font-weight: 700;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+.send-project h1.required:after {
+  color: #d77251;
+  content: '*';
+}
+.bigradioholder {
+  width: 48%;
+  background: #fff;
+  margin-bottom: 1em;
+  font-size: 1em;
+  height: 2.4em;
+  color: #666;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+}
+.bigradioholder {
+  width: 100%;
+}
+.bigradioholder .desc {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: .6em;
+  line-height: 2.4em;
+}
+.bigradioholder .tick {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.4em;
+  height: 100%;
+  background-color: #eee;
+  background-image: none;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+.bigradioholder:hover {
+  background-color: #eee;
+}
+.radioholder:hover .tick,
+.bigradioholder:hover .tick {
+  background-color: #ddd;
+}
+.activeradioholder {
+  background: #39A9A4;
+  color: #fff;
+}
+.activeradioholder .tick {
+  background-color: #2A817C;
+  background-size: cover;
+}
+.activeradioholder:hover {
+  background-color: #39A9A4;
+}
+.activeradioholder:hover .tick {
+  background-color: #2A817C;
+}
+.pro_col1,
+.pro_col2 {
+  margin: 0;
+  width: 47%;
+  text-align: left;
+  padding: 0;
+}
+.pro_col1 {
+  float: left;
+}
+.pro_col2 {
+  float: right;
 }

@@ -56,7 +56,7 @@
     </ul>
     <h3 translate="what_we_can_technology">Technology We Used</h3>
     <ul class="programming-technology">
-        <li ng-repeat="technology in technologies" ng-bind="technology.name"></li>
+        <li ng-repeat="technology in technologies" ng-class="getTechClass(technology.familiarity)" ng-bind="technology.name"></li>
     </ul>
 
 </section>

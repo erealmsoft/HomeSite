@@ -28,5 +28,9 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
 
     });
 
+    $scope.getTechClass = function(familiarity) {
+        return "tech-" + Math.ceil(familiarity/2);
+    }
+
 
 }]);
