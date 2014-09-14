@@ -4,15 +4,15 @@
  * Created by root on 9/5/2014.
  */
 'use strict';
-var mhelper=require('../helper/dbhelper');
+var mhelper = require('../helper/dbhelper');
 
 exports.readcontacts = function(req, res) {
 
-    var language =req.params.language;
+    var language = req.params.language;
 
     var collectionName = 'contact_' + language;
     console.log(collectionName);
-    mhelper.conn_db().open(function(err, db){
+    mhelper.conn_db().open(function(err, db) {
         db.createCollection(collectionName, function(err, collection) {
             if (err) {
                 console.log("error during creating or openniing the team table!");
@@ -20,18 +20,19 @@ exports.readcontacts = function(req, res) {
                 throw err;
             }
 
-            collection.find().toArray(function (err, items) {
+            collection.find().toArray(function(err, items) {
                 //         mhelper.queryArray(err, items, db, res);
-                if(err) {
+                if (err) {
                     console.log("error during finding the team table!");
                     db.close();
                     throw err;
                 }
-                items.sort(function(va,vb){return va.number - vb.number});
+                items.sort(function(va, vb) {
+                    return va.number - vb.number
+                });
                 res.json(items);
                 db.close();
             });
         });
     });
 };
-

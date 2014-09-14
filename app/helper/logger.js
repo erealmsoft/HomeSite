@@ -6,16 +6,16 @@
 
 'use strict';
 
-var     path        = require('path'),
-    winston         = require('winston');
+var path = require('path'),
+    winston = require('winston');
 
-module.exports = new (winston.Logger)({
+module.exports = new(winston.Logger)({
     transports: [
-        new (winston.transports.Console)({
+        new(winston.transports.Console)({
             level: 'debug',
             colorize: true
         }),
-        new (winston.transports.DailyRotateFile)({
+        new(winston.transports.DailyRotateFile)({
             level: 'silly',
             filename: path.join(__dirname, '../../logs/access-'),
             datePattern: 'yyyy-MM-dd.log',

@@ -130,6 +130,17 @@ module.exports = function(grunt){
                 }]
             }
         },
+        jsbeautifier: {
+            files: ['app/**/*.js','public/javascript/*.js','public/javascript/app/*.js','app/templates/*.html'],
+            options: {
+                js: {
+                    fileTypes: ['.js']
+                },
+                html: {
+                    fileTypes: ['.html']
+                }
+            }
+        },
         cssmin: {
             build: {
                 options: {
@@ -313,7 +324,7 @@ module.exports = function(grunt){
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-
+    grunt.loadNpmTasks('grunt-jsbeautifier');
 
     grunt.loadNpmTasks('grunt-lesslint');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -338,7 +349,7 @@ module.exports = function(grunt){
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
 
-    grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images']);
+    grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images','jsbeautifier']);
     grunt.registerTask('default', ['jshint','less:debug','autoprefixer:debug', "concurrent"]);
     grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'copy:build', 'clean:build']);
 };

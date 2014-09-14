@@ -3,40 +3,44 @@
  */
 'use strict';
 
-exports.readMsg = function(req,res){
+exports.readMsg = function(req, res) {
 
-    var db = require("../helper/dbhelper").conn_db();   //connect to the databases
+    var db = require("../helper/dbhelper").conn_db(); //connect to the databases
 
-    var language =req.query.lang;
+    var language = req.query.lang;
 
-    db.open(function(err,db){
+    db.open(function(err, db) {
 
-        if(err){
+        if (err) {
             console.log(err);
             return false;
         }
 
-        if(language === 'en'){
-            db.collection('language_en',{safe:true},function(err,collection){
-                collection.find().toArray(function(err,items){
-                    if(err){
+        if (language === 'en') {
+            db.collection('language_en', {
+                safe: true
+            }, function(err, collection) {
+                collection.find().toArray(function(err, items) {
+                    if (err) {
                         console.log(err);
                         return false;
                     }
                     res.json(items);
-                    db.close();   //close the connection.
+                    db.close(); //close the connection.
                     console.log("the db-connection is closed.");
                 });
             });
-        }else if(language === 'cn'){
-            db.collection('language_cn',{safe:true},function(err,collection){
-                collection.find().toArray(function(err,items){
-                    if(err){
+        } else if (language === 'cn') {
+            db.collection('language_cn', {
+                safe: true
+            }, function(err, collection) {
+                collection.find().toArray(function(err, items) {
+                    if (err) {
                         console.log(err);
                         return false;
                     }
                     res.json(items);
-                    db.close();   //close the connection.
+                    db.close(); //close the connection.
                     console.log("the db-connection is closed.");
                 });
             });
