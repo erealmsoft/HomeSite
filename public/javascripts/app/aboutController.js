@@ -20,6 +20,10 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
             var person = response.data;
             $scope.person = person;
         });
+        client.getPartnersInfo(language).then(function(response){
+            var partner = response.data;
+            $scope.partner = partner;
+        });
     };
     $scope.loadData();
     client.getFlickrPhotos().then(function(response){

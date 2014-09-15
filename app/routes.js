@@ -46,6 +46,8 @@ module.exports = function(app, express) {
 
     app.get('/app/personnel/:language', require('./api/personnel').readStaff);
 
+    app.get('/app/partners/:language', require('./api/partners').readPartner);
+
     app.get('/app/projects/:language/:flag', require('./api/projects').readProjects);
 
     app.get('/app/projectDetails/:id/:language', require('./api/projectDetails').findProDetails);
