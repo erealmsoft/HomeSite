@@ -349,7 +349,7 @@ module.exports = function(grunt){
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
 
-    grunt.registerTask('prepare', ['bower', 'copy:main', 'imagemin', 'copy:images', 'clean:images','jsbeautifier']);
+    grunt.registerTask('prepare', ['copy:main', 'imagemin', 'copy:images', 'clean:images','jsbeautifier']);
     grunt.registerTask('default', ['jshint','less:debug','autoprefixer:debug', "concurrent"]);
     grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'copy:build', 'clean:build']);
 };
