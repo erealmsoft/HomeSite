@@ -24,13 +24,30 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
         }
     };
 
-    $scope.types = [
-        {name:'-- choose project type --'},
+    var types_en =  [
         {name:'Website'},
         {name:'Mobile'},
         {name:'Application'  },
         {name:'Illustration' },
         {name:'Other'}
     ];
-    $scope.type = $scope.types[0];
+    var types_cn =  [
+        {name:'网站'},
+        {name:'移动电话'},
+        {name:'应用程序'  },
+        {name:'项目说明' },
+        {name:'其它'}
+    ];
+
+    $scope.loadData = function(language) {
+        if (!language) language = $translate.proposedLanguage();
+        if (language === 'en') {
+            $scope.types =  types_en;
+        } else {
+            $scope.types = types_cn;
+        }
+    };
+    $scope.loadData();
+
+
 }]);

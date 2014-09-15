@@ -1223,7 +1223,7 @@ footer .back-top {
 .send-project {
   padding: 2% 0;
 }
-.send-project .form-group h1 {
+.send-project h1 {
   text-align: left;
   font-size: 1.5em;
   letter-spacing: .05em;
@@ -1240,17 +1240,30 @@ footer .back-top {
   width: 50%;
   padding: 1.5%;
 }
-.send-message textarea {
-  height: 100%;
+.send-project .form-group textarea {
+  height: 330px;
 }
 .send-project .form-group input {
-  height: 2em;
+  height: 1.3em;
   margin-bottom: -0.2em;
+  border: none;
+  color: #9C9999;
 }
 .send-project .form-group h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
+}
+.send-project .form-group select {
+  background-color: #eeeeee;
+  height: 2em;
+  margin-bottom: -0.2em;
+  font-size: 1.2em;
+  border: none;
+  color: #9C9999;
+}
+.send-project .form-group b {
+  font-size: 24px;
 }
 .send-project .info {
   color: #e1704b;
@@ -1282,55 +1295,20 @@ footer .back-top {
   content: '*';
 }
 .bigradioholder {
-  width: 48%;
+  width: 5%;
   background: #fff;
-  margin-bottom: 1em;
   font-size: 1em;
-  height: 2.4em;
   color: #666;
   -webkit-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
   cursor: pointer;
 }
-.bigradioholder {
-  width: 100%;
-}
-.bigradioholder .desc {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: .6em;
-  line-height: 2.4em;
-}
-.bigradioholder .tick {
-  display: inline-block;
-  vertical-align: middle;
-  width: 2.4em;
-  height: 100%;
-  background-color: #eee;
-  background-image: none;
-  -webkit-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
-}
 .bigradioholder:hover {
   background-color: #eee;
 }
-.radioholder:hover .tick,
-.bigradioholder:hover .tick {
-  background-color: #ddd;
-}
-.activeradioholder {
-  background: #39A9A4;
-  color: #fff;
-}
-.activeradioholder .tick {
-  background-color: #2A817C;
-  background-size: cover;
-}
-.activeradioholder:hover {
-  background-color: #39A9A4;
-}
-.activeradioholder:hover .tick {
-  background-color: #2A817C;
+.send-project .form-group input.radio {
+  margin: 20px;
+  display: inline-block;
 }
 .pro_col1,
 .pro_col2 {
