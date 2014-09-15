@@ -20,8 +20,8 @@
             <fieldset>
                 <div class="form-group left">
                     <h1 class="required" translate="pro_type"></h1>
-                   <span>
-                     <select ng-model="type" ng-options="type.name for type in types">
+                   <span class="pro_col1">
+                     <select name="" ng-model="type" ng-options="type.name for type in types">
                      </select>
                    </span><br/>
                 </div>
@@ -35,25 +35,25 @@
                 <div class="pro_col1 form-group">
                     <h1 class="required" translate="budget"></h1>
                     <div>
-                        <input type="radio" name="budget" ng-model="budget" value="Under £5,000">
+                        <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="Under £5,000">
                         <label style="display: none;">Under £5,000</label>
-                        <span>Under £5,000</span></div>
+                        <b>Under £5,000</b></div>
                     <div>
-                        <input type="radio" name="budget" ng-model="budget" value="£5,000 - £10,000" >
+                        <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="£5,000 - £10,000" >
                         <label style="display: none;">£5,000 - £10,000</label>
-                        <span >£5,000 - £10,000</span></div>
+                        <b>£5,000 - £10,000</b></div>
                     <div>
-                        <input type="radio" name="budget" ng-model="budget" value="£10,000 - £15,000">
+                        <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="£10,000 - £15,000">
                         <label style="display: none;">£10,000 - £15,000</label>
-                        <span >£10,000 - £15,000</span></div>
+                        <b>£10,000 - £15,000</b></div>
                     <div>
-                        <input type="radio" name="budget" ng-model="budget" value="£15,000 - £20,000">
+                        <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="£15,000 - £20,000">
                         <label style="display: none;">£15,000 - £20,000</label>
-                        <span>£15,000 - £20,000</span></div>
+                        <b>£15,000 - £20,000</b></div>
                     <div>
-                        <input type="radio" name="budget" ng-model="budget" value="Over £20,000">
+                        <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="Over £20,000">
                         <label style="display: none;">Over £20,000</label>
-                        <span>Over £20,000</span></div>
+                        <b>Over £20,000</b></div>
                     <button id="planner-submit" class="planner-submit" name="reset" type="reset" translate="reset"></button>
                 </div>
                 <div class="form-group right">
