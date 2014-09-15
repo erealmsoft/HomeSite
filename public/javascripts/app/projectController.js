@@ -23,4 +23,14 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
             });
         }
     };
+
+    $scope.types = [
+        {name:'-- choose project type --'},
+        {name:'Website'},
+        {name:'Mobile'},
+        {name:'Application'  },
+        {name:'Illustration' },
+        {name:'Other'}
+    ];
+    $scope.type = $scope.types[0];
 }]);

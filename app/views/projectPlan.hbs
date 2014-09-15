@@ -20,7 +20,10 @@
             <fieldset>
                 <div class="form-group left">
                     <h1 class="required" translate="pro_type"></h1>
-                    <input type="text" class="form-control" name="type" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="type" title="Enter your projectname" required="required" ng-attr-placeholder="{{angular '\'project_type\'| translate'}}"><br>
+                   <span>
+                     <select ng-model="type" ng-options="type.name for type in types">
+                     </select>
+                   </span><br/>
                 </div>
                 <div class="form-group right">
                     <h1 class="required" translate="timeline"></h1>
@@ -31,27 +34,27 @@
             <fieldset>
                 <div class="pro_col1 form-group">
                     <h1 class="required" translate="budget"></h1>
-                    <div class="bigradioholder activeradioholder"><span class="tick"></span>
-                        <input type="radio" name="budget" id="b_1" value="Under £5,000" checked="" style="display: none;">
-                        <label for="b_1" style="display: none;">Under £5,000</label>
-                        <span class="desc">Under £5,000</span></div>
-                    <div class="bigradioholder"><span class="tick"></span>
-                        <input type="radio" name="budget" id="b_2" value="£5,000 - £10,000" style="display: none;">
-                        <label for="b_2" style="display: none;">£5,000 - £10,000</label>
-                        <span class="desc">£5,000 - £10,000</span></div>
-                    <div class="bigradioholder"><span class="tick"></span>
-                        <input type="radio" name="budget" id="b_3" value="£10,000 - £15,000" style="display: none;">
-                        <label for="b_3" style="display: none;">£10,000 - £15,000</label>
-                        <span class="desc">£10,000 - £15,000</span></div>
-                    <div class="bigradioholder"><span class="tick"></span>
-                        <input type="radio" name="budget" id="b_4" value="£15,000 - £20,000" style="display: none;">
-                        <label for="b_4" style="display: none;">£15,000 - £20,000</label>
-                        <span class="desc">£15,000 - £20,000</span></div>
-                    <div class="bigradioholder"><span class="tick"></span>
-                        <input type="radio" name="budget" id="b_5" value="Over £20,000" style="display: none;">
-                        <label for="b_5" style="display: none;">Over £20,000</label>
-                        <span class="desc">Over £20,000</span></div>
-                    <button id="planner-submit" class="planner-submit" name="reset" type="reset" >Reset</button>
+                    <div>
+                        <input type="radio" name="budget" ng-model="budget" value="Under £5,000">
+                        <label style="display: none;">Under £5,000</label>
+                        <span>Under £5,000</span></div>
+                    <div>
+                        <input type="radio" name="budget" ng-model="budget" value="£5,000 - £10,000" >
+                        <label style="display: none;">£5,000 - £10,000</label>
+                        <span >£5,000 - £10,000</span></div>
+                    <div>
+                        <input type="radio" name="budget" ng-model="budget" value="£10,000 - £15,000">
+                        <label style="display: none;">£10,000 - £15,000</label>
+                        <span >£10,000 - £15,000</span></div>
+                    <div>
+                        <input type="radio" name="budget" ng-model="budget" value="£15,000 - £20,000">
+                        <label style="display: none;">£15,000 - £20,000</label>
+                        <span>£15,000 - £20,000</span></div>
+                    <div>
+                        <input type="radio" name="budget" ng-model="budget" value="Over £20,000">
+                        <label style="display: none;">Over £20,000</label>
+                        <span>Over £20,000</span></div>
+                    <button id="planner-submit" class="planner-submit" name="reset" type="reset" translate="reset"></button>
                 </div>
                 <div class="form-group right">
                     <h1 class="required" translate="brief_description"></h1>
