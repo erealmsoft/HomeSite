@@ -139,6 +139,37 @@ input.error:-moz-placeholder {
           transition: background .15s linear;
   text-align: center;
 }
+.btn-submit {
+  color: #fff;
+  border: solid 1px #ffffff;
+  background: transparent;
+  border-radius: 0;
+  margin: 10px;
+  padding: 10px 40px;
+  width: 170px;
+  -webkit-transition: background 500ms linear;
+          transition: background 500ms linear;
+}
+.btn-submit:hover {
+  color: #ffffff;
+  background: #3B4250;
+}
+.btn-submit.home-submit {
+  border: solid 1px #ffffff;
+}
+.common-btn {
+  position: absolute;
+  bottom: 10%;
+  height: 10%;
+  background: rgba(57, 169, 164, 0.95);
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+}
+.plan-form-group .common-btn {
+  position: static;
+  height: 15%;
+}
 /* Header __________________________________________________________ */
 header {
   background: #fff;
@@ -927,7 +958,7 @@ footer .back-top {
 .contact_details {
   text-align: left;
   position: absolute;
-  right: 10%;
+  right: 3%;
   margin: 3em 0;
   z-index: 99;
   background: #39a9a4;

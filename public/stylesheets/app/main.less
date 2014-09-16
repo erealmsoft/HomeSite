@@ -134,6 +134,40 @@ textarea.error, input.error {
   text-align: center;
 }
 
+.btn-submit {
+  color: #fff;
+  border:solid 1px @white;
+  background: transparent;
+  border-radius: 0;
+  margin:10px;
+  padding:10px 40px;
+  width:170px;
+  transition:background 500ms linear;
+  &:hover {
+    color: @white;
+    background: #3B4250;
+  }
+}
+.btn-submit.home-submit{
+  border: solid 1px @white;
+}
+
+.common-btn {
+  position: absolute;
+  bottom: 10%;
+  height: 10%;
+  background: rgba(57, 169, 164, 0.95);
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+}
+
+.plan-form-group .common-btn
+{
+  position: static;
+  height: 15%;
+}
+
 
 /* Header __________________________________________________________ */
 header {

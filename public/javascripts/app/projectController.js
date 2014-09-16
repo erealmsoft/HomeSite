@@ -33,7 +33,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     ];
     var types_cn =  [
         {name:'网站'},
-        {name:'移动电话'},
+        {name:'移动应用'},
         {name:'应用程序'  },
         {name:'项目说明' },
         {name:'其它'}
