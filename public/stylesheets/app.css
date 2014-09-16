@@ -16,27 +16,6 @@ body {
   text-align: center;
   overflow: hidden;
 }
-.wrap .btn-submit {
-  color: #fff;
-  border: solid 1px #ffffff;
-  background: transparent;
-  border-radius: 0;
-  margin: 10px;
-  padding: 10px 40px;
-  width: 170px;
-  -webkit-transition: background 500ms linear;
-          transition: background 500ms linear;
-}
-.wrap .btn-submit:hover {
-  color: #ffffff;
-  background: #3B4250;
-}
-.wrap .btn-submit.home-submit {
-  border: solid 1px #ffffff;
-}
-.wrap .btn-submit.contact-submit {
-  border: solid 1px #808080;
-}
 ::-moz-selection {
   background: #3DA9A4;
   color: #fff;
@@ -59,9 +38,6 @@ a.link:before {
   width: 18px;
   height: 18px;
   margin-right: .5em;
-}
-a:visited {
-  color: #e1704b;
 }
 a:hover {
   color: #333333;
@@ -1016,15 +992,6 @@ footer .back-top {
   height: 3em;
   margin-bottom: 1em;
 }
-.send-message .form-group .contact-submit {
-  position: absolute;
-  bottom: 10%;
-  height: 10%;
-  background: rgba(57, 169, 164, 0.95);
-  color: #FFF;
-  font-weight: 700;
-  border: none;
-}
 .send-message .info {
   color: #e1704b;
 }
@@ -1043,21 +1010,14 @@ footer .back-top {
     height: 70px;
     line-height: 70px;
   }
-  .send-message .form-group .contact-submit {
-    position: static;
-    height: 15%;
-  }
+  /* Smartphones ----------- */
 }
-/* Smartphones ----------- */
-@media only screen and (max-width: 580px) and (min-width: 0) {
+@media only screen and (max-width: 768px) and (min-width: 0) and only screen and (max-width: 580px) and (min-width: 0) {
   .send-message .form-group {
     width: 90%;
     height: auto;
     float: none;
     margin: 0 auto;
-  }
-  .send-message .form-group .contact-submit {
-    position: static;
   }
   .send-message .form-group input {
     height: 2em;
@@ -1233,25 +1193,25 @@ footer .back-top {
 .send-project .info {
   color: #e1704b;
 }
-.send-project .form-group {
+.send-project .plan-form-group {
   width: 50%;
   padding: 1.5%;
 }
-.send-project .form-group textarea {
+.send-project .plan-form-group textarea {
   height: 330px;
 }
-.send-project .form-group input {
+.send-project .plan-form-group input {
   height: 1.3em;
   margin-bottom: -0.2em;
   border: none;
   color: #9C9999;
 }
-.send-project .form-group h2 {
+.send-project .plan-form-group h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
 }
-.send-project .form-group select {
+.send-project .plan-form-group select {
   background-color: #eeeeee;
   height: 2em;
   margin-bottom: -0.2em;
@@ -1259,7 +1219,7 @@ footer .back-top {
   border: none;
   color: #9C9999;
 }
-.send-project .form-group b {
+.send-project .plan-form-group b {
   font-size: 24px;
 }
 .send-project .info {
@@ -1271,21 +1231,6 @@ footer .back-top {
   width: 90%;
   max-width: 1140px;
   position: relative;
-}
-.planner-submit {
-  border: none;
-  background: #39A9A4;
-  border-radius: 10px;
-  color: #ffffff;
-  height: 10%;
-  padding: 1em 3em;
-  margin-top: 1em;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-size: 1em;
-  font-weight: 700;
-  -webkit-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
 }
 .send-project h1.required:after {
   color: #d77251;
@@ -1303,7 +1248,7 @@ footer .back-top {
 .bigradioholder:hover {
   background-color: #eee;
 }
-.send-project .form-group input.radio {
+.send-project .plan-form-group input.radio {
   margin: 20px;
   display: inline-block;
 }
@@ -1319,4 +1264,35 @@ footer .back-top {
 }
 .pro_col2 {
   float: right;
+}
+.btn-submit {
+  color: #fff;
+  border: solid 1px #ffffff;
+  background: transparent;
+  border-radius: 0;
+  margin: 10px;
+  padding: 10px 40px;
+  width: 170px;
+  -webkit-transition: background 500ms linear;
+          transition: background 500ms linear;
+}
+.btn-submit:hover {
+  color: #ffffff;
+  background: #3B4250;
+}
+.btn-submit.home-submit {
+  border: solid 1px #ffffff;
+}
+.common-btn {
+  position: absolute;
+  bottom: 10%;
+  height: 10%;
+  background: rgba(57, 169, 164, 0.95);
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+}
+.plan-form-group .common-btn {
+  position: static;
+  height: 15%;
 }

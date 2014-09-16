@@ -79,71 +79,47 @@
       height: 3em;
       margin-bottom: 1em;
     }
-
-    .contact-submit {
-      position: absolute;
-      bottom: 10%;
-      height: 10%;
-      background: rgba(57, 169, 164, 0.95);
-      color: #FFF;
-      font-weight: 700;
-      border: none;
-    }
-
   }
   .info {
     color: #e1704b;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 0)
-{
-  #google_map
-  {
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  #google_map {
     height: 300px;
   }
-  .contact_details
-  {
+
+  .contact_details {
     position: static;
-    margin:0 auto;
-    width:100%;
+    margin: 0 auto;
+    width: 100%;
 
   }
-  .circle_icon
-  {
-    font-size:2em;
-    width:70px;
-    height:70px;
-    line-height:70px;
+
+  .circle_icon {
+    font-size: 2em;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
 
   }
-  .send-message .form-group .contact-submit
-  {
-    position: static;
-    height: 15%;
-  }
-}
-/* Smartphones ----------- */
-@media only screen and (max-width: 580px) and (min-width: 0)
-{
 
-  .send-message
-  {
-    .form-group
-    {
-      width: 90%;
-      height:auto;
-      float:none;
-      margin:0 auto;
-      .contact-submit
-      {
-        position: static;
-      }
-      input
-      {
-        height:2em;
-        margin-bottom:1em;
-        text-align: center;
+  /* Smartphones ----------- */
+  @media only screen and (max-width: 580px) and (min-width: 0) {
 
+    .send-message {
+      .form-group {
+        width: 90%;
+        height: auto;
+        float: none;
+        margin: 0 auto;
+      
+        input {
+          height: 2em;
+          margin-bottom: 1em;
+          text-align: center;
+
+        }
       }
     }
   }
