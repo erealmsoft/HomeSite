@@ -24,7 +24,7 @@ angular.module('erealm').controller('WorkDetailsController', ['$scope','client',
         $('#project_details').imagesLoaded(function() {
             // Prepare layout options.
             var options = {
-                itemWidth: 500, // Optional min width of a grid item
+                itemWidth: 400, // Optional min width of a grid item
                 autoResize: true, // This will auto-update the layout when the browser window is resized.
                 container: $('#project_details'), // Optional, used for some extra CSS styling
                 offset: 25, // Optional, the distance between grid items

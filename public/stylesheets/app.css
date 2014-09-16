@@ -66,9 +66,6 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
-.about-h1 {
-  color: #ffffff;
-}
 h2 {
   font-size: 2em;
   letter-spacing: .05em;
@@ -661,6 +658,9 @@ footer .back-top {
   text-align: center;
   margin-top: 150px;
 }
+.what-we-are .home-box h2 {
+  margin-bottom: 1em;
+}
 .what-we-are .back2 + .wrap {
   color: #e1704b;
 }
@@ -1117,7 +1117,8 @@ footer .back-top {
 }
 .our-team h4 {
   color: #e1704b;
-  margin: 1em 0 1.5em;
+  height: 2em;
+  font-size: 0.8em;
 }
 .our-team .description {
   font-style: italic;
@@ -1162,6 +1163,9 @@ footer .back-top {
   color: #ffffff;
   padding: 20px;
   margin: 30px auto;
+}
+.detail-we-are .about-box h2 {
+  margin: 0.5em 0;
 }
 .detail-we-are .about-box .about-center {
   -webkit-column-count: 2;

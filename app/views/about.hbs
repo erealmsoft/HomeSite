@@ -30,18 +30,10 @@
                              ng-src="{{angular 'item.photo'}}"/>
                     </figure>
                 </a>
-                <h4 ng-bind="item.first_name"></h4>
-                <h3 ng-bind="item.position"></h3>
+                <h3 ng-bind="item.first_name"></h3>
+                <h4 ng-bind="item.position"></h4>
                 <q ng-bind="item.description" class="description"></q>
             </li>
-        </ul>
-    </div>
-</section>
-<section class="our-team our-partners">
-    <div class="wrap">
-        <h2 translate="our_partner"></h2>
-        <h3 translate="wework"></h3>
-        <ul class="clearfix">
             <li class="profile" ng-repeat="part in partner">
                 <a ng-href="#{{angular 'part.first_name'}}" class="clearfix">
                     <figure>
@@ -49,8 +41,8 @@
                              ng-src="{{angular 'part.photo'}}"/>
                     </figure>
                 </a>
-                <h4 ng-bind="part.first_name"></h4>
-                <h3 ng-bind="part.position"></h3>
+                <h3 ng-bind="part.first_name"></h3>
+                <h4 ng-bind="part.position"></h4>
                 <q ng-bind="part.description" class="description"></q>
             </li>
         </ul>

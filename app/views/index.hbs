@@ -14,8 +14,7 @@
     <h2 translate="what_we_done">What we have done</h2>
     <carousel interval="myInterval">
         <slide ng-repeat="work in projects" active="work.active" class="wrap">
-            <h3><a ng-href="/workdetails#{{angular 'pro.ID'}}" ng-bind="work.title" target="_blank"></a></h3>
-            <h3 ng-bind="work.proj_name"></h3>
+            <h3><a ng-href="/workdetails#{{angular 'work.ID'}}" ng-bind="work.proj_name" target="_self"></a></h3>
             <div class="carousel-caption">
                 <p ng-bind="work.description_title"></p>
             </div>
