@@ -121,7 +121,7 @@ textarea.error:-moz-placeholder,
 input.error:-moz-placeholder {
   color: #FFF;
 }
-.circle_icon {
+.circle-icon {
   background: #75c3bf;
   color: #FFF;
   width: 2em;
@@ -235,17 +235,17 @@ header .git-fock a {
   text-shadow: 0 0 0.5em #444;
 }
 /* Navigation __________________________________________________________ */
-.nav_container {
+.nav-container {
   height: 4em;
 }
-.nav_container nav {
+.nav-container nav {
   background: #eeeeee;
   padding: 0;
   height: 4em;
   z-index: 999;
   width: 100%;
 }
-.nav_container nav .sub-logo-mark {
+.nav-container nav .sub-logo-mark {
   float: left;
   width: 2.5em;
   height: 2.5em;
@@ -258,26 +258,26 @@ header .git-fock a {
   margin-top: 1em;
   margin-left: .4em;
 }
-.nav_container nav .sub-logo-mark:hover {
+.nav-container nav .sub-logo-mark:hover {
   filter: alpha(opacity=100);
   opacity: 1;
 }
-.nav_container nav .sub-logo-mark a {
+.nav-container nav .sub-logo-mark a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.nav_container nav .sub-logo-mark {
+.nav-container nav .sub-logo-mark {
   display: none;
 }
-.nav_container nav.fixed {
+.nav-container nav.fixed {
   position: fixed;
   top: 0;
 }
-.nav_container nav.fixed .sub-logo-mark {
+.nav-container nav.fixed .sub-logo-mark {
   display: inline-block;
 }
-.nav_container nav ul {
+.nav-container nav ul {
   line-height: 4.7em;
   float: right;
   display: inline-block;
@@ -288,29 +288,29 @@ header .git-fock a {
   text-transform: uppercase;
   vertical-align: top;
 }
-.nav_container nav ul a {
+.nav-container nav ul a {
   color: #333;
   text-decoration: none;
   margin: 0 1em;
   padding-bottom: 5px;
 }
-.nav_container nav ul a:visited {
+.nav-container nav ul a:visited {
   color: #333;
 }
-.nav_container nav ul li {
+.nav-container nav ul li {
   line-height: 1em;
   display: inline-block;
 }
-.nav_container nav li.active a {
+.nav-container nav li.active a {
   color: #e1704b;
 }
-.nav_container nav li.active a {
+.nav-container nav li.active a {
   color: #e1704b;
 }
-.nav_container nav li:hover a {
+.nav-container nav li:hover a {
   color: #e1704b;
 }
-.nav_container .nav-link {
+.nav-container .nav-link {
   background-repeat: no-repeat;
   background-size: 29px 59px;
   position: absolute;
@@ -322,7 +322,7 @@ header .git-fock a {
   height: 21px;
   display: none;
 }
-.nav_container nav .wrap {
+.nav-container nav .wrap {
   text-align: left;
 }
 .content {
@@ -568,22 +568,22 @@ footer .back-top {
   header .wrap .intro h1 {
     font-size: 1.5em;
   }
-  .nav_container {
+  .nav-container {
     height: auto;
   }
-  .nav_container nav {
+  .nav-container nav {
     position: fixed;
     z-index: 99;
     top: 0;
     width: 100%;
   }
-  .nav_container nav ul {
+  .nav-container nav ul {
     display: none;
   }
-  .nav_container nav .sub-logo-mark {
+  .nav-container nav .sub-logo-mark {
     display: inline-block;
   }
-  .nav_container .nav-link {
+  .nav-container .nav-link {
     display: inline-block;
   }
   footer ul li {
@@ -844,30 +844,30 @@ footer .back-top {
   overflow: hidden;
   background-color: #ffffff;
 }
-.work-wrap .work_row {
+.work-wrap .work-row {
   margin-bottom: 0;
 }
-.work-wrap .work_row li {
-  height: 500px;
+.work-wrap .work-row li {
+  height: 300px;
   text-align: center;
   cursor: pointer;
   margin: 4em auto 4em;
 }
-.work-wrap .work_row li q {
+.work-wrap .work-row li q {
   color: #808080;
   margin-top: 10px;
   font-style: normal;
 }
-.work-wrap .work_row li h3 {
+.work-wrap .work-row li h3 {
   margin-bottom: 30px;
 }
-.work-wrap .work_row figure {
+.work-wrap .work-row figure {
   width: 350px;
   height: 270px;
   margin: 0 auto;
   position: relative;
 }
-.work-wrap .work_row figure:hover::after {
+.work-wrap .work-row figure:hover::after {
   content: '+';
   position: absolute;
   height: 80px;
@@ -884,7 +884,7 @@ footer .back-top {
   color: #ffffff;
   text-align: center;
 }
-.work-wrap .work_row img {
+.work-wrap .work-row img {
   -webkit-transition: -webkit-transform .5s ease;
           transition: transform .5s ease;
   width: 100%;
@@ -892,7 +892,7 @@ footer .back-top {
   max-height: 100%;
 }
 @media only screen and (max-width: 580px) and (min-width: 0) {
-  .work-wrap .work_row li {
+  .work-wrap .work-row li {
     margin: .5em auto;
   }
 }
@@ -955,7 +955,7 @@ footer .back-top {
   font-weight: 200;
   margin: 7px 0 2px 7px;
 }
-.contact_details {
+.contact-details {
   text-align: left;
   position: absolute;
   right: 3%;
@@ -966,13 +966,13 @@ footer .back-top {
   color: #fff;
   padding: 1.5em;
 }
-.contact_details .circle_icon {
+.contact-details .circle-icon {
   background: #75c3bf;
 }
-.contact_details .circle_icon:hover {
+.contact-details .circle-icon:hover {
   background: #268e89;
 }
-.contact_details a {
+.contact-details a {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
@@ -982,10 +982,10 @@ footer .back-top {
   font-size: 1.5em;
   color: #ffffff;
 }
-.contact_details a:hover {
+.contact-details a:hover {
   color: #268E89;
 }
-.contact_details .cotact-address li {
+.contact-details .cotact-address li {
   display: inline-block;
   list-style-type: none;
   padding-left: 25px;
@@ -993,15 +993,15 @@ footer .back-top {
   font-size: .9em;
   margin: 0 20px;
 }
-.contact_details .cotact-address li .location-marker {
+.contact-details .cotact-address li .location-marker {
   margin-left: -25px;
   font-size: 1.5em;
   line-height: 1.6em;
 }
-.contact_details .cotact-address li.active .location-marker {
+.contact-details .cotact-address li.active .location-marker {
   color: #e1704b;
 }
-.contact_details .cotact-address li .address span {
+.contact-details .cotact-address li .address span {
   display: block;
 }
 .google-map {
@@ -1030,12 +1030,12 @@ footer .back-top {
   #google_map {
     height: 300px;
   }
-  .contact_details {
+  .contact-details {
     position: static;
     margin: 0 auto;
     width: 100%;
   }
-  .circle_icon {
+  .circle-icon {
     font-size: 2em;
     width: 70px;
     height: 70px;
@@ -1287,47 +1287,16 @@ footer .back-top {
   margin: 20px;
   display: inline-block;
 }
-.pro_col1,
-.pro_col2 {
+.pro-col1,
+.pro-col2 {
   margin: 0;
   width: 47%;
   text-align: left;
   padding: 0;
 }
-.pro_col1 {
+.pro-col1 {
   float: left;
 }
-.pro_col2 {
+.pro-col2 {
   float: right;
-}
-.btn-submit {
-  color: #fff;
-  border: solid 1px #ffffff;
-  background: transparent;
-  border-radius: 0;
-  margin: 10px;
-  padding: 10px 40px;
-  width: 170px;
-  -webkit-transition: background 500ms linear;
-          transition: background 500ms linear;
-}
-.btn-submit:hover {
-  color: #ffffff;
-  background: #3B4250;
-}
-.btn-submit.home-submit {
-  border: solid 1px #ffffff;
-}
-.common-btn {
-  position: absolute;
-  bottom: 10%;
-  height: 10%;
-  background: rgba(57, 169, 164, 0.95);
-  color: #FFF;
-  font-weight: 700;
-  border: none;
-}
-.plan-form-group .common-btn {
-  position: static;
-  height: 15%;
 }
