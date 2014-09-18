@@ -8,9 +8,8 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
 
     'use strict';
 
-    $scope.subTitle = "ABOUT";
-    $scope.mainTitle = "working with you";
-    $scope.currentPage = "about-page";
+    angular.extend($scope,{subTitle: "ABOUT", mainTitle: "working with you", currentPage: "about-page"});
+
     $scope.isCollapsed = true;
     $scope.homeBack = 'back' + (Math.floor(Math.random() * 4) + 1);
 

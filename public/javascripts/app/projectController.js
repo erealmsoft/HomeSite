@@ -8,9 +8,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
 
     'use strict';
 
-    $scope.subTitle = "PROJECT",
-        $scope.mainTitle = "submit your project",
-        $scope.currentPage = "project-page";
+    angular.extend($scope,{subTitle: "PROJECT", mainTitle: "submit your project", currentPage: "project-page"});
 
     $scope.sendMessage = function() {
         if(!$scope.form.$invalid){

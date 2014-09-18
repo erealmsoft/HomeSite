@@ -8,10 +8,7 @@ angular.module('erealm').controller('WorkController', ['$scope','client','$trans
 
     'use strict';
 
-    $scope.subTitle = "WORK",
-        $scope.mainTitle = "what we did",
-        $scope.currentPage = "work-page";
-
+    angular.extend($scope,{subTitle: "WORK", mainTitle: "what we did", currentPage: "work-page"});
     $scope.loadData = function(language) {
         if (!language){
             language = $translate.proposedLanguage();

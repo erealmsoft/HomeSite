@@ -8,9 +8,9 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
     'use strict';
 
-    $scope.subTitle = "CONTACT",
-    $scope.mainTitle = "Say Hello",
-    $scope.currentPage = "contact-page";
+    angular.extend($scope,{subTitle: "CONTACT", mainTitle: "Say Hello", currentPage: "contact-page"});
+
+    var google = window.google;
 
     $scope.loadData = function(language) {
         if (!language){
@@ -68,7 +68,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
             type: 'poly'
         };
 
-        var marker = new google.maps.Marker({
+        new google.maps.Marker({
             draggable: true,
             raiseOnDrag: false,
             icon: image,

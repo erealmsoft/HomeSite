@@ -184,7 +184,7 @@ module.exports = function(grunt){
                     'public/javascripts/libs.min.js': [
                         'public/javascripts/libs/*.js',
                         'public/javascripts/libs/plugins/jquery.wookmark.min.js',
-                        'public/javascripts/libs/plugins/jquery.imagesloaded.js',
+                        'public/javascripts/libs/plugins/imagesloaded.pkgd.min.js',
                         'public/javascripts/libs/plugins/angular-cookies.min.js',
                         'public/javascripts/libs/plugins/angular-translate.min.js',
                         'public/javascripts/libs/plugins/angular-translate-loader-url.min.js',

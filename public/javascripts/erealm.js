@@ -50,10 +50,10 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
 .directive("language", ['$translate', '$spMenu', function ($translate, $spMenu) {
     return function(scope, element, attrs) {
         angular.element(element).bind("click", function() {
-            $translate.uses(attrs['key']);
+            $translate.uses(attrs.key);
             $spMenu.hide();
             if (scope.loadData){
-                scope.loadData(attrs['key']);
+                scope.loadData(attrs.key);
             }
             scope.$apply();
         });
@@ -70,7 +70,7 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
     };
 }])
 .directive("backtop",  ['$window',function () {
-    return function(scope, element, attrs) {
+    return function(scope, element) {
         angular.element(element).bind("click", function() {
             $('body,html').animate({
                 scrollTop: 0

@@ -6,10 +6,8 @@
 angular.module('erealm').controller('WorkDetailsController', ['$scope','client','$translate','$timeout', function($scope, client, $translate, $timeout) {
 
     'use strict';
-    $scope.subTitle = "WORK",
-        $scope.mainTitle = "what we did",
-        $scope.currentPage = "work-page";
 
+    angular.extend($scope, {subTitle: "WORK", mainTitle: "what we did", currentPage: "work-page"});
     var hash = location.hash.substring(1);  //remove the '#' from the ID
 
     $scope.loadData = function(language){
@@ -28,7 +26,7 @@ angular.module('erealm').controller('WorkDetailsController', ['$scope','client',
 
     var rangeImages = function() {
 
-        $('#project_details').imagesLoaded(function() {
+        window.imagesLoaded('#project_details', function() {
             // Prepare layout options.
             var options = {
                 itemWidth: 400, // Optional min width of a grid item

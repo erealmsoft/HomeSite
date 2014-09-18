@@ -8,9 +8,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
 
     'use strict';
 
-    $scope.subTitle = "Hello, We are",
-    $scope.mainTitle = "Erealm Info & Tech",
-    $scope.currentPage = "home-page",
+    angular.extend($scope,{subTitle: "Hello, We are", mainTitle: "Erealm Info & Tech", currentPage: "home-page"});
     $scope.myInterval = 5000;
 
     $scope.loadData = function(language) {
