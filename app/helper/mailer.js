@@ -39,7 +39,9 @@ function Mailer() {
 
 Mailer.prototype.sendTemplate = function(to, templateName, data) {
     var template = this.templates[templateName];
-    if (!template) return;
+    if (!template){
+        return;
+    }
     var compiledTemplate = template.compiledTemplate;
     if (!compiledTemplate) {
         var source = fs.readFileSync(path.join(this.path, template.file), 'utf8');

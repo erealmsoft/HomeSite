@@ -2,6 +2,8 @@
  * Created by root on 9/3/2014.
  */
 
+'use strict';
+
 exports.findProDetails = function(req, res) {
     var db = require("../helper/dbhelper").conn_db(); //connect to the databases
 

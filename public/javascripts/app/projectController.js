@@ -40,7 +40,9 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     ];
 
     $scope.loadData = function(language) {
-        if (!language) language = $translate.proposedLanguage();
+        if (!language){
+            language = $translate.proposedLanguage();
+        }
         if (language === 'en') {
             $scope.types =  types_en;
         } else {

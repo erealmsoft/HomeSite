@@ -36,14 +36,14 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
 
                 var message = 'Please try again later';
 
-                if (rejection.status == '400') {
+                if (rejection.status === '400') {
                     message = "Invalid request parameters";
                 }
 
                 $rootScope.errorMessage = {text: message};
                 return $q.reject(rejection);
             }
-        }
+        };
     }
 ])
 // window scroll event.

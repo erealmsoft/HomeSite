@@ -26,10 +26,11 @@ exports.readCollections = function(req, res) {
             var collectionNames = [];
             for (var i = 0; i < collections.length; i++) {
                 //the first collection is the system default collection named "system.indexes"
-                if (i !== 0)
+                if (i !== 0){
                     collectionNames.push({
                         "name": collections[i].collectionName
                     });
+                }
             }
             res.send(collectionNames);
 

@@ -14,7 +14,9 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
     $scope.myInterval = 5000;
 
     $scope.loadData = function(language) {
-        if (!language) language = $translate.proposedLanguage();
+        if (!language){
+            language = $translate.proposedLanguage();
+        }
         client.getProjectsInfo(language,'2').then(function(response){  //2 presents the top 5 projects
             var projects = response.data;
             $scope.projects = projects;
@@ -30,7 +32,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
 
     $scope.getTechClass = function(familiarity) {
         return "tech-" + Math.ceil(familiarity/2);
-    }
+    };
 
 
 }]);

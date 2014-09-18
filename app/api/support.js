@@ -40,7 +40,7 @@ exports.sendMessage = function(req, res) {
     var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
     console.log(storagekey);
     var language = '';
-    if (storagekey == '"cn"') {
+    if (storagekey === '"cn"') {
         language = cn;
     } else {
         language = en;

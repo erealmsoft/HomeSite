@@ -15,7 +15,9 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
     $scope.homeBack = 'back' + (Math.floor(Math.random() * 4) + 1);
 
     $scope.loadData = function(language) {
-        if (!language) language = $translate.proposedLanguage();
+        if (!language){
+            language = $translate.proposedLanguage();
+        }
         client.getEmployeeInfo(language).then(function(response){
             var person = response.data;
             $scope.person = person;

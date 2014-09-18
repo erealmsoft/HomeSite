@@ -2,6 +2,8 @@
  * Created by root on 9/11/2014.
  */
 
+'use strict';
+
 var config = require('../../config'),
     mailer = require('../helper/mailer');
 
@@ -21,15 +23,15 @@ var cn = require('../../public/data/content_cn.json');
 var en = require('../../public/data/content_en.json');
 
 exports.sendProject = function(req, res) {
-    var name = req.body.name,
-        email = req.body.email,
-        message = req.body.message;
-    company = req.body.company;
-    start = req.body.start;
-    type = req.body.type.name;
-    deadline = req.body.deadline;
-    telephone = req.body.telephone;
-    budget = req.body.budget;
+    var   name = req.body.name;
+    var   email = req.body.email;
+    var   message = req.body.message;
+    var   company = req.body.company;
+    var   start = req.body.start;
+    var   type = req.body.type.name;
+    var   deadline = req.body.deadline;
+    var   telephone = req.body.telephone;
+    var   budget = req.body.budget;
 
     req.checkBody('name', 'Invalid postparam').notEmpty().len(0, 20);
     req.checkBody('email', 'Invalid postparam').notEmpty().isEmail().len(0, 50);
@@ -49,7 +51,7 @@ exports.sendProject = function(req, res) {
 
     var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
     var language = '';
-    if (storagekey == '"cn"') {
+    if (storagekey === '"cn"') {
         language = cn;
     } else {
         language = en;

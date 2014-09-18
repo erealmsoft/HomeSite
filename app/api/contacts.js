@@ -28,7 +28,7 @@ exports.readcontacts = function(req, res) {
                     throw err;
                 }
                 items.sort(function(va, vb) {
-                    return va.number - vb.number
+                    return va.number - vb.number;
                 });
                 res.json(items);
                 db.close();

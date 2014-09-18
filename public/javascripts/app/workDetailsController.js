@@ -8,7 +8,9 @@ angular.module('erealm').controller('WorkDetailsController', ['$scope','client',
     var hash = location.hash.substring(1);  //remove the '#' from the ID
 
     $scope.loadData = function(language){
-        if (!language) language = $translate.proposedLanguage();
+        if (!language){
+            language = $translate.proposedLanguage();
+        }
 
         client.getProjectsDetailsInfo(hash,language).then(function(response){
             var projectDetails = response.data;
@@ -51,5 +53,5 @@ angular.module('erealm').controller('WorkDetailsController', ['$scope','client',
             // Call the layout function.
             handler.wookmark(options);
         });
-    }
+    };
 }]);

@@ -27,15 +27,15 @@ exports.readProjects = function(req, res) {
                     throw err;
                 }
                 items.sort(function(va, vb) {
-                    return va.number - vb.number
+                    return va.number - vb.number;
                 });
                 var projectsNumber = items.length;
                 var topProjects = [];
 
-                if (flag == '1') {
+                if (flag === '1') {
                     res.json(items);
                     db.close();
-                } else if (flag == '2') {
+                } else if (flag === '2') {
                     if (projectsNumber <= 5) {
                         res.json(items);
                         db.close();
