@@ -1,5 +1,7 @@
 /**
- * Created by root on 8/19/2014.
+ *Copyright 2014 Erealm Info & Tech.
+ *
+ * Created by Gavin on 8/19/2014.
  */
 
 'use strict';

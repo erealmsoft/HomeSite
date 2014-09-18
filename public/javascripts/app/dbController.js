@@ -1,5 +1,7 @@
 /**
- * Created by root on 8/27/2014.
+ *Copyright 2014 Erealm Info & Tech.
+ *
+ * Created by Steven on 8/27/2014.
  */
 
 angular.module('erealm').controller('DBController', ['$scope','$http',function($scope, $http) {

@@ -1,7 +1,7 @@
 /**
- * Copyright 2014 eRealm Sdn.Bhd.
+ *Copyright 2014 Erealm Info & Tech.
  *
- * Created by dang on 8/08/2014
+ * Created by Ken on 8/08/2014
  */
 
 'use strict';

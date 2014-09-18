@@ -1,7 +1,7 @@
 /**
- * Copyright 2014 eRealm Sdn.Bhd.
+ *Copyright 2014 Erealm Info & Tech.
  *
- * Created by root on 9/5/2014.
+ * Created by Don on 9/5/2014.
  */
 'use strict';
 var mhelper = require('../helper/dbhelper');
@@ -21,7 +21,6 @@ exports.readcontacts = function(req, res) {
             }
 
             collection.find().toArray(function(err, items) {
-                //         mhelper.queryArray(err, items, db, res);
                 if (err) {
                     console.log("error during finding the team table!");
                     db.close();
