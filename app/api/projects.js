@@ -52,7 +52,7 @@ exports.readProjects = function(req, res) {
                         db.close();
                     } else {
                         for (var iii = 0; iii < 5; iii++) {
-                              topProjects[iii] = projectsData[iii];
+                            topProjects[iii] = projectsData[iii];
                         }
                         res.json(topProjects);
                         db.close();

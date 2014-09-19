@@ -550,6 +550,9 @@ footer .back-top {
 }
 /* Smartphones ----------- */
 @media only screen and (max-width: 580px) {
+  h2 {
+    font-size: 1.5em;
+  }
   img {
     max-width: 100%;
     height: auto;
