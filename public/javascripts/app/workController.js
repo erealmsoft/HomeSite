@@ -13,7 +13,7 @@ angular.module('erealm').controller('WorkController', ['$scope','client','$trans
         if (!language){
             language = $translate.proposedLanguage();
         }
-        client.getProjectsInfo(language,'1').then(function(response){  //1 presents the whole projects
+        client.getProjectsInfo(language,'wholePro').then(function(response){  //wholePro presents the whole projects
             var project = response.data;
             $scope.project = project;
         });
