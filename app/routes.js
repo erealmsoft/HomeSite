@@ -42,8 +42,6 @@ module.exports = function(app, express) {
 
     app.post('/app/projectplan', require('./api/projectplan').sendProject);
 
-    app.get('/app/language', require('./api/language').readMsg);
-
     app.get('/app/personnel/:language', require('./api/personnel').readStaff);
 
     app.get('/app/partners/:language', require('./api/partners').readPartner);
