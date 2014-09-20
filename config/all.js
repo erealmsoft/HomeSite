@@ -35,7 +35,7 @@ module.exports = {
     },
 //    dbManage:process.env.DB_MANAGE,
     dbManage:'wojiubuxinninengcaidao',
-    support: 'ken@erealm.com.my',
+    support: 'hello@erealm.cn',
     projectName: 'eRealm-Home',
     copyrightName: 'eRealm'
 };
