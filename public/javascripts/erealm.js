@@ -80,13 +80,7 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
         });
     };
 }])
-.config(['$translateProvider','$httpProvider', function($translateProvider,$httpProvider){
-
-    $translateProvider.useUrlLoader('/app/language');
-    // Tell the module what language to use by default
-    $translateProvider.preferredLanguage('cn');
-    $translateProvider.fallbackLanguage('cn');
+.config(['$httpProvider', function($httpProvider){
     // Tell the module to store the language in the cookie
-    $translateProvider.useCookieStorage();
     $httpProvider.interceptors.push('errorHttpInterceptor');
 }]);

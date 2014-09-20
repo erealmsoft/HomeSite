@@ -195,6 +195,7 @@ module.exports = function(grunt){
                     ] ,
                     'public/javascripts/app.min.js': [
                         'public/javascripts/erealm.js',
+                        'public/javascripts/language.js',
                         'public/javascripts/clients.js',
                         'public/javascripts/app/*.js'
                     ]

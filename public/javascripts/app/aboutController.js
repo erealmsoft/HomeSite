@@ -15,7 +15,7 @@ angular.module('erealm').controller('AboutController', ['$scope','client','$tran
 
     $scope.loadData = function(language) {
         if (!language){
-            language = $translate.proposedLanguage();
+            language = $translate.uses();
         }
         client.getEmployeeInfo(language).then(function(response){
             var person = response.data;

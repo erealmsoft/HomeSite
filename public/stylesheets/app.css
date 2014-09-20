@@ -95,7 +95,6 @@ h4 {
   padding: 1em;
   font-size: 1.2em;
   background: #eeeeee;
-  -webkit-appearance: none;
   position: relative;
 }
 textarea.error,
@@ -136,36 +135,23 @@ input.error:-moz-placeholder {
           transition: background .15s linear;
   text-align: center;
 }
-.btn-submit {
-  color: #fff;
-  border: solid 1px #ffffff;
-  background: transparent;
+.common-btn {
+  width: 170px;
+  background: rgba(57, 169, 164, 0.95);
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
   border-radius: 0;
   margin: 10px;
   padding: 10px 40px;
-  width: 170px;
   -webkit-transition: background 500ms linear;
           transition: background 500ms linear;
+  font-size: 18px;
 }
-.btn-submit:hover {
+.common-btn:hover,
+.common-btn:focus {
   color: #ffffff;
   background: #3B4250;
-}
-.btn-submit.home-submit {
-  border: solid 1px #ffffff;
-}
-.common-btn {
-  position: absolute;
-  bottom: 10%;
-  height: 10%;
-  background: rgba(57, 169, 164, 0.95);
-  color: #FFF;
-  font-weight: 700;
-  border: none;
-}
-.plan-form-group .common-btn {
-  position: static;
-  height: 15%;
 }
 /* Header __________________________________________________________ */
 header {
@@ -663,6 +649,14 @@ footer .back-top {
 }
 .what-we-are .home-box h2 {
   margin-bottom: 1em;
+}
+.what-we-are .home-box .common-btn {
+  color: #fff;
+  background: transparent;
+  border: solid 1px #ffffff;
+}
+.what-we-are .home-box .common-btn:hover {
+  background: #3B4250;
 }
 .what-we-are .back2 + .wrap {
   color: #e1704b;
@@ -1235,14 +1229,12 @@ footer .back-top {
   width: 50%;
   padding: 1.5%;
 }
+.send-project .plan-form-group .common-btn {
+  position: static;
+  height: 15%;
+}
 .send-project .plan-form-group textarea {
   height: 330px;
-}
-.send-project .plan-form-group input {
-  height: 1.3em;
-  margin-bottom: -0.2em;
-  border: none;
-  color: #9C9999;
 }
 .send-project .plan-form-group h2 {
   font-size: 2em;
@@ -1260,8 +1252,13 @@ footer .back-top {
 .send-project .plan-form-group b {
   font-size: 24px;
 }
-.send-project .info {
-  color: #e1704b;
+.send-project .plan-form-group input.radio {
+  margin: 20px;
+  display: inline-block;
+}
+.send-project h1.required:after {
+  color: #d77251;
+  content: '*';
 }
 .project-wrap {
   margin: 0 auto;
@@ -1269,10 +1266,6 @@ footer .back-top {
   width: 90%;
   max-width: 1140px;
   position: relative;
-}
-.send-project h1.required:after {
-  color: #d77251;
-  content: '*';
 }
 .bigradioholder {
   width: 5%;
@@ -1285,10 +1278,6 @@ footer .back-top {
 }
 .bigradioholder:hover {
   background-color: #eee;
-}
-.send-project .plan-form-group input.radio {
-  margin: 20px;
-  display: inline-block;
 }
 .pro-col1,
 .pro-col2 {

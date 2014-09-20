@@ -12,7 +12,7 @@ angular.module('erealm').controller('WorkDetailsController', ['$scope','client',
 
     $scope.loadData = function(language){
         if (!language){
-            language = $translate.proposedLanguage();
+            language = $translate.uses();
         }
 
         client.getProjectsDetailsInfo(hash,language).then(function(response){

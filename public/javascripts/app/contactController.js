@@ -14,7 +14,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
     $scope.loadData = function(language) {
         if (!language){
-            language = $translate.proposedLanguage();
+            language = $translate.uses();
         }
         client.getContactsInfo(language).then(function(response){
             var contact = response.data;
