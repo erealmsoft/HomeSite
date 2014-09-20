@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Erealm Info & Tech.
+ * Copyright 2014 eRealm Info & Tech.
  *
  * Created by Gavin on 8/19/2014.
  */

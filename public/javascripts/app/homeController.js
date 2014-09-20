@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Erealm Info & Tech.
+ * Copyright 2014 eRealm Info & Tech.
  *
  * Created by Ken on2/08/2014
  */
@@ -8,7 +8,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
 
     'use strict';
 
-    angular.extend($scope,{subTitle: "Hello, We are", mainTitle: "Erealm Info & Tech", currentPage: "home-page"});
+    angular.extend($scope,{subTitle: "Hello, We are", mainTitle: "eRealm Info & Tech", currentPage: "home-page"});
     $scope.myInterval = 5000;
 
     $scope.loadData = function(language) {

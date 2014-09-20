@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Erealm Info & Tech.
+ * Copyright 2014 eRealm Info & Tech.
  *
  * Created by Ken on 3/08/2014
  */
@@ -17,19 +17,19 @@ function Mailer() {
     this.templates = {
         "messageReciced": {
             "file": "message-received.html",
-            "subject": "[ Erealm Info & Tech Sdn Bhd] Message Received"
+            "subject": "[ eRealm Info & Tech Sdn Bhd] Message Received"
         },
         "newContactMessage": {
             "file": "new-contact-message.html",
-            "subject": "[ Erealm Info & Tech Sdn Bhd] New Message from Customer"
+            "subject": "[ eRealm Info & Tech Sdn Bhd] New Message from Customer"
         },
         "messagePlanReciced": {
             "file": "message-projectplan-received.html",
-            "subject": "[ Erealm Info & Tech Sdn Bhd] ProjectPlan Received"
+            "subject": "[ eRealm Info & Tech Sdn Bhd] ProjectPlan Received"
         },
         "newProjectplanMessage": {
             "file": "new-projectplan-message.html",
-            "subject": "[ Erealm Info & Tech Sdn Bhd] New ProjectPlan from Customer"
+            "subject": "[ eRealm Info & Tech Sdn Bhd] New ProjectPlan from Customer"
         }
     };
 

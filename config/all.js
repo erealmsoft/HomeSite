@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Erealm Info & Tech.
+ * Copyright 2014 eRealm Info & Tech.
  *
  * Created by Ken on 2/08/2014
  */
@@ -24,7 +24,7 @@ module.exports = {
     mail: {
         enable: true,
         transport: 'SMTP',
-        fromaddress: ' Erealm Info & Tech Sdn Bhd <hello@erealm.com.my>',
+        fromaddress: ' eRealm Info & Tech Sdn Bhd <hello@erealm.cn>',
         options: {
             service: 'Gmail',
             auth: {

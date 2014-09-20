@@ -1,4 +1,4 @@
-# [Erealm Info & Tech Sdn Bhd](http://www.erealm.cn)[![Build Status](https://travis-ci.org/Erealm-Tech/HomeSite.svg?branch=master)](http://travis-ci.org/Erealm-Tech/HomeSite)
+# [eRealm Info & Tech Sdn Bhd](http://www.erealm.cn)[![Build Status](https://travis-ci.org/eRealm-Tech/HomeSite.svg?branch=master)](http://travis-ci.org/eRealm-Tech/HomeSite)
 
 ## Notes and information
 ### Public Modules We used.
