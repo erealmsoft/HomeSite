@@ -1031,19 +1031,14 @@ footer .back-top {
     height: 70px;
     line-height: 70px;
   }
-  /* Smartphones ----------- */
 }
-@media only screen and (max-width: 768px) and (min-width: 0) and only screen and (max-width: 580px) and (min-width: 0) {
+/* Smartphones ----------- */
+@media only screen and (max-width: 580px) and (min-width: 0) {
   .send-message .form-group {
     width: 90%;
     height: auto;
     float: none;
     margin: 0 auto;
-  }
-  .send-message .form-group input {
-    height: 2em;
-    margin-bottom: 1em;
-    text-align: center;
   }
 }
 .flickr-feed {
@@ -1218,29 +1213,29 @@ footer .back-top {
 .send-project .info {
   color: #e1704b;
 }
-.send-project .plan-form-group {
+.send-project .form-group {
   width: 50%;
   padding: 1.5%;
 }
-.send-project .plan-form-group .common-btn {
+.send-project .form-group .common-btn {
   position: static;
   height: 15%;
 }
-.send-project .plan-form-group textarea {
+.send-project .form-group textarea {
   height: 330px;
 }
-.send-project .plan-form-group h2 {
+.send-project .form-group h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
 }
-.send-project .plan-form-group select {
+.send-project .form-group select {
   height: 2em;
 }
-.send-project .plan-form-group b {
+.send-project .form-group b {
   font-size: 24px;
 }
-.send-project .plan-form-group input.radio {
+.send-project .form-group input.radio {
   margin: 20px;
   display: inline-block;
 }
@@ -1279,4 +1274,13 @@ footer .back-top {
 }
 .pro-col2 {
   float: right;
+}
+/* Smartphones ----------- */
+@media only screen and (max-width: 580px) and (min-width: 0) {
+  .send-project .form-group {
+    width: 90%;
+    height: auto;
+    float: none;
+    margin: 0 auto;
+  }
 }

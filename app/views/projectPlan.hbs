@@ -6,19 +6,19 @@
         <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
             <p class="info contact-center" ng-bind="errorMessage" translate="make_sure"></p>
             <fieldset>
-                <div class="plan-form-group left">
+                <div class="form-group left">
                     <h1 class="required" translate="your_details"></h1>
                     <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}"><br>
                     <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
                 </div>
-                <div class="plan-form-group right">
+                <div class="form-group right">
                     <h1>&nbsp;</h1>
                     <input type="text" class="form-control" name="company" ng-maxlength="20" ng-class="{error: (form.company.$dirty || submitted) && form.company.$invalid}" ng-model="company" title="Enter your company" required="required" ng-attr-placeholder="{{angular '\'your_company\'| translate'}}"><br>
                     <input type="tel" class="form-control" name="telephone" ng-maxlength="50" ng-class="{error: (form.telephone.$dirty || submitted) && form.telephone.$invalid}" ng-model="telephone" title="Enter your telephone" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
                 </div>
             </fieldset>
             <fieldset>
-                <div class="plan-form-group left">
+                <div class="form-group left">
                     <h1 class="required" translate="pro_type"></h1>
                    <span class="pro-col1">
                      <select class="form-control" ng-model="type" ng-options="type.name for type in types">
@@ -26,14 +26,14 @@
                      </select>
                    </span><br/>
                 </div>
-                <div class="plan-form-group right">
+                <div class="form-group right">
                     <h1 class="required" translate="timeline"></h1>
                     <input type="date" class="form-control" name="start" ng-maxlength="20" ng-class="{error: (form.start.$dirty || submitted) && form.start.$invalid}" ng-model="start" title="Enter your project start data" required="required" ng-attr-placeholder="{{angular '\'start_date\'| translate'}}"><br>
                     <input type="date" class="form-control" name="deadline" ng-maxlength="20" ng-class="{error: (form.deadline.$dirty || submitted) && form.deadline.$invalid}" ng-model="deadline" title="Enter your project deadline" required="required" ng-attr-placeholder="{{angular '\'deadline\'| translate'}}"><br>
                 </div>
             </fieldset>
             <fieldset>
-                <div class="pro-col1 plan-form-group">
+                <div class="pro-col1 form-group">
                     <h1 class="required" translate="budget"></h1>
                     <div>
                         <input class="bigradioholder radio" type="radio" name="budget" ng-model="budget" value="Under £5,000">
@@ -56,7 +56,7 @@
                         <label style="display: none;">Over £20,000</label>
                         <b translate="budget_five"></b></div>
                 </div>
-                <div class="plan-form-group right">
+                <div class="form-group right">
                     <h1 class="required" translate="brief_description"></h1>
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
                               ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
