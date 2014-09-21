@@ -60,7 +60,7 @@ h1 {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 3em;
   line-height: 1em;
-  margin: 0 0 .5em 0;
+  margin-bottom: .5em;
   color: #333333;
   letter-spacing: .05em;
   font-weight: 700;
@@ -70,9 +70,11 @@ h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
+  margin-bottom: .5em;
 }
 h3 {
   padding: 0;
+  font-size: 1.2em;
   margin: 10px 0 1em 0;
   color: #e1704b;
 }
@@ -505,12 +507,18 @@ footer .back-top {
   }
 }
 @media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
   .wrap {
     width: 100%;
     padding: 0 1%;
-  }
-  .wrap .intro h1 {
-    font-size: 2em;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -536,8 +544,14 @@ footer .back-top {
 }
 /* Smartphones ----------- */
 @media only screen and (max-width: 580px) {
-  h2 {
+  h1 {
     font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
   }
   img {
     max-width: 100%;
@@ -553,9 +567,6 @@ footer .back-top {
     text-align: center;
     margin-left: auto;
     margin-top: 4em;
-  }
-  header .wrap .intro h1 {
-    font-size: 1.5em;
   }
   .nav-container {
     height: auto;
@@ -809,9 +820,6 @@ footer .back-top {
   .what-we-are .wrap .home-box {
     margin: 50px 0;
   }
-  .what-we-are .wrap .home-box h2 {
-    font-size: 1.5em;
-  }
   .what-we-work .carousel-caption {
     height: 6em;
     padding: 0;
@@ -1040,6 +1048,11 @@ footer .back-top {
     float: none;
     margin: 0 auto;
   }
+  .contact-details .cotact-address li {
+    width: 100%;
+    margin: 0.5em 0;
+    text-align: center;
+  }
 }
 .flickr-feed {
   bottom: 0;
@@ -1080,7 +1093,6 @@ footer .back-top {
   padding: 0 2%;
   height: 500px;
   text-align: center;
-  cursor: pointer;
   margin: .5em auto 4em;
   float: left;
 }
@@ -1188,9 +1200,6 @@ footer .back-top {
   }
 }
 @media only screen and (max-width: 580px) {
-  .wrap h1 {
-    font-size: 1em;
-  }
   .wrap .about-box .about-center {
     -webkit-column-count: 1;
        -moz-column-count: 1;
@@ -1200,37 +1209,29 @@ footer .back-top {
 .send-project {
   padding: 2% 0;
 }
-.send-project h1 {
-  text-align: left;
-  font-size: 1.5em;
-  letter-spacing: .05em;
-}
-.send-project h2 {
-  font-size: 2em;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-}
 .send-project .info {
   color: #e1704b;
 }
 .send-project .form-group {
   width: 50%;
-  padding: 1.5%;
+  padding: 0 3%;
+  margin-bottom: 0;
+}
+.send-project .form-group input,
+.send-project .form-group select {
+  height: 3em;
+  margin-bottom: 1em;
+}
+.send-project .form-group input[type="radio"] {
+  height: auto;
 }
 .send-project .form-group .common-btn {
   position: static;
   height: 15%;
 }
 .send-project .form-group textarea {
-  height: 330px;
-}
-.send-project .form-group h2 {
-  font-size: 2em;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-}
-.send-project .form-group select {
-  height: 2em;
+  height: 7em;
+  margin-bottom: 1em;
 }
 .send-project .form-group b {
   font-size: 24px;
@@ -1282,5 +1283,6 @@ footer .back-top {
     height: auto;
     float: none;
     margin: 0 auto;
+    padding: 0;
   }
 }

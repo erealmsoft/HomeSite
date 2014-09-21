@@ -29,9 +29,7 @@ exports.sendProject = function(req, res) {
     var   email = req.body.email;
     var   message = req.body.message;
     var   company = req.body.company;
-    var   start = req.body.start;
-    var   type = req.body.type.name;
-    var   deadline = req.body.deadline;
+    var   type = req.body.type;
     var   telephone = req.body.telephone;
     var   budget = req.body.budget;
 
@@ -39,9 +37,7 @@ exports.sendProject = function(req, res) {
     req.checkBody('email', 'Invalid postparam').notEmpty().isEmail().len(0, 50);
     req.checkBody('message', 'Invalid postparam').notEmpty().len(0, 300);
     req.checkBody('company', 'Invalid postparam').notEmpty().len(0, 30);
-    req.checkBody('start', 'Invalid postparam').notEmpty().len(0, 15);
     req.checkBody('type', 'Invalid postparam').notEmpty().len(0, 20);
-    req.checkBody('deadline', 'Invalid postparam').notEmpty().len(0, 20);
     req.checkBody('telephone', 'Invalid postparam').notEmpty().len(0, 14);
     req.checkBody('budget', 'Invalid postparam').notEmpty().len(0, 20);
 
@@ -68,9 +64,7 @@ exports.sendProject = function(req, res) {
         email: email,
         message: message,
         company: company,
-        start: start,
         type: type,
-        deadline: deadline,
         telephone: telephone,
         budget: budget
     });
@@ -83,9 +77,7 @@ exports.sendProject = function(req, res) {
         email: email,
         message: message,
         company: company,
-        start: start,
         type: type,
-        deadline: deadline,
         telephone: telephone,
         budget: budget
     });

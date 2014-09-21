@@ -23,7 +23,6 @@ function parseCookies(request) {
 var cn = require('../../public/data/content_cn.json');
 var en = require('../../public/data/content_en.json');
 
-
 exports.sendMessage = function(req, res) {
     var name = req.body.name,
         email = req.body.email,

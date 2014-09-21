@@ -64,14 +64,11 @@ angular.module('erealm')
             "tell_us" : "Please tell us a little more about your project",
             "your_details" : "YOUR DETAILS",
             "pro_type" : "PROJECT TYPE",
-            "timeline" : "TIMELINE",
+            "timeline_start" : "Project Start",
+            "timeline_end" : "Project end",
             "brief_description" : "BRIEF DESCRIPTION",
-            "choose_project" : "-- choose project type --",
-            "budget_one" : "< $5,000",
-            "budget_two" : "$5,000 - $10,000",
-            "budget_three" : "$10,000 - $15,000",
-            "budget_four" : "$15,000 - $20,000",
-            "budget_five" : "> $20,000"
+            "choose_project" : "Choose Project Type",
+            "choose_budget" : "Choose Project Budget"
         });
         $translateProvider.translations('cn', {
             "language" : "简体中文",
@@ -128,18 +125,14 @@ angular.module('erealm')
             "project_type" : "网站/应用程序/手机应用开发",
             "start_date" : "计划开始日期",
             "deadline" : "截止日期",
-            "budget" : "您的预算",
             "tell_us" : "请告诉我们您需要做的项目，我们会尽快答复您。",
             "your_details" : "详细信息",
             "pro_type" : "项目类型",
-            "timeline" : "项目计划时间",
+            "timeline_start" : "项目计划开始时间",
+            "timeline_end" : "项目计划结束时间",
             "brief_description" : "请简要描述您的项目",
-            "choose_project" : "-- 请选择您的项目类型 --",
-            "budget_one" : "< ￥5,000",
-            "budget_two" : "￥5,000 - ￥10,000",
-            "budget_three" : "￥10,000 - ￥15,000",
-            "budget_four" : "￥15,000 - ￥20,000",
-            "budget_five" : "> ￥20,000"
+            "choose_project" : "请选择您的项目类型",
+            "choose_budget" : "请选择您的预算"
         });
 
         $translateProvider.preferredLanguage('cn');

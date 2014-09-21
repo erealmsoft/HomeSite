@@ -60,7 +60,7 @@ h1 {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 3em;
   line-height: 1em;
-  margin: 0 0 .5em 0;
+  margin-bottom: .5em;
   color: #333333;
   letter-spacing: .05em;
   font-weight: 700;
@@ -71,11 +71,13 @@ h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
+  margin-bottom: .5em;
 }
 
 
 h3 {
   padding: 0;
+  font-size: 1.2em;
   margin: 10px 0 1em 0;
   color:@orange;
 }
@@ -529,14 +531,19 @@ footer {
 @media only screen and (max-width:1024px)
 {
 
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
   .wrap
   {
     width:100%;
     padding: 0 1%;
-    .intro h1
-    {
-      font-size: 2em;
-    }
   }
 }
 
@@ -577,8 +584,14 @@ footer {
 /* Smartphones ----------- */
 @media only screen and (max-width: 580px)
 {
-  h2 {
+  h1 {
     font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
   }
   img
   {
@@ -600,11 +613,6 @@ footer {
         text-align: center;
         margin-left:auto;
         margin-top: 4em;
-
-        h1
-        {
-          font-size: 1.5em;
-        }
       }
     }
   }

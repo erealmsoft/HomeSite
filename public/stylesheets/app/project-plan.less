@@ -1,25 +1,23 @@
 .send-project {
   padding: 2% 0;
 
-    h1{
-      text-align: left;
-      font-size:1.5em;
-      letter-spacing: .05em;
+    .info {
+      color: #e1704b;
     }
-
-    h2 {
-      font-size: 2em;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-
-  .info {
-    color: #e1704b;
-  }
 
   .form-group {
     width: 50%;
-    padding:1.5%;
+    padding:0 3%;
+    margin-bottom: 0;
+
+    input, select {
+      height: 3em;
+      margin-bottom: 1em;
+    }
+
+    input[type="radio"] {
+      height: auto;
+    }
 
     .common-btn {
       position: static;
@@ -27,17 +25,8 @@
     }
 
     textarea {
-      height: 330px;
-    }
-
-    h2 {
-      font-size: 2em;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-
-    select {
-      height: 2em;
+      height: 7em;
+      margin-bottom: 1em;
     }
 
     b {
@@ -105,6 +94,7 @@
       height: auto;
       float: none;
       margin: 0 auto;
+      padding: 0;
     }
   }
 }

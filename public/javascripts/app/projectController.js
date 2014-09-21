@@ -26,15 +26,28 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
         {name:'Website'},
         {name:'Mobile'},
         {name:'Application'  },
-        {name:'Illustration' },
         {name:'Other'}
+    ];
+
+    var budgets_en = [
+        {"name" : "< $50,000"},
+        {"name" : "$50,000 - $100,000"},
+        {"name" : "$100,000 - $150,000"},
+        {"name" : "$150,000 - $200,000"},
+        {"name" : "> $200,000"}
     ];
     var types_cn =  [
         {name:'网站'},
         {name:'移动应用'},
         {name:'应用程序'  },
-        {name:'项目说明' },
         {name:'其它'}
+    ];
+    var budgets_cn = [
+        {"name" : "< ￥50,000"},
+        {"name" : "￥50,000 - ￥100,000"},
+        {"name" : "￥100,000 - ￥150,000"},
+        {"name" : "￥150,000 - ￥200,000"},
+        {"name" : "> ￥200,000"}
     ];
 
     $scope.loadData = function(language) {
@@ -43,8 +56,10 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
         }
         if (language === 'en') {
             $scope.types =  types_en;
+            $scope.budgets =  budgets_en;
         } else {
             $scope.types = types_cn;
+            $scope.budgets =  budgets_cn;
         }
     };
     $scope.loadData();

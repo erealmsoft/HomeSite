@@ -15,8 +15,8 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         submitMessage: function(name, email, message) {
             return $http.post('/app/message', {name: name, email:email, message: message});
         },
-        submitProjectplan: function(name, email,company,message,start,type,deadline,telephone,budget) {
-            return $http.post('/app/projectplan', {name: name, email:email, message: message,company:company,start:start,type:type,deadline:deadline,telephone:telephone,budget:budget});
+        submitProjectplan: function(name, email,company,message,type,telephone,budget) {
+            return $http.post('/app/projectplan', {name: name, email:email, message: message,company:company,type:type,telephone:telephone,budget:budget});
         },
         getEmployeeInfo:function(language){
             return $http.get('/app/personnel/'+language);
