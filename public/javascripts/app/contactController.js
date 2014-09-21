@@ -16,6 +16,8 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
         if (!language){
             language = $translate.uses();
         }
+        $scope.errorMessage = $translate('make_sure');
+
         client.getContactsInfo(language).then(function(response){
             var contact = response.data;
             $scope.contacts = contact;
@@ -103,10 +105,10 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
         if(!$scope.form.$invalid){
             $scope.loading = true;
             client.submitMessage($scope.name, $scope.email, $scope.message).then(function(){
-                $scope.errorMessage = "Your message has be sent successfully";
+                $scope.errorMessage = $translate('sent_successfully');
             }, function(){
                 $scope.loading = false;
-                $scope.errorMessage = "Your message could not be sent";
+                $scope.errorMessage = $translate('sent_fault');
             });
         }
     };

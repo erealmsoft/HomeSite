@@ -9,15 +9,14 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     'use strict';
 
     angular.extend($scope,{subTitle: "PROJECT", mainTitle: "submit your project", currentPage: "plan-page"});
-
     $scope.sendMessage = function() {
         if(!$scope.form.$invalid){
             $scope.loading = true;
             client.submitProjectplan($scope.name, $scope.email, $scope.company,$scope.message,$scope.start,$scope.type,$scope.deadline,$scope.telephone,$scope.budget).then(function(){
-                $scope.errorMessage = "Your message has be sent successfully";
+                $scope.errorMessage = $translate('sent_successfully');
             }, function(){
                 $scope.loading = false;
-                $scope.errorMessage = "Your message could not be sent";
+                $scope.errorMessage = $translate('sent_fault');
             });
         }
     };
@@ -54,6 +53,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
         if (!language){
             language = $translate.uses();
         }
+        $scope.errorMessage = $translate('make_sure');
         if (language === 'en') {
             $scope.types =  types_en;
             $scope.budgets =  budgets_en;

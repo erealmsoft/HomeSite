@@ -1011,18 +1011,21 @@ footer .back-top {
 }
 .send-message .form-group {
   width: 50%;
-  padding: 3%;
+  padding: 0 3%;
   height: 350px;
 }
 .send-message .form-group textarea {
   height: 100%;
+  margin-bottom: 1em;
 }
-.send-message .form-group input {
+.send-message .form-group input,
+.send-message .form-group select {
   height: 3em;
   margin-bottom: 1em;
 }
 .send-message .info {
   color: #e1704b;
+  margin-bottom: 1em;
 }
 @media only screen and (max-width: 768px) and (min-width: 0) {
   #google_map {
@@ -1047,6 +1050,7 @@ footer .back-top {
     height: auto;
     float: none;
     margin: 0 auto;
+    padding: 0;
   }
   .contact-details .cotact-address li {
     width: 100%;
@@ -1211,6 +1215,7 @@ footer .back-top {
 }
 .send-project .info {
   color: #e1704b;
+  margin-bottom: 1em;
 }
 .send-project .form-group {
   width: 50%;
@@ -1239,10 +1244,6 @@ footer .back-top {
 .send-project .form-group input.radio {
   margin: 20px;
   display: inline-block;
-}
-.send-project h1.required:after {
-  color: #d77251;
-  content: '*';
 }
 .project-wrap {
   margin: 0 auto;
