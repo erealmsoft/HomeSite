@@ -12,7 +12,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
     $scope.sendMessage = function() {
         if(!$scope.form.$invalid){
             $scope.loading = true;
-            client.submitProjectplan($scope.name, $scope.email, $scope.company,$scope.message,$scope.start,$scope.type,$scope.deadline,$scope.telephone,$scope.budget).then(function(){
+            client.submitProjectplan($scope.name, $scope.email, $scope.company,$scope.message,$scope.type,$scope.telephone,$scope.budget).then(function(){
                 $scope.errorMessage = $translate('sent_successfully');
             }, function(){
                 $scope.loading = false;
