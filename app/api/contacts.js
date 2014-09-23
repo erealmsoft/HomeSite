@@ -11,7 +11,6 @@ exports.readcontacts = function(req, res) {
     var language = req.params.language;
 
     var collectionName = 'contact_' + language;
-    console.log(collectionName);
     mhelper.conn_db().open(function(err, db) {
         db.createCollection(collectionName, function(err, collection) {
             if (err) {
