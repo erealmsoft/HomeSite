@@ -80,6 +80,5 @@
         { "name": "Meteor", "familiarity": 4 },
         { "name": "Sails", "familiarity": 4 },
         { "name": "CoreOS", "familiarity": 9 }
-
     ]
 }
