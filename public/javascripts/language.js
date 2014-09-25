@@ -69,7 +69,13 @@ angular.module('erealm')
             "timeline_end" : "Project end",
             "brief_description" : "BRIEF DESCRIPTION",
             "choose_project" : "Choose Project Type",
-            "choose_budget" : "Choose Project Budget"
+            "choose_budget" : "Choose Project Budget",
+            "403":"Access Denial!",
+            "403_content":"You are not authorized to  access this resource.",
+            "404":"Page Not Found!",
+            "404_content":"The resource you requested doesn't exist.",
+            "500":"Server Error!",
+            "500_content":"Sorry something went wrong."
         });
         $translateProvider.translations('cn', {
             "language" : "简体中文",
@@ -134,7 +140,13 @@ angular.module('erealm')
             "timeline_end" : "项目计划结束时间",
             "brief_description" : "请简要描述您的项目",
             "choose_project" : "请选择您的项目类型",
-            "choose_budget" : "请选择您的预算"
+            "choose_budget" : "请选择您的预算",
+            "403":"访问拒绝！",
+            "403_content":"您无权访问该资源。",
+            "404":"页面没有找到！",
+            "404_content":"您所请求的资源不存在。",
+            "500":"服务器错误！",
+            "500_content":"抱歉，发生某些故障。"
         });
 
         $translateProvider.preferredLanguage('cn');
