@@ -1226,6 +1226,7 @@ footer .back-top {
 .send-project .form-group select {
   height: 3em;
   margin-bottom: 1em;
+  padding: 0 0.9em;
 }
 .send-project .form-group input[type="radio"] {
   height: auto;

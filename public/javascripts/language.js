@@ -149,7 +149,12 @@ angular.module('erealm')
             "500_content":"抱歉，发生某些故障。"
         });
 
-        $translateProvider.preferredLanguage('cn');
+        var preferLanguage = 'en';
+        if (navigator.language.indexOf('zh') >= 0) {
+            preferLanguage = 'cn';
+        }
+
+        $translateProvider.preferredLanguage(preferLanguage);
         $translateProvider.fallbackLanguage('cn');
         $translateProvider.useCookieStorage();
     }
