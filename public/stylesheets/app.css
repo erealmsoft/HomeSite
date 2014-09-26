@@ -816,6 +816,25 @@ footer .back-top {
   color: #333333;
   padding: 2.5em 1em;
 }
+.how-we-manage {
+  margin: 0;
+  padding: 2%;
+  color: #fff;
+  background-color: #54c1cf;
+}
+.how-we-manage li {
+  height: 50px;
+  margin: 0 auto;
+}
+.how-we-manage .left {
+  text-align: left;
+}
+.how-we-manage .right {
+  text-align: right;
+}
+.how-we-manage .center {
+  text-align: center;
+}
 @media only screen and (max-width: 768px) and (min-width: 0) {
   .what-we-are {
     height: auto;

@@ -19,6 +19,11 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
 //            var projects = response.data;
 //            $scope.projects = projects;
 //        });
+        client.getManagement().then(function(response) {
+            $scope.roles = response.data[language].roles;
+            $scope.skills = response.data[language].skills;
+            $scope.management = response.data[language].management;
+        });
     };
     $scope.loadData();
 
@@ -27,17 +32,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
         $scope.languages = response.data.languages;
 
     });
-    client.getManagement().then(function(response) {
-        $scope.roles = response.data.roles;
-        $scope.skills = response.data.skills;
-        $scope.management = response.data.management;
-
-
-    });
-
     $scope.getTechClass = function(familiarity) {
         return "tech-" + Math.ceil(familiarity/2);
     };
-
-
 }]);

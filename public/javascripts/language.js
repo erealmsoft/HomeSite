@@ -75,7 +75,11 @@ angular.module('erealm')
             "404":"Page Not Found!",
             "404_content":"The resource you requested doesn't exist.",
             "500":"Server Error!",
-            "500_content":"Sorry something went wrong."
+            "500_content":"Sorry something went wrong.",
+            "manage_team":"How We Manage The Team",
+            "team":"Team",
+            "skills":"Skills",
+            "management":"Management"
         });
         $translateProvider.translations('cn', {
             "language" : "简体中文",
@@ -146,7 +150,11 @@ angular.module('erealm')
             "404":"页面没有找到！",
             "404_content":"您所请求的资源不存在。",
             "500":"服务器错误！",
-            "500_content":"抱歉，发生某些故障。"
+            "500_content":"抱歉，发生某些故障。",
+            "manage_team":"我们的管理方式",
+            "team":"团队",
+            "skills":"技术",
+            "management":"管理"
         });
 
         var preferLanguage = 'en';
