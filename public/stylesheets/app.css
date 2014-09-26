@@ -796,40 +796,31 @@ footer .back-top {
   padding: 2%;
   color: #fff;
   background-color: #54c1cf;
+  text-align: center;
+}
+.how-we-manage h3 {
+  text-align: center;
+}
+.how-we-manage ul {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  min-height: 14em;
 }
 .how-we-manage li {
-  height: 50px;
-  margin: 0 auto;
+  line-height: 2em;
+  display: block;
 }
-.how-we-manage .left {
-  text-align: left;
-}
-.how-we-manage .right {
-  text-align: right;
-}
-.how-we-manage .center {
-  text-align: center;
+.how-we-manage li .fa-check:before {
+  background: rgba(225, 112, 75, 0.5);
+  padding: 0.2em;
+  margin-right: 0.2em;
 }
 .cta {
   font-size: 2em;
   font-weight: 700;
   color: #333333;
   padding: 2.5em 1em;
-}
-@media only screen and (max-width: 1200px) {
-  .how-we-manage .left,
-  .how-we-manage .right {
-    text-align: center;
-  }
-  .how-we-manage .col-lg-4 {
-    width: 100%;
-  }
-  .how-we-manage h2 {
-    margin-top: 20px;
-  }
-  .how-we-manage h3 {
-    margin-bottom: 5px;
-  }
 }
 @media only screen and (max-width: 768px) and (min-width: 0) {
   .what-we-are {

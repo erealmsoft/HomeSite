@@ -62,25 +62,24 @@
 
 </section>
 <section class="how-we-manage">
-    <h2 class="center" translate="manage_team"></h2>
+    <h2 translate="manage_team"></h2>
     <div class="row">
-        <div  class="col-lg-4 left">
+        <div  class="col-sm-4">
             <h3 translate="team"></h3>
             <ul>
-                <li ng-repeat="item in roles" ng-bind="item.name"></li>
+                <li ng-repeat="item in roles"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
              </ul>
-
         </div>
-        <div  class="col-lg-4 center">
+        <div  class="col-sm-4">
             <h3 translate="skills"></h3>
             <ul>
-                <li ng-repeat="item in skills" ng-bind="item.name"></li>
+                <li ng-repeat="item in skills"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
             </ul>
         </div>
-        <div  class="col-lg-4 right">
+        <div  class="col-sm-4">
             <h3 translate="management"></h3>
         <ul>
-            <li class="last" ng-repeat="item in management" ng-bind="item.name"></li>
+            <li ng-repeat="item in management"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
         </ul>
         </div>
     </div>
