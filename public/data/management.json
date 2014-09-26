@@ -1,25 +1,52 @@
 {
+
+    "en":{
+        "roles":[
+            { "name":"Project manager"},
+            { "name":"senior software engineers"},
+            { "name":"software engineers"},
+            { "name":"User Experience Architect"},
+            { "name":"Quality Assistants"},
+            { "name":"DBA"}
+        ],
+        "skills":[
+            { "name":"Proficiency in Web, Mobile Web, Windows Form, Native APP"},
+            { "name":"Front-end and back-end development"},
+            { "name":"Optimizing the performance of database"},
+            { "name":"Years of manageing projects."},
+            { "name":"Good verbal and written communication skill in English"}
+        ],
+        "management":[
+            { "name":"Basecamp access"},
+            { "name":"Time Sheet"},
+            { "name":"Agile Development"},
+            { "name":"Daily/Weekly reports"},
+            { "name":"Live previews"}
+        ]
+    },
+
+   "cn":{
     "roles":[
-        { "name":"Project manager"},
-        { "name":"senior software engineers"},
-        { "name":"software engineers"},
-        { "name":"User Experience Architect"},
-        { "name":"Quality Assistants"},
-        { "name":"DBA"}
+        { "name":"项目经理"},
+        { "name":"高级软件工程师"},
+        { "name":"软件工程师"},
+        { "name":"用户体验架构师"},
+        { "name":"软件测试工程师"},
+        { "name":"数据库管理员"}
     ],
     "skills":[
-        { "name":"Proficiency in Web, Mobile Web, Windows Form, Native APP."},
-        { "name":"Front-end and back-end development."},
-        { "name":"Optimizing the performance of database."},
-        { "name":"Years of manageing projects."},
-        { "name":"Good verbal and written communication skill in English"}
+        { "name":"熟练掌握 Web, Mobile Web, Windows Form, Native APP"},
+        { "name":"前端、后端开发"},
+        { "name":"数据库性能优化"},
+        { "name":"项目管理"},
+        { "name":"良好的英语交流以及书面表达能力"}
     ],
     "management":[
         { "name":"Basecamp access"},
         { "name":"Time Sheet"},
-        { "name":"Agile Development "},
-        { "name":"Daily/Weekly reports "},
-        { "name":"Live previews"}
+        { "name":"敏捷开发"},
+        { "name":"日/周报"},
+        { "name":"实时预览"}
     ]
-
+}
 }
