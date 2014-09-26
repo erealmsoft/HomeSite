@@ -230,7 +230,6 @@
   li{
       height: 50px;
       margin: 0 auto;
-
     }
   .left{text-align: left}
   .right{text-align: right}
@@ -247,8 +246,18 @@
 }
 
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1200px)
 {
+  .how-we-manage {
+    .left,.right{text-align: center}
+    .col-lg-4
+    {
+      width:100%;
+    }
+
+    h2{margin-top: 20px }
+    h3{margin-bottom: 5px}
+  }
 
 }
 @media only screen and (max-width: 768px) and (min-width: 0){
@@ -269,6 +278,7 @@
   .what-we-work .carousel-cover {
     height: 300px;
   }
+
 }
 
 
@@ -316,20 +326,8 @@
   }
   .how-we-manage {
 
-    margin: 0;
-    padding: 2%;
-    color: #fff;
-    background-color: @lightgreen;
-
-    li{
-      height: 50px;
-      margin: 0 auto;
-
-    }
-    .left{text-align: left}
-    .right{text-align: right}
-    .center{text-align: center}
-
-  }
+   .center,.right,.left{text-align: left}
+   line-height: 1em;
+ }
 
 }
