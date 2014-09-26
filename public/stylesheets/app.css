@@ -816,24 +816,20 @@ footer .back-top {
   color: #333333;
   padding: 2.5em 1em;
 }
-.how-we-manage {
-  margin: 0;
-  padding: 2%;
-  color: #fff;
-  background-color: #54c1cf;
-}
-.how-we-manage li {
-  height: 50px;
-  margin: 0 auto;
-}
-.how-we-manage .left {
-  text-align: left;
-}
-.how-we-manage .right {
-  text-align: right;
-}
-.how-we-manage .center {
-  text-align: center;
+@media only screen and (max-width: 1200px) {
+  .how-we-manage .left,
+  .how-we-manage .right {
+    text-align: center;
+  }
+  .how-we-manage .col-lg-4 {
+    width: 100%;
+  }
+  .how-we-manage h2 {
+    margin-top: 20px;
+  }
+  .how-we-manage h3 {
+    margin-bottom: 5px;
+  }
 }
 @media only screen and (max-width: 768px) and (min-width: 0) {
   .what-we-are {
@@ -874,23 +870,12 @@ footer .back-top {
     font-size: 1.2em;
   }
   .how-we-manage {
-    margin: 0;
-    padding: 2%;
-    color: #fff;
-    background-color: #54c1cf;
+    line-height: 1em;
   }
-  .how-we-manage li {
-    height: 50px;
-    margin: 0 auto;
-  }
+  .how-we-manage .center,
+  .how-we-manage .right,
   .how-we-manage .left {
     text-align: left;
-  }
-  .how-we-manage .right {
-    text-align: right;
-  }
-  .how-we-manage .center {
-    text-align: center;
   }
 }
 .work-wrap {
