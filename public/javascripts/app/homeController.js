@@ -27,6 +27,13 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
         $scope.languages = response.data.languages;
 
     });
+    client.getManagement().then(function(response) {
+        $scope.roles = response.data.roles;
+        $scope.skills = response.data.skills;
+        $scope.management = response.data.management;
+
+
+    });
 
     $scope.getTechClass = function(familiarity) {
         return "tech-" + Math.ceil(familiarity/2);

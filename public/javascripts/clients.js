@@ -6,6 +6,9 @@
 
 angular.module('erealm').factory('client', ['$http', function ($http) {
     return {
+        getManagement:function() {
+            return $http.get('/data/management.json');
+        },
         getTechnologies: function() {
             return $http.get('/data/technology.json');
         },
@@ -35,3 +38,6 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         }
     };
 }]);
+/**
+ * Created by root on 26.09.2014.
+ */

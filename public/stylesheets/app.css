@@ -791,6 +791,25 @@ footer .back-top {
 .what-we-can .programming-technology .tech-5 {
   font-size: 1.1em;
 }
+.how-we-manage {
+  margin: 0;
+  padding: 2%;
+  color: #fff;
+  background-color: #54c1cf;
+}
+.how-we-manage li {
+  height: 50px;
+  margin: 0 auto;
+}
+.how-we-manage .left {
+  text-align: left;
+}
+.how-we-manage .right {
+  text-align: right;
+}
+.how-we-manage .center {
+  text-align: center;
+}
 .cta {
   font-size: 2em;
   font-weight: 700;
@@ -834,6 +853,25 @@ footer .back-top {
   }
   .what-we-love a {
     font-size: 1.2em;
+  }
+  .how-we-manage {
+    margin: 0;
+    padding: 2%;
+    color: #fff;
+    background-color: #54c1cf;
+  }
+  .how-we-manage li {
+    height: 50px;
+    margin: 0 auto;
+  }
+  .how-we-manage .left {
+    text-align: left;
+  }
+  .how-we-manage .right {
+    text-align: right;
+  }
+  .how-we-manage .center {
+    text-align: center;
   }
 }
 .work-wrap {

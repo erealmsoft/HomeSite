@@ -7,7 +7,7 @@
             <h2 translate="slogan"></h2>
             <a href="about" class="btn common-btn" translate="about_us"></a>
             <a href="contact" class="btn common-btn" translate="hire_us"></a>
-       </div>
+        </div>
     </div>
 </section>
 <!--
@@ -61,4 +61,27 @@
     </ul>
 
 </section>
+<section class="how-we-manage">
+    <h2 class="center">How We Manage The Team</h2>
+    <div class="row">
+        <div  class="col-lg-4 left">
+            <h3>Team</h3>
+            <ul>
+                <li ng-repeat="item in roles" ng-bind="item.name"></li>
+             </ul>
 
+        </div>
+        <div  class="col-lg-4 center">
+            <h3>Skills</h3>
+            <ul>
+                <li ng-repeat="item in skills" ng-bind="item.name"></li>
+            </ul>
+        </div>
+        <div  class="col-lg-4 right">
+            <h3>Management</h3>
+        <ul>
+            <li class="last" ng-repeat="item in management" ng-bind="item.name"></li>
+        </ul>
+        </div>
+    </div>
+</section>
