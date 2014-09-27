@@ -798,6 +798,9 @@ footer .back-top {
   background-color: #54c1cf;
   text-align: center;
 }
+.how-we-manage .row {
+  margin: 0;
+}
 .how-we-manage h3 {
   text-align: center;
 }
@@ -859,14 +862,6 @@ footer .back-top {
   }
   .what-we-love a {
     font-size: 1.2em;
-  }
-  .how-we-manage {
-    line-height: 1em;
-  }
-  .how-we-manage .center,
-  .how-we-manage .right,
-  .how-we-manage .left {
-    text-align: left;
   }
 }
 .work-wrap {
