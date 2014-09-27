@@ -803,6 +803,7 @@ footer .back-top {
 }
 .how-we-manage h3 {
   text-align: center;
+  text-transform: uppercase;
 }
 .how-we-manage ul {
   text-align: left;
@@ -815,7 +816,7 @@ footer .back-top {
   display: block;
 }
 .how-we-manage li .fa-check:before {
-  background: rgba(255, 255, 255, 0.1);
+  color: #e1704b;
   padding: 0.2em;
   margin-right: 0.2em;
 }
