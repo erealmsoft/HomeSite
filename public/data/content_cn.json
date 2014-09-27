@@ -15,11 +15,11 @@
     "address_shanghai":"上海市闵行区元江路5500号",
     "office_malaysia":"马来西亚公司",
     "address_malaysia":"雪兰莪州,班达布轰区,IOI商业园三楼19号",
-    "contact":"邮箱",
+    "E_mail":"电子邮箱",
     "email":"hello@erealm.cn",
     "phone":"联系电话",
     "tel":"+86 029-6859-6119",
-    "postcode":"邮编",
+    "postcode": "邮   编",
     "copyright":"版权所有",
     "newmessage":"来自客户的新邮件",
     "dearall":"尊敬的 eRealm成员",
@@ -29,10 +29,12 @@
     "your_company" : "公司名称",
     "pro_content":"您提交的项目计划已收到",
     "pro_newmessage":"来自客户的新项目计划",
-    "pro_show":"来自客户的项目计划内容如下:",
+    "pro_show":"来自客户的项目计划内容如下",
     "your_telephone" : "联系电话",
     "pro_type" : "项目类型",
     "start_date" : "计划开始日期",
     "deadline" : "截止日期",
-    "budget" : "您的预算"
+    "budget" : "您的预算",
+    "adress":"公司地址",
+    "contact":"联系方式"
 }

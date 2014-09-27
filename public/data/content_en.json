@@ -15,7 +15,7 @@
     "address_shanghai":"5500 Yuan Jiang Road,Minhang District,ShangHai",
     "office_malaysia":"Malaysia Office",
     "address_malaysia":"3F-19 IOI Business Park,Bandar Puchong Jaya,Selangor",
-    "contact":"Contact Details:",
+    "E_mail":"Contact Details",
     "email":"hello@erealm.cn",
     "phone":"Phone",
     "tel":"+60 011 2623 4513",
@@ -34,5 +34,7 @@
     "pro_type" : "PROJECT TYPE",
     "start_date" : "Start",
     "deadline" : "Deadline",
-    "budget" : "Budget"
+    "budget" : "Budget",
+    "adress":"Adress",
+    "contact":" Contact Information"
 }
