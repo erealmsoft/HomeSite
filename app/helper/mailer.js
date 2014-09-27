@@ -17,19 +17,19 @@ function Mailer() {
     this.templates = {
         "messageReciced": {
             "file": "message-received.html",
-            "subject": "[ eRealm Info & Tech Sdn Bhd] Message Received"
+            "subject": "[ eRealm Info & Tech] Message Received"
         },
         "newContactMessage": {
             "file": "new-contact-message.html",
-            "subject": "[ eRealm Info & Tech Sdn Bhd] New Message from Customer"
+            "subject": "[ eRealm Info & Tech] New Message from Customer"
         },
         "messagePlanReciced": {
             "file": "message-projectplan-received.html",
-            "subject": "[ eRealm Info & Tech Sdn Bhd] ProjectPlan Received"
+            "subject": "[ eRealm Info & Tech] ProjectPlan Received"
         },
         "newProjectplanMessage": {
             "file": "new-projectplan-message.html",
-            "subject": "[ eRealm Info & Tech Sdn Bhd] New ProjectPlan from Customer"
+            "subject": "[ eRealm Info & Tech] New ProjectPlan from Customer"
         }
     };
 

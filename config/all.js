@@ -24,7 +24,7 @@ module.exports = {
     mail: {
         enable: true,
         transport: 'SMTP',
-        fromaddress: ' eRealm Info & Tech Sdn Bhd <hello@erealm.cn>',
+        fromaddress: ' eRealm Info & Tech <hello@erealm.cn>',
         options: {
             service: 'Gmail',
             auth: {

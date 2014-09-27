@@ -40,7 +40,7 @@ angular.module('erealm')
             "love_three" : "we love solving problems. we modeled,designed and developed the enterprise-level application solutions which managing hundreds of servers and millions of users' data and connecting different business, organization and governments.",
             "love_four" : "We love being a professional team and working directly with you on all your projects. We love to talk and discover your ideas. We have finished more than 50 projects and our system benefits more than 1,000,000 people from more than 20 countries.",
             "touch_us" : "Get in touch with us ›",
-            "copyright" : "© Copyright eRealm Info & Tech Sdn Bhd. 2013-2014. · All rights reserved. Registered in Malaysia · Company number 1090229-T",
+            "copyright" : "© Copyright eRealm Info & Tech. 2013-2014. · All rights reserved. Registered in Malaysia · Company number 1090229-T",
             "powerby" : "Code licensed under the The MIT License. Powered by ",
             "send_us" : "Send Us a message",
             "make_sure" : "Please make sure all fields are fill out correctly.",

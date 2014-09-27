@@ -78,7 +78,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
             shape: shape,
             map: map,
             position: pointInfo,
-            title: "eRealm Info & Tech Sdn Bhd"
+            title: "eRealm Info & Tech"
         });
 
 
