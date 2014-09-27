@@ -676,7 +676,7 @@ footer .back-top {
   margin: 0;
   padding: 2% 0;
   background: #75d1cd;
-  color: #fff;
+  color: #333333;
   text-align: center;
 }
 .what-we-love h2 {
@@ -701,7 +701,7 @@ footer .back-top {
   line-height: 115px;
 }
 .what-we-love a {
-  color: #fff;
+  color: #e1704b;
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -794,7 +794,7 @@ footer .back-top {
 .how-we-manage {
   margin: 0;
   padding: 2%;
-  color: #fff;
+  color: #333333;
   background-color: #54c1cf;
   text-align: center;
 }
@@ -815,7 +815,7 @@ footer .back-top {
   display: block;
 }
 .how-we-manage li .fa-check:before {
-  background: rgba(225, 112, 75, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.2em;
   margin-right: 0.2em;
 }

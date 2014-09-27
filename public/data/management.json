@@ -10,11 +10,11 @@
             { "name":"DBA"}
         ],
         "skills":[
-            { "name":"Proficiency in Web, Windows Form"},
+            { "name":"Web, Windows Form development"},
             { "name":"Front-end and back-end development"},
             { "name":"Optimizing the performance of database"},
             { "name":"Years of managing projects."},
-            { "name":"Good verbal and written in english"}
+            { "name":"Verbal and written in english"}
         ],
         "management":[
             { "name":"Basecamp access"},
@@ -35,11 +35,11 @@
         { "name":"数据库管理员"}
     ],
     "skills":[
-        { "name":"熟练掌握各种桌面或移动应用开发"},
+        { "name":"各种桌面或移动应用开发"},
         { "name":"前端、后端开发"},
         { "name":"数据库性能优化"},
         { "name":"项目管理"},
-        { "name":"良好的英语听说读写能力"}
+        { "name":"英语听说读写能力"}
     ],
     "management":[
         { "name":"Basecamp access"},
