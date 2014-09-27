@@ -2,19 +2,19 @@
 
     "en":{
         "roles":[
-            { "name":"Project manager"},
-            { "name":"senior software engineers"},
-            { "name":"software engineers"},
+            { "name":"Project Manager"},
+            { "name":"Senior Software Engineers"},
+            { "name":"Software Engineers"},
             { "name":"User Experience Architect"},
             { "name":"Quality Assistants"},
             { "name":"DBA"}
         ],
         "skills":[
-            { "name":"Proficiency in Web, Windows Form, APP"},
+            { "name":"Proficiency in Web, Windows Form"},
             { "name":"Front-end and back-end development"},
             { "name":"Optimizing the performance of database"},
-            { "name":"Years of manageing projects."},
-            { "name":"Good verbal and written in English"}
+            { "name":"Years of managing projects."},
+            { "name":"Good verbal and written in english"}
         ],
         "management":[
             { "name":"Basecamp access"},
