@@ -1,0 +1,40 @@
+.blog-list {
+
+  ul {
+    margin: 4em auto;
+  }
+  li {
+    width: 768px;
+    margin: 0 auto;
+  }
+  time {
+    color: @orange;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  p {
+    text-align: left;
+    img {
+      display: block;
+      margin: 0.5em auto;
+      min-width: 90%;
+      max-width: 99%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  .blog-list {
+    li {
+      width: 85%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  .blog-list {
+    li {
+      width: 95%;
+    }
+  }
+}
