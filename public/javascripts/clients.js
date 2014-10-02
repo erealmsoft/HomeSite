@@ -36,9 +36,6 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getContactsInfo:function(language){
             return $http.get('/app/contact/'+language);
         },
-        getManagement:function() {
-            return $http.get('/data/management.json');
-        },
         getPosts: function(language) {
             return $http.get('/app/posts/' + language);
         }

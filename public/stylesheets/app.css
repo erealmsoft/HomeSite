@@ -427,7 +427,7 @@ footer .back-top {
   font-weight: 700;
 }
 .page-menu-slide .nav-slide li.divider {
-  height: 100px;
+  height: 50px;
   border-bottom: 1px solid #5c5c5c;
   background: #CCC;
 }
@@ -558,6 +558,9 @@ footer .back-top {
   img {
     max-width: 100%;
     height: auto;
+  }
+  .muti-language {
+    display: none;
   }
   header {
     padding: 1em 0;

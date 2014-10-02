@@ -26,11 +26,11 @@ angular.module('erealm').controller('BlogController', ['$scope','$sce','$filter'
     };
 
     $scope.formatDate = function(date) {
-        if ($translate.uses() == 'cn') {
+        if ($translate.uses() === 'cn') {
             moment.lang('zh-cn');
         } else {
             moment.lang('en');
         }
-        return moment(date).format('lll');
-    }
+        return moment(date, 'yyyy-mm-dd').format('lll')
+    };
 }]);
