@@ -9,16 +9,28 @@ angular.module('erealm').controller('BlogController', ['$scope','$sce','$filter'
     'use strict';
 
     angular.extend($scope,{subTitle: "BLOGS", mainTitle: "what we did", currentPage: "blog-page"});
+    $scope.loadData = function(language) {
+        if (!language){
+            language = $translate.uses();
+        }
 
-    client.getPosts().then(function(response){
-        $scope.blogs = response.data;
-    });
+        client.getPosts(language).then(function(response){
+            $scope.blogs = response.data;
+        });
+    };
+    $scope.loadData();
+
 
     $scope.trustHtml = function(html) {
         return $sce.trustAsHtml(html);
     };
 
     $scope.formatDate = function(date) {
-        return $filter('date')(new Date(date),'medium');
+        if ($translate.uses() == 'cn') {
+            moment.lang('zh-cn');
+        } else {
+            moment.lang('en');
+        }
+        return moment(date).format('lll');
     }
 }]);

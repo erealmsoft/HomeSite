@@ -40,7 +40,7 @@ module.exports = function(app, express) {
     //    app.get('/project', function(req, res){  //Temporarily useless
     //        res.render('project');
     //    });
-    app.get('/app/posts', require('./api/blog').getPosts);
+    app.get('/app/posts/:language', require('./api/blog').getPosts);
 
     app.post('/app/message', require('./api/support').sendMessage);
 

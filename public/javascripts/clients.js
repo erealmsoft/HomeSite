@@ -39,8 +39,8 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getManagement:function() {
             return $http.get('/data/management.json');
         },
-        getPosts: function() {
-            return $http.get('/app/posts');
+        getPosts: function(language) {
+            return $http.get('/app/posts/' + language);
         }
     };
 }]);

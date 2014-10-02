@@ -5,6 +5,7 @@ html {
 body {
   background: #ffffff;
   color: #333333;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', "Helvetica", SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-size: 20px;
 }
@@ -228,7 +229,7 @@ header .git-fock a {
   height: 4em;
 }
 .nav-container nav {
-  background: #eeeeee;
+  background: #f1f1f1;
   padding: 0;
   height: 4em;
   z-index: 999;
@@ -1239,12 +1240,19 @@ footer .back-top {
             column-count: 1;
   }
 }
+.blog-list {
+  background: #f6f6f6;
+}
 .blog-list ul {
-  margin: 4em auto;
+  margin: 0 auto;
 }
 .blog-list li {
-  width: 768px;
-  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  margin: 2em auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: rgba(14, 14, 14, 0.1) 0px 1px 1px;
 }
 .blog-list time {
   color: #e1704b;
@@ -1260,6 +1268,8 @@ footer .back-top {
   margin: 0.5em auto;
   min-width: 90%;
   max-width: 99%;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 @media only screen and (max-width: 768px) and (min-width: 0) {
   .blog-list li {
@@ -1267,8 +1277,12 @@ footer .back-top {
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 0) {
+  .blog-list {
+    background: #ffffff;
+  }
   .blog-list li {
-    width: 95%;
+    width: 100%;
+    background: none;
   }
 }
 .send-project {

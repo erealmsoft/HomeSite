@@ -191,7 +191,9 @@ module.exports = function(grunt){
                         'public/javascripts/libs/plugins/angular-translate-storage-cookie.min.js',
                         'public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js',
                         'public/javascripts/libs/plugins/ng-mobile-menu.min.js',
-                        'public/javascripts/libs/plugins/bootstrap.min.js'
+                        'public/javascripts/libs/plugins/bootstrap.min.js',
+                        'public/javascripts/libs/plugins/moment-with-locales.js'
+
                     ] ,
                     'public/javascripts/app.min.js': [
                         'public/javascripts/erealm.js',

@@ -8,11 +8,11 @@
 var config = require('../../config'),
     tumblr = require('tumblr.js');
 var client = tumblr.createClient({
-    consumer_key: config.blog.API_KEY,
-    consumer_secret: config.blog.SECRET_KEY
+    consumer_key: config.blog.API_KEY
 });
 exports.getPosts = function(req, res) {
-    client.posts("erealm", function(err, resp) {
+    var language = req.params.language;
+    client.posts("erealm",{tag: language}, function(err, resp) {
         res.send(resp.posts);
     });
 };
