@@ -13,7 +13,8 @@ html {
 }
 body {
   background:@white;
-  color: #808080;
+  color: @black;
+  -webkit-font-smoothing: antialiased;
   font-family:'Roboto',"Helvetica", SimSun, "宋体","Microsoft YaHei", "微软雅黑",sans-serif;
   font-size:20px;
 }
@@ -230,7 +231,7 @@ header {
   height: 4em;
 
   nav {
-    background: #eeeeee;
+    background: #f1f1f1;
     padding: 0;
     height: 4em;
     z-index: 999;
@@ -461,7 +462,7 @@ footer {
     font-weight: 700;
 
     li.divider {
-      height: 100px;
+      height: 50px;
       border-bottom: 1px solid #5c5c5c;
       background: #CCC;
     }
@@ -599,6 +600,9 @@ footer {
   {
     max-width:100%;
     height:auto;
+  }
+  .muti-language{
+    display: none;
   }
   header
   {

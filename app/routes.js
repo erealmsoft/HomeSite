@@ -25,6 +25,9 @@ module.exports = function(app, express) {
     app.get('/about', function(req, res) {
         res.render('about');
     });
+    app.get('/blog', function(req, res) {
+        res.render('blog');
+    });
     app.get('/work', function(req, res) {
         res.render('work');
     });
@@ -37,6 +40,7 @@ module.exports = function(app, express) {
     //    app.get('/project', function(req, res){  //Temporarily useless
     //        res.render('project');
     //    });
+    app.get('/app/posts/:language', require('./api/blog').getPosts);
 
     app.post('/app/message', require('./api/support').sendMessage);
 

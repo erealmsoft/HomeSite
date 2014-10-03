@@ -1,0 +1,12 @@
+{{!< master}}
+{{#contentFor "bodyAttr"}}ng-controller="BlogController"{{/contentFor}}
+<div class="blog-list">
+    <ul class="wrap">
+        <li ng-repeat="blog in blogs">
+            <time ng-datetime="blog.date" ng-bind="formatDate(blog.date)"></time>
+            <h2 ng-bind="blog.title"></h2>
+            <p ng-bind-html="trustHtml(blog.body)"></p>
+        </li>
+    </ul>
+</div>
+

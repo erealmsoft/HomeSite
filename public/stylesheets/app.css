@@ -4,7 +4,8 @@ html {
 }
 body {
   background: #ffffff;
-  color: #808080;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', "Helvetica", SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-size: 20px;
 }
@@ -228,7 +229,7 @@ header .git-fock a {
   height: 4em;
 }
 .nav-container nav {
-  background: #eeeeee;
+  background: #f1f1f1;
   padding: 0;
   height: 4em;
   z-index: 999;
@@ -426,7 +427,7 @@ footer .back-top {
   font-weight: 700;
 }
 .page-menu-slide .nav-slide li.divider {
-  height: 100px;
+  height: 50px;
   border-bottom: 1px solid #5c5c5c;
   background: #CCC;
 }
@@ -557,6 +558,9 @@ footer .back-top {
   img {
     max-width: 100%;
     height: auto;
+  }
+  .muti-language {
+    display: none;
   }
   header {
     padding: 1em 0;
@@ -1237,6 +1241,51 @@ footer .back-top {
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
+  }
+}
+.blog-list {
+  background: #f6f6f6;
+}
+.blog-list ul {
+  margin: 0 auto;
+}
+.blog-list li {
+  width: 800px;
+  max-width: 100%;
+  margin: 2em auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: rgba(14, 14, 14, 0.1) 0px 1px 1px;
+}
+.blog-list time {
+  color: #e1704b;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  display: block;
+}
+.blog-list p {
+  text-align: left;
+}
+.blog-list p img {
+  display: block;
+  margin: 0.5em auto;
+  min-width: 90%;
+  max-width: 99%;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  .blog-list li {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  .blog-list {
+    background: #ffffff;
+  }
+  .blog-list li {
+    width: 100%;
+    background: none;
   }
 }
 .send-project {

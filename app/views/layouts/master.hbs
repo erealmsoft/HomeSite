@@ -53,9 +53,10 @@
             <div class="sub-logo-mark"><a href="/"></a></div>
             <div class="nav-link fa fa-bars" ng-click="$spMenu.toggle()"></div>
             <ul id="navslide">
-                <li ng-class="{active: currentPage == 'home-page'}"><a href="/" translate="home"></a></li>
-                <li ng-class="{active: currentPage == 'contact-page'}"><a href="/contact" translate="contact"></a></li>
-                <li ng-class="{active: currentPage == 'about-page'}"><a href="/about" translate="about"></a></li>
+                <li ng-class="{active: currentPage == 'home-page'}"><a href="/" translate="home">home</a></li>
+                <li ng-class="{active: currentPage == 'blog-page'}"><a href="/blog" translate="blog">blog</a></li>
+                <li ng-class="{active: currentPage == 'contact-page'}"><a href="/contact" translate="contact">contact</a></li>
+                <li ng-class="{active: currentPage == 'about-page'}"><a href="/about" translate="about">about</a></li>
             </ul>
         </div>
     </nav>
@@ -63,6 +64,7 @@
 <div id="sp-nav" class="page-menu-slide">
     <ul class="nav-slide">
         <li><a href="/" translate="home"></a></li>
+        <li><a href="/blog" translate="blog"></a></li>
         <li><a href="/contact" translate="contact"></a></li>
         <li><a href="/about" translate="about"></a></li>
         <li class="divider"></li>
@@ -109,6 +111,7 @@
 <script src="/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
 <script src="/javascripts/libs/plugins/ng-mobile-menu.min.js"></script>
 <script src="/javascripts/libs/plugins/bootstrap.min.js"></script>
+<script src="/javascripts/libs/plugins/moment-with-locales.js"></script>
 <script src="http://127.0.0.1:35729/livereload.js" cache="false"></script>
 <!-- endbuild -->
 <!-- build:js /javascripts/app.min.js -->
@@ -118,6 +121,7 @@
 <script src="/javascripts/app/homeController.js"></script>
 <script src="/javascripts/app/contactController.js"></script>
 <script src="/javascripts/app/aboutController.js"></script>
+<script src="/javascripts/app/blogController.js"></script>
 <script src="/javascripts/app/workController.js"></script>
 <script src="/javascripts/app/projectController.js"></script>
 <script src="/javascripts/app/workDetailsController.js"></script>

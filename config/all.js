@@ -16,6 +16,9 @@ module.exports = {
     serverRoot: rootPath + '/app',
     clientRoot: rootPath + '/public',
     port: process.env.PORT || 3000,
+    blog: {
+        API_KEY: process.env.BLOG_KEY,
+    },
     app: {
         name: process.env.NODE_ENV === 'production' ? pkg.name + ' (' + pkg.version + ')' : pkg.name + ' [' + pkg.version + ']',
         version: pkg.version,
