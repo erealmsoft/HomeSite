@@ -5,7 +5,7 @@
  */
 
 'use strict';
-
+require('newrelic');
 var cluster = require('cluster'),
  express = require('express'),
  hbs = require('express-hbs'),
