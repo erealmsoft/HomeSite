@@ -5,7 +5,6 @@ html {
 body {
   background: #ffffff;
   color: #333333;
-  -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', "Helvetica", SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-size: 20px;
 }
@@ -28,7 +27,7 @@ body {
   text-shadow: none;
 }
 a {
-  color: #e1704b;
+  color: #d35400;
   text-decoration: none;
   -webkit-transition: color .15s linear;
           transition: color .15s linear;
@@ -41,7 +40,7 @@ a.link:before {
   margin-right: .5em;
 }
 a:hover {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 a:focus {
@@ -77,7 +76,7 @@ h3 {
   padding: 0;
   font-size: 1.2em;
   margin: 10px 0 1em 0;
-  color: #e1704b;
+  color: #d35400;
 }
 h4 {
   color: #333333;
@@ -292,13 +291,10 @@ header .git-fock a {
   display: inline-block;
 }
 .nav-container nav li.active a {
-  color: #e1704b;
-}
-.nav-container nav li.active a {
-  color: #e1704b;
+  color: #d35400;
 }
 .nav-container nav li:hover a {
-  color: #e1704b;
+  color: #d35400;
 }
 .nav-container .nav-link {
   background-repeat: no-repeat;
@@ -321,7 +317,7 @@ header .git-fock a {
   background-color: #ffffff;
 }
 footer {
-  background: #e1704b;
+  background: #34495e;
   color: #ffffff;
   padding-top: 2.5em;
   clear: both;
@@ -341,30 +337,24 @@ footer ul li {
   margin-right: 1.5em;
   width: 82px;
 }
-footer ul li a,
-footer ul li a:link,
-footer ul li a:visited {
-  background: #ea9b81;
-  color: #FFF;
+footer ul li .circle-icon {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   position: relative;
 }
-footer ul li a:hover {
-  background: #d56540;
+footer ul li .circle-icon:hover {
+  border: 2px solid #d35400;
+  color: #d35400;
 }
 footer .copyright {
-  background: #d56540;
+  background: #2c3e50;
   text-align: center;
   padding: 2em;
 }
 footer .copyright p {
   font-size: .7em;
   width: 100%;
-}
-footer .copyright a {
-  color: #EA9B81;
-}
-footer .copyright a:hover {
-  color: #a34424;
 }
 footer .back-top {
   position: fixed;
@@ -385,7 +375,7 @@ footer .back-top {
   padding: 40px 0;
 }
 .error-info h1 {
-  color: #e1704b;
+  color: #d35400;
 }
 .muti-language {
   position: absolute;
@@ -396,12 +386,6 @@ footer .back-top {
 .muti-language .btn {
   padding-top: 0;
   padding-bottom: 0;
-}
-.muti-language a:visited {
-  color: #e1704b;
-}
-.muti-language a:hover {
-  color: #333333;
 }
 .page-menu-slide {
   width: 0;
@@ -652,7 +636,7 @@ footer .back-top {
   overflow: hidden;
   position: relative;
   height: 600px;
-  color: #e1704b;
+  color: #d35400;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/images/background-0.png");
@@ -674,7 +658,7 @@ footer .back-top {
   background: #3B4250;
 }
 .what-we-are .back2 + .wrap {
-  color: #e1704b;
+  color: #d35400;
 }
 .what-we-love {
   margin: 0;
@@ -696,16 +680,17 @@ footer .back-top {
 .what-we-love .programming-manners li .illustration {
   width: 115px;
   height: 115px;
-  background: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   display: inline-block;
   border-radius: 50%;
   margin-bottom: 30px;
-  color: #666;
   font-size: 60px;
   line-height: 115px;
 }
 .what-we-love a {
-  color: #e1704b;
+  color: #d35400;
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -813,14 +798,14 @@ footer .back-top {
   text-align: left;
   background: rgba(255, 255, 255, 0.1);
   padding: 1em;
-  min-height: 14em;
+  min-height: 16em;
 }
 .how-we-manage li {
   line-height: 2em;
   display: block;
 }
 .how-we-manage li .fa-check:before {
-  color: #e1704b;
+  color: #d35400;
   padding: 0.2em;
   margin-right: 0.2em;
 }
@@ -1085,6 +1070,9 @@ footer .back-top {
     margin: 0 auto;
     padding: 0;
   }
+  .contact-details a {
+    font-size: 1.2em;
+  }
   .contact-details .cotact-address li {
     width: 100%;
     margin: 0.5em 0;
@@ -1150,7 +1138,7 @@ footer .back-top {
           filter: none;
 }
 .our-team h4 {
-  color: #e1704b;
+  color: #d35400;
   height: 2em;
   font-size: 0.8em;
 }
@@ -1258,7 +1246,7 @@ footer .back-top {
   box-shadow: rgba(14, 14, 14, 0.1) 0px 1px 1px;
 }
 .blog-list time {
-  color: #e1704b;
+  color: #d35400;
   font-size: 0.8em;
   margin-bottom: 1em;
   display: block;
