@@ -11,13 +11,13 @@
   "author": "dangjian",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eRealm-Tech/HomeSite.git"
+    "url": "https://github.com/eRealm/HomeSite.git"
   },
   "config": {
     "unsafe-perm": true
   },
   "bugs": {
-    "url": "https://github.com/eRealm-Tech/HomeSite/issues",
+    "url": "https://github.com/eRealm/HomeSite/issues",
     "email": "ken@ereaml.com.my"
   },
   "license": "",
