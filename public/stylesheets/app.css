@@ -5,7 +5,7 @@ html {
 body {
   background: #ffffff;
   color: #333333;
-  font-family: 'Roboto', "Helvetica", SimSun, "宋体", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-family: 'Roboto', "Helvetica", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size: 20px;
 }
 .wrap {
@@ -27,7 +27,7 @@ body {
   text-shadow: none;
 }
 a {
-  color: #d35400;
+  color: #e67e22;
   text-decoration: none;
   -webkit-transition: color .15s linear;
           transition: color .15s linear;
@@ -76,7 +76,7 @@ h3 {
   padding: 0;
   font-size: 1.2em;
   margin: 10px 0 1em 0;
-  color: #d35400;
+  color: #e67e22;
 }
 h4 {
   color: #333333;
@@ -160,7 +160,7 @@ input.error:-moz-placeholder {
 header {
   background: #fff;
   overflow: hidden;
-  padding: 3em 0 1em;
+  padding: 1.5em 0 1em;
   position: relative;
 }
 header .wrap {
@@ -279,6 +279,7 @@ header .git-fock a {
 }
 .nav-container nav ul a {
   color: #333;
+  font-weight: 700;
   text-decoration: none;
   margin: 0 1em;
   padding-bottom: 5px;
@@ -291,10 +292,10 @@ header .git-fock a {
   display: inline-block;
 }
 .nav-container nav li.active a {
-  color: #d35400;
+  color: #e67e22;
 }
 .nav-container nav li:hover a {
-  color: #d35400;
+  color: #e67e22;
 }
 .nav-container .nav-link {
   background-repeat: no-repeat;
@@ -322,30 +323,31 @@ footer {
   padding-top: 2.5em;
   clear: both;
   margin-top: 0;
+  position: relative;
 }
 footer .contact ul {
   margin: 0 0 3em 0;
   padding: 0;
 }
-footer .contact p {
-  width: 50%;
-  margin: 1em auto;
-}
-footer ul li {
+footer .contact ul li {
   display: inline-block;
   margin-left: 1.5em;
   margin-right: 1.5em;
   width: 82px;
 }
-footer ul li .circle-icon {
+footer .contact ul li .circle-icon {
   background: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
   position: relative;
 }
-footer ul li .circle-icon:hover {
-  border: 2px solid #d35400;
-  color: #d35400;
+footer .contact ul li .circle-icon:hover {
+  border: 2px solid #e67e22;
+  color: #e67e22;
+}
+footer .contact p {
+  width: 50%;
+  margin: 1em auto;
 }
 footer .copyright {
   background: #2c3e50;
@@ -375,12 +377,12 @@ footer .back-top {
   padding: 40px 0;
 }
 .error-info h1 {
-  color: #d35400;
+  color: #e67e22;
 }
 .muti-language {
   position: absolute;
-  top: 10px;
-  left: 20px;
+  bottom: 10px;
+  right: 50px;
   color: #A00;
 }
 .muti-language .btn {
@@ -636,7 +638,7 @@ footer .back-top {
   overflow: hidden;
   position: relative;
   height: 600px;
-  color: #d35400;
+  color: #e67e22;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/images/background-0.png");
@@ -658,7 +660,7 @@ footer .back-top {
   background: #3B4250;
 }
 .what-we-are .back2 + .wrap {
-  color: #d35400;
+  color: #e67e22;
 }
 .what-we-love {
   margin: 0;
@@ -690,7 +692,7 @@ footer .back-top {
   line-height: 115px;
 }
 .what-we-love a {
-  color: #d35400;
+  color: #e67e22;
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -787,25 +789,33 @@ footer .back-top {
   background-color: #54c1cf;
   text-align: center;
 }
-.how-we-manage .row {
-  margin: 0;
-}
-.how-we-manage h3 {
-  text-align: center;
-  text-transform: uppercase;
-}
-.how-we-manage ul {
-  text-align: left;
+.how-we-manage .skill-container > li {
   background: rgba(255, 255, 255, 0.1);
+  width: 31.3333%;
+  margin: 0 1%;
+  float: left;
+  text-align: left;
+}
+.how-we-manage .skill-container h3 {
+  text-transform: uppercase;
+  padding: 0.2em 0.5em;
+  color: #e67e22;
+  margin: 0.5em 0 0 1em;
+}
+.how-we-manage .skill-list {
   padding: 1em;
   min-height: 16em;
 }
-.how-we-manage li {
+.how-we-manage .skill-list li {
   line-height: 2em;
   display: block;
+  padding-left: 40px;
 }
-.how-we-manage li .fa-check:before {
-  color: #d35400;
+.how-we-manage .skill-list li .fa-check {
+  margin-left: -40px;
+}
+.how-we-manage .skill-list li .fa-check:before {
+  color: #e67e22;
   padding: 0.2em;
   margin-right: 0.2em;
 }
@@ -1138,7 +1148,7 @@ footer .back-top {
           filter: none;
 }
 .our-team h4 {
-  color: #d35400;
+  color: #e67e22;
   height: 2em;
   font-size: 0.8em;
 }
@@ -1232,7 +1242,7 @@ footer .back-top {
   }
 }
 .blog-list {
-  background: #f6f6f6;
+  background: #ecf0f1;
 }
 .blog-list ul {
   margin: 0 auto;
@@ -1246,7 +1256,7 @@ footer .back-top {
   box-shadow: rgba(14, 14, 14, 0.1) 0px 1px 1px;
 }
 .blog-list time {
-  color: #d35400;
+  color: #e67e22;
   font-size: 0.8em;
   margin-bottom: 1em;
   display: block;

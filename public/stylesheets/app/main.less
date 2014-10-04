@@ -1,7 +1,8 @@
 @lightgreen:#54C1CF;
 @white: #ffffff;
-@orange:#d35400;
+@orange:#e67e22;
 @green:#75D1CD;
+@clouds: #ecf0f1;
 @grey:#808080;
 @black:#333;
 @content:#F1F0E8;
@@ -16,7 +17,7 @@ html {
 body {
   background:@white;
   color: @black;
-  font-family:'Roboto',"Helvetica", SimSun, "宋体","Microsoft YaHei", "微软雅黑",sans-serif;
+  font-family:'Roboto',"Helvetica","Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size:20px;
 }
 .wrap {
@@ -157,7 +158,7 @@ textarea.error, input.error {
 header {
   background: #fff;
   overflow: hidden;
-  padding: 3em 0 1em;
+  padding: 1.5em 0 1em;
   position: relative;
 
   .wrap {
@@ -289,6 +290,7 @@ header {
 
       a {
         color: #333;
+        font-weight: 700;
         text-decoration: none;
         margin: 0 1em;
         padding-bottom: 5px;
@@ -343,36 +345,36 @@ footer {
   padding-top: 2.5em;
   clear: both;
   margin-top: 0;
+  position: relative;
 
   .contact {
     ul {
       margin: 0 0 3em 0;
       padding: 0;
+
+      li {
+        display: inline-block;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        width:82px;
+
+        .circle-icon {
+          background: transparent;
+          border: 2px solid @white;
+          color: @white;
+          position: relative;
+
+          &:hover {
+            border: 2px solid @orange;
+            color: @orange;
+          }
+        }
+      }
     }
 
     p {
       width: 50%;
       margin: 1em auto;
-    }
-  }
-
-
-  ul li {
-    display: inline-block;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    width:82px;
-
-    .circle-icon {
-      background: transparent;
-      border: 2px solid @white;
-      color: @white;
-      position: relative;
-
-      &:hover {
-        border: 2px solid @orange;
-        color: @orange;
-      }
     }
   }
 
@@ -412,8 +414,8 @@ footer {
 
 .muti-language {
   position:absolute;
-  top:10px;
-  left:20px;
+  bottom:10px;
+  right:50px;
   color:#A00;
 
 

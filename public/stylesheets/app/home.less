@@ -229,30 +229,38 @@
   background-color: @lightgreen;
   text-align: center;
 
-  .row {
-    margin: 0;
+  .skill-container {
+    > li {
+      background: rgba(255,255,255,0.1);
+      width: 31.3333%;
+      margin: 0 1%;
+      float: left;
+      text-align: left;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      padding: 0.2em 0.5em;
+      color: @orange;
+      margin: 0.5em 0 0 1em;
+    }
   }
 
-  h3 {
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  ul {
-    text-align: left;
-    background: rgba(255,255,255,0.1);
+  .skill-list {
     padding: 1em;
     min-height: 16em;
-  }
-
-  li{
-    line-height: 2em;
-    display: block;
-
-    .fa-check:before {
-      color: @orange;
-      padding: 0.2em;
-      margin-right: 0.2em;
+    li{
+      line-height: 2em;
+      display: block;
+      padding-left: 40px;
+      .fa-check {
+        margin-left: -40px;
+      }
+      .fa-check:before {
+        color: @orange;
+        padding: 0.2em;
+        margin-right: 0.2em;
+      }
     }
   }
 }
