@@ -1,4 +1,5 @@
-# [eRealm Info & Tech](http://www.erealm.cn)[![Build Status](https://travis-ci.org/erealm/HomeSite.svg?branch=master)](http://travis-ci.org/erealm/HomeSite)
+![alt ereaml](https://raw.github.com/erealm/HomeSite/master/public/images/erealm.png)
+# [eRealm Info & Tech](http://www.erealm.cn)  [![Build Status](https://travis-ci.org/erealm/HomeSite.svg?branch=master)](http://travis-ci.org/erealm/HomeSite)
 
 ## Notes and information
 ### Public Modules We used.
@@ -11,6 +12,7 @@
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
 * Using [**handlebars**](https://www.npmjs.org/package/handlebars) as the server template engine.
 * Integrate with **MongoDB**.
+* Integrate with [**tumblr.js**](https://github.com/tumblr/tumblr.js/)
 * Responsive Design.
 
 ### Setting up the application
@@ -35,5 +37,5 @@ sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' forever st
 ``` 
 
 ## TODO List
-* Add blog module using [**poet**](https://github.com/jsantell/poet)
 * Unit test.
+* Dash board.
