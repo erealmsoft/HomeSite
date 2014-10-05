@@ -1,4 +1,4 @@
-![alt ereaml](https://raw.github.com/erealm/HomeSite/master/public/images/erealm.png)
+[![alt ereaml](https://raw.github.com/erealm/HomeSite/master/public/images/erealm.png)](http://www.erealm.cn)
 # [eRealm Info & Tech](http://www.erealm.cn)  [![Build Status](https://travis-ci.org/erealm/HomeSite.svg?branch=master)](http://travis-ci.org/erealm/HomeSite)
 
 ## Notes and information
