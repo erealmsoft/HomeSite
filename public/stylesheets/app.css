@@ -1131,7 +1131,7 @@ footer .back-top {
   float: left;
 }
 .our-team .profile figure {
-  background: #8dc63f;
+  background: #e67e22;
   width: 85%;
   position: relative;
   margin: 0  auto;
@@ -1152,6 +1152,7 @@ footer .back-top {
   margin: auto;
   height: 7em;
   display: none;
+  padding: 0 0.5em;
   width: 100%;
   color: #ffffff;
 }
@@ -1159,7 +1160,7 @@ footer .back-top {
   display: block;
 }
 .our-team .profile figure:hover img {
-  opacity: 0.1;
+  opacity: 0.3;
 }
 .our-team h4 {
   color: #e67e22;
