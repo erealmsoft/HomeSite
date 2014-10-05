@@ -1124,36 +1124,47 @@ footer .back-top {
   background-color: #EEE;
 }
 .our-team .profile {
-  width: 25%;
+  width: 33.3333%;
   padding: 0 2%;
-  height: 500px;
   text-align: center;
-  margin: .5em auto 4em;
+  margin: .5em auto 2.5em;
   float: left;
 }
-.our-team .profile img {
+.our-team .profile figure {
+  background: #8dc63f;
+  width: 85%;
+  position: relative;
+  margin: 0  auto;
+}
+.our-team .profile figure img {
   margin: 0 auto;
   -webkit-transition: -webkit-transform .5s ease;
           transition: transform .5s ease;
-  width: 200px;
-  height: 200px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  width: 100%;
+  opacity: 0.97;
 }
-.our-team .profile img:hover {
-  -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-      -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-          transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-  -webkit-filter: none;
-          filter: none;
+.our-team .profile figure .description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 7em;
+  display: none;
+  width: 100%;
+  color: #ffffff;
+}
+.our-team .profile figure:hover .description {
+  display: block;
+}
+.our-team .profile figure:hover img {
+  opacity: 0.1;
 }
 .our-team h4 {
   color: #e67e22;
   height: 2em;
   font-size: 0.8em;
-}
-.our-team .description {
-  font-style: italic;
 }
 .detail-we-are {
   overflow: hidden;
@@ -1210,7 +1221,6 @@ footer .back-top {
 @media only screen and (max-width: 1024px) {
   .our-team .profile {
     width: 50%;
-    height: 350px;
   }
 }
 @media only screen and (max-width: 768px) {

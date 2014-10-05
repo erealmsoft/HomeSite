@@ -24,26 +24,22 @@
         <h3 translate="welove"></h3>
         <ul class="clearfix">
             <li class="profile" ng-repeat="item in person">
-                <a ng-href="#{{angular 'item.first_name'}}" class="clearfix">
-                    <figure>
-                        <img class="img-circle img-responsive"
-                             ng-src="{{angular 'item.photo'}}"/>
-                    </figure>
-                </a>
+                <figure>
+                    <img class="img-responsive"
+                         ng-src="{{angular 'item.photo'}}"/>
+                    <p ng-bind="item.description" class="description"></p>
+                </figure>
                 <h3 ng-bind="item.first_name"></h3>
                 <h4 ng-bind="item.position"></h4>
-                <q ng-bind="item.description" class="description"></q>
             </li>
             <li class="profile" ng-repeat="part in partner">
-                <a ng-href="#{{angular 'part.first_name'}}" class="clearfix">
-                    <figure>
-                        <img class="img-circle img-responsive"
-                             ng-src="{{angular 'part.photo'}}"/>
-                    </figure>
-                </a>
+                <figure>
+                    <img class="img-responsive"
+                         ng-src="{{angular 'part.photo'}}"/>
+                    <p ng-bind="part.description" class="description"></p>
+                </figure>
                 <h3 ng-bind="part.first_name"></h3>
                 <h4 ng-bind="part.position"></h4>
-                <q ng-bind="part.description" class="description"></q>
             </li>
         </ul>
     </div>
