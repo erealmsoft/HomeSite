@@ -110,11 +110,12 @@
     .illustration {
       width: 115px;
       height: 115px;
-      background: #ffffff;
+      background: transparent;
+      border: 2px solid @white;
+      color: @white;
       display: inline-block;
       border-radius: 50%;
       margin-bottom: 30px;
-      color: #666;
       font-size: 60px;
       line-height: 115px;
     }
@@ -228,30 +229,39 @@
   background-color: @lightgreen;
   text-align: center;
 
-  .row {
-    margin: 0;
-  }
+  .skill-container {
+    > li {
+      background: rgba(255,255,255,0.1);
+      width: 31.3333%;
+      min-width: 300px;
+      margin: 1em 1%;
+      float: left;
+      text-align: left;
+    }
 
-  h3 {
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  ul {
-    text-align: left;
-    background: rgba(255,255,255,0.1);
-    padding: 1em;
-    min-height: 14em;
-  }
-
-  li{
-    line-height: 2em;
-    display: block;
-
-    .fa-check:before {
+    h3 {
+      text-transform: uppercase;
+      padding: 0.2em 0.5em;
       color: @orange;
-      padding: 0.2em;
-      margin-right: 0.2em;
+      margin: 0.5em 0 0 1em;
+    }
+  }
+
+  .skill-list {
+    padding: 1em;
+    min-height: 16em;
+    li{
+      line-height: 2em;
+      display: block;
+      padding-left: 2em;
+      .fa-check {
+        margin-left: -2em;
+      }
+      .fa-check:before {
+        color: @orange;
+        padding: 0.2em;
+        margin-right: 0.2em;
+      }
     }
   }
 }
@@ -264,6 +274,23 @@
   padding: 2.5em 1em;
 }
 
+@media only screen and (max-width:1024px)
+{
+  .what-we-can .programming-technology {
+    .tech-1, .tech-2 {
+      display: none;
+    }
+  }
+
+  .how-we-manage {
+
+    .skill-container {
+      > li {
+        width: 48%;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 768px) and (min-width: 0){
   .what-we-are
@@ -280,10 +307,25 @@
       }
     }
   }
+  .what-we-can .programming-technology {
+    .tech-3 {
+      display: none;
+    }
+  }
   .what-we-work .carousel-cover {
     height: 300px;
   }
 
+  .how-we-manage {
+
+    .skill-container {
+      > li {
+        width: 85%;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 
@@ -327,6 +369,19 @@
 
     a {
       font-size: 1.2em;
+    }
+  }
+  .what-we-can .programming-technology {
+    .tech-4 {
+      display: none;
+    }
+  }
+  .how-we-manage {
+
+    .skill-container {
+      > li {
+        width: 98%;
+      }
     }
   }
 }

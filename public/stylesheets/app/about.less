@@ -42,23 +42,43 @@
   }
 
   .profile {
-    width: 25%;
+    width: 33.3333%;
     padding: 0 2%;
-    height: 500px;
     text-align: center;
-    margin:.5em auto 4em;
+    margin:.5em auto 2.5em;
     float: left;
 
-    img{
-      margin:0 auto;
-      transition:transform .5s ease;
-      width: 200px;
-      height:200px;
-      filter: grayscale(100%);
-
-      &:hover {
-        transform:matrix(1.1,0,0,1.1,0,0);
-        filter: none;
+    figure {
+      background: @orange;
+      width: 85%;
+      position: relative;
+      margin: 0  auto;
+      img{
+        margin:0 auto;
+        transition:transform .5s ease;
+        width: 100%;
+        opacity: 0.97;
+      }
+      .description{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 7em;
+        display: none;
+        padding: 0 0.5em;
+        width: 100%;
+        color: @white;
+      }
+      &:hover{
+        .description{
+          display: block;
+        }
+        img {
+          opacity: 0.3;
+        }
       }
     }
   }
@@ -67,10 +87,6 @@
     color:@orange;
     height: 2em;
     font-size: 0.8em;
-  }
-  .description{
-//    color:@orange;
-    font-style: italic;
   }
 }
 
@@ -132,7 +148,6 @@
   .our-team {
     .profile {
       width: 50%;
-      height: 350px;
     }
   }
 }
@@ -146,7 +161,7 @@
 
   .our-team {
     .profile {
-      width: 90%;
+      width: 100%;
       height: auto;
       float: none;
     }

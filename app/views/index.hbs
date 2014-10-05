@@ -63,24 +63,24 @@
 </section>
 <section class="how-we-manage">
     <h2 translate="manage_team"></h2>
-    <div class="row">
-        <div  class="col-sm-4">
+    <ul class="skill-container clearfix">
+        <li>
             <h3 translate="team"></h3>
-            <ul>
+            <ul class="skill-list">
                 <li ng-repeat="item in roles"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
              </ul>
-        </div>
-        <div  class="col-sm-4">
+        </li>
+        <li>
             <h3 translate="skills"></h3>
-            <ul>
+            <ul class="skill-list">
                 <li ng-repeat="item in skills"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
             </ul>
-        </div>
-        <div  class="col-sm-4">
+        </li>
+        <li>
             <h3 translate="management"></h3>
-        <ul>
-            <li ng-repeat="item in management"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
-        </ul>
-        </div>
-    </div>
+            <ul class="skill-list">
+                <li ng-repeat="item in management"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
+            </ul>
+        </li>
+    </ul>
 </section>

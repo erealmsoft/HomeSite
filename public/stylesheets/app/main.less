@@ -1,11 +1,14 @@
 @lightgreen:#54C1CF;
 @white: #ffffff;
-@orange:#e1704b;
+@orange:#e67e22;
 @green:#75D1CD;
-@grey:#808080;
+@clouds: #ecf0f1;
+@grey:#d2d6d5;
 @black:#333;
 @content:#F1F0E8;
 @lightgreen:#54C1CF;
+@lightblue: #34495e;
+@darkblue: #2c3e50;
 
 html {
   height: 100%;
@@ -14,8 +17,7 @@ html {
 body {
   background:@white;
   color: @black;
-  -webkit-font-smoothing: antialiased;
-  font-family:'Roboto',"Helvetica", SimSun, "宋体","Microsoft YaHei", "微软雅黑",sans-serif;
+  font-family:'Roboto',"Helvetica","Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size:20px;
 }
 .wrap {
@@ -30,7 +32,7 @@ body {
 ::-moz-selection { background: #3DA9A4; color: #fff; text-shadow: none; }
 ::selection { background: #3DA9A4; color: #fff; text-shadow: none; }
 a {
-  color: #e1704b;
+  color: @orange;
   text-decoration: none;
   transition: color .15s linear;
 }
@@ -44,7 +46,7 @@ a.link:before {
 }
 
 a:hover {
-  color: @black;
+  color: @white;
   text-decoration: none;
 }
 
@@ -54,15 +56,15 @@ a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
 h2,h3 {
-  font-family:'Arimo', sans-serif;
+  font-family:'Arimo', "Microsoft YaHei", "微软雅黑", SimSun, "宋体",sans-serif;
   font-weight: 700;
 }
 
 h1 {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab', "Microsoft YaHei", "微软雅黑", SimSun, "宋体",sans-serif;
   font-size: 3em;
   line-height: 1em;
-  margin-bottom: .5em;
+  margin: .5em 0;
   color: #333333;
   letter-spacing: .05em;
   font-weight: 700;
@@ -73,7 +75,7 @@ h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
-  margin-bottom: .5em;
+  margin: .5em 0;
 }
 
 
@@ -90,6 +92,9 @@ h4 {
   font-size: 1.1em;
   padding: 0;
   margin: 0 0 1em 0;
+}
+p {
+  padding-bottom: 0.8em;
 }
 .left {
   float: left;
@@ -143,7 +148,7 @@ textarea.error, input.error {
   border: none;
   border-radius: 0;
   margin: 10px;
-  padding: 10px 40px;
+  padding: 10px 25px;
   transition: background 500ms linear;
   font-size: 18px;
   &:hover,&:focus {
@@ -156,7 +161,7 @@ textarea.error, input.error {
 header {
   background: #fff;
   overflow: hidden;
-  padding: 3em 0 1em;
+  padding: 1.5em 0 1em;
   position: relative;
 
   .wrap {
@@ -232,6 +237,7 @@ header {
 
   nav {
     background: #f1f1f1;
+    border-bottom: 1px solid @grey;
     padding: 0;
     height: 4em;
     z-index: 999;
@@ -288,6 +294,7 @@ header {
 
       a {
         color: #333;
+        font-weight: 700;
         text-decoration: none;
         margin: 0 1em;
         padding-bottom: 5px;
@@ -303,13 +310,10 @@ header {
     }
 
     li.active a {
-      color: #e1704b;
-    }
-    li.active a {
-      color: #e1704b;
+      color: @orange;
     }
     li:hover a {
-      color: #e1704b;
+      color: @orange;
     }
   }
 
@@ -340,16 +344,35 @@ header {
 }
 
 footer {
-  background:@orange;
+  background:@lightblue;
   color: @white;
   padding-top: 2.5em;
   clear: both;
   margin-top: 0;
+  position: relative;
 
   .contact {
     ul {
       margin: 0 0 3em 0;
       padding: 0;
+
+      li {
+        display: inline-block;
+        margin: 0.5em 1.5em;
+        width:82px;
+
+        .circle-icon {
+          background: transparent;
+          border: 2px solid @white;
+          color: @white;
+          position: relative;
+
+          &:hover {
+            border: 2px solid @orange;
+            color: @orange;
+          }
+        }
+      }
     }
 
     p {
@@ -358,40 +381,13 @@ footer {
     }
   }
 
-
-  ul li {
-    display: inline-block;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    width:82px;
-
-    a,
-    a:link,
-    a:visited {
-      background: #ea9b81;
-      color: #FFF;
-      position: relative;
-    }
-
-    a:hover {
-      background: #d56540;
-    }
-  }
-
   .copyright {
-    background: #d56540;
+    background: @darkblue;
     text-align: center;
     padding: 2em;
     p {
       font-size: .7em;
       width: 100%;
-    }
-    a {
-      color: #EA9B81;
-
-      &:hover {
-        color: #a34424;
-      }
     }
   }
 
@@ -421,20 +417,14 @@ footer {
 
 .muti-language {
   position:absolute;
-  top:10px;
-  left:20px;
+  bottom:10px;
+  right:50px;
   color:#A00;
 
 
   .btn {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  a:visited {
-    color: @orange;
-  }
-  a:hover{
-    color: @black;
   }
 }
 
@@ -578,7 +568,7 @@ footer {
   footer {
     .contact {
       p {
-        width: 70%;
+        width: 85%;
       }
     }
   }
