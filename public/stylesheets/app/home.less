@@ -274,6 +274,23 @@
   padding: 2.5em 1em;
 }
 
+@media only screen and (max-width:1024px)
+{
+  .what-we-can .programming-technology {
+    .tech-1, .tech-2 {
+      display: none;
+    }
+  }
+
+  .how-we-manage {
+
+    .skill-container {
+      > li {
+        width: 48%;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 768px) and (min-width: 0){
   .what-we-are
@@ -290,10 +307,25 @@
       }
     }
   }
+  .what-we-can .programming-technology {
+    .tech-3 {
+      display: none;
+    }
+  }
   .what-we-work .carousel-cover {
     height: 300px;
   }
 
+  .how-we-manage {
+
+    .skill-container {
+      > li {
+        width: 85%;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 
@@ -339,12 +371,16 @@
       font-size: 1.2em;
     }
   }
+  .what-we-can .programming-technology {
+    .tech-4 {
+      display: none;
+    }
+  }
   .how-we-manage {
 
     .skill-container {
       > li {
         width: 98%;
-        text-align: left;
       }
     }
   }

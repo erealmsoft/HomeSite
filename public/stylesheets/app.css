@@ -232,6 +232,7 @@ header .git-fock a {
 }
 .nav-container nav {
   background: #f1f1f1;
+  border-bottom: 1px solid #d2d6d5;
   padding: 0;
   height: 4em;
   z-index: 999;
@@ -828,6 +829,15 @@ footer .back-top {
   color: #333333;
   padding: 2.5em 1em;
 }
+@media only screen and (max-width: 1024px) {
+  .what-we-can .programming-technology .tech-1,
+  .what-we-can .programming-technology .tech-2 {
+    display: none;
+  }
+  .how-we-manage .skill-container > li {
+    width: 48%;
+  }
+}
 @media only screen and (max-width: 768px) and (min-width: 0) {
   .what-we-are {
     height: auto;
@@ -838,8 +848,16 @@ footer .back-top {
     margin: 100px 0;
     text-align: center;
   }
+  .what-we-can .programming-technology .tech-3 {
+    display: none;
+  }
   .what-we-work .carousel-cover {
     height: 300px;
+  }
+  .how-we-manage .skill-container > li {
+    width: 85%;
+    float: none;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 580px) and (min-width: 0) {
@@ -866,9 +884,11 @@ footer .back-top {
   .what-we-love a {
     font-size: 1.2em;
   }
+  .what-we-can .programming-technology .tech-4 {
+    display: none;
+  }
   .how-we-manage .skill-container > li {
     width: 98%;
-    text-align: left;
   }
 }
 .work-wrap {
@@ -888,7 +908,7 @@ footer .back-top {
   margin: 4em auto 4em;
 }
 .work-wrap .work-row li q {
-  color: #808080;
+  color: #d2d6d5;
   margin-top: 10px;
   font-style: normal;
 }
