@@ -60,7 +60,7 @@ h1 {
   font-family: 'Roboto Slab', "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size: 3em;
   line-height: 1em;
-  margin-bottom: .5em;
+  margin: .5em 0;
   color: #333333;
   letter-spacing: .05em;
   font-weight: 700;
@@ -70,7 +70,7 @@ h2 {
   font-size: 2em;
   letter-spacing: .05em;
   text-transform: uppercase;
-  margin-bottom: .5em;
+  margin: .5em 0;
 }
 h3 {
   padding: 0;
@@ -794,7 +794,8 @@ footer .back-top {
 .how-we-manage .skill-container > li {
   background: rgba(255, 255, 255, 0.1);
   width: 31.3333%;
-  margin: 0 1%;
+  min-width: 300px;
+  margin: 1em 1%;
   float: left;
   text-align: left;
 }
@@ -811,10 +812,10 @@ footer .back-top {
 .how-we-manage .skill-list li {
   line-height: 2em;
   display: block;
-  padding-left: 40px;
+  padding-left: 2em;
 }
 .how-we-manage .skill-list li .fa-check {
-  margin-left: -40px;
+  margin-left: -2em;
 }
 .how-we-manage .skill-list li .fa-check:before {
   color: #e67e22;
@@ -864,6 +865,10 @@ footer .back-top {
   }
   .what-we-love a {
     font-size: 1.2em;
+  }
+  .how-we-manage .skill-container > li {
+    width: 98%;
+    text-align: left;
   }
 }
 .work-wrap {
