@@ -85,6 +85,9 @@ h4 {
   padding: 0;
   margin: 0 0 1em 0;
 }
+p {
+  padding-bottom: 0.8em;
+}
 .left {
   float: left;
 }
@@ -146,7 +149,7 @@ input.error:-moz-placeholder {
   border: none;
   border-radius: 0;
   margin: 10px;
-  padding: 10px 40px;
+  padding: 10px 25px;
   -webkit-transition: background 500ms linear;
           transition: background 500ms linear;
   font-size: 18px;
@@ -331,8 +334,7 @@ footer .contact ul {
 }
 footer .contact ul li {
   display: inline-block;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin: 0.5em 1.5em;
   width: 82px;
 }
 footer .contact ul li .circle-icon {
@@ -527,7 +529,7 @@ footer .back-top {
     text-align: center;
   }
   footer .contact p {
-    width: 70%;
+    width: 85%;
   }
 }
 /* Smartphones ----------- */
@@ -1230,7 +1232,7 @@ footer .back-top {
     margin: 0;
   }
   .our-team .profile {
-    width: 90%;
+    width: 100%;
     height: auto;
     float: none;
   }
