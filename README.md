@@ -1,5 +1,6 @@
 [![alt ereaml](https://raw.github.com/erealm/HomeSite/master/public/images/erealm.png)](http://www.erealm.cn)
 # [eRealm Info & Tech](http://www.erealm.cn)  [![Build Status](https://travis-ci.org/erealm/HomeSite.svg?branch=master)](http://travis-ci.org/erealm/HomeSite)
+[ ![Codeship Status for erealm/HomeSite](https://www.codeship.io/projects/1f17b940-2f28-0132-d05d-4e682e9b5dbd/status)](https://www.codeship.io/projects/39458)
 
 ## Notes and information
 ### Public Modules We used.
