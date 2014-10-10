@@ -58,7 +58,7 @@ h3 {
 }
 h1 {
   font-family: 'Roboto Slab', "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1em;
   margin: .5em 0;
   color: #333333;
@@ -67,7 +67,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: .05em;
   text-transform: uppercase;
   margin: .5em 0;
@@ -1177,7 +1177,7 @@ footer .back-top {
   right: 0;
   left: 0;
   margin: auto;
-  height: 7em;
+  height: 12em;
   display: none;
   padding: 0 0.5em;
   width: 100%;
