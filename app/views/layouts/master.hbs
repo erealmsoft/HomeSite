@@ -33,6 +33,20 @@
         <a href="https://github.com/eRealm" target="_blank">Fork me on GitHub</a>
     </div>
 </header>
+<span class="muti-language">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default " translate="language"></button>
+        <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a  href="javascript:void(0)" language key="cn">简体中文</a></li>
+            <li class="divider"></li>
+            <li><a  href="javascript:void(0)" language key="en">English</a></li>
+        </ul>
+    </div>
+ </span>
 <div class="nav-container" >
     <nav ng-class="{fixed: showFixedHeader}">
         <div class="wrap">
@@ -78,20 +92,6 @@
         <p translate="property"></p>
     </div>
     <a class="back-top fa fa-level-up" href="javascript: void(0)" ng-show="showFixedHeader" backtop></a>
-    <div class="muti-language">
-        <div class="btn-group dropup">
-            <button type="button" class="btn btn-default " translate="language"></button>
-            <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a  href="javascript:void(0)" language key="cn">简体中文</a></li>
-                <li class="divider"></li>
-                <li><a  href="javascript:void(0)" language key="en">English</a></li>
-            </ul>
-        </div>
-     </div>
 </footer>
 <div class="overlay-message" ng-show="mainLoading">
     <ul class="loader">

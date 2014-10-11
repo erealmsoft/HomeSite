@@ -38,15 +38,15 @@
         { "name":"各种桌面或移动应用开发"},
         { "name":"前端、后端开发"},
         { "name":"数据库性能优化"},
-        { "name":"项目管理"},
+        { "name":"项目管理咨询"},
         { "name":"英语听说读写能力"}
     ],
     "management":[
-        { "name":"Basecamp access"},
-        { "name":"Time Sheet"},
+        { "name":"基于Basecamp管理项目"},
+        { "name":"电子工时表"},
         { "name":"敏捷开发"},
         { "name":"日/周报"},
-        { "name":"实时预览"}
+        { "name":"项目进度实时预览"}
     ]
 }
 }

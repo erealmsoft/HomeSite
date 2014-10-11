@@ -384,8 +384,8 @@ footer .back-top {
 }
 .muti-language {
   position: absolute;
-  bottom: 10px;
-  right: 50px;
+  top: 10px;
+  left: 20px;
   color: #A00;
 }
 .muti-language .btn {
