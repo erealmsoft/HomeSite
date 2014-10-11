@@ -384,12 +384,15 @@ footer .back-top {
 }
 .muti-language {
   position: absolute;
-  top: 10px;
+  top: -3px;
   left: 20px;
   color: #A00;
 }
+.muti-language .btn-group {
+  display: block;
+}
 .muti-language .btn {
-  padding-top: 0;
+  padding-top: 3px;
   padding-bottom: 0;
 }
 .page-menu-slide {
