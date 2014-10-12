@@ -34,9 +34,12 @@ grunt
 grunt build
 ``` 
 ```bash
-sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' forever start app.js
+sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' BLOG_KEY='tumblr key' forever start app.js
 ``` 
-
+* or publish the application using bash script
+```bash
+sudo ./build.sh 'name@yourdomain.com' 'your mail password' 'tumblr key'
+```
 ## TODO List
 * Unit test.
 * Dash board.
