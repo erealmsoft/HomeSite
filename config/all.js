@@ -29,7 +29,10 @@ module.exports = {
         transport: 'SMTP',
         fromaddress: ' eRealm Info & Tech <hello@erealm.cn>',
         options: {
-            service: 'Gmail',
+            host: "smtp.mailgun.org",
+            port:465,
+            secureConnection: true,
+            requiresAuth: true,
             auth: {
                 user: process.env.GMAIL_USER,
                 pass: process.env.GMAIL_PASS
