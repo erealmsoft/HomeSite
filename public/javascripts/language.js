@@ -112,7 +112,7 @@ angular.module('erealm')
             "what_we_can_technology" : "我们使用的开发技术",
             "our_team" : "eRealm团队",
             "our_partner" : "我们的合作伙伴",
-            "welove" : "我们热爱软件开发,我们积极向上",
+            "welove" : "我们热爱软件开发，我们积极向上",
             "wework" : "伙伴们专注于各种前后端开发 相互信任使我们紧密合作",
             "love_one" : "我们是技术控，热爱软件开发。我们热衷于阅读技术文章、参加技术会议，通过不断的技术学习和交流使我们团队开发技术保持业界领先。",
             "love_two" : "我们擅长使用 Node.js, ASP.NET, JSP，HTML5等技术来构建网站,使用Windows Form，WPF，MFC等技术开发桌面应用,使用Object C，Swift，Java等语言来构建移动应用",
