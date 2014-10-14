@@ -412,9 +412,6 @@ footer .back-top {
   -webkit-transition: width 100ms linear;
           transition: width 100ms linear;
 }
-.page-menu-slide.show {
-  width: 200px;
-}
 .page-menu-slide .nav-slide {
   margin: 0;
   padding: 0;
@@ -585,6 +582,9 @@ footer .back-top {
   }
   .nav-container .nav-link {
     display: inline-block;
+  }
+  .page-menu-slide.show {
+    width: 200px;
   }
   footer ul li {
     margin-left: .2em;
