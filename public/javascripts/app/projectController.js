@@ -21,6 +21,12 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
         }
     };
 
+
+    $scope.reloading = function(){
+        $scope.loading = false;
+        $scope.errorMessage = $translate('make_sure');
+    };
+
     var types_en =  [
         {name:'Website'},
         {name:'Mobile'},

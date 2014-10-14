@@ -21,6 +21,7 @@
                     <input type="tel" class="form-control" name="telephone" ng-maxlength="50" ng-class="{error: (form.telephone.$dirty || submitted) && form.telephone.$invalid}" ng-model="telephone" title="Enter your telephone" required="required" ng-attr-placeholder="{{angular '\'your_telephone\'| translate'}}">
                     <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
                               ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
+                    <button class="btn common-btn reset" name="reset" type="reset" ng-click="reloading()" translate="reset" ></button>
                     <button class="btn common-btn" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send_message"></button>
                 </div>
             </fieldset>

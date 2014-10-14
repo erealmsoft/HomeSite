@@ -112,4 +112,9 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
             });
         }
     };
+
+    $scope.reloading = function(){
+        $scope.loading = false;
+        $scope.errorMessage = $translate('make_sure');
+    };
 }]);
