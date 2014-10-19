@@ -25,16 +25,16 @@
 <div class="send-message">
     <div class="wrap">
         <h2 translate="send_us"></h2>
-        <form ng-submit="sendMessage();" method="" action="" novalidate="novalidate" role="form" name="form">
+        <form ng-submit="sendMessage();" name="contact_form" method="" action="" novalidate="novalidate" role="form">
             <p class="info" ng-bind="errorMessage" translate="make_sure"></p>
             <fieldset>
                 <div class="form-group left">
-                    <textarea name="message" class="form-control" ng-class="{error: (form.message.$dirty || submitted) && form.message.$invalid}"
+                    <textarea name="message" class="form-control" ng-class="{error: (contact_form.message.$dirty || submitted) && contact_form.message.$invalid}"
                               ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
                 </div>
                 <div class="form-group right">
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (form.name.$dirty || submitted) && form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}">
-                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (form.email.$dirty || submitted) && form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (contact_form.name.$dirty || submitted) && contact_form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}">
+                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (contact_form.email.$dirty || submitted) && contact_form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
                     <button class="btn common-btn reset" name="reset" type="reset" ng-click="reloading()" translate="reset" ></button>
                     <button class="btn common-btn" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send_message"></button>
                 </div>

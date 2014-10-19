@@ -7,6 +7,7 @@ body {
   color: #333333;
   font-family: 'Roboto', "Helvetica", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size: 20px;
+  -webkit-font-smoothing: antialiased;
 }
 .wrap {
   margin: 0 auto;
@@ -155,7 +156,7 @@ input.error:-moz-placeholder {
   font-size: 18px;
 }
 .common-btn.reset {
-  background: #615B5B;
+  background: #d2d6d5;
 }
 .common-btn:hover,
 .common-btn:focus {
@@ -397,6 +398,10 @@ footer .back-top {
 .muti-language .btn {
   padding-top: 3px;
   padding-bottom: 0;
+  border-radius: 0;
+}
+.muti-language .dropdown-menu {
+  border-radius: 0;
 }
 .page-menu-slide {
   width: 0;

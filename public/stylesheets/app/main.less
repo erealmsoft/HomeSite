@@ -19,6 +19,7 @@ body {
   color: @black;
   font-family:'Roboto',"Helvetica","Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
   font-size:20px;
+  -webkit-font-smoothing: antialiased;
 }
 .wrap {
   margin: 0 auto;
@@ -153,7 +154,7 @@ textarea.error, input.error {
   font-size: 18px;
 
   &.reset {
-    background: #615B5B;
+    background: @grey;
   }
 
   &:hover,&:focus {
@@ -435,6 +436,10 @@ footer {
   .btn {
     padding-top: 3px;
     padding-bottom: 0;
+    border-radius: 0;
+  }
+  .dropdown-menu {
+    border-radius: 0;
   }
 }
 

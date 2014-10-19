@@ -123,7 +123,7 @@ angular.module('erealm')
             "touch_us" : "联系我们？",
             "copyright" : "版权所有 西安瑞木信息技术有限公司 2013-2014",
             "powerby" : "MIT许可 ",
-            "property":"版权所有 翻版必究",
+            "property":"内容中提到的其他商标和图标，版权属于商标和图标的原始拥有者",
             "send_us" : "向我们发送信息，保持联络",
             "make_sure" : "请确保所有的内容都填写正确",
             "pop_message" : "在这里填写您的信息...",

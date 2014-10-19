@@ -24,6 +24,7 @@ angular.module('erealm').controller('ProjectController', ['$scope','client','$tr
 
     $scope.reloading = function(){
         $scope.loading = false;
+        $scope.project_form.$setPristine();
         $scope.errorMessage = $translate('make_sure');
     };
 

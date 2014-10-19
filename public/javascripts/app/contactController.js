@@ -102,7 +102,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
     };
 
     $scope.sendMessage = function() {
-        if(!$scope.form.$invalid){
+        if(!$scope.contact_form.$invalid){
             $scope.loading = true;
             client.submitMessage($scope.name, $scope.email, $scope.message).then(function(){
                 $scope.errorMessage = $translate('sent_successfully');
@@ -115,6 +115,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
     $scope.reloading = function(){
         $scope.loading = false;
+        $scope.contact_form.$setPristine();
         $scope.errorMessage = $translate('make_sure');
     };
 }]);
