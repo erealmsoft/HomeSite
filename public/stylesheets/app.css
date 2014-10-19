@@ -154,13 +154,13 @@ input.error:-moz-placeholder {
           transition: background 500ms linear;
   font-size: 18px;
 }
+.common-btn.reset {
+  background: #615B5B;
+}
 .common-btn:hover,
 .common-btn:focus {
   color: #ffffff;
   background: #3B4250;
-}
-.reset {
-  background: #615B5B;
 }
 /* Header __________________________________________________________ */
 header {
