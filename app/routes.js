@@ -25,7 +25,7 @@ module.exports = function(app, express) {
     app.get('/about', function(req, res) {
         res.render('about');
     });
-    app.get('/blog', function(req, res) {
+    app.get('/news', function(req, res) {
         res.render('blog');
     });
     app.get('/work', function(req, res) {
