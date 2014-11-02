@@ -40,6 +40,10 @@ sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' BLOG_KEY='
 ```bash
 sudo ./build.sh 'name@yourdomain.com' 'your mail password' 'tumblr key'
 ```
+
+### Document
+* [Chinese Version](http://blog.erealm.cn/font-end/home/2014/11/02/erealm-home-opensource-nodejs.html)
+
 ## TODO List
 * Unit test.
 * Dash board.
