@@ -11,7 +11,10 @@ var cluster = require('cluster'),
  hbs = require('express-hbs'),
  config = require('./config'),
  app = express(),
- expressValidator = require('express-validator');
+ expressValidator = require('express-validator'),
+ favicon = require('serve-favicon'),
+ compression = require('compression'),
+ bodyParser = require('body-parser');
 
 if (process.env.SITE_USER) {
     app.use(express.basicAuth(process.env.SITE_USER, process.env.SITE_PASS));
@@ -32,11 +35,14 @@ app.engine('hbs', hbs.express3({
 }));
 app.set('view engine', 'hbs');
 app.set('views', config.serverRoot + '/views');
-app.use(express.compress());
-app.use(express.favicon(config.clientRoot + '/favicon.ico'));
+app.use(compression({
+    threshold: 512
+}));
+app.use(favicon(config.clientRoot + '/favicon.ico'));
 app.use(express.static(config.clientRoot));
 
-app.use(express.bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator([]));
 
 require('./app/routes')(app, express);
