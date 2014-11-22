@@ -44,6 +44,9 @@ sudo ./build.sh 'name@yourdomain.com' 'your mail password' 'tumblr key'
 ### Documents
 * [Chinese Version](http://blog.erealm.cn/font-end/home/2014/11/02/erealm-home-opensource-nodejs.html)
 
+## Update Notes
+* November 20, 2014: Update express.js(from express3 to express4)
+* November 22, 2014: change back-end view engine(from hbs to swig);add back-end mock data. by default, no need to setup the data base, just set the `config.mock` to `true`.
 ## TODO List
 * Unit test.
 * Dash board.
