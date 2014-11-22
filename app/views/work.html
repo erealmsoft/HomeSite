@@ -1,12 +1,13 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="WorkController"{{/contentFor}}
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="WorkController"{% endblock %}
+{% block content %}
 <div class="work-wrap">
   <div>
     <ul class="work-row">
         <li class="col-lg-4" ng-repeat="pro in project">
-            <a ng-href="/workdetails#{{angular 'pro.ID'}}">
+            <a ng-href="/workdetails#{{'pro.ID'}}">
                 <figure>
-                    <img ng-src="{{angular 'pro.cover'}}"/>
+                    <img ng-src="{{'pro.cover'}}"/>
                 </figure>
             </a>
             <h3 ng-bind="pro.proj_name"></h3>
@@ -17,4 +18,4 @@
     </ul>
 </div>
 </div>
-
+{% endblock %}

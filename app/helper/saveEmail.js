@@ -4,10 +4,12 @@
  * Created by Steven on 8/22/2014.
  */
 'use strict';
-
+var config = require("../../config");
 exports.saveMessage = function(message) {
-
-    var db = require("../helper/dbhelper").conn_db(); //connect to the databases
+    if (!config.mock) {
+        return false;
+    }
+    var db = require("dbhelper").conn_db(); //connect to the databases
 
     db.open(function(err, db) {
 

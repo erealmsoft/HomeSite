@@ -1,6 +1,6 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="HomeController"{{/contentFor}}
-
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="HomeController"{% endblock %}
+{% block content %}
 <section class="what-we-are">
     <div class="wrap">
         <div class="home-box">
@@ -15,12 +15,12 @@
     <h2 translate="what_we_done">What we have done</h2>
     <carousel interval="myInterval">
         <slide ng-repeat="work in projects" active="work.active" class="wrap">
-            <h3><a ng-href="/workdetails#{{angular 'work.ID'}}" ng-bind="work.proj_name" target="_self"></a></h3>
+            <h3><a ng-href="/workdetails#{{'work.ID'}}" ng-bind="work.proj_name" target="_self"></a></h3>
             <div class="carousel-caption">
                 <p ng-bind="work.description_title"></p>
             </div>
             <div class="carousel-cover">
-                <img ng-src="{{angular 'work.cover'}}">
+                <img ng-src="{{'work.cover'}}">
             </div>
         </slide>
     </carousel>
@@ -67,20 +67,21 @@
         <li>
             <h3 translate="team"></h3>
             <ul class="skill-list">
-                <li ng-repeat="item in roles"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
+                <li ng-repeat="item in roles"><i class="fa fa-check"></i> {{item.name}}</li>
              </ul>
         </li>
         <li>
             <h3 translate="skills"></h3>
             <ul class="skill-list">
-                <li ng-repeat="item in skills"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
+                <li ng-repeat="item in skills"><i class="fa fa-check"></i> {{item.name}}</li>
             </ul>
         </li>
         <li>
             <h3 translate="management"></h3>
             <ul class="skill-list">
-                <li ng-repeat="item in management"><i class="fa fa-check"></i> {{angular 'item.name'}}</li>
+                <li ng-repeat="item in management"><i class="fa fa-check"></i> {{item.name}}</li>
             </ul>
         </li>
     </ul>
 </section>
+{% endblock %}

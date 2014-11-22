@@ -22,7 +22,7 @@ angular.module('erealm').controller('BlogController', ['$scope','$sce','$filter'
         }
 
         client.getPosts(language).then(function(response){
-            var blogs = response.data
+            var blogs = response.data;
             var len = blogs.length;
             for(var i=0;i<len && i < mockDates.length; i++) {
                 blogs[len-i-1].date = mockDates[i];
@@ -43,6 +43,6 @@ angular.module('erealm').controller('BlogController', ['$scope','$sce','$filter'
         } else {
             moment.lang('en');
         }
-        return moment(date, 'YYYY-MM-DD HH:mm:ss').format('lll')
+        return moment(date, 'YYYY-MM-DD HH:mm:ss').format('lll');
     };
 }]);

@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "5400031ebfa37a7c3335c6f5",
+    "name": "china",
+    "sort": 1,
+    "location": "Xi'an Office",
+    "map": {
+      "shortUrl": "http://goo.gl/6QoZt8",
+      "latLng": [
+        34.194825,
+        108.9
+      ],
+      "point": [
+        34.194825,
+        108.88425
+      ]
+    },
+    "info": {
+      "address": "No.5,Zhangba 1st Road",
+      "region": "YanTa District",
+      "county": "Xi'an",
+      "postcode": "710065",
+      "country": "China",
+      "contact": "+86 029-68596119"
+    }
+  },
+  {
+    "_id": "54180eab1af3639cb050941b",
+    "name": "shanghai",
+    "sort": 2,
+    "location": "Shanghai Office",
+    "map": {
+      "shortUrl": "http://goo.gl/6QoZt8",
+      "latLng": [
+        31.04,
+        121.38
+      ],
+      "point": [
+        31.040182,
+        121.360925
+      ]
+    },
+    "info": {
+      "address": "No.5500,Yuan Jiang Road",
+      "region": "Minhang District",
+      "county": "ShangHai",
+      "postcode": "201111",
+      "country": "China",
+      "contact": "+86 021-54101117"
+    }
+  }
+]

@@ -8,13 +8,13 @@
 require('newrelic');
 var cluster = require('cluster'),
  express = require('express'),
- hbs = require('express-hbs'),
  config = require('./config'),
  app = express(),
  expressValidator = require('express-validator'),
  favicon = require('serve-favicon'),
  compression = require('compression'),
- bodyParser = require('body-parser');
+ bodyParser = require('body-parser'),
+ swig = require('swig');
 
 if (process.env.SITE_USER) {
     app.use(express.basicAuth(process.env.SITE_USER, process.env.SITE_PASS));
@@ -23,17 +23,9 @@ if (process.env.SITE_USER) {
 //config express in all environments
 app.disable('x-powered-by');
 
-// Use `.hbs` for extensions and find partials in `views/partials`.
-hbs.registerHelper('angular', function(text) {
-    return new hbs.SafeString(
-            "{{" + text + "}}"
-    );
-});
-
-app.engine('hbs', hbs.express3({
-    layoutsDir: config.serverRoot + '/views/layouts'
-}));
-app.set('view engine', 'hbs');
+swig.setDefaults({ varControls: ['{$', '$}'] });
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
 app.set('views', config.serverRoot + '/views');
 app.use(compression({
     threshold: 512

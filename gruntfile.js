@@ -83,7 +83,8 @@ module.exports = function(grunt){
                 options: {
                     jshintrc: '.jshintrc-client',
                     ignores: [
-                        'public/javascripts/**/*.min.js'
+                        'public/javascripts/**/*.min.js',
+                        'public/javascripts/libs/**'
                     ]
                 },
                 src: [
@@ -205,13 +206,13 @@ module.exports = function(grunt){
             }
         },
         useminPrepare: {
-            html: 'app/views/layouts/*.hbs',
+            html: 'app/views/layouts/*.html',
             options: {
                 dest: 'public'
             }
         },
         usemin: {
-            html: 'app/views/layouts/*.hbs',
+            html: 'app/views/layouts/*.html',
             options: {
                 root: 'public',
                 dest: 'public',
@@ -229,7 +230,7 @@ module.exports = function(grunt){
                 files: [
                     'public/**/*.js', '!client/app/**/*.min.js'
                 ],
-                tasks: ['newer:jshint:client'],
+                tasks: ['jshint:client'],
                 options: {
                     livereload: true
                 }
@@ -249,10 +250,10 @@ module.exports = function(grunt){
             },
             serverJS: {
                 files: ['app/**/*.js'],
-                tasks: ['newer:jshint:server']
+                tasks: ['jshint:server']
             },
             serverTemplates: {
-                files: ['app/views/**/*.hbs','app/templates/*.html'],
+                files: ['app/views/**/*.html','app/templates/*.html'],
                 options: {
                     livereload: true
                 }

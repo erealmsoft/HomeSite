@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "53f70856ff3aa206d71dec1e",
+    "number": "1",
+    "photo": "http://i.imgur.com/HzFBvIx.jpg",
+    "first_name": "Howard",
+    "last_name": "Huang",
+    "motto": "Whatever is worth doing at all is worth doing well.",
+    "hobby": "Playing basketball",
+    "position": "Project Manager",
+    "description": "Graduated from Wuhan University of Technology,first job in Dalian，got married in Xi'an, took an exchange programme to Japan and now a member of eRealm Team in Malaysia."
+  },
+  {
+    "_id": "53f57699ff3aa206d71dec07",
+    "number": "2",
+    "photo": "http://i.imgur.com/ksEryzo.jpg",
+    "first_name": "Ling",
+    "last_name": "Zhang",
+    "position": "Business Analyst",
+    "hobby": "Finished labours are pleasant.",
+    "description": "The head of Agile Development, one of the developers of JsonSDK, #17 diamond group of the first season of StartCraft league,always looking for easier ways to do things.",
+    "motto": "Nothing great was ever achieved without enthusiasm!"
+  },
+  {
+    "_id": "53f6ff04ff3aa206d71dec1a",
+    "number": "3",
+    "photo": "http://i.imgur.com/e5TwPGZ.jpg",
+    "first_name": "Ken",
+    "last_name": "Dang",
+    "motto": "Business makes a man as well as tries him",
+    "hobby": "Playing badminton and table tennis",
+    "position": "User Experience Designer",
+    "description": " Web developer, writer, blogger. I discussed the best practice of network performance in my book The Best Practice of Front-End development. "
+  },
+  {
+    "_id": "53f6dde3ff3aa206d71dec0c",
+    "number": "4",
+    "photo": "http://i.imgur.com/typ81Ep.jpg",
+    "first_name": "Jason",
+    "last_name": "Xu",
+    "motto": "Wisdom in the mind is better than money in the hand.",
+    "hobby": "Playing chess",
+    "position": "Technical Director",
+    "description": "Software Architect/ Web developer，From back-end programming to front-end web developing, I spent a lot of time in network development. "
+  },
+  {
+    "_id": "53f5777dff3aa206d71dec0a",
+    "number": "5",
+    "photo": "http://i.imgur.com/P8SmXr5.jpg",
+    "first_name": "Don",
+    "last_name": "Xue",
+    "motto": "We are going to have the most simple life and the most distant dream, even if tomorrow freezing, it was a long way, and the horse is dead.",
+    "hobby": "billiards,music,travel,read and so on",
+    "position": " Front-end Developer",
+    "description": "I enjoy the developing of techniques and I've learnt C/C++ and I'm now a front-end developer. Programming is like art to me. It attracts me and it is my motivation. forever."
+  },
+  {
+    "_id": "53f57759ff3aa206d71dec09",
+    "number": "6",
+    "photo": "http://i.imgur.com/RrkWgOk.jpg",
+    "first_name": "Gavin",
+    "last_name": "Guo",
+    "motto": "A great ship asks for deep waters",
+    "hobby": "I'm fond of reading and Playing chess, badminton and table tennis",
+    "position": "Back-End developer",
+    "description": "I love learning network techniques and I always create new ideas through the website learning. Look forward to exchange ideas with you. "
+  },
+  {
+    "_id": "53f7057aff3aa206d71dec1c",
+    "number": "7",
+    "photo": "http://i.imgur.com/3TahNS3.jpg",
+    "first_name": "Emma",
+    "last_name": "Li",
+    "motto": "Everything has its time and that time must be watched.",
+    "hobby": "Playing basketball",
+    "position": " Front-end Developer",
+    "description": "Positive, funny and beautiful. I like learning a new language, traveling, singing and taekwondo. Big fan of Old Friend. I’m waiting for you. "
+  },
+  {
+    "_id": "53f57730ff3aa206d71dec08",
+    "number": "8",
+    "photo": "http://i.imgur.com/ZPIuzuk.jpg",
+    "first_name": "Steven",
+    "last_name": "Zhang",
+    "hobby": "Hobby:Onlime Games,ping-pang,Football",
+    "position": "Back-End developer",
+    "description": "I have deep love for online games. I think life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "motto": "Life is like riding a bicycle. To keep your balance you must keep moving"
+  }
+]

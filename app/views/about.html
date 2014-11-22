@@ -1,5 +1,6 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="AboutController"{{/contentFor}}
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="AboutController"{% endblock %}
+{% block content %}
 <section class="detail-we-are">
     <div class="back" ng-class="homeBack"></div>
     <div class="wrap">
@@ -26,7 +27,7 @@
             <li class="profile" ng-repeat="item in person">
                 <figure>
                     <img class="img-responsive"
-                         ng-src="{{angular 'item.photo'}}"/>
+                         ng-src="{{item.photo}}"/>
                     <p ng-bind="item.description" class="description"></p>
                 </figure>
                 <h3 ng-bind="item.first_name"></h3>
@@ -35,7 +36,7 @@
             <li class="profile" ng-repeat="part in partner">
                 <figure>
                     <img class="img-responsive"
-                         ng-src="{{angular 'part.photo'}}"/>
+                         ng-src="{{part.photo}}"/>
                     <p ng-bind="part.description" class="description"></p>
                 </figure>
                 <h3 ng-bind="part.first_name"></h3>
@@ -47,10 +48,11 @@
 <section id="flickrfeed" class="flickr-feed">
     <ul>
         <li ng-repeat="part in photos">
-            <a ng-href="{{angular 'part.link'}}" target="_blank">
-                <img ng-src="{{angular 'part.media.m'}}" ng-alt="{{angular 'part.title'}}"
-                     ng-title="{{angular 'part.title'}}">
+            <a ng-href="{{part.link}}" target="_blank">
+                <img ng-src="{{part.media.m}}" ng-alt="{{part.title}}"
+                     ng-title="{{part.title}}">
             </a>
         </li>
     </ul>
 </section>
+{% endblock %}

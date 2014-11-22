@@ -1,6 +1,6 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="WorkDetailsController"{{/contentFor}}
-
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="WorkDetailsController"{% endblock %}
+{% block content %}
 <section class="project-details-container">
     <div class="wrap">
     <header>
@@ -11,14 +11,14 @@
         <hr class="short">
     <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
         <li ng-repeat="detail in projectDetails.details">
-            <img ng-src="{{angular 'detail.image'}}">
+            <img ng-src="{{'detail.image'}}">
             <b ng-bind="detail.title"></b>
             <p ng-bind="detail.description"></p>
         </li>
     </ul>
         <hr class="short">
-        <p>{{angular 'projectDetails.description_conclude_one'}}<a class="link" ng-attr-href="{{angular 'projectDetails.home'}}" target="_blank">{{angular 'projectDetails.link_name'}}</a>{{angular 'projectDetails.description_conclude_two'}}</p>
-        <b>{{angular 'projectDetails.let_us'}}<a href="contact">{{angular 'projectDetails.lets'}}</a>.</b>
+        <p>{{'projectDetails.description_conclude_one'}}<a class="link" ng-attr-href="{{'projectDetails.home'}}" target="_blank">{{'projectDetails.link_name'}}</a>{{'projectDetails.description_conclude_two'}}</p>
+        <b>{{'projectDetails.let_us'}}<a href="contact">{{'projectDetails.lets'}}</a>.</b>
     </div>
 </section>
-
+{% endblock %}

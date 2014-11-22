@@ -12,7 +12,11 @@ var client = tumblr.createClient({
 });
 exports.getPosts = function(req, res) {
     var language = req.params.language;
-    client.posts("erealm",{tag: language}, function(err, resp) {
-        res.send(resp.posts);
-    });
+    if (config.mock) {
+        res.send(require('./data/blog_' + language +'.json'));
+    } else {
+        client.posts("erealm", {tag: language}, function(err, resp) {
+            res.send(resp.posts);
+        });
+    }
 };

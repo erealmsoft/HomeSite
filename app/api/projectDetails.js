@@ -5,36 +5,11 @@
  */
 
 'use strict';
+var dbHelper = require('../helper/dbhelper');
 
 exports.findProDetails = function(req, res) {
-    var db = require("../helper/dbhelper").conn_db(); //connect to the databases
 
-    var id = req.params.id;
-    var language = req.params.language;
-
-    db.open(function(err, db) {
-
-        if (err) {
-            console.log(err);
-            return false;
-        }
-        var collectionName = 'projects_' + language;
-        db.collection(collectionName, {
-            safe: true
-        }, function(err, collection) {
-            collection.findOne({
-                ID: id
-            }, function(err, items) {
-                if (err) {
-                    console.log(err);
-                    return false;
-                }
-                res.json(items);
-                db.close();
-                console.log("the db-connection is closed.");
-            });
-        });
-
+    dbHelper.findOne('projects_' + req.params.language, {ID: req.params.id}, function(item){
+        res.json(item);
     });
-
 };

@@ -4,9 +4,10 @@
  * Created by Ken on 2/08/2014
  */
 
+
 'use strict';
 
-var config = require("../config");
+//var config = require("../config");
 
 module.exports = function(app, express) {
 
@@ -16,6 +17,7 @@ module.exports = function(app, express) {
         next();
     });
 
+    // views
     app.get('/', function(req, res) {
         res.render('index');
     });
@@ -37,9 +39,8 @@ module.exports = function(app, express) {
     app.get('/workdetails', function(req, res) {
         res.render('workDetails');
     });
-    //    app.get('/project', function(req, res){  //Temporarily useless
-    //        res.render('project');
-    //    });
+
+    // API
     app.get('/app/posts/:language', require('./api/blog').getPosts);
 
     app.post('/app/message', require('./api/support').sendMessage);
@@ -55,17 +56,6 @@ module.exports = function(app, express) {
     app.get('/app/projectDetails/:id/:language', require('./api/projectDetails').findProDetails);
 
     app.get('/app/contact/:language', require('./api/contacts').readcontacts);
-
-
-    //the database manage page.
-//    app.get('/' + config.dbManage, function(req, res) {
-//        res.render('mongo_manage');
-//    });
-//
-//    app.get('/app/dbCollections', require('./api/dbCollections').readCollections);
-//    app.get('/app/dbQuery/:collectionName', require('./api/dbQuery').queryCollection);
-//    app.post('/app/dbSave', require('./api/dbSave').saveCollection);
-
 
     //error handler
     app.use(require('./views/http/index').http500);

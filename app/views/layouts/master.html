@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/stylesheets/app.css" type="text/css"/>
     <!-- endbuild -->
 </head>
-<body {{{block "bodyAttr"}}} scroll>
+<body {% block bodyAttr %}{% endblock %}  scroll>
 <header role="banner" ng-click="$spMenu.hide()">
     <div class="wrap">
         <div class="logo-mark"><a href="/"></a></div>
@@ -73,18 +73,18 @@
     </ul>
 </div>
 <div class="content" ng-click="$spMenu.hide()">
-    {{{body}}}
+    {% block content %}{% endblock %}
 </div>
 <footer role="contentinfo">
     <div class="contact wrap">
         <h2 translate="say_hello"></h2>
         <p translate="say_content"></p>
         <ul>
-            <li><a href="mailto:hello@erealm.cn" ng-attr-href="{{angular '\'emaillink\'| translate'}}" class="circle-icon" ng-attr-title="{{angular '\'sendus_email\'| translate'}}"><span class="fa fa-envelope"></span></a></li>
-            <li><a href="https://github.com/eRealm" class="circle-icon" ng-attr-title="{{angular '\'follow_us\'| translate'}}" target="_blank"><span class="fa fa-github"></span></a></li>
-            <li><a href="http://erealm.tumblr.com" class="circle-icon" ng-attr-title="{{angular '\'scan_blog\'| translate'}}" ><span class="fa fa-tumblr"></span></a></li>
-            <li><a href="http://weibo.com/erealm2014" class="circle-icon" ng-attr-title="{{angular '\'follow_weibo\'| translate'}}" ><span class="fa fa-weibo"></span></a></li>
-            <li><a href="/projectPlan" class="circle-icon" ng-attr-title="{{angular '\'submit_project\'| translate'}}"><span class="fa fa-send"></span></a></li>
+            <li><a href="mailto:hello@erealm.cn" ng-attr-href="{{'emaillink'| translate}}" class="circle-icon" ng-attr-title="{{'sendus_email'| translate}}"><span class="fa fa-envelope"></span></a></li>
+            <li><a href="https://github.com/eRealm" class="circle-icon" ng-attr-title="{{ 'follow_us'| translate}}" target="_blank"><span class="fa fa-github"></span></a></li>
+            <li><a href="http://erealm.tumblr.com" class="circle-icon" ng-attr-title="{{ 'scan_blog'| translate}}" ><span class="fa fa-tumblr"></span></a></li>
+            <li><a href="http://weibo.com/erealm2014" class="circle-icon" ng-attr-title="{{ 'follow_weibo'| translate}}" ><span class="fa fa-weibo"></span></a></li>
+            <li><a href="/projectPlan" class="circle-icon" ng-attr-title="{{ 'submit_project'| translate}}"><span class="fa fa-send"></span></a></li>
         </ul>
     </div>
     <div class="copyright">

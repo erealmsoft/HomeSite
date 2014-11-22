@@ -41,6 +41,3 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         }
     };
 }]);
-/**
- * Created by root on 26.09.2014.
- */

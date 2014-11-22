@@ -20,8 +20,8 @@ function parseCookies(request) {
     return list;
 }
 
-var cn = require('../../public/data/content_cn.json');
-var en = require('../../public/data/content_en.json');
+var cn = require('./data/content_cn.json');
+var en = require('./data/content_en.json');
 
 exports.sendMessage = function(req, res) {
     var name = req.body.name,
@@ -56,7 +56,7 @@ exports.sendMessage = function(req, res) {
     });
 
     //save the email message into mongodb
-    require('./saveEmail').saveMessage({
+    require('../helper/saveEmail').saveMessage({
         name: name,
         email: email,
         message: message

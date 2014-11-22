@@ -1,5 +1,6 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="BlogController"{{/contentFor}}
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="BlogController"{% endblock %}
+{% block content %}
 <div class="blog-list">
     <ul class="wrap">
         <li ng-repeat="blog in blogs">
@@ -9,4 +10,4 @@
         </li>
     </ul>
 </div>
-
+{% endblock %}

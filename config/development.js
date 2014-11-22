@@ -8,8 +8,9 @@
 'use strict';
 
 module.exports = {
+    mock: false,
     mongodb: {
-        hostaddress:'192.168.199.254',
+        hostaddress:'127.0.0.1',
         port: 27017,
         dbname: 'e-homesite'
     }

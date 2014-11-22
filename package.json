@@ -26,7 +26,6 @@
     "compression": "^1.2.0",
     "errorhandler": "^1.2.2",
     "express": "^4.10.2",
-    "express-hbs": "~0.7.11",
     "express-session": "^1.9.1",
     "express-validator": "^1.0.1",
     "grunt-autoprefixer": "~1.0.1",
@@ -54,6 +53,7 @@
     "newrelic": "^1.11.3",
     "nodemailer": "^0.7.1",
     "serve-favicon": "^2.1.6",
+    "swig": "^1.4.2",
     "tumblr.js": "0.0.4",
     "winston": "~0.7.3",
     "winston-sendmail": "~1.0.4"

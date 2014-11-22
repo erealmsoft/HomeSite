@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "5416c954eb4655354ac599d7",
+    "number": "1",
+    "photo": "http://i.imgur.com/ScQSSLZ.jpg",
+    "first_name": "David",
+    "last_name": "Guo",
+    "position": "web/iOS Developer",
+    "hobby": "-----",
+    "description": "Currently working as an iOS Developer & Designer.Since 2007, I started to develop projects besides web programs such as developing iPhone apps and Objective-c.",
+    "motto": "------"
+  },
+  {
+    "_id": "53f57699ff3aa206d71dec07",
+    "number": "2",
+    "photo": "http://i.imgur.com/51zMlx9.jpg",
+    "first_name": "Alex",
+    "last_name": "Guo",
+    "position": "back-end developer",
+    "hobby": "-----",
+    "description": "I’m an experienced SCJP of Java and Web2.0, Which does limit to Search Engine Marketing, semantic markup, web standards, and JavaScript with AJAX.",
+    "motto": "------"
+  },
+  {
+    "_id": "5416c96beb4655354ac599d8",
+    "number": "3",
+    "photo": "http://i.imgur.com/MwvIUgR.jpg",
+    "first_name": "Owen",
+    "last_name": "Wang",
+    "position": "font-end developer",
+    "hobby": "-----",
+    "description": "Professional web designer and front-end freelance web developer with over 9 years experience - I design effective websites for your business and organisation.",
+    "motto": "------"
+  },
+  {
+    "_id": "5416c986eb4655354ac599d9",
+    "number": "4",
+    "photo": "http://i.imgur.com/Tbp7vTv.jpg",
+    "first_name": "Tom",
+    "last_name": "Yuan",
+    "position": "Android/iOS Developer",
+    "hobby": "-----",
+    "description": "Design, develop, code, test, build, deploy and debug new software. 5 + years Mobile Development in iOS and Android",
+    "motto": "------"
+  },
+  {
+    "_id": "5418461be2573ceb271aee73",
+    "number": "5",
+    "photo": "http://i.imgur.com/Te96e4G.jpg",
+    "first_name": "Musa",
+    "last_name": "Sun",
+    "position": "Web Developer",
+    "hobby": "-----",
+    "description": "I love all different forms of web development and design. I can help small businesses and artists improve their online efficiency.",
+    "motto": "------"
+  },
+  {
+    "_id": "5418531de2573ceb271aee74",
+    "number": "6",
+    "photo": "http://i.imgur.com/rEc7xmw.jpg",
+    "first_name": "Sandy",
+    "last_name": "Li",
+    "position": "software tester",
+    "hobby": "-----",
+    "description": "Enjoys testing, discussing testing, writing about testing, and helping others with their testing.Published a lot of articles about software testing.",
+    "motto": "------"
+  },
+  {
+    "_id": "5418546be2573ceb271aee75",
+    "number": "7",
+    "photo": "http://i.imgur.com/u1arsfq.jpg",
+    "first_name": "Jack",
+    "last_name": "Zhang",
+    "position": "DBA",
+    "hobby": "-----",
+    "description": " I’ve been working with database technology in a variety of flavors for over 6 years. I absolutely love what I do and genuinely feel privileged to be a part of our tremendous technology community.",
+    "motto": "------"
+  }
+]

@@ -1,8 +1,9 @@
-{{!< master}}
-{{#contentFor "bodyAttr"}}ng-controller="ContactController"{{/contentFor}}
+{% extends 'layouts/master.html' %}
+{% block bodyAttr %}ng-controller="ContactController"{% endblock %}
+{% block content %}
 <div class="contact-details">
     <div class="circle-icon"><span class="fa fa-envelope"></span></div>
-    <a  ng-attr-href="{{angular '\'emaillink\'| translate'}}" translate="email"></a>
+    <a  ng-attr-href="{{'emaillink'| translate}}" translate="email"></a>
     <hr>
     <p></p>
     <ul class="contact-address">
@@ -30,11 +31,11 @@
             <fieldset>
                 <div class="form-group left">
                     <textarea name="message" class="form-control" ng-class="{error: (contact_form.message.$dirty || submitted) && contact_form.message.$invalid}"
-                              ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{angular '\'pop_message\'| translate'}}"></textarea>
+                              ng-model="message" title="Enter your message" ng-maxlength="300" required="required" ng-attr-placeholder="{{'pop_message'| translate}}"></textarea>
                 </div>
                 <div class="form-group right">
-                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (contact_form.name.$dirty || submitted) && contact_form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{angular '\'your_name\'| translate'}}">
-                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (contact_form.email.$dirty || submitted) && contact_form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{angular '\'your_email\'| translate'}}">
+                    <input type="text" class="form-control" name="name" ng-maxlength="20" ng-class="{error: (contact_form.name.$dirty || submitted) && contact_form.name.$invalid}" ng-model="name" title="Enter your name" required="required" ng-attr-placeholder="{{'your_name'| translate}}">
+                    <input type="email" class="form-control" name="email" ng-maxlength="50" ng-class="{error: (contact_form.email.$dirty || submitted) && contact_form.email.$invalid}" type="email" ng-model="email" title="Enter your email" required="required" ng-attr-placeholder="{{'your_email'| translate}}">
                     <button class="btn common-btn reset" name="reset" type="reset" ng-click="reloading()" translate="reset" ></button>
                     <button class="btn common-btn" name="submit" type="submit" ng-click="submitted=true" ng-disabled="loading" translate="send_message"></button>
                 </div>
@@ -43,5 +44,4 @@
     </div>
 </div>
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-
+{% endblock %}
