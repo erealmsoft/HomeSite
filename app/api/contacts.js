@@ -9,11 +9,5 @@ var dbHelper = require('../helper/dbhelper'),
 
 exports.readcontacts = function(req, res) {
     var language = req.params.language;
-    if (config.mock) {
-        res.send(require('./data/contact_' + language +'.json'));
-    } else {
-        dbHelper.findArray('contact_' + language, function (items) {
-            res.json(items);
-        });
-    }
+    res.send(require('./data/contact_' + language +'.json'));
 };

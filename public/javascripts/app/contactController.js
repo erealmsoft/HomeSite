@@ -10,7 +10,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
     angular.extend($scope,{subTitle: "CONTACT", mainTitle: "Say Hello", currentPage: "contact-page"});
 
-    var google = window.google;
+    //var google = window.google;
 
     $scope.loadData = function(language) {
         if (!language){
@@ -26,6 +26,44 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
     };
     $scope.loadData();
 
+    $scope.changeMap = function(contactInfo) {
+
+        $scope.activeMap = contactInfo.name;
+
+        var latLng = contactInfo.map.latLng;
+        var location = contactInfo.map.point;
+        var map = new BMap.Map("google_map");
+        var point = new BMap.Point(latLng[1],latLng[0]);
+        var center = new BMap.Point(location[1],location[0]);
+        map.addControl(new BMap.NavigationControl());
+        map.addControl(new BMap.ScaleControl());
+        map.addControl(new BMap.OverviewMapControl());
+        map.enableScrollWheelZoom();
+        map.addControl(new BMap.MapTypeControl());
+        map.disable3DBuilding();
+        map.setMapStyle({style:'grassgreen'});
+        map.centerAndZoom(point, 15);
+
+
+        var locationIcon = new BMap.Icon('/images/icon_marker.png', new BMap.Size(300,157));
+        var marker = new BMap.Marker(center);
+        map.addOverlay(marker);
+        var opts = {
+            width : 200,
+            height: 100,
+            title : "eRealm Info & Tech",
+            enableMessage:false
+        };
+
+        var address = contactInfo.info.address + ' ' + contactInfo.info.region + ' ' + contactInfo.info.county;
+
+        var infoWindow = new BMap.InfoWindow(address, opts);
+        marker.addEventListener("click", function(){
+            map.openInfoWindow(infoWindow, center);
+        });
+    };
+
+    /*
     $scope.changeMap = function(contactInfo) {
         $scope.activeMap = contactInfo.name;
 
@@ -100,6 +138,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
         map.setOptions({styles: red_road_styles});
     };
+    */
 
     $scope.sendMessage = function() {
         if(!$scope.contact_form.$invalid){
