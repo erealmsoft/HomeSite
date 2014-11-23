@@ -14,6 +14,9 @@ exports.readStaff = function(req, res) {
         res.send(require('./data/personnel_' + language +'.json'));
     } else {
         dbHelper.findArray('personnel_' + language, function(items){
+            items.sort(function(va, vb) {
+                return va.number - vb.number;
+            });
             res.json(items);
         });
     }

@@ -14,6 +14,9 @@ exports.readPartner = function(req, res) {
         res.send(require('./data/partners_' + language +'.json'));
     } else {
         dbHelper.findArray('partners_' + language, function(items){
+            items.sort(function(va, vb) {
+                return va.number - vb.number;
+            });
             res.json(items);
         });
     }
