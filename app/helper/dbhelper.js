@@ -40,9 +40,7 @@ exports.findArray = function(collectionName, callback) {
                     db.close();
                     throw err;
                 }
-                items.sort(function(va, vb) {
-                    return va.sort - vb.sort;
-                });
+
                 callback(items);
                 //res.json(items);
                 db.close();

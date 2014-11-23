@@ -21,6 +21,9 @@ exports.readProjects = function(req, res) {
     var projects = req.params.projects; // wholePro: the whole projects   top5Pro:the top 5 projects
 
     dbHelper.findArray('projects_' + req.params.language, function(items){
+        items.sort(function(va, vb) {
+            return va.sort - vb.sort;
+        });
         var projectsNumber = items.length;
         var topProjects = [];
         var projectsData = projectsInfo(items);

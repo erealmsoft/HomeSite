@@ -38,7 +38,6 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
         map.addControl(new BMap.NavigationControl());
         map.addControl(new BMap.ScaleControl());
         map.addControl(new BMap.OverviewMapControl());
-        map.enableScrollWheelZoom();
         map.addControl(new BMap.MapTypeControl());
         map.disable3DBuilding();
         map.setMapStyle({style:'grassgreen'});
