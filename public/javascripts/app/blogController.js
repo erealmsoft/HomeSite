@@ -12,9 +12,7 @@ angular.module('erealm').controller('BlogController', ['$scope','$sce','$filter'
     var mockDates = [
         '2014-05-03 11:17:00 GMT',
         '2014-06-17 18:31:00 GMT',
-        '2014-07-01 13:03:00 GMT',
-        '2014-08-22 18:21:00 GMT',
-        '2014-09-30 14:29:00 GMT'
+        '2014-07-01 13:03:00 GMT'
     ];
     $scope.loadData = function(language) {
         if (!language){
