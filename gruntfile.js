@@ -210,6 +210,7 @@ module.exports = function(grunt){
                     ],
                     'public/javascripts/admin.min.js': [
                         'public/javascripts/erealm.js',
+                        'public/javascripts/language.js',
                         'public/javascripts/client.js',
                         'public/javascripts/admin/*.js'
                     ]
