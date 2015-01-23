@@ -190,18 +190,14 @@ module.exports = function(grunt){
                 files: {
                     'public/javascripts/libs.min.js': [
                         'public/javascripts/libs/*.js',
-                        'public/javascripts/libs/plugins/jquery.wookmark.min.js',
-                        'public/javascripts/libs/plugins/imagesloaded.pkgd.min.js',
                         'public/javascripts/libs/plugins/angular-cookies.min.js',
                         'public/javascripts/libs/plugins/angular-translate.min.js',
                         'public/javascripts/libs/plugins/angular-translate-loader-url.min.js',
                         'public/javascripts/libs/plugins/angular-translate-storage-cookie.min.js',
                         'public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js',
                         'public/javascripts/libs/plugins/ng-mobile-menu.min.js',
-                        'public/javascripts/libs/plugins/bootstrap.min.js',
                         'public/javascripts/libs/plugins/moment-with-locales.js'
-
-                    ] ,
+                    ],
                     'public/javascripts/app.min.js': [
                         'public/javascripts/erealm.js',
                         'public/javascripts/language.js',

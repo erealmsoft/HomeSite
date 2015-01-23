@@ -28,7 +28,7 @@ var connect = function () {
 connect();
 
 mongoose.connection.on('error', console.log);
-//mongoose.connection.on('disconnected', connect);
+mongoose.connection.on('disconnected', connect);
 
 // Bootstrap models
 fs.readdirSync(path.join(__dirname, './app/models')).forEach(function (file) {
