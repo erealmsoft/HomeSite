@@ -6,20 +6,7 @@
 
 'use strict';
 
-var path = require('path'),
-    winston = require('winston');
+var winston = require('winston'),
+    config = require('../../lib/config');
 
-module.exports = new(winston.Logger)({
-    transports: [
-        new(winston.transports.Console)({
-            level: 'debug',
-            colorize: true
-        }),
-        new(winston.transports.DailyRotateFile)({
-            level: 'silly',
-            filename: path.join(__dirname, '../../logs/access-'),
-            datePattern: 'yyyy-MM-dd.log',
-            maxsize: 5242880 /* 5MB */
-        })
-    ]
-});
+module.exports = new(winston.Logger)(config.logger);

@@ -15,14 +15,11 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
         if (!language){
             language = $translate.uses();
         }
-//        client.getProjectsInfo(language,'top5Pro').then(function(response){
-//            var projects = response.data;
-//            $scope.projects = projects;
-//        });
-        client.getManagement().then(function(response) {
-            $scope.roles = response.data[language].roles;
-            $scope.skills = response.data[language].skills;
-            $scope.management = response.data[language].management;
+
+        client.getManagement(language).then(function(response) {
+            $scope.roles = response.data.roles;
+            $scope.skills = response.data.skills;
+            $scope.management = response.data.management;
         });
     };
     $scope.loadData();

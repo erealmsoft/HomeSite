@@ -115,10 +115,10 @@ module.exports = function(grunt){
                 browsers: ['last 2 versions', 'ie 9']
             },
             debug: {
-                src: 'public/stylesheets/app.css'
+                src: ['public/stylesheets/app.css','public/stylesheets/admin.css']
             },
             compile: {
-                src: 'public/stylesheets/app.min.css'
+                src: ['public/stylesheets/app.min.css','public/stylesheets/admin.min.css']
             }
         },
         imagemin: {
@@ -149,7 +149,11 @@ module.exports = function(grunt){
                 files: {
                     'public/stylesheets/libs.min.css':
                         [
-                            "public/stylesheets/libs/*"
+                            "public/stylesheets/libs/bootstrap.min.css",
+                            "public/stylesheets/libs/bootflat.min.css",
+                            "public/stylesheets/libs/font-awesome.min.css",
+                            "public/stylesheets/libs/reset.css",
+                            "public/stylesheets/libs/erealmFont.css"
                         ]
                 }
             }
@@ -160,7 +164,8 @@ module.exports = function(grunt){
                     cleancss: false
                 },
                 files: {
-                    'public/stylesheets/app.css': 'public/stylesheets/app.less'
+                    'public/stylesheets/app.css': 'public/stylesheets/app.less',
+                    'public/stylesheets/admin.css': 'public/stylesheets/admin.less'
                 }
             },
             compile: {
@@ -168,7 +173,8 @@ module.exports = function(grunt){
                     cleancss: true
                 },
                 files: {
-                    'public/stylesheets/app.min.css': 'public/stylesheets/app.less'
+                    'public/stylesheets/app.min.css': 'public/stylesheets/app.less',
+                    'public/stylesheets/admin.min.css': 'public/stylesheets/admin.less'
                 }
             }
         },
@@ -201,6 +207,11 @@ module.exports = function(grunt){
                         'public/javascripts/language.js',
                         'public/javascripts/clients.js',
                         'public/javascripts/app/*.js'
+                    ],
+                    'public/javascripts/admin.min.js': [
+                        'public/javascripts/erealm.js',
+                        'public/javascripts/client.js',
+                        'public/javascripts/admin/*.js'
                     ]
                 }
             }
@@ -286,7 +297,7 @@ module.exports = function(grunt){
                     args: ['--debug'],
                     ext: 'js',
                     ignore: ['node_modules/**', '.git/**', '.idea/', '.cache/'],
-                    watch: ['config', 'app/**', 'public/**'],
+                    watch: ['config','lib/**', 'app/**'],
                     debug: true,
                     delayTime: 10,
                     env: {

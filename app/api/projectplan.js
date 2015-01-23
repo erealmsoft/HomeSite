@@ -6,7 +6,7 @@
 
 'use strict';
 
-var config = require('../../config'),
+var config = require('../../lib/config'),
     mailer = require('../helper/mailer');
 
 function parseCookies(request) {

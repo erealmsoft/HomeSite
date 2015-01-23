@@ -1,0 +1,127 @@
+body {
+  font-size: 16px;
+}
+.admin-body {
+  padding-top: 50px;
+
+  .section-inner {
+    max-width: 1248px;
+    margin: 0 auto;
+  }
+}
+.table-head th {
+  text-align: center;
+}
+.table {
+  text-align: center;
+  table-layout: fixed;
+
+  td {
+    input, button {
+      max-width: 100%;
+      min-width: 0;
+    }
+  }
+}
+.rightcontent {
+  min-height: 500px;
+}
+.trashcolor {
+  color:red;
+  font-size:20px;
+}
+.form-horizontal .formgroupselect {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+.reportdate::before {
+  content:"--";
+  display: inline-block;
+  position:absolute;
+  left:-5px;
+  top:10px;
+  color: #000000;
+}
+//.panel {
+//  .form-control {
+//    font-size:.7em;
+//  }
+//}
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+  text-align: right;
+
+  &.show {
+    position: absolute;
+    background: rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav .mobile-nav {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+.admin-body {
+  .main {
+    margin-top: 20px;
+  }
+
+  .main .page-header {
+    margin-top: 0;
+  }
+}

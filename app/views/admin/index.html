@@ -1,0 +1,47 @@
+templates{% extends '../layouts/admin.html' %}
+{% block bodyAttr %}ng-controller="AdminController"{% endblock %}
+{% block body %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid section-inner">
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand" href="/">eRealm</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+            <li class="mobile-nav"><a href="#" class="glyphicon glyphicon-th-list" ng-click="$spMenu.toggle()"></a></li>
+        </ul>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        <i class="glyphicon glyphicon-user"></i> {$ user.name $} <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" ng-click="loadTemplate('modifyPassword');">密码修改</a></li>
+                        <li><a href="/admin/logout">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row section-inner">
+        <div id="sp-nav" class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                {% if user.group == 'superuser' %}
+                <li ng-class="{'active': currentAction == 'createuser'}"><a href="#" ng-click="loadTemplate('createuser')">用户管理<span class="sr-only">(current)</span></a></li>
+                {% endif %}
+                {% if user.group == 'superuser' || user.group == 'developer' %}
+                <li ng-class="{'active': currentAction == 'logs'}"><a href="#" ng-click="loadTemplate('logs')">日志</a></li>
+                <li ng-class="{'active': currentAction == 'release'}"><a href="#" ng-click="loadTemplate('release')">项目维护</a></li>
+                {% endif %}
+                <li ng-class="{'active': currentAction == 'modifyPassword'}"><a href="#" ng-click="loadTemplate('modifyPassword')">密码修改</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10 main" ng-include src="currentTemplate">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

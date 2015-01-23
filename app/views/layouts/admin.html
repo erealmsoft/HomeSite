@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-app="erealm">
+<head>
+    <meta charset="utf-8">
+    <!--[if lte IE 8 ]>
+    <meta http-equiv=refresh content="0; URL=/helper/upgrade.html">
+    <script>window.location.href="/helper/upgrade.html";</script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{$csrf_token$}">
+    <title>eRealm Info & Tech</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="author" href="humans.txt">
+    <!-- build:css /stylesheets/libs.min.css -->
+    <link rel="stylesheet" href="/stylesheets/libs/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/libs/bootflat.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/libs/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/libs/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/libs/erealmFont.css" type="text/css" />
+    <!-- endbuild -->
+    <!-- build:css /stylesheets/admin.min.css -->
+    <link rel="stylesheet" href="/stylesheets/admin.css" type="text/css" />
+    <!-- endbuild -->
+</head>
+<body {% block bodyAttr %}{% endblock %} class="admin-body">
+
+<div class="main-content">
+    {% block body %}{% endblock %}
+</div>
+
+<div class="overlay-message" ng-show="mainLoading">
+    <ul class="loader">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!-- build:js /javascripts/libs.min.js -->
+<script src="/javascripts/libs/angular.min.js"></script>
+<script src="/javascripts/libs/jquery.min.js"></script>
+<script src="/javascripts/libs/plugins/jquery.wookmark.min.js"></script>
+<script src="/javascripts/libs/plugins/imagesloaded.pkgd.min.js"></script>
+<script src="/javascripts/libs/plugins/angular-cookies.min.js"></script>
+<script src="/javascripts/libs/plugins/angular-translate.min.js"></script>
+<script src="/javascripts/libs/plugins/angular-translate-storage-cookie.min.js"></script>
+<script src="/javascripts/libs/plugins/ui-bootstrap-tpls.min.js"></script>
+<script src="/javascripts/libs/plugins/ng-mobile-menu.min.js"></script>
+<script src="/javascripts/libs/plugins/bootstrap.min.js"></script>
+<script src="/javascripts/libs/plugins/moment-with-locales.js"></script>
+<script src="http://127.0.0.1:35729/livereload.js" cache="false"></script>
+<!-- endbuild -->
+<!-- build:js /javascripts/admin.min.js -->
+<script src="/javascripts/erealm.js"></script>
+<script src="/javascripts/language.js"></script>
+<script src="/javascripts/clients.js"></script>
+<script src="/javascripts/admin/loginController.js"></script>
+<script src="/javascripts/admin/adminController.js"></script>
+<script src="/javascripts/admin/modifyPasswordController.js"></script>
+<script src="/javascripts/admin/developmentController.js"></script>
+<script src="/javascripts/admin/usersController.js"></script>
+<!-- endbuild -->
+<script>
+    angular.element(document).ready(function() {
+        // Launch jdk module. Here we go!
+        var id = angular.element(document.querySelector('html')).attr('data-app');
+        console.log('booting angular app: ' + id);
+        angular.bootstrap(document, [id]);
+    });
+
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff534d05eaba4bd1d41c0106fe343b21f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

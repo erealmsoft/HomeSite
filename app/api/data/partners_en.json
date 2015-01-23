@@ -1,6 +1,5 @@
 [
   {
-    "_id": "5416c954eb4655354ac599d7",
     "number": "1",
     "photo": "http://i.imgur.com/ScQSSLZ.jpg",
     "first_name": "David",
@@ -11,7 +10,6 @@
     "motto": "------"
   },
   {
-    "_id": "53f57699ff3aa206d71dec07",
     "number": "2",
     "photo": "http://i.imgur.com/51zMlx9.jpg",
     "first_name": "Alex",
@@ -22,7 +20,6 @@
     "motto": "------"
   },
   {
-    "_id": "5416c96beb4655354ac599d8",
     "number": "3",
     "photo": "http://i.imgur.com/MwvIUgR.jpg",
     "first_name": "Owen",
@@ -33,7 +30,6 @@
     "motto": "------"
   },
   {
-    "_id": "5416c986eb4655354ac599d9",
     "number": "4",
     "photo": "http://i.imgur.com/Tbp7vTv.jpg",
     "first_name": "Tom",
@@ -44,7 +40,6 @@
     "motto": "------"
   },
   {
-    "_id": "5418461be2573ceb271aee73",
     "number": "5",
     "photo": "http://i.imgur.com/Te96e4G.jpg",
     "first_name": "Musa",
@@ -55,7 +50,6 @@
     "motto": "------"
   },
   {
-    "_id": "5418531de2573ceb271aee74",
     "number": "6",
     "photo": "http://i.imgur.com/rEc7xmw.jpg",
     "first_name": "Sandy",
@@ -66,7 +60,6 @@
     "motto": "------"
   },
   {
-    "_id": "5418546be2573ceb271aee75",
     "number": "7",
     "photo": "http://i.imgur.com/u1arsfq.jpg",
     "first_name": "Jack",

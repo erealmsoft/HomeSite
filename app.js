@@ -8,36 +8,41 @@
 require('newrelic');
 var cluster = require('cluster'),
  express = require('express'),
- config = require('./config'),
+ config = require('./lib/config'),
  app = express(),
+ mongoose = require('mongoose'),
+ passport = require('passport'),
+ fs = require('fs'),
+ path = require('path'),
  expressValidator = require('express-validator'),
  favicon = require('serve-favicon'),
  compression = require('compression'),
  bodyParser = require('body-parser'),
  swig = require('swig');
 
-if (process.env.SITE_USER) {
-    app.use(express.basicAuth(process.env.SITE_USER, process.env.SITE_PASS));
-}
+// Connect to mongodb
+var connect = function () {
+ var options = { server: { socketOptions: { keepAlive: 1 } } };
+ mongoose.connect(config.mongodb, options);
+};
+connect();
 
-//config express in all environments
-app.disable('x-powered-by');
+mongoose.connection.on('error', console.log);
+//mongoose.connection.on('disconnected', connect);
 
-swig.setDefaults({ varControls: ['{$', '$}'] });
-app.engine('html', swig.renderFile);
-app.set('view engine', 'html');
-app.set('views', config.serverRoot + '/views');
-app.use(compression({
-    threshold: 512
-}));
-app.use(favicon(config.clientRoot + '/favicon.ico'));
-app.use(express.static(config.clientRoot));
+// Bootstrap models
+fs.readdirSync(path.join(__dirname, './app/models')).forEach(function (file) {
+ if (~file.indexOf('.js')) require(path.join(__dirname, './app/models/') + file);
+});
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator([]));
+// Bootstrap passport config
+require('./lib/passport')(passport, config);
 
-require('./app/routes')(app, express);
+// Bootstrap application settings
+require('./lib/express')(app, passport);
+
+// Bootstrap routes
+require('./lib/routes')(app, passport);
 
 app.listen(config.port, function () {
     console.log('Server running on port ' + config.port);

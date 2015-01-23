@@ -5,7 +5,7 @@
  */
 'use strict';
 
-var config = require('../../config'),
+var config = require('../../lib/config'),
     tumblr = require('tumblr.js');
 var client = tumblr.createClient({
     consumer_key: config.blog.API_KEY

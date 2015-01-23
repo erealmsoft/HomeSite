@@ -83,4 +83,11 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
 .config(['$httpProvider', function($httpProvider){
     // Tell the module to store the language in the cookie
     $httpProvider.interceptors.push('errorHttpInterceptor');
+
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+    if(csrfToken){
+        ($httpProvider.defaults.headers.common['X-CSRF-Token'] = csrfToken);
+    }
 }]);

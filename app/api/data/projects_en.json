@@ -1,0 +1,229 @@
+[
+  {
+    "ID" : "1e5fa279-a451-4aeb-b59b-f5b2fb99e571",
+    "cover" : "http://i.imgur.com/4KB0RIy.png",
+    "proj_name" : "MyStudyBible",
+    "link_name" : "MyStudyBible.com",
+    "home" : "http://www.mystudybible.com",
+    "let_us" : "Let us help your App look awesome.",
+    "lets" : "Let's get started",
+    "description_title" : "Study the Holman Christian Standard Bible through fully integrated commentaries, study notes, and original language definitions.",
+    "description_conclude_one" : "Today marks a huge improvement for",
+    "description_conclude_two" : " as we now have full compatibility with the LifeWay Reader platform and (nearly) all of the content from WORDsearch is now available. We'll be continuing to push out new content on a regular basis, so if your favorite title isn't available just keep checking back! Enjoy the new, improved site and send us your feedback for what you want to see next!",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/XD7attQ.png",
+        "title" : "WELCOME TO MY STUDY BIBLE",
+        "description" : "The quick guide to essential tasks will guide you how to use the MYSTUDYBIBLE."
+      },
+      {
+        "image" : "http://i.imgur.com/iPu8en4.png",
+        "title" : "HOME PAGE",
+        "description" : "Show you all functions."
+      },
+      {
+        "image" : "http://i.imgur.com/1TM6ABk.png",
+        "title" : "SIGN IN",
+        "description" : "Register for a free account to save your notes,highlights,and bookmarks."
+      },
+      {
+        "image" : "http://i.imgur.com/keGYiou.png",
+        "title" : "BROUGHT TO YOU",
+        "description" : "We will brought to you by all kinds of books."
+      },
+      {
+        "image" : "http://i.imgur.com/668AWDg.png",
+        "title" : "LIBRARY",
+        "description" : "Open other Bible Translations and free resource."
+      },
+      {
+        "image" : "http://i.imgur.com/p063WjM.png",
+        "title" : "STORE",
+        "description" : "Here you can buy all kinds of books you're interested in."
+      },
+      {
+        "image" : "http://i.imgur.com/UvvUrIK.png",
+        "title" : "NEWS",
+        "description" : "Show you all news about us."
+      },
+      {
+        "image" : "http://i.imgur.com/eGPgeao.png",
+        "title" : "OPIONS",
+        "description" : "You can set any attributes that you like in here."
+      },
+      {
+        "image" : "http://i.imgur.com/OszbcoX.png",
+        "title" : "CROSS REFERENCE",
+        "description" : "To provide you with a variety of convenient tools."
+      },
+      {
+        "image" : "http://i.imgur.com/TNxqVui.png",
+        "title" : "MY NOTES",
+        "description" : "Record each of your bookmarks and reading notes."
+      }
+    ]
+  },
+  {
+    "ID" : "a5aac919-1fcd-4079-b725-b4c6ae821cc6",
+    "cover" : "http://i.imgur.com/0E82YLH.png",
+    "proj_name" : "LifeWay Reader",
+    "link_name" : "LifeWay.com.",
+    "home" : "http://reader.lifeway.com",
+    "let_us" : "Let us help your App look awesome.",
+    "lets" : "Let's get started",
+    "description_title" : "Access a growing library of your favorite Christian books, Bibles and studies.",
+    "description_conclude_one" : "If you want to read your favorite books, magazines and more on your tablet, mobile phone or computer with Lifeway please access",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/r4RQu41.png",
+        "title" : "SIGN IN",
+        "description" : "Register for a free account to read."
+      },
+      {
+        "image" : "http://i.imgur.com/2Jut53M.png",
+        "title" : "HOME PAGE",
+        "description" : "You can manage your books order by Title,Author,Last Viewed and Recently Purchased."
+      },
+      {
+        "image" : "http://i.imgur.com/mfy5fep.png",
+        "title" : "STORE",
+        "description" : "You can buy any goods you like."
+      },
+      {
+        "image" : "http://i.imgur.com/9otNVsz.png",
+        "title" : "EVENTS",
+        "description" : "You can be classified according to different attributes."
+      },
+      {
+        "image" : "http://i.imgur.com/1qzzUB7.png",
+        "title" : "ARTICLES",
+        "description" : "You can scan all articles about lifeway in here."
+      },
+      {
+        "image" : "http://i.imgur.com/1wz210V.png",
+        "title" : "MINISTRY",
+        "description" : "Here is all department managers。"
+      },
+      {
+        "image" : "http://i.imgur.com/lWCUtkQ.png",
+        "title" : "CHURCH ORDERING",
+        "description" : "You can manage your account in here.Edit profile,Change Password,Order History and so on."
+      },
+      {
+        "image" : "http://i.imgur.com/DLIszg7.png",
+        "title" : "INFORMATION",
+        "description" : "You can link different web page for more information."
+      }
+    ]
+  },
+  {
+    "ID" : "6de573ed-4895-462b-b58f-bef5395d7163",
+    "cover" : "http://i.imgur.com/YCoxRel.png",
+    "proj_name" : "SBG Bio-Registration System",
+    "link_name" : "SBG-Fwcms.com",
+    "home" : "http://www.sbg-fwcms.com",
+    "let_us" : "Let us help your App look awesome.",
+    "lets" : "Let's get started",
+    "description_title" : "SBG Bio-Registration System is foreign workers registration management system, can be for foreign workers personal information management, safeguard legitimate rights and interests of foreign workers and hiring company.",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/M1KoRKR.png",
+        "title" : "SIGN IN",
+        "description" : "According to the permission to login the system for information processing."
+      }
+    ]
+  },
+  {
+    "ID" : "6de573ed-4895-462b-b58f-bef5395db58f",
+    "cover" : "http://i.imgur.com/lSH4OuO.png",
+    "proj_name" : "Silverfish",
+    "link_name" : "Twitter",
+    "home" : "http://twitter.com/@ueqt",
+    "let_us" : "Let us help your App look awesome.",
+    "lets" : "Let's get started",
+    "description_title" : "Books are the ladder of human progress,Silverfish lets you more convenient to read more books you like in this rapidly developing society and knowledge management",
+    "description_conclude_one" : "As long as you want to do, we will do, if you like，please @ us in",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/JuEdH3R.png",
+        "title" : "PREFACE",
+        "description" : "This page is a software start page to wholeheartedly service for programmers"
+      },
+      {
+        "image" : "http://i.imgur.com/H6RtIrj.png",
+        "title" : "COVER",
+        "description" : "This is our cover"
+      },
+      {
+        "image" : "http://i.imgur.com/ylGti4P.png",
+        "title" : "ICON",
+        "description" : "This is icon of Silverfish"
+      },
+      {
+        "image" : "http://i.imgur.com/MS9SZ7M.png",
+        "title" : "RECENTLY",
+        "description" : "In this interface for you to record your recent reading"
+      },
+      {
+        "image" : "http://i.imgur.com/9lTbNBs.png",
+        "title" : " COLLECTION",
+        "description" : "Here you can see you are interested in collections of books and can continue to add or delete"
+      },
+      {
+        "image" : "http://i.imgur.com/NagdtEf.png",
+        "title" : "LOGIN",
+        "description" : "Logining interface, version 2.0 will add members discuss and synchronous collection, etc"
+      },
+      {
+        "image" : "http://i.imgur.com/FBjX2Aj.png",
+        "title" : "CENTER",
+        "description" : "You will see the interface after login"
+      },
+      {
+        "image" : "http://i.imgur.com/td2vUBP.png",
+        "title" : "DOWNLOAD",
+        "description" : "Here you can manage your download content,it support selection and delete"
+      },
+      {
+        "image" : "http://i.imgur.com/5zcaRUh.png",
+        "title" : "RECOMMENDATION",
+        "description" : "Show you wonderful content and all kinds of top ranking contents localization books"
+      },
+      {
+        "image" : "http://i.imgur.com/DDAZ9h1.png",
+        "title" : "UPDATE",
+        "description" : "Show you recently updated content, supported by pull on refresh and gain data paging"
+      },
+      {
+        "image" : "http://i.imgur.com/evlumDn.png",
+        "title" : "SEARCH",
+        "description" : "Support the functions of fuzzy search author and the title, provide more efficient service for you"
+      },
+      {
+        "image" : "http://i.imgur.com/cCoK6uH.png",
+        "title" : "MORE",
+        "description" : "Here you can remove page caching and check and update the current software version"
+      },
+      {
+        "image" : "http://i.imgur.com/UZVKO5S.png",
+        "title" : "DOWNLOAD BOOKS",
+        "description" : "The module of Download provides download books function"
+      },
+      {
+        "image" : "http://i.imgur.com/KCrse7A.png",
+        "title" : "NOTE",
+        "description" : "You can do for your favorite books notes"
+      },
+      {
+        "image" : "http://i.imgur.com/KCrse7A.png",
+        "title" : "MANAGEMENT",
+        "description" : "The module of books management provides you with increased delete books, collecting books, etc"
+      },
+      {
+        "image" : "http://i.imgur.com/lmTneGQ.png",
+        "title" : "RADING",
+        "description" : "Let you reading books you're interested in detailly"
+      }
+    ]
+  }
+]

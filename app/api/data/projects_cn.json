@@ -1,0 +1,230 @@
+[
+  {
+    "ID" : "1e5fa279-a451-4aeb-b59b-f5b2fb99e571",
+    "cover" : "http://i.imgur.com/4KB0RIy.png",
+    "proj_name" : "MYSTUDYBIBLE",
+    "link_name" : "MyStudyBible.com",
+    "home" : "http://www.mystudybible.com",
+    "let_us" : "让我们一起前进！",
+    "lets" : "一起开始吧！",
+    "description_title" : "通过阅读各类权威的书籍,总结学习笔记，并保存书签。",
+    "description_conclude_one" : "MYSTUDYBIBLE今天已经有了巨大改善，可在",
+    "description_conclude_two" : " 看到。完全兼容Lifeway Reader的平台,所有的内容从WORDSEARCH中呈现。我们将继续定期推出新的内容,所以如果你最喜欢的话欢迎投票哦！同时有什么新的好的意见，请及时发送给我们，我们会及时改进。",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/XD7attQ.png",
+        "title" : "欢迎来到MYSTUDYBIBLE",
+        "description" : "这个导航页面将会引导您如何使用MYSTUDYBIBLE。"
+      },
+      {
+        "image" : "http://i.imgur.com/iPu8en4.png",
+        "title" : "主页",
+        "description" : "向您展示MYSTUDYBIBLE所有功能。"
+      },
+      {
+        "image" : "http://i.imgur.com/1TM6ABk.png",
+        "title" : "登录",
+        "description" : "免费注册一个账户来存储您的笔记和书签。"
+      },
+      {
+        "image" : "http://i.imgur.com/keGYiou.png",
+        "title" : "为您推荐",
+        "description" : "我们将为您带来各种各样的书籍供您选择。"
+      },
+      {
+        "image" : "http://i.imgur.com/668AWDg.png",
+        "title" : "图书推荐",
+        "description" : "打开其它权威翻译和免费资源。"
+      },
+      {
+        "image" : "http://i.imgur.com/p063WjM.png",
+        "title" : "商店",
+        "description" : "这里您可以购买各类图书。"
+      },
+      {
+        "image" : "http://i.imgur.com/UvvUrIK.png",
+        "title" : "新闻",
+        "description" : "您可以看到关于我们的各类新闻消息。"
+      },
+      {
+        "image" : "http://i.imgur.com/eGPgeao.png",
+        "title" : "设置",
+        "description" : "您可以在这里设置适合您的各类属性值。"
+      },
+      {
+        "image" : "http://i.imgur.com/OszbcoX.png",
+        "title" : "工具",
+        "description" : "为您提供各类便捷工具。"
+      },
+      {
+        "image" : "http://i.imgur.com/TNxqVui.png",
+        "title" : "我的笔记",
+        "description" : "记录您正在阅读的每一个书签和笔记。"
+      }
+    ]
+  },
+  {
+    "ID" : "6de573ed-4895-462b-b58f-bef5395d7163",
+    "cover" : "http://i.imgur.com/YCoxRel.png",
+    "proj_name" : "SBG Bio-注册系统",
+    "link_name" : "SBG-Fwcms.com",
+    "home" : "http://www.sbg-fwcms.com",
+    "let_us" : "让我们一起前进！",
+    "lets" : "一起开始吧！",
+    "description_title" : "SBG Bio-注册系统是外劳工人注册系统,可以进行外劳个人信息管理, 保障外劳和雇佣公司的合法权益。",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/M1KoRKR.png",
+        "title" : "登陆界面",
+        "description" : "根据不同的权限登录系统进行信息管理。"
+      }
+    ]
+  },
+  {
+    "ID" : "a5aac919-1fcd-4079-b725-b4c6ae821cc6",
+    "cover" : "http://i.imgur.com/0E82YLH.png",
+    "proj_name" : "LifeWay Reader",
+    "link_name" : "LifeWay.com.",
+    "home" : "http://reader.lifeway.com",
+    "let_us" : "让我们一起前进！",
+    "lets" : "一起开始吧！",
+    "description_title" : "通过研究各种权威书籍获得您最喜欢的图书及笔记。",
+    "description_conclude_one" : "如果您想阅读更多您喜爱的书籍或杂志请访问:",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/r4RQu41.png",
+        "title" : "登陆界面",
+        "description" : "本页面将可以实现注册账户即登录功能。"
+      },
+      {
+        "image" : "http://i.imgur.com/2Jut53M.png",
+        "title" : "主页",
+        "description" : "您可以按照书名，作者，最后阅读时间和最近购买书籍时间进行排序并管理书籍信息。"
+      },
+      {
+        "image" : "http://i.imgur.com/mfy5fep.png",
+        "title" : "商店",
+        "description" : "在这里，您可以买到任何您喜欢的商品。"
+      },
+      {
+        "image" : "http://i.imgur.com/9otNVsz.png",
+        "title" : "事项",
+        "description" : "您可以根据不同的事物进行分类，筛选您喜欢的商品。"
+      },
+      {
+        "image" : "http://i.imgur.com/1qzzUB7.png",
+        "title" : "文章",
+        "description" : "在这里您可以浏览任何关于lifeway的文章。"
+      },
+      {
+        "image" : "http://i.imgur.com/1wz210V.png",
+        "title" : "部门",
+        "description" : "这里您能看到我们所有的部门管理人员信息。"
+      },
+      {
+        "image" : "http://i.imgur.com/lWCUtkQ.png",
+        "title" : "设置",
+        "description" : "您可以管理您的账户信息.例如更换个人头像，修改账户密码，查看历史订单等。"
+      },
+      {
+        "image" : "http://i.imgur.com/DLIszg7.png",
+        "title" : "信息",
+        "description" : "您可以点击链接查看关于我们更多的信息。"
+      }
+    ]
+  },
+  {
+    "ID" : "6de573ed-4895-462b-b58f-bef5395db58f",
+    "cover" : "http://i.imgur.com/lSH4OuO.png",
+    "proj_name" : "Silverfish",
+    "link_name" : "Twitter",
+    "home" : "http://twitter.com/@ueqt",
+    "let_us" : "让我们一起前进！",
+    "lets" : "一起开始吧！",
+    "description_title" : "书籍是人类进步的阶梯  Silverfish让您在这个发展迅速的社会中更便捷的阅读更多您喜欢的书籍，并很好的进行知识分类管理",
+    "description_conclude_one" : "只要您想做，我们就会做，如果您喜欢，请在",
+    "description_conclude_two" : "上@我们",
+    "details" : [
+      {
+        "image" : "http://i.imgur.com/JuEdH3R.png",
+        "title" : "前言",
+        "description" : "本页面为软件的开始页面，为程序员竭诚服务"
+      },
+      {
+        "image" : "http://i.imgur.com/H6RtIrj.png",
+        "title" : "封面",
+        "description" : "本页面为软件封面介绍，大道至简，一虫以蔽之"
+      },
+      {
+        "image" : "http://i.imgur.com/ylGti4P.png",
+        "title" : "图标",
+        "description" : "这是Silverfish图标"
+      },
+      {
+        "image" : "http://i.imgur.com/MS9SZ7M.png",
+        "title" : "最近阅读",
+        "description" : "本界面向您展示您最近的阅读记录"
+      },
+      {
+        "image" : "http://i.imgur.com/9lTbNBs.png",
+        "title" : "我的收藏",
+        "description" : "在这里您可以看到您收藏过的感兴趣的书籍并可继续添加或者删除"
+      },
+      {
+        "image" : "http://i.imgur.com/NagdtEf.png",
+        "title" : "登录",
+        "description" : "本界面为登陆界面，2.0版本将会增加会员讨论及同步收藏等功能"
+      },
+      {
+        "image" : "http://i.imgur.com/FBjX2Aj.png",
+        "title" : "个人中心",
+        "description" : "您登录后将会看到此界面"
+      },
+      {
+        "image" : "http://i.imgur.com/td2vUBP.png",
+        "title" : "下载管理",
+        "description" : "在这里您可以管理您的下载内容，支持全选和删除"
+      },
+      {
+        "image" : "http://i.imgur.com/5zcaRUh.png",
+        "title" : "精彩推荐",
+        "description" : "运用书架式为您展示精彩内容，热门排行内容及各类汉化书籍的推荐"
+      },
+      {
+        "image" : "http://i.imgur.com/DDAZ9h1.png",
+        "title" : "最近更新",
+        "description" : "向您展示最近更新过的内容，支持下拉刷新及上拉获取分页数据"
+      },
+      {
+        "image" : "http://i.imgur.com/evlumDn.png",
+        "title" : "搜索",
+        "description" : "软件支持模糊搜索作者及书名功能，为您提供更快捷服务"
+      },
+      {
+        "image" : "http://i.imgur.com/cCoK6uH.png",
+        "title" : "更多",
+        "description" : "这里您可以清除页面缓存及检查和更新当前软件版本"
+      },
+      {
+        "image" : "http://i.imgur.com/UZVKO5S.png",
+        "title" : "下载图书",
+        "description" : "下载模块为您提供下载书籍功能"
+      },
+      {
+        "image" : "http://i.imgur.com/KCrse7A.png",
+        "title" : "编辑图书",
+        "description" : "下载图书模块为您提供下载书籍功能"
+      },
+      {
+        "image" : "http://i.imgur.com/KCrse7A.png",
+        "title" : "管理图书",
+        "description" : "管理图书模块为您提供增加删除书籍、收藏书籍等功能"
+      },
+      {
+        "image" : "http://i.imgur.com/lmTneGQ.png",
+        "title" : "阅读书籍",
+        "description" : "让您详细的阅览您感兴趣的书籍"
+      }
+    ]
+  }
+]

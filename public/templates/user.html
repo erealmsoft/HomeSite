@@ -1,0 +1,78 @@
+<div class="rightcontent" ng-controller="UserController">
+    <div class="panel panel-info user-form">
+        <div class="panel-heading">
+            <div class="panel-title"><h2>用户列表</h2></div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <colgroup>
+                    <col style="width: 20%">
+                    <col style="width: 30%">
+                    <col style="width: 20%">
+                    <col style="width: 10%">
+                    <col style="width: 20%">
+                </colgroup>
+                <thead>
+                <tr class="table-head">
+                    <th>用户名</th>
+                    <th>邮箱</th>
+                    <th>全名</th>
+                    <th>角色</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <td ng-bind="user.username"></td>
+                    <td ng-bind="user.email"></td>
+                    <td ng-bind="user.name"></td>
+                    <td ng-bind="user.group"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-footer text-right">
+            <button class="btn btn-success" ng-click="showCreateModal()">创建用户</button>
+        </div>
+    </div>
+    <script type="text/ng-template" id="cheateUser.html">
+        <div class="modal-header">
+            <h3 class="modal-title">创建用户</h3>
+        </div>
+        <div class="modal-body login-form">
+            <form method="post" role="form" class="form-horizontal">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="name" class="form-control" type="text" ng-model="$parent.user.name" placeholder="姓名">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="text" name="email" placeholder="邮箱" ng-model="$parent.user.email" class="form-control">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="username" class="form-control" type="text" ng-model="$parent.user.username" placeholder="用户名">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" class="form-control" type="password" ng-model="$parent.user.password" placeholder="密码">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <select ng-model="$parent.user.group" class="form-control">
+                        <option value="developer">开发人员</option>
+                        <option value="customer">用户</option>
+                    </select>
+                    <!--<input id="group" class="form-control" type="password" ng-model="user.group" placeholder="developer or customer">-->
+                </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" ng-click="$dismiss()">取消</button>
+            <button class="btn btn-success" ng-click="signup()">提交</button>
+        </div>
+    </script>
+</div>

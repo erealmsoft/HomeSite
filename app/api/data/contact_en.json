@@ -1,6 +1,5 @@
 [
   {
-    "_id": "5400031ebfa37a7c3335c6f5",
     "name": "china",
     "sort": 1,
     "location": "Xi'an Office",
@@ -25,7 +24,6 @@
     }
   },
   {
-    "_id": "54180eab1af3639cb050941b",
     "name": "shanghai",
     "sort": 2,
     "location": "Shanghai Office",

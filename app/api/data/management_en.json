@@ -1,0 +1,24 @@
+{
+    "roles":[
+        { "name":"Project Manager"},
+        { "name":"Senior Software Engineers"},
+        { "name":"Software Engineers"},
+        { "name":"User Experience Architect"},
+        { "name":"Quality Assistants"},
+        { "name":"DBA"}
+    ],
+    "skills":[
+        { "name":"Web, Windows Form development"},
+        { "name":"Front-end and back-end development"},
+        { "name":"Optimizing the performance of database"},
+        { "name":"Years of managing projects"},
+        { "name":"Verbal and written in english"}
+    ],
+    "management":[
+        { "name":"Basecamp access"},
+        { "name":"Time Sheet"},
+        { "name":"Agile Development"},
+        { "name":"Daily/Weekly reports"},
+        { "name":"Live previews"}
+    ]
+}

@@ -1,8 +1,11 @@
 #!/bin/sh
-forever stopall
 git reset --hard HEAD
-git clean -f
-git pull
-grunt build
+git pull origin master
 npm install
-sudo GMAIL_USER=$1 GMAIL_PASS=$2 BLOG_KEY=$3 forever start app.js
+git clean -f
+grunt build
+if [ "${1}" = "" ] || [ "${1}" != "restart" ]; then
+echo "start"
+forever stopall
+fi
+forever ${1:-start} app.js

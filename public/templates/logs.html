@@ -1,0 +1,27 @@
+<div class="panel panel-info clearfix">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h2>查看日志</h2>
+        </div>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group formgroupselect clearfix">
+                <label for="inputSelect1" class="col-sm-2 control-label">日志列表: </label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-options="log for log in logList" id="inputSelect1" ng-model="$parent.selectedLog">
+                        <option value="">请选择一个文件</option>
+                    </select>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-success" ng-click="getLogText()">加载</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="panel logs-text clearfix" ng-if="selectedLogText">
+    <div class="col-xs-12 text-left" ng-bind-html="trustHtml(selectedLogText)">
+    </div>
+</div>
+

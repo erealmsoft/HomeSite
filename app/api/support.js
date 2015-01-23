@@ -5,7 +5,7 @@
  */
 'use strict';
 
-var config = require('../../config'),
+var config = require('../../lib/config'),
     mailer = require('../helper/mailer');
 
 function parseCookies(request) {
@@ -56,7 +56,7 @@ exports.sendMessage = function(req, res) {
     });
 
     //save the email message into mongodb
-    require('../helper/saveEmail').saveMessage({
+    require('../helper/messager').saveMessage({
         name: name,
         email: email,
         message: message

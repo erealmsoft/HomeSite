@@ -10,7 +10,7 @@ var fs = require('fs'),
     path = require('path'),
     _ = require('lodash'),
     handlebars = require('handlebars'),
-    config = require('../../config'),
+    config = require('../../lib/config'),
     nodemailer = require('nodemailer');
 
 function Mailer() {
@@ -34,7 +34,7 @@ function Mailer() {
     };
 
     this.path = path.normalize(path.join(__dirname, '../templates/'));
-    this.transport = nodemailer.createTransport(config.mail.transport, _.clone(config.mail.options) || {});
+    this.transport = nodemailer.createTransport("SMTP", _.clone(config.mail.options) || {});
 }
 
 Mailer.prototype.sendTemplate = function(to, templateName, data) {
@@ -74,9 +74,11 @@ Mailer.prototype.send = function(mailOptions) {
 
     try {
         this.transport.sendMail(mailOptions, function(error, response) {
-
+            if (error) logger.error(error);
         });
-    } catch (err) {}
+    } catch (err) {
+        logger.error(err);
+    }
 };
 
 module.exports = new Mailer();

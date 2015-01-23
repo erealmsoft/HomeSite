@@ -4,10 +4,9 @@
  * Created by Don on 9/5/2014.
  */
 'use strict';
-var dbHelper = require('../helper/dbhelper'),
-    config = require('../../config');
+var config = require('../../lib/config');
 
-exports.readcontacts = function(req, res) {
+exports.readContacts = function(req, res) {
     var language = req.params.language;
     res.send(require('./data/contact_' + language +'.json'));
 };

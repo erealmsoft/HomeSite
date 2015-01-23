@@ -1,0 +1,44 @@
+{% extends '../layouts/admin.html' %}
+{% block bodyAttr %}ng-controller="LoginController"{% endblock %}
+{% block body %}
+
+<div class="panel panel-info login-form">
+    <div class="panel-heading">
+        <div class="panel-title"><h2>用户登录</h2></div>
+    </div>
+    <div class="panel-body">
+        <form id="loginform" class="form-horizontal" role="form">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="login-username" type="text" class="form-control" ng-model="user.username" value="" placeholder="username">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="login-password" type="password" class="form-control" ng-model="user.password" placeholder="password">
+            </div>
+            <!--<div class="input-group">-->
+                <!--<div class="checkbox">-->
+                    <!--<label>-->
+                        <!--<input id="login-remember" type="checkbox" name="remember" value="1"> Remember me-->
+                    <!--</label>-->
+                <!--</div>-->
+            <!--</div>-->
+                <!-- Button -->
+            <div class="controls">
+                <button id="btn-login" ng-click="login()" class="btn btn-block btn-success">登录</button>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<div class="col-md-12 control">-->
+                    <!--<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">-->
+                        <!--Don't have an account!-->
+                        <!--<a href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()">-->
+                            <!--Sign Up Here-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </form>
+    </div>
+</div>
+
+{% endblock %}

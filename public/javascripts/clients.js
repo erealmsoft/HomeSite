@@ -6,11 +6,11 @@
 
 angular.module('erealm').factory('client', ['$http', function ($http) {
     return {
-        getManagement:function() {
-            return $http.get('/data/management.json');
+        getManagement:function(language) {
+            return $http.get('/app/management/'+language);
         },
         getTechnologies: function() {
-            return $http.get('/data/technology.json');
+            return $http.get('/app/technology');
         },
         getFlickrPhotos: function() {
             return $http.jsonp('http://api.flickr.com/services/feeds/groups_pool.gne?id=2678732@N20&lang=en-us&format=json&jsoncallback=JSON_CALLBACK');
@@ -38,6 +38,38 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         getPosts: function(language) {
             return $http.get('/app/posts/' + language);
+        },
+
+        //admin
+        login: function(user) {
+            return $http.post('/app/admin/login', user);
+        },
+        getUsers: function(user) {
+            return $http.get('/app/admin/users');
+        },
+        signup: function(user) {
+            return $http.post('/app/admin/createuser', user);
+        },
+        changePassword: function(passwords){
+            return $http.post('/app/admin/changepassword', passwords);
+        },
+        getLogList: function(){
+            return $http.get('/app/admin/loglist');
+        },
+        getLogText: function(fileName){
+            return $http.post('/app/admin/logtext',{log: fileName});
+        },
+        getDBList: function() {
+            return $http.get('/app/admin/dblist');
+        },
+        restoreDB: function(file) {
+            return $http.post('/app/admin/restoredb', {db: file.split('.')[0]});
+        },
+        backupDB: function() {
+            return $http.get('/app/admin/backupdb');
+        },
+        buildProject: function() {
+            return $http.post('/app/admin/buildProject');
         }
     };
 }]);

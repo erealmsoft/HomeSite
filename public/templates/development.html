@@ -1,0 +1,24 @@
+<div class="rightcontent" ng-controller="developmentController">
+    <div  class="panel panel-info clearfix">
+        <div class="panel-heading">
+            <div class="panel-title"><h2>项目维护</h2></div>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group formgroupselect clearfix">
+                    <label for="inputSelect1" class="col-sm-2 control-label">备份列表: </label>
+                    <div class="col-sm-3">
+                        <select class="form-control" ng-options="db for db in DBList" id="inputSelect1" ng-model="$parent.selectedDB">
+                            <option value="">请选择一个文件</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-7 text-left">
+                        <button class="btn btn-danger" ng-click="restoreDB()">更新数据库</button>
+                        <button class="btn btn-danger" ng-click="releaseProject()">发布项目</button>
+                        <button class="btn btn-danger" ng-click="backupDB()">备份数据库</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
