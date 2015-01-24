@@ -12,14 +12,19 @@
 * Using [**winston**](https://github.com/flatiron/winston) as Logger
 * Using [**Nodemailer**](https://github.com/andris9/Nodemailer) to send the mail.
 * Using [**handlebars**](https://www.npmjs.org/package/handlebars) as the server template engine.
-* Integrate with **MongoDB**.
+* Unsing [**passport**](https://github.com/jaredhanson/passport) to setup the auth model.
+* Integrate with **MongoDB** using [**mongoose**](http://mongoosejs.com/).
 * Integrate with [**tumblr.js**](https://github.com/tumblr/tumblr.js/)
 * Responsive Design.
+* Dashboard: DB backup, Restore DB, Build and publish site, logs view.
 
 ### Setting up the application
  * Install all modules
 ```bash
 npm install
+npm install pm2 -g
+npm install grunt -g
+npm install grunt-cli -g
 ```
 * Before Checkin code: manage front-end library and compress images.
 ```bash
@@ -34,12 +39,13 @@ grunt
 grunt build
 ``` 
 ```bash
-sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' BLOG_KEY='tumblr key' forever start app.js
+sudo GMAIL_USER='name@yourdomain.com' GMAIL_PASS='your mail password' BLOG_KEY='tumblr key' pm2 start app.js
 ``` 
 * or publish the application using bash script
 ```bash
 sudo ./build.sh 'name@yourdomain.com' 'your mail password' 'tumblr key'
 ```
+or create a file named `custom.js` in config folder and override the default config.
 
 ### Documents
 * [Chinese Version](http://blog.erealm.cn/font-end/home/2014/11/02/erealm-home-opensource-nodejs.html)
@@ -48,6 +54,8 @@ sudo ./build.sh 'name@yourdomain.com' 'your mail password' 'tumblr key'
 * November 20, 2014: Update express.js(from express3 to express4)
 * November 22, 2014: change back-end view engine(from hbs to swig);add back-end mock data. by default, no need to setup the data base, just set the `config.mock` to `true`.
 * November 23, 2014: Change Contact map from Google map to Baidu map.
+* January 10, 2015: add dashboard, add auth model.
+* January 24, 2015: change from `forever` to `pm2`.
 
 ## TODO List
 * Unit test.
