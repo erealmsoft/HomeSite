@@ -3,6 +3,7 @@
  *
  * Created by ken on 12/13/14
  */
+
 'use strict';
 
 var fs = require("fs"),
@@ -29,6 +30,6 @@ exports.getLogText = function(req, res, next) {
         if (err) {
             next(err);
         }
-        res.send({code: 'success', data: data.replace(/"/g, "'").replace(/\n/g, "<br>")});
+        res.send(data.replace(/"/g, "'").replace(/\n/g, "<br>"));
     });
 };

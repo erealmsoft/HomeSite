@@ -5,6 +5,21 @@
  */
 
 var erealm = angular.module('erealm', ['ui.bootstrap','pascalprecht.translate','ngCookies','shoppinpal.mobile-menu']);
+erealm.run(['$rootScope','$modal', '$translate', function($rootScope, $modal, $translate) {
+
+    $rootScope.showMessage = function(code) {
+        $rootScope.mainMessage = $translate(code) || $translate(500);
+        var type = code.split('_')[0];
+        if (['info', 'error', 'warning', 'confirm', 'success'].indexOf(type) < 0) {
+            type = 'error';
+        }
+        $modal.open({
+            templateUrl: 'main_message.html',
+            backdrop: 'static',
+            windowClass: 'message-modal ' + type
+        });
+    };
+}]);
 erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
     function ($q, $rootScope, $injector) {
         $rootScope.mainLoading = false;
@@ -24,7 +39,18 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
             },
             'response': function (response) {
                 $rootScope.http = $rootScope.http || $injector.get('$http');
-                $rootScope.mainLoading = false;
+                if ($rootScope.http.pendingRequests.length < 1) {
+                    $rootScope.mainLoading = false;
+                }
+
+                if (response.data.code){
+                    if (response.data.code === 'success') {
+                        response.data = response.data.data;
+                    }else {
+                        $rootScope.showMessage(response.data.code);
+                        response.data = null;
+                    }
+                }
 
                 return response || $q.when(response);
             },
@@ -36,9 +62,7 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
 
                 var message = 'Please try again later';
 
-                if (rejection.status === '400') {
-                    message = "Invalid request parameters";
-                }
+                $rootScope.showMessage(rejection.status);
 
                 $rootScope.errorMessage = {text: message};
                 return $q.reject(rejection);

@@ -35,6 +35,19 @@
         <li></li>
     </ul>
 </div>
+<script type="text/ng-template" id="main_message.html">
+    <div class="modal-header">
+        <h4 class="modal-title">
+            <i class="glyphicon"></i>
+        </h4>
+    </div>
+    <div class="modal-body">
+        <p>{{mainMessage}}</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" ng-click="$dismiss()">OK</button>
+    </div>
+</script>
 <!-- build:js /javascripts/libs.min.js -->
 <script src="/javascripts/libs/angular.min.js"></script>
 <script src="/javascripts/libs/jquery.min.js"></script>
@@ -52,7 +65,6 @@
 <script src="/javascripts/clients.js"></script>
 <script src="/javascripts/admin/loginController.js"></script>
 <script src="/javascripts/admin/adminController.js"></script>
-<script src="/javascripts/admin/modifyPasswordController.js"></script>
 <script src="/javascripts/admin/developmentController.js"></script>
 <script src="/javascripts/admin/usersController.js"></script>
 <!-- endbuild -->

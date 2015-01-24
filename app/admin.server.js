@@ -20,3 +20,4 @@ exports.restoreDB = require('./api/admin/development').restoreDB;
 exports.backupDB = require('./api/admin/development').backupDB;
 
 exports.buildProject = require('./api/admin/development').buildProject;
+exports.getMessageList = require('./api/admin/message').getMessageList;

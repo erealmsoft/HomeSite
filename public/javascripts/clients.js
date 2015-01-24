@@ -70,6 +70,9 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         },
         buildProject: function() {
             return $http.post('/app/admin/buildProject');
+        },
+        getMessageList: function() {
+            return $http.get('/app/admin/messages');
         }
     };
 }]);

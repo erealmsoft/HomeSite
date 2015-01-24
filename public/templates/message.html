@@ -1,0 +1,33 @@
+<div class="rightcontent" ng-controller="UserController">
+    <div class="panel panel-info user-form">
+        <div class="panel-heading">
+            <div class="panel-title"><h2>消息列表</h2></div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <colgroup>
+                    <col style="width: 20%">
+                    <col style="width: 30%">
+                    <col style="width: 40%">
+                    <col style="width: 10%">
+                </colgroup>
+                <thead>
+                <tr class="table-head">
+                    <th>姓名</th>
+                    <th>邮箱</th>
+                    <th>消息</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in messages">
+                    <td ng-bind="user.name"></td>
+                    <td ng-bind="user.email"></td>
+                    <td ng-bind="user.message"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

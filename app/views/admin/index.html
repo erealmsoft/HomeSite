@@ -35,6 +35,7 @@ templates{% extends '../layouts/admin.html' %}
                 {% if user.group == 'superuser' || user.group == 'developer' %}
                 <li ng-class="{'active': currentAction == 'logs'}"><a href="#" ng-click="loadTemplate('logs')">日志</a></li>
                 <li ng-class="{'active': currentAction == 'release'}"><a href="#" ng-click="loadTemplate('release')">项目维护</a></li>
+                <li ng-class="{'active': currentAction == 'message'}"><a href="#" ng-click="loadTemplate('message')">用户消息</a></li>
                 {% endif %}
                 <li ng-class="{'active': currentAction == 'modifyPassword'}"><a href="#" ng-click="loadTemplate('modifyPassword')">密码修改</a></li>
             </ul>

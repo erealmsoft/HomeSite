@@ -34,10 +34,10 @@
         <a href="https://github.com/eRealm" target="_blank">Fork me on GitHub</a>
     </div>
 </header>
-<span class="muti-language">
-    <div class="btn-group clearfix">
-        <button type="button" class="btn btn-default " translate="language"></button>
-        <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown">
+<div class="muti-language">
+    <div class="btn-group clearfix" dropdown>
+        <button type="button" class="btn btn-default" translate="language"></button>
+        <button type="button" class="btn btn-default  dropdown-toggle" dropdown-toggle>
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
         </button>
@@ -47,7 +47,7 @@
             <li><a  href="javascript:void(0)" language key="en">English</a></li>
         </ul>
     </div>
- </span>
+</div>
 <div class="nav-container" >
     <nav ng-class="{fixed: showFixedHeader}">
         <div class="wrap">
@@ -90,7 +90,7 @@
     </div>
     <div class="copyright">
         <p translate="copyright"></p>
-        <p><span translate="powerby"></span><a href="http://www.erealm.cn" target="_blank">eRealm</a> @ 2014</p>
+        <p><span translate="powerby"></span><a href="http://blog.erealm.cn" target="_blank">eRealm</a> @ 2014</p>
         <p translate="property"></p>
     </div>
     <a class="back-top fa fa-level-up" href="javascript: void(0)" ng-show="showFixedHeader" backtop></a>
@@ -102,6 +102,19 @@
         <li></li>
     </ul>
 </div>
+<script type="text/ng-template" id="main_message.html">
+    <div class="modal-header">
+        <h4 class="modal-title">
+            <i class="glyphicon"></i>
+        </h4>
+    </div>
+    <div class="modal-body">
+        <p>{{mainMessage}}</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" ng-click="$dismiss()">OK</button>
+    </div>
+</script>
 <!-- build:js /javascripts/libs.min.js -->
 <script src="/javascripts/libs/angular.min.js"></script>
 <script src="/javascripts/libs/jquery.min.js"></script>

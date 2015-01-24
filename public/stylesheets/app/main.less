@@ -534,6 +534,124 @@ footer {
   }
 }
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  bottom: 0;
+}
+
+.message-modal {
+  margin: 100px auto;
+  text-align: left;
+
+  .modal-dialog {
+    max-width: 450px;
+  }
+  .modal-header {
+    background-color: #428bca;
+    border-radius: 4px 4px 0 0;
+
+    .glyphicon::before {
+      margin-right: 5px;
+      content: "\e107";
+    }
+  }
+
+  .modal-title::after {
+    content: '消息';
+  }
+
+  h4 {
+    color: @white;
+  }
+
+  .modal-body {
+    padding: 20px 15px;
+    color: #3a87ad;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  &.error {
+    .modal-header {
+      background-color: #d2322d;
+
+      .glyphicon::before {
+        content: "\e107";
+      }
+    }
+    .modal-title::after {
+      content: '错误';
+    }
+
+    .modal-body {
+      color: #b94a48;
+    }
+  }
+  &.warning {
+    .modal-header {
+      background-color: #f0ad4e;
+
+      .glyphicon::before {
+        content: "\e123";
+      }
+    }
+    .modal-title::after {
+      content: '警告';
+    }
+
+    .modal-body {
+      color: #8a6d3b;
+    }
+  }
+  &.success {
+    .modal-header {
+      background-color: #3c763d;
+
+      .glyphicon::before {
+        content: "\e067";
+      }
+    }
+    .modal-title::after {
+      content: '成功';
+    }
+
+    .modal-body {
+      color: #63B264;
+    }
+  }
+
+  &.confirm {
+    .modal-header {
+      background-color: #f0ad4e;
+
+      .glyphicon::before {
+        content: "\e123";
+      }
+    }
+    .modal-title::after {
+      content: '确认';
+    }
+
+    .modal-body {
+      color: #8a6d3b;
+    }
+
+    .modal-footer {
+      display: block;
+    }
+  }
+}
+
+@media print {
+  .footer, .main-content .sidebar, .main-content .navbar, .report-form, .panel-footer, .back-top {
+    display: none;
+  }
+}
+
 @media only screen and (max-width:1024px)
 {
 

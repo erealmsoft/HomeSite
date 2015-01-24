@@ -21,10 +21,10 @@
 ### Setting up the application
  * Install all modules
 ```bash
-npm install
 npm install pm2 -g
 npm install grunt -g
 npm install grunt-cli -g
+npm install
 ```
 * Before Checkin code: manage front-end library and compress images.
 ```bash
@@ -59,4 +59,3 @@ or create a file named `custom.js` in config folder and override the default con
 
 ## TODO List
 * Unit test.
-* Dash board.

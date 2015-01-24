@@ -1,3 +1,9 @@
+/**
+ * Copyright 2014 Erealm Info & Tech.
+ *
+ * Created by ken on 1/24/15
+ */
+
 'use strict';
 
 var mongoose = require('mongoose');
@@ -13,7 +19,7 @@ exports.login = function (req, res, next) {
         // if user is not found due to wrong username or password
         if (!user) {
             //return res.render('login', {});
-            return res.json({code: 'ws001'});
+            return res.json({code: 'error_001'});
         }//(!user)
         //passport.js has a logIn user method
 
@@ -39,7 +45,7 @@ exports.create = function (req, res, next) {
         if (err) {
             return next(err);
         }
-        return res.send({code: '200', type: 'success'});
+        return res.send({code: '200'});
     });
 };
 exports.getUsers = function (req, res, next) {
@@ -47,7 +53,7 @@ exports.getUsers = function (req, res, next) {
         if (err) {
             return res.status(401).send();
         } else {
-            return res.send({code: 'success', data: users});
+            return res.send(users);
         }
     });
 };
@@ -62,10 +68,10 @@ exports.changePassword = function(req, res, next){
             var newPassConfirm = req.body.newPasswordConfirm;
 
             if (!oldPass || !newPass || oldPass === newPass || newPass.length < 6) {
-                return res.send({code: 'ws002'});
+                return res.send({code: 'error_002'});
             }
             if (newPassConfirm !== newPass) {
-                return res.send({code: 'ws004'});
+                return res.send({code: 'error_004'});
             }
             var isAuth = user.authenticate(req.body.password);
             if (isAuth) {
@@ -75,10 +81,10 @@ exports.changePassword = function(req, res, next){
                     if (err) {
                         return next(err);
                     }
-                    return res.send({code: '200', type: 'success'});
+                    return res.send({code: '200'});
                 });
             } else {
-                return res.send({code: 'ws003'});
+                return res.send({code: 'error_003'});
             }
         }
     });

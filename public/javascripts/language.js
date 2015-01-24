@@ -56,8 +56,6 @@ angular.module('erealm')
             "sendus_email" : "Please Send us an email - hello@erealm.cn",
             "submit_project" : "Send a Project Plan",
             "scan_blog":"Scan the blog on Tumblr",
-            "sent_successfully" : "Your message has be sent successfully",
-            "sent_fault": "Your message could not be sent",
             "emaillink" : "mailto:hello@erealm.cn?subject=Enquiry%20from%20eRealm%20website",
             "email" : "hello@erealm.cn",
             "your_company" : "Company",
@@ -74,16 +72,29 @@ angular.module('erealm')
             "brief_description" : "BRIEF DESCRIPTION",
             "choose_project" : "Choose Project Type",
             "choose_budget" : "Choose Project Budget",
-            "403":"Access Denial!",
-            "403_content":"You are not authorized to  access this resource.",
-            "404":"Page Not Found!",
-            "404_content":"The resource you requested doesn't exist.",
-            "500":"Server Error!",
-            "500_content":"Sorry something went wrong.",
             "manage_team":"How We Manage The Team",
             "team":"Team",
             "skills":"Skills",
-            "management":"Management"
+            "management":"Management",
+
+            "403_content":"You are not authorized to  access this resource.",
+            "404_content":"The resource you requested doesn't exist.",
+            "500_content":"Sorry something went wrong.",
+
+            // system error message.
+            'success_200': 'Operation Completed Successfully',
+            '400': 'Bad Request!',
+            "403":"Access Denial!",
+            "404":"Page Not Found!",
+            "500":"Server No Available!",
+
+            // custom error message.
+            "success_001" : "Your message has be sent successfully",
+            'error_001': 'Incorrect username or password',
+            'error_002': 'Password cannot be empty, New password should not the same as old, At least 6 characters in length',
+            'error_003': 'The Password is Incorrect',
+            'error_004': 'The passwords you entered did not match.',
+            "error_005": "Your message could not be sent"
         });
         $translateProvider.translations('cn', {
             "language" : "简体中文",
@@ -136,8 +147,6 @@ angular.module('erealm')
             "sendus_email" : "向我们发送电子邮件 邮箱-hello@erealm.cn",
             "submit_project" : "提交您的项目计划",
             "scan_blog":"浏览我们的博客",
-            "sent_successfully" : "您的信息发送成功",
-            "sent_fault": "您的信息发送失败",
             "emaillink" : "mailto:hello@erealm.cn?subject=从eRealm官方网站联系",
             "email" : "hello@erealm.cn",
             "your_company" : "公司名称",
@@ -153,16 +162,29 @@ angular.module('erealm')
             "brief_description" : "请简要描述您的项目",
             "choose_project" : "请选择您的项目类型",
             "choose_budget" : "请选择您的预算",
-            "403":"访问拒绝！",
-            "403_content":"您无权访问该资源。",
-            "404":"页面没有找到！",
-            "404_content":"您所请求的资源不存在。",
-            "500":"服务器错误！",
-            "500_content":"抱歉，发生某些故障。",
             "manage_team":"我们的管理方式",
             "team":"团队结构",
             "skills":"技术能力",
-            "management":"管理方式"
+            "management":"管理方式",
+
+            "403_content":"您无权访问该资源。",
+            "404_content":"您所请求的资源不存在。",
+            "500_content":"抱歉，发生某些故障。",
+
+            // system error message.
+            'success_200': '操作成功',
+            '400': '非法请求',
+            "403":"访问拒绝！",
+            "404":"您请求的资源不存在！",
+            "500":"服务暂时不可用！",
+
+            // custom error message.
+            "success_001" : "您的信息发送成功",
+            'error_001': '用户名或密码错误',
+            'error_002': '密码不能为空，新密码不可与旧密码相同，密码长度至少为6',
+            'error_003': '密码错误',
+            'error_004': '密码确认错误',
+            "error_005": "您的信息发送失败"
         });
 
         var preferLanguage = 'en';

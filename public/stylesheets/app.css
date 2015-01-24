@@ -508,6 +508,102 @@ footer .back-top {
     margin-top: 25px;
   }
 }
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  bottom: 0;
+}
+.message-modal {
+  margin: 100px auto;
+  text-align: left;
+}
+.message-modal .modal-dialog {
+  max-width: 450px;
+}
+.message-modal .modal-header {
+  background-color: #428bca;
+  border-radius: 4px 4px 0 0;
+}
+.message-modal .modal-header .glyphicon::before {
+  margin-right: 5px;
+  content: "\e107";
+}
+.message-modal .modal-title::after {
+  content: '消息';
+}
+.message-modal h4 {
+  color: #ffffff;
+}
+.message-modal .modal-body {
+  padding: 20px 15px;
+  color: #3a87ad;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.message-modal.error .modal-header {
+  background-color: #d2322d;
+}
+.message-modal.error .modal-header .glyphicon::before {
+  content: "\e107";
+}
+.message-modal.error .modal-title::after {
+  content: '错误';
+}
+.message-modal.error .modal-body {
+  color: #b94a48;
+}
+.message-modal.warning .modal-header {
+  background-color: #f0ad4e;
+}
+.message-modal.warning .modal-header .glyphicon::before {
+  content: "\e123";
+}
+.message-modal.warning .modal-title::after {
+  content: '警告';
+}
+.message-modal.warning .modal-body {
+  color: #8a6d3b;
+}
+.message-modal.success .modal-header {
+  background-color: #3c763d;
+}
+.message-modal.success .modal-header .glyphicon::before {
+  content: "\e067";
+}
+.message-modal.success .modal-title::after {
+  content: '成功';
+}
+.message-modal.success .modal-body {
+  color: #63B264;
+}
+.message-modal.confirm .modal-header {
+  background-color: #f0ad4e;
+}
+.message-modal.confirm .modal-header .glyphicon::before {
+  content: "\e123";
+}
+.message-modal.confirm .modal-title::after {
+  content: '确认';
+}
+.message-modal.confirm .modal-body {
+  color: #8a6d3b;
+}
+.message-modal.confirm .modal-footer {
+  display: block;
+}
+@media print {
+  .footer,
+  .main-content .sidebar,
+  .main-content .navbar,
+  .report-form,
+  .panel-footer,
+  .back-top {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1024px) {
   h1 {
     font-size: 2.5em;

@@ -9,16 +9,11 @@
 angular.module('erealm').controller('AdminController' , ['$scope','$rootScope','$sce','$spMenu' , 'client' , function($scope, $rootScope, $sce, $spMenu, client) {
     var config = {
         'index': {tpl: "/templates/index.html"},
-        'reports': {tpl: "/templates/report.html"},
-        'receiveGoods':{tpl: "/templates/receiveGoods.html"},
-        'priceCalendar':{tpl: "/templates/priceCalendar.html"},
         'createuser': {tpl: "/templates/user.html"},
         'logs': {tpl: "/templates/logs.html", action: 'getLogList'},
         'modifyPassword': {tpl: "/templates/modifyPassword.html"},
-        'dailyRecommend': {tpl: "/templates/dailyRecommend.html"},
-        'flowerPotImg': {tpl: "/templates/flowerPotImg.html"},
-        'receivePayment': {tpl: "/templates/receivePayment.html"},
-        'release': {tpl: "/templates/development.html"}
+        'release': {tpl: "/templates/development.html"},
+        'message': {tpl: "/templates/message.html", action: 'getMessageList'}
     };
     $scope.currentTemplate = config['index'].tpl;
     $scope.loadTemplate = function(type) {
@@ -47,4 +42,15 @@ angular.module('erealm').controller('AdminController' , ['$scope','$rootScope','
         return $sce.trustAsHtml(html);
     };
 
+    $scope.passwords = {};
+    $scope.changePassword = function(){
+        client.changePassword($scope.passwords).then(function(response){});
+    };
+
+    $scope.getMessageList = function() {
+        client.getMessageList($scope.selectedLog).then(function(response) {
+            if (!response.data) return;
+            $scope.messages = response.data;
+        });
+    }
 }]);

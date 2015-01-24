@@ -32,7 +32,7 @@ exports.sendMessage = function(req, res) {
     req.checkBody('message', 'Invalid postparam').notEmpty().len(0, 300);
     var errors = req.validationErrors();
     if (errors) {
-        res.send('There have been validation errors', 400);
+        res.send({code: 'error_005'});
         return;
     }
 
@@ -62,8 +62,5 @@ exports.sendMessage = function(req, res) {
         message: message
     });
 
-    res.json({
-        code: 200,
-        success: true
-    });
+    res.json({code: 'success_001'});
 };
