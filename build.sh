@@ -6,6 +6,6 @@ git clean -f
 grunt build
 if [ "${1}" = "" ] || [ "${1}" != "restart" ]; then
 echo "start"
-pm2 kill
+forever stop all
 fi
-pm2 ${1:-start} app.js
+forever ${1:-start} app.js

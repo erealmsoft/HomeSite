@@ -54,8 +54,7 @@ or create a file named `custom.js` in config folder and override the default con
 * November 20, 2014: Update express.js(from express3 to express4)
 * November 22, 2014: change back-end view engine(from hbs to swig);add back-end mock data. by default, no need to setup the data base, just set the `config.mock` to `true`.
 * November 23, 2014: Change Contact map from Google map to Baidu map.
-* January 10, 2015: add dashboard, add auth model.
-* January 24, 2015: change from `forever` to `pm2`.
+* January 24, 2015: add dashboard, add auth model.
 
 ## TODO List
 * Unit test.

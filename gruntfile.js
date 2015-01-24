@@ -292,11 +292,10 @@ module.exports = function(grunt){
                 script: 'app.js',
                 options: {
                     args: ['--debug'],
-                    ext: 'js',
+                    ext: 'js,html',
                     ignore: ['node_modules/**', '.git/**', '.idea/', '.cache/'],
                     watch: ['config','lib/**', 'app/**'],
                     debug: true,
-                    delayTime: 10,
                     env: {
                         PORT: 3000,
                         NODE_ENV: 'development'
