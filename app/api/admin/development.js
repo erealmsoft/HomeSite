@@ -28,11 +28,12 @@ exports.buildProject = function(req,res){
     });
     res.send({code: 200});
 };
-exports.getDBList = function(req,res){
+exports.getDBList = function(req,res, next){
     var p = path.join(__dirname, '../../../build/');
     fs.readdir(p, function (err, files) {
         if (err) {
             next(err);
+            return;
         }
 
         var result = [];

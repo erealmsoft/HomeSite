@@ -62,7 +62,7 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
 
                 var message = 'Please try again later';
 
-                $rootScope.showMessage(rejection.status);
+                $rootScope.showMessage(rejection.status + '');
 
                 $rootScope.errorMessage = {text: message};
                 return $q.reject(rejection);
