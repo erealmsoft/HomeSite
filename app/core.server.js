@@ -14,6 +14,7 @@ exports.readStaff = require('./api/team').readStaff;
 exports.readPartner = require('./api/team').readPartner;
 exports.getTeamManagement = require('./api/team').getTeamManagement;
 exports.getTeamTech = require('./api/team').getTeamTech;
+exports.getTeamPhotos = require('./api/team').getTeamPhotos;
 
 
 exports.readContacts = require('./api/contacts').readContacts;
