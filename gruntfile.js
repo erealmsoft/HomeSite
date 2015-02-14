@@ -334,7 +334,6 @@ module.exports = function(grunt){
     });
 
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-jsbeautifier');
 
     grunt.loadNpmTasks('grunt-lesslint');
@@ -360,7 +359,7 @@ module.exports = function(grunt){
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
 
-    grunt.registerTask('prepare', ['copy:main', 'imagemin', 'copy:images', 'clean:images','jsbeautifier']);
+    grunt.registerTask('prepare', ['copy:main', 'copy:images', 'clean:images','jsbeautifier']);
     grunt.registerTask('default', ['lesslint', 'jshint','less:debug','autoprefixer:debug', "concurrent"]);
     grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'copy:build', 'clean:build']);
 };
