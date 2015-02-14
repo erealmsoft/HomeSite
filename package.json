@@ -52,7 +52,7 @@
     "mongodb": "^1.4.30",
     "mongoose": "^3.8.21",
     "morgan": "^1.5.0",
-    "multer": "^0.1.6",
+    "multer": "^0.1.7",
     "newrelic": "^1.16.2",
     "nodemailer": "^0.7.1",
     "passport": "^0.2.1",
