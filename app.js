@@ -5,7 +5,7 @@
  */
 
 'use strict';
-require('newrelic');
+//require('newrelic');
 var cluster = require('cluster'),
  express = require('express'),
  config = require('./lib/config'),
