@@ -39,6 +39,9 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         getPosts: function(language) {
             return $http.get('/app/posts/' + language);
         },
+        checkPosts: function(language) {
+            return $http.get('/back/postscheck/' + language);
+        },
 
         //admin
         login: function(user) {

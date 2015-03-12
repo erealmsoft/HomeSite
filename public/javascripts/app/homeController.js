@@ -4,7 +4,7 @@
  * Created by Ken on2/08/2014
  */
 
-angular.module('erealm').controller('HomeController', ['$scope','client', '$translate',function($scope, client, $translate) {
+angular.module('erealm').controller('HomeController', ['$scope','client', '$translate', '$timeout',function($scope, client, $translate, $timeout) {
 
     'use strict';
 
@@ -21,6 +21,12 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
             $scope.skills = response.data.skills;
             $scope.management = response.data.management;
         });
+
+        $timeout(function(){
+            client.checkPosts(language).then(function(response){
+                $scope.postsNotification = response.data.result;
+            })
+        }, 2000);
     };
     $scope.loadData();
 

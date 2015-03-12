@@ -7,6 +7,7 @@
 'use strict';
 
 exports.getPosts = require('./api/blog').getPosts;
+exports.checkPosts = require('./api/blog').checkPosts;
 exports.sendMessage = require('./api/support').sendMessage;
 exports.sendProject = require('./api/projectplan').sendProject;
 

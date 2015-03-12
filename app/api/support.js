@@ -6,19 +6,10 @@
 'use strict';
 
 var config = require('../../lib/config'),
-    mailer = require('../helper/mailer');
+    mailer = require('../helper/mailer'),
+    util = require('../helper/util');
 
-function parseCookies(request) {
-    var list = {},
-        rc = request.headers.cookie;
 
-    rc.split(';').forEach(function(cookie) {
-        var parts = cookie.split('=');
-        list[parts.shift().trim()] = unescape(parts.join('='));
-    });
-
-    return list;
-}
 
 var cn = require('./data/content_cn.json');
 var en = require('./data/content_en.json');
@@ -36,7 +27,7 @@ exports.sendMessage = function(req, res) {
         return;
     }
 
-    var storagekey = parseCookies(req).NG_TRANSLATE_LANG_KEY;
+    var storagekey = util.parseCookies(req).NG_TRANSLATE_LANG_KEY;
     console.log(storagekey);
     var language = '';
     if (storagekey === '"cn"') {

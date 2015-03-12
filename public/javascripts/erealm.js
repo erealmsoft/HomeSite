@@ -26,7 +26,9 @@ erealm.factory('errorHttpInterceptor', ['$q', '$rootScope', '$injector',
         $rootScope.http = null;
         return {
             'request': function (config) {
-                $rootScope.mainLoading = true;
+                if (config.url.indexOf('/back/') === -1) {
+                    $rootScope.mainLoading = true;
+                }
                 return config || $q.when(config);
             },
             'requestError': function (rejection) {
