@@ -55,6 +55,7 @@ or create a file named `custom.js` in config folder and override the default con
 * November 22, 2014: change back-end view engine(from hbs to swig);add back-end mock data. by default, no need to setup the data base, just set the `config.mock` to `true`.
 * November 23, 2014: Change Contact map from Google map to Baidu map.
 * January 24, 2015: add dashboard, add auth model.
+* March 16, 2015: material design.
 
 ## TODO List
 * Unit test.
