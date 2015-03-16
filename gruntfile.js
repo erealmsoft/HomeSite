@@ -287,6 +287,18 @@ module.exports = function(grunt){
                 src: ['public/javascripts/*.min.js', 'public/stylesheets/*.min.css']
             }
         },
+        replace: {
+            build: {
+                src: ['app/views/layouts/*.html'],             // source files array (supports minimatch)
+                dest: 'app/views/layouts/',             // destination directory or file
+                replacements: [{
+                    from: '#version',
+                    to: function () {   // callback replacement
+                        return Math.floor(Date.now() / 1000);
+                    }
+                }]
+            }
+        },
         nodemon: {
             dev: {
                 script: 'app.js',
@@ -353,6 +365,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
 //    grunt.loadNpmTasks('grunt-useminPrepare');
     grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-text-replace');
 
 
 
@@ -361,5 +374,5 @@ module.exports = function(grunt){
 
     grunt.registerTask('prepare', ['copy:main', 'copy:images', 'clean:images','jsbeautifier']);
     grunt.registerTask('default', ['lesslint', 'jshint','less:debug','autoprefixer:debug', "concurrent"]);
-    grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'copy:build', 'clean:build']);
+    grunt.registerTask('build', ['cssmin', 'less:compile','autoprefixer:compile', 'uglify','filerev', 'usemin', 'replace', 'copy:build', 'clean:build']);
 };
