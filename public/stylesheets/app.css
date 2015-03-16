@@ -145,7 +145,7 @@ input.error:-moz-placeholder {
 }
 .common-btn {
   min-width: 170px;
-  background: rgba(57, 169, 164, 0.95);
+  background: rgba(57, 169, 164, 0.95) !important;
   color: #ffffff;
   font-weight: 700;
   border: none;
@@ -156,7 +156,7 @@ input.error:-moz-placeholder {
   font-size: 18px;
 }
 .common-btn.reset {
-  background: #d2d6d5;
+  background: #d2d6d5 !important;
 }
 .common-btn:hover,
 .common-btn:focus {
@@ -405,7 +405,7 @@ footer .back-top {
 }
 .muti-language {
   position: absolute;
-  top: -3px;
+  top: -10px;
   left: 20px;
   color: #A00;
 }
@@ -779,7 +779,7 @@ footer .back-top {
 }
 .what-we-are .home-box .common-btn {
   color: #fff;
-  background: transparent;
+  background: transparent!important;
   border: solid 1px #ffffff;
 }
 .what-we-are .home-box .common-btn:hover {
@@ -1193,12 +1193,12 @@ footer .back-top {
   padding: 0 3%;
 }
 .send-message .form-group textarea {
-  height: 7em;
+  height: 7em!important;
   margin-bottom: 1em;
 }
 .send-message .form-group input,
 .send-message .form-group select {
-  height: 3em;
+  height: 3em!important;
   margin-bottom: 1em;
 }
 .send-message .info {

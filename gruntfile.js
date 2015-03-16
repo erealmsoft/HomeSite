@@ -150,7 +150,8 @@ module.exports = function(grunt){
                     'public/stylesheets/libs.min.css':
                         [
                             "public/stylesheets/libs/bootstrap.min.css",
-                            "public/stylesheets/libs/bootflat.min.css",
+                            "public/stylesheets/libs/material.min.css",
+                            "public/stylesheets/libs/ripples.min.css",
                             "public/stylesheets/libs/font-awesome.min.css",
                             "public/stylesheets/libs/reset.css",
                             "public/stylesheets/libs/erealmFont.css"
@@ -196,7 +197,9 @@ module.exports = function(grunt){
                         'public/javascripts/libs/plugins/angular-translate-storage-cookie.min.js',
                         'public/javascripts/libs/plugins/ui-bootstrap-tpls.min.js',
                         'public/javascripts/libs/plugins/ng-mobile-menu.min.js',
-                        'public/javascripts/libs/plugins/moment-with-locales.js'
+                        'public/javascripts/libs/plugins/moment-with-locales.js',
+                        'public/javascripts/libs/plugins/material.min.js',
+                        'public/javascripts/libs/plugins/ripples.min.js'
                     ],
                     'public/javascripts/app.min.js': [
                         'public/javascripts/erealm.js',
