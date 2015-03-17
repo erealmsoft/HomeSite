@@ -29,6 +29,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
 
         $scope.activeMap = contactInfo.name;
 
+        var BMap = window.BMap;
         var latLng = contactInfo.map.latLng;
         var location = contactInfo.map.point;
         var map = new BMap.Map("google_map");
@@ -43,7 +44,7 @@ angular.module('erealm').controller('ContactController', ['$scope','client','$tr
         map.centerAndZoom(point, 15);
 
 
-        var locationIcon = new BMap.Icon('/images/icon_marker.png', new BMap.Size(300,157));
+        new BMap.Icon('/images/icon_marker.png', new BMap.Size(300,157));
         var marker = new BMap.Marker(center);
         map.addOverlay(marker);
         var opts = {

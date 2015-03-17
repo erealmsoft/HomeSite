@@ -49,7 +49,9 @@ UserSchema.path('email').validate(function (email, fn) {
         User.find({ email: email }).exec(function (err, users) {
             fn(!err && users.length === 0);
         });
-    } else fn(true);
+    } else{
+        fn(true);
+    }
 }, 'Email already exists');
 
 UserSchema.path('username').validate(function (username) {
@@ -65,7 +67,9 @@ UserSchema.path('hashed_password').validate(function (hashed_password) {
 }, 'Password cannot be blank');
 
 UserSchema.pre('save', function(next) {
-    if (!this.isNew) return next();
+    if (!this.isNew) {
+        return next();
+    }
 
     if (!validatePresenceOf(this.password)) {
         next(new Error('Invalid password'));
@@ -85,7 +89,9 @@ UserSchema.methods = {
     },
 
     encryptPassword: function (password) {
-        if (!password) return '';
+        if (!password) {
+            return '';
+        }
         try {
             return crypto
                 .createHmac('sha1', this.salt)

@@ -30,7 +30,7 @@ exports.checkPosts = function(req, res) {
 
     if (config.mock) {
         var current = require('./data/blog_' + language +'.json')[0];
-        res.send({result: current.id == currentId? 0:1})
+        res.send({result: current.id == currentId? 0:1});
     } else {
         client.posts("erealm", {tag: language}, function(err, resp) {
             var count = Math.min(resp.posts.length, 5);
@@ -43,7 +43,7 @@ exports.checkPosts = function(req, res) {
                 }
             }
 
-            res.send({result: count})
+            res.send({result: count});
         });
     }
 };

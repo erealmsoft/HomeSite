@@ -4,9 +4,8 @@
  * Created by ken on 12/13/2014.
  */
 
-'use strict';
-
 angular.module('erealm').controller('developmentController' , ['$scope', 'client' , function($scope, client) {
+    'use strict';
 
     $scope.releaseProject = function(){
         client.buildProject().then();

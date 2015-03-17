@@ -25,7 +25,7 @@ angular.module('erealm').controller('HomeController', ['$scope','client', '$tran
         $timeout(function(){
             client.checkPosts(language).then(function(response){
                 $scope.postsNotification = response.data.result;
-            })
+            });
         }, 2000);
     };
     $scope.loadData();

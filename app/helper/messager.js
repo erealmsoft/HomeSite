@@ -12,7 +12,6 @@ exports.saveMessage = function(message) {
     if (config.mock) {
         return false;
     }
-    var message = new Message(message);
-    message.save(function (err) {
+    (new Message(message)).save(function (err) {
     });
 };

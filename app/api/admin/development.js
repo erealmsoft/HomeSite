@@ -19,7 +19,7 @@ function run_cmd(cmd, args, callBack ) {
     child.stdout.on('data', function (buffer) {
         resp += buffer.toString();
     });
-    child.stdout.on('end', function() { callBack (resp) });
+    child.stdout.on('end', function() { callBack (resp); });
 }
 
 exports.buildProject = function(req,res){
@@ -46,14 +46,14 @@ exports.getDBList = function(req,res, next){
 exports.restoreDB = function(req, res, next) {
     run_cmd( "./DBInstall.sh", [req.body.db], function(text) {
         logger.info(text);
-        res.send({code: "success"})
+        res.send({code: "success"});
     });
 };
 
 exports.backupDB = function(req, res, next) {
     run_cmd( "./DBBackup.sh", [], function(text) {
         logger.info(text);
-        res.send({code: "success"})
+        res.send({code: "success"});
     });
 };
 

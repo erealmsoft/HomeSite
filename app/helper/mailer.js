@@ -74,7 +74,9 @@ Mailer.prototype.send = function(mailOptions) {
 
     try {
         this.transport.sendMail(mailOptions, function(error, response) {
-            if (error) logger.error(error);
+            if (error) {
+                logger.error(error);
+            }
         });
     } catch (err) {
         logger.error(err);

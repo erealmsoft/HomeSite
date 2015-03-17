@@ -47,7 +47,7 @@ angular.module('erealm').factory('client', ['$http', function ($http) {
         login: function(user) {
             return $http.post('/app/admin/login', user);
         },
-        getUsers: function(user) {
+        getUsers: function() {
             return $http.get('/app/admin/users');
         },
         signup: function(user) {

@@ -6,8 +6,6 @@
 
 'use strict';
 
-var config = require('../../lib/config');
-
 exports.readPartner = function(req, res) {
     var language = req.params.language;
     res.send(require('./data/partners_' + language +'.json'));
