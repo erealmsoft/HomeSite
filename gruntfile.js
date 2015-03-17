@@ -310,6 +310,7 @@ module.exports = function(grunt){
                     ext: 'js,html',
                     ignore: ['node_modules/**', '.git/**', '.idea/', '.cache/'],
                     watch: ['config','lib/**', 'app/**'],
+                    delay: 1000,
                     debug: true,
                     env: {
                         PORT: 3000,
@@ -333,6 +334,7 @@ module.exports = function(grunt){
                         nodemon.on('restart', function () {
                             // Delay before server listens on port
                             setTimeout(function() {
+                                console.log('restart browser');
                                 require('fs').writeFileSync('.rebooted', 'rebooted');
                             }, 1000);
                         });
