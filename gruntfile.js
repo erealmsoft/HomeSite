@@ -259,16 +259,6 @@ module.exports = function(grunt){
                     livereload: true
                 }
             },
-            serverJS: {
-                files: ['app/**/*.js'],
-                tasks: ['jshint:server']
-            },
-            serverTemplates: {
-                files: ['app/views/**/*.html','app/templates/*.html'],
-                options: {
-                    livereload: true
-                }
-            },
             tests: {
                 files: ['tests/**/*.js'],
                 tasks: ['mochacov:test']
@@ -309,7 +299,7 @@ module.exports = function(grunt){
                     args: ['--debug'],
                     ext: 'js,html',
                     ignore: ['node_modules/**', '.git/**', '.idea/', '.cache/'],
-                    watch: ['config','lib/**', 'app/**'],
+                    watch: ['config','lib', 'app'],
                     delay: 1000,
                     debug: true,
                     env: {
