@@ -32,7 +32,7 @@ exports.getDBList = function(req,res, next){
     var p = path.join(__dirname, '../../../build/');
     fs.readdir(p, function (err, files) {
         if (err) {
-            next(err);
+            res.json([]);
             return;
         }
 
