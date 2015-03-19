@@ -26,7 +26,7 @@ exports.buildProject = function(req,res){
     run_cmd( "./build.sh", ['restart'], function(text) {
         logger.info(text);
     });
-    res.send({code: "success"});
+    res.send({code: "success_200"});
 };
 exports.getDBList = function(req,res, next){
     var p = path.join(__dirname, '../../../build/');
@@ -46,14 +46,14 @@ exports.getDBList = function(req,res, next){
 exports.restoreDB = function(req, res, next) {
     run_cmd( "./DBInstall.sh", [req.body.db], function(text) {
         logger.info(text);
-        res.send({code: "success"});
+        res.send({code: "success_200"});
     });
 };
 
 exports.backupDB = function(req, res, next) {
     run_cmd( "./DBBackup.sh", [], function(text) {
         logger.info(text);
-        res.send({code: "success"});
+        res.send({code: "success_200"});
     });
 };
 
