@@ -126,8 +126,13 @@ textarea.error, input.error {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  transition: background .15s linear;
   text-align: center;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: rotate(360deg) scale(1.02);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
 }
 
 .common-btn {
@@ -148,7 +153,7 @@ textarea.error, input.error {
 
   &:hover,&:focus {
     color: @white;
-    background: #3B4250;
+    background: #3B4250!important;
   }
 }
 
