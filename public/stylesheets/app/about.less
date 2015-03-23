@@ -42,15 +42,22 @@
   }
 
   .profile {
-    width: 33.3333%;
-    padding: 0 2%;
+    width: 29.3333%;
     text-align: center;
-    margin:.5em auto 2.5em;
+    margin:.5em 2% 2.5em;
     float: left;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    border-radius: 2px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translate3d(0, -3px, 0);
+      box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.4);
+    }
 
     figure {
       background: @orange;
-      width: 85%;
+      width: 100%;
       position: relative;
       margin: 0  auto;
       img{
@@ -147,7 +154,7 @@
 
   .our-team {
     .profile {
-      width: 50%;
+      width: 46%;
     }
   }
 }
@@ -161,7 +168,7 @@
 
   .our-team {
     .profile {
-      width: 100%;
+      width: 96%;
       height: auto;
       float: none;
     }
