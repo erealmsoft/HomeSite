@@ -11,14 +11,14 @@
         <hr class="short">
     <ul id="project_details" class="project-details" ng-init="bindImageLoad()">
         <li ng-repeat="detail in projectDetails.details">
-            <img ng-src="{{'detail.image'}}">
+            <img ng-cloak ng-src="{{'detail.image'}}">
             <b ng-bind="detail.title"></b>
             <p ng-bind="detail.description"></p>
         </li>
     </ul>
         <hr class="short">
-        <p>{{'projectDetails.description_conclude_one'}}<a class="link" ng-attr-href="{{'projectDetails.home'}}" target="_blank">{{'projectDetails.link_name'}}</a>{{'projectDetails.description_conclude_two'}}</p>
-        <b>{{'projectDetails.let_us'}}<a href="contact">{{'projectDetails.lets'}}</a>.</b>
+        <p ng-cloak>{{'projectDetails.description_conclude_one'}}<a class="link" ng-attr-href="{{'projectDetails.home'}}" target="_blank">{{'projectDetails.link_name'}}</a>{{'projectDetails.description_conclude_two'}}</p>
+        <b ng-cloak>{{'projectDetails.let_us'}}<a href="contact" ng-cloak>{{'projectDetails.lets'}}</a>.</b>
     </div>
 </section>
 {% endblock %}

@@ -26,7 +26,7 @@
         <ul class="clearfix">
             <li class="profile" ng-repeat="item in person">
                 <figure>
-                    <img class="img-responsive"
+                    <img ng-cloak ng-cloak class="img-responsive"
                          ng-src="{{item.photo}}"/>
                     <p ng-bind="item.description" class="description"></p>
                 </figure>
@@ -35,7 +35,7 @@
             </li>
             <li class="profile" ng-repeat="part in partner">
                 <figure>
-                    <img class="img-responsive"
+                    <img ng-cloak class="img-responsive"
                          ng-src="{{part.photo}}"/>
                     <p ng-bind="part.description" class="description"></p>
                 </figure>
@@ -49,7 +49,7 @@
     <ul>
         <li ng-repeat="part in photos">
             <a ng-href="{{part.link}}" target="_blank">
-                <img ng-src="{{part.media.m}}" ng-alt="{{part.title}}"
+                <img ng-cloak ng-src="{{part.media.m}}" ng-alt="{{part.title}}"
                      ng-title="{{part.title}}">
             </a>
         </li>

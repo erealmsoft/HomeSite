@@ -7,7 +7,7 @@
         <li class="col-lg-4" ng-repeat="pro in project">
             <a ng-href="/workdetails#{{'pro.ID'}}">
                 <figure>
-                    <img ng-src="{{'pro.cover'}}"/>
+                    <img ng-cloak ng-src="{{'pro.cover'}}"/>
                 </figure>
             </a>
             <h3 ng-bind="pro.proj_name"></h3>
