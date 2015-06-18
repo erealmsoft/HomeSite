@@ -52,7 +52,7 @@ module.exports = {
             })
         ]
     },
-    support: 'hello@erealm.cn',
+    support: 'hello@erealmsoft.com',
     projectName: 'eRealm-Home',
     copyrightName: 'eRealm'
 };
