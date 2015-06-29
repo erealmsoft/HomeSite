@@ -6,29 +6,29 @@
 
 'use strict';
 //require('newrelic');
-var cluster = require('cluster'),
- express = require('express'),
+ var express = require('express'),
  config = require('./lib/config'),
  app = express(),
  mongoose = require('mongoose'),
  passport = require('passport'),
  fs = require('fs'),
- path = require('path'),
- expressValidator = require('express-validator'),
- favicon = require('serve-favicon'),
- compression = require('compression'),
- bodyParser = require('body-parser'),
- swig = require('swig');
+ path = require('path');
 
 // Connect to mongodb
 var connect = function () {
  var options = { server: { socketOptions: { keepAlive: 1 } } };
- mongoose.connect(config.mongodb, options);
+ mongoose.connect(config.mongodb, options, function (err, res) {
+  if (err) {
+   config.info('ERROR connecting to: remote' + config.mongodb + '. ' + err);
+  } else {
+   config.info('Successfully connected to: remote' + config.mongodb);
+  }
+ });
 };
 connect();
 
 mongoose.connection.on('error', console.log);
-//mongoose.connection.on('disconnected', connect);
+mongoose.connection.on('disconnected', connect);
 
 // Bootstrap models
 fs.readdirSync(path.join(__dirname, './app/models')).forEach(function (file) {
