@@ -4,47 +4,23 @@
     "sort": 1,
     "location": "西安公司",
     "map": {
-      "shortUrl": "http://goo.gl/6QoZt8",
+      "shortUrl": "http://j.map.baidu.com/SQDF7",
       "latLng": [
-        34.194825,
-        108.9
+        34.228450,
+        108.877040
       ],
       "point": [
-        34.201967,
-        108.890675
+        34.233356,
+        108.884308
       ]
     },
     "info": {
-      "address": "丈八一路绿地SOHO",
+      "address": "高新六路21号金松大厦B座2007",
       "region": "雁塔区",
       "county": "西安市",
-      "postcode": "710065",
+      "postcode": "710075",
       "country": "中国",
-      "contact": "+86 029-89194831"
-    }
-  },
-  {
-    "name": "shang hai",
-    "sort": 2,
-    "location": "上海公司",
-    "map": {
-      "shortUrl": "http://goo.gl/6QoZt8",
-      "latLng": [
-        31.04,
-        121.38
-      ],
-      "point": [
-        31.044208,
-        121.366631
-      ]
-    },
-    "info": {
-      "address": "元江路5500号",
-      "region": "闵行区",
-      "county": "上海市",
-      "postcode": "201111",
-      "country": "中国",
-      "contact": "+86 021-54101117"
+      "contact": "+86 029-88763093"
     }
   }
 ]

@@ -4,47 +4,23 @@
     "sort": 1,
     "location": "Xi'an Office",
     "map": {
-      "shortUrl": "http://goo.gl/6QoZt8",
+      "shortUrl": "http://j.map.baidu.com/SQDF7",
       "latLng": [
-        34.194825,
-        108.9
+        34.228450,
+        108.877040
       ],
       "point": [
-        34.201967,
-        108.890675
+        34.233356,
+        108.884308
       ]
     },
     "info": {
-      "address": "No.5,Zhangba 1st Road",
+      "address": "2007, CROSS Building B, GaoXin 6th Road",
       "region": "YanTa District",
       "county": "Xi'an",
-      "postcode": "710065",
+      "postcode": "710075",
       "country": "China",
-      "contact": "+86 029-89194831"
-    }
-  },
-  {
-    "name": "shanghai",
-    "sort": 2,
-    "location": "Shanghai Office",
-    "map": {
-      "shortUrl": "http://goo.gl/6QoZt8",
-      "latLng": [
-        31.04,
-        121.38
-      ],
-      "point": [
-        31.044208,
-        121.366631
-      ]
-    },
-    "info": {
-      "address": "No.5500,Yuan Jiang Road",
-      "region": "Minhang District",
-      "county": "ShangHai",
-      "postcode": "201111",
-      "country": "China",
-      "contact": "+86 021-54101117"
+      "contact": "+86 029-88763093"
     }
   }
 ]
