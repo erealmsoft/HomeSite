@@ -17,7 +17,7 @@ module.exports = {
     serverRoot: rootPath + '/app',
     clientRoot: rootPath + '/public',
     port: process.env.PORT || 3000,
-    mock: false,
+    mock: true,
     mongodb: 'mongodb://dangjian:dangjian@ds045107.mongolab.com:45107/homesite',
     blog: {
         API_KEY: process.env.BLOG_KEY
